@@ -1,0 +1,463 @@
+doi,title,relevance_score,publication_year,publication_date,cited_by_count
+https://doi.org/10.1109/tpami.2023.3275156,Multimodal Learning With Transformers: A Survey,716.8861,2023,2023-01-01,174
+https://doi.org/10.1101/2023.01.11.523679,The Nucleotide Transformer: Building and Evaluating Robust Foundation Models for Human Genomics,688.8785,2023,2023-01-15,56
+https://doi.org/10.1038/s41586-023-05881-4,Foundation models for generalist medical artificial intelligence,669.8666,2023,2023-04-12,433
+https://doi.org/10.1101/2024.02.27.582234,Sequence modeling and design from molecular to genome scale with Evo,641.9354,2024,2024-02-27,35
+https://doi.org/10.1002/mef2.43,Accelerating the integration of ChatGPT and other large‐scale AI models into biomedical research and healthcare,632.1301,2023,2023-05-17,62
+https://doi.org/10.1145/3611651,Pre-trained Language Models in Biomedical Domain: A Systematic Survey,566.1072,2023,2023-08-01,48
+https://doi.org/10.2214/ajr.16.17224,Implementing Machine Learning in Radiology Practice and Research,478.83356,2017,2017-01-26,265
+https://doi.org/10.1162/neco_a_01563,Large Language Models and the Reverse Turing Test,447.29715,2023,2023-02-06,85
+https://doi.org/10.1093/bib/bbad493,Opportunities and challenges for ChatGPT and large language models in biomedicine and health,430.30212,2023,2023-11-22,91
+https://doi.org/10.1109/jbhi.2023.3316750,"Large AI Models in Health Informatics: Applications, Challenges, and the Future",419.89026,2023,2023-09-22,55
+https://doi.org/10.1101/2023.06.12.544594,GENA-LM: A Family of Open-Source Foundational DNA Language Models for Long Sequences,386.8792,2023,2023-06-13,13
+https://doi.org/10.1016/j.media.2021.102306,Surgical data science – from concepts toward clinical translation,377.2021,2021,2021-11-18,170
+https://doi.org/10.1038/s41437-021-00403-2,The population genomics of adaptive loss of function,357.37253,2021,2021-02-11,40
+https://doi.org/10.1101/2022.08.06.503062,Interpretable RNA Foundation Model from Unannotated Data for Highly Accurate RNA Structure and Function Predictions,341.69617,2022,2022-08-07,45
+https://doi.org/10.18653/v1/2022.emnlp-main.488,mPLUG: Effective and Efficient Vision-Language Learning by Cross-modal Skip-connections,337.10095,2022,2022-01-01,64
+https://doi.org/10.1093/nar/gkad1031,Multiple sequence alignment-based RNA language model and its application to structural inference,332.05054,2023,2023-11-06,17
+https://doi.org/10.1055/s-0039-1677895,Beginnings of Artificial Intelligence in Medicine (AIM): Computational Artifice Assisting Scientific Inquiry and Clinical Art – with Reflections on Present AIM Challenges,307.57968,2019,2019-04-25,82
+https://doi.org/10.3390/ijms242115858,Deep Learning for Genomics: From Early Neural Nets to Modern Large Language Models,296.0865,2023,2023-11-01,6
+https://doi.org/10.1016/j.copbio.2022.102881,Perspectives for self-driving labs in synthetic biology,282.04175,2023,2023-01-03,29
+https://doi.org/10.3389/frai.2022.807406,Generative Models of Brain Dynamics,280.22516,2022,2022-07-15,25
+https://doi.org/10.1146/annurev-pathmechdis-051222-113147,Toward Explainable Artificial Intelligence for Precision Pathology,277.5077,2023,2023-10-23,17
+https://doi.org/10.1101/2023.11.28.568918,Universal Cell Embeddings: A Foundation Model for Cell Biology,274.41754,2023,2023-11-29,18
+https://doi.org/10.18653/v1/2022.emnlp-main.432,"Video Question Answering: Datasets, Algorithms and Challenges",271.70215,2022,2022-01-01,30
+https://doi.org/10.1101/2024.02.29.582810,Evaluating the representational power of pre-trained DNA language models for regulatory genomics,265.30176,2024,2024-03-04,4
+https://doi.org/10.1145/3617592,Deep Learning Approaches on Image Captioning: A Review,254.2262,2023,2023-08-25,31
+https://doi.org/10.1093/bib/bbx035,"The anatomy of phenotype ontologies: principles, properties and applications",252.06201,2017,2017-03-07,85
+https://doi.org/10.36227/techrxiv.23589741.v3,"Large Language Models: A Comprehensive Survey of its Applications, Challenges, Limitations, and Future Prospects",251.73709,2023,2023-09-21,12
+https://doi.org/10.2967/jnumed.123.265687,An Opinion on ChatGPT in Health Care—Written by Humans Only,247.5486,2023,2023-04-13,39
+https://doi.org/10.1007/s10916-024-02045-3,The Breakthrough of Large Language Models Release for Medical Applications: 1-Year Timeline and Perspectives,246.04393,2024,2024-02-17,20
+https://doi.org/10.1093/bib/bbad422,From intuition to AI: evolution of small molecule representations in drug discovery,245.80511,2023,2023-11-22,10
+https://doi.org/10.6028/nist.ai.100-2e2023,Adversarial machine learning :,236.74858,2024,2024-01-02,28
+https://doi.org/10.1109/jiot.2023.3329061,"Federated Learning for Medical Applications: A Taxonomy, Current Trends, Challenges, and Future Research Directions",235.57133,2023,2023-11-01,36
+https://doi.org/10.1109/tmm.2017.2729400,Retrieval From and Understanding of Large-Scale Multi-modal Medical Datasets: A Review,233.29811,2017,2017-07-19,55
+https://doi.org/10.18653/v1/2023.bionlp-1.30,Evaluation of ChatGPT on Biomedical Tasks: A Zero-Shot Comparison with Fine-Tuned Generative Transformers,229.86438,2023,2023-01-01,16
+https://doi.org/10.1101/2023.05.29.542705,Large Scale Foundation Model on Single-cell Transcriptomics,229.0553,2023,2023-05-31,32
+https://doi.org/10.1038/s41556-023-01194-w,Advances and prospects for the Human BioMolecular Atlas Program (HuBMAP),226.85838,2023,2023-07-19,57
+https://doi.org/10.1162/coli_a_00481,Machine Learning for Ancient Languages: A Survey,225.84856,2023,2023-01-01,13
+https://doi.org/10.1259/bjr.20230023,AI pitfalls and what not to do: mitigating bias in AI,216.62015,2023,2023-09-12,45
+https://doi.org/10.3390/biomedinformatics4010015,"Deep Machine Learning for Medical Diagnosis, Application to Lung Cancer Detection: A Review",215.49405,2024,2024-01-18,11
+https://doi.org/10.1109/jas.2022.106103,DeCASA in AgriVerse: Parallel Agriculture for Smart Villages in Metaverses,209.66484,2022,2022-12-01,28
+https://doi.org/10.24072/pcjournal.72,Simulation of bacterial populations with SLiM,207.49786,2022,2022-01-13,21
+https://doi.org/10.1101/2023.09.09.556981,CodonBERT: Large Language Models for mRNA design and optimization,207.0448,2023,2023-09-12,12
+https://doi.org/10.1101/2024.03.14.584712,SegmentNT: annotating the genome at single-nucleotide resolution with DNA foundation models,205.48169,2024,2024-03-15,4
+https://doi.org/10.1038/s41746-024-01024-9,CancerGPT for few shot drug pair synergy prediction using large pretrained language models,204.96759,2024,2024-02-19,19
+https://doi.org/10.59717/j.xinn-med.2023.100030,"Artificial intelligence for medicine: Progress, challenges, and perspectives",203.02321,2023,2023-01-01,16
+https://doi.org/10.1021/acs.jcim.3c00643,Open-Source Machine Learning in Computational Chemistry,199.3417,2023,2023-07-19,20
+https://doi.org/10.3389/fcomm.2023.1129082,Artificial intelligence for health message generation: an empirical study using a large language model (LLM) and prompt engineering,197.97452,2023,2023-05-26,32
+https://doi.org/10.1101/2022.01.31.478596,Generative pretraining from large-scale transcriptomes: Implications for single-cell deciphering and clinical translation,197.79007,2022,2022-02-02,6
+https://doi.org/10.1101/2023.10.16.562533,GENEPT: A SIMPLE BUT HARD-TO-BEAT FOUNDATION MODEL FOR GENES AND CELLS BUILT FROM CHATGPT,193.2969,2023,2023-10-19,18
+https://doi.org/10.3389/fmed.2023.1278232,"Principles, applications, and future of artificial intelligence in dermatology",192.28265,2023,2023-10-12,12
+https://doi.org/10.1016/j.cemconcomp.2022.104721,"Estimating compressive strength of lightweight foamed concrete using neural, genetic and ensemble machine learning approaches",191.12245,2022,2022-08-21,60
+https://doi.org/10.3389/frai.2023.1237704,Overview of Chatbots with special emphasis on artificial intelligence-enabled ChatGPT in medical science,191.0805,2023,2023-10-31,30
+https://doi.org/10.1128/mbio.02899-18,Large Circular Plasmids from Groundwater Plasmidomes Span Multiple Incompatibility Groups and Are Enriched in Multimetal Resistance Genes,189.91989,2019,2019-02-25,43
+https://doi.org/10.3386/w27373,Implications of Heterogeneous SIR Models for Analyses of COVID-19,187.89441,2020,2020-06-01,80
+https://doi.org/10.18653/v1/2022.emnlp-main.763,PEVL: Position-enhanced Pre-training and Prompt Tuning for Vision-language Models,187.16495,2022,2022-01-01,15
+https://doi.org/10.1007/978-3-030-73103-8_32,Question and Answer Classification with Deep Contextualized Transformer,186.07603,2021,2021-01-01,3
+https://doi.org/10.1136/bmjopen-2020-044353,Longitudinal cohorts for harnessing the electronic health record for disease prediction in a US population,185.32144,2021,2021-06-01,18
+https://doi.org/10.1098/rstb.2017.0382,OpenWorm: overview and recent advances in integrative biological simulation of <i>Caenorhabditis elegans</i>,183.42194,2018,2018-09-10,80
+https://doi.org/10.1016/j.artmed.2021.102111,A review of AI and Data Science support for cancer management,183.3778,2021,2021-05-24,22
+https://doi.org/10.15252/msb.202311799,Single‐cell biology: what does the future hold?,180.42429,2023,2023-06-15,11
+https://doi.org/10.14573/altex.2309191,ToxAIcology - The evolving role of artificial intelligence in advancing toxicology and modernizing regulatory science,177.39877,2023,2023-01-01,15
+https://doi.org/10.1016/j.ympev.2018.04.030,Comparative transcriptomics and genomic patterns of discordance in Capsiceae (Solanaceae),177.38397,2018,2018-04-25,16
+https://doi.org/10.3390/diagnostics13142429,Artificial Intelligence in Neurosurgery: A State-of-the-Art Review from Past to Future,174.577,2023,2023-07-20,18
+https://doi.org/10.18653/v1/2023.acl-demo.3,LAVIS: A One-stop Library for Language-Vision Intelligence,173.23474,2023,2023-01-01,20
+https://doi.org/10.1158/2159-8290.cd-23-1199,"Artificial Intelligence in Oncology: Current Landscape, Challenges, and Future Directions",171.4213,2024,2024-03-21,7
+https://doi.org/10.1101/2023.09.26.559542,GeneCompass: Deciphering Universal Gene Regulatory Mechanisms with Knowledge-Informed Cross-Species Foundation Model,170.44435,2023,2023-09-28,10
+https://doi.org/10.1101/2023.11.09.566187,Democratizing Protein Language Models with Parameter-Efficient Fine-Tuning,170.06293,2023,2023-11-10,9
+https://doi.org/10.1038/s42256-022-00596-z,Learning from data with structured missingness,167.04825,2023,2023-01-25,19
+https://doi.org/10.1101/2023.09.12.23295357,Pretrained transformers applied to clinical studies improve predictions of treatment efficacy and associated biomarkers,166.55261,2023,2023-09-13,3
+https://doi.org/10.3390/fi15100336,Fluent but Not Factual: A Comparative Analysis of ChatGPT and Other AI Chatbots’ Proficiency and Originality in Scientific Writing for Humanities,165.00134,2023,2023-10-13,18
+https://doi.org/10.1101/2023.11.09.566403,GFETM: Genome Foundation-based Embedded Topic Model for scATAC-seq Modeling,164.1246,2023,2023-11-13,2
+https://doi.org/10.1162/daed_e_01897,Getting AI Right: Introductory Notes on AI &amp; Society,163.2591,2022,2022-01-01,11
+https://doi.org/10.1101/2023.09.12.557460,BrainLM: A foundation model for brain activity recordings,161.39069,2023,2023-09-13,6
+https://doi.org/10.1101/2023.11.17.567630,A Foundation Model for Cell Segmentation,161.3414,2023,2023-11-20,9
+https://doi.org/10.1101/2023.10.18.563023,Bioinfo-Bench: A Simple Benchmark Framework for LLM Bioinformatics Skills Evaluation,158.64743,2023,2023-10-21,7
+https://doi.org/10.1101/2024.02.14.580373,regLM: Designing realistic regulatory DNA with autoregressive language models,158.31815,2024,2024-02-18,3
+https://doi.org/10.3389/fpsyt.2024.1346059,Beyond Discrimination: Generative AI Applications and Ethical Challenges in Forensic Psychiatry,157.78157,2024,2024-03-08,6
+https://doi.org/10.1101/2023.07.19.549677,The human genome’s vocabulary as proposed by the DNA language model GROVER,157.7185,2023,2023-07-19,2
+https://doi.org/10.1101/2024.02.09.579631,Investigating the performance of foundation models on human 3’UTR sequences,156.32826,2024,2024-02-12,1
+https://doi.org/10.5811/westjem.2018.11.39725,A Review of Natural Language Processing in Medical Education,155.79128,2018,2018-12-12,78
+https://doi.org/10.1002/eng2.12785,"Deep learning and knowledge graph for image/video captioning: A review of datasets, evaluation metrics, and methods",155.2895,2023,2023-10-12,9
+https://doi.org/10.20944/preprints202311.1819.v1,Machine Learning to Advance Human Genome‐Wide Association Studies,155.14062,2023,2023-11-28,2
+https://doi.org/10.1007/978-3-031-23190-2_3,Improving Pre-trained Language Models,155.12773,2023,2023-01-01,4
+https://doi.org/10.3390/make5020035,A Survey of Deep Learning for Alzheimer’s Disease,154.18164,2023,2023-06-09,15
+https://doi.org/10.1038/s42256-021-00395-y,The big question,153.98203,2021,2021-09-17,4
+https://doi.org/10.1038/s41467-020-18365-0,Efficient rational modification of non-ribosomal peptides by adenylation domain substitution,153.8682,2020,2020-09-11,71
+https://doi.org/10.1186/s13073-024-01282-y,Spatial multi-omics: novel tools to study the complexity of cardiovascular diseases,152.11871,2024,2024-01-18,9
+https://doi.org/10.1371/journal.ppat.1010591,Projecting the SARS-CoV-2 transition from pandemicity to endemicity: Epidemiological and immunological considerations,150.45517,2022,2022-06-30,29
+https://doi.org/10.1101/2023.07.15.549134,EpiGePT: a Pretrained Transformer model for epigenomics,150.03784,2023,2023-07-18,1
+https://doi.org/10.1145/3581784.3613215,FORGE: Pre-Training Open Foundation Models for Science,148.21353,2023,2023-11-11,4
+https://doi.org/10.1101/2023.07.05.547496,xTrimoPGLM: Unified 100B-Scale Pre-trained Transformer for Deciphering the Language of Protein,147.30888,2023,2023-07-06,32
+https://doi.org/10.2196/47551,Security Implications of AI Chatbots in Health Care,146.13658,2023,2023-11-28,19
+https://doi.org/10.1101/2023.10.07.561331,Scaling cross-tissue single-cell annotation models,143.57063,2023,2023-10-10,4
+https://doi.org/10.1101/2024.01.30.577935,ViraLM: Empowering Virus Discovery through the Genome Foundation Model,143.41617,2024,2024-01-31,1
+https://doi.org/10.20944/preprints202401.1882.v1,Artificial Intelligence: A Promising Tool for Application in Phytopathology,143.25905,2024,2024-01-26,3
+https://doi.org/10.1146/annurev-micro-031021-084116,Culturing Human Gut Microbiomes in the Laboratory,141.3516,2021,2021-05-26,16
+https://doi.org/10.1016/j.celrep.2016.12.066,Primary Cell Culture of Live Neurosurgically Resected Aged Adult Human Brain Cells and Single Cell Transcriptomics,141.3197,2017,2017-01-01,68
+https://doi.org/10.1101/2023.09.15.558027,cdsBERT - Extending Protein Language Models with Codon Awareness,140.65703,2023,2023-09-17,3
+https://doi.org/10.1101/2023.09.24.559168,GET: a foundation model of transcription across human cell types,140.27109,2023,2023-09-24,2
+https://doi.org/10.1124/pharmrev.122.000715,Review of Natural Language Processing in Pharmacology,139.29588,2023,2023-03-17,5
+https://doi.org/10.18653/v1/2023.findings-emnlp.40,"Toward Building General Foundation Models for Language, Vision, and Vision-Language Understanding Tasks",136.65947,2023,2023-01-01,7
+https://doi.org/10.3390/app131911103,A Review of Transformer-Based Approaches for Image Captioning,136.40915,2023,2023-10-09,3
+https://doi.org/10.1007/978-3-319-97427-9_19,Evolution and Adaptation in the Maize Genome,136.36964,2018,2018-01-01,7
+https://doi.org/10.21203/rs.3.rs-3324530/v1,Towards Generalist Foundation Model for Radiology,136.25339,2023,2023-09-18,12
+https://doi.org/10.2196/49949,Democratizing Artificial Intelligence Imaging Analysis With Automated Machine Learning: Tutorial,135.78429,2023,2023-09-13,11
+https://doi.org/10.1093/petrology/egae036,Machine Learning in Petrology: State-of-the-Art and Future Perspectives,134.40073,2024,2024-03-28,4
+https://doi.org/10.1101/2024.02.01.578352,DNA-Diffusion: Leveraging Generative Models for Controlling Chromatin Accessibility and Gene Expression via Synthetic Regulatory Elements,133.88623,2024,2024-02-01,6
+https://doi.org/10.1016/j.polgeo.2024.103134,A world model: On the political logics of generative AI,130.25827,2024,2024-05-24,1
+https://doi.org/10.1007/s13347-023-00635-6,On the Philosophy of Unsupervised Learning,130.1863,2023,2023-04-21,13
+https://doi.org/10.1016/j.ajhg.2018.12.019,Gene Augmentation and Readthrough Rescue Channelopathy in an iPSC-RPE Model of Congenital Blindness,128.30634,2019,2019-01-25,30
+https://doi.org/10.3390/bioengineering11030219,A Comprehensive Review on Synergy of Multi-Modal Data and AI Technologies in Medical Diagnosis,127.0439,2024,2024-02-25,2
+https://doi.org/10.3390/genes15010034,Machine Learning to Advance Human Genome-Wide Association Studies,127.03975,2023,2023-12-25,1
+https://doi.org/10.1109/access.2023.3338548,The State of the Art for Cross-Modal Retrieval: A Survey,126.46038,2023,2023-01-01,3
+https://doi.org/10.1111/jora.12411,Puberty and the Evolution of Developmental Science,126.12412,2019,2019-03-01,27
+https://doi.org/10.1101/2024.04.15.589472,Nicheformer: a foundation model for single-cell and spatial omics,125.876785,2024,2024-04-17,5
+https://doi.org/10.1371/journal.pone.0191263,Labeling for Big Data in radiation oncology: The Radiation Oncology Structures ontology,125.66655,2018,2018-01-19,29
+https://doi.org/10.12688/f1000research.12989.1,Funding knowledgebases: Towards a sustainable funding model for the UniProt use case,125.48305,2017,2017-11-27,14
+https://doi.org/10.3389/frai.2023.1291136,"Artificial intelligence in biology and medicine, and radioprotection research: perspectives from Jerusalem",125.4028,2024,2024-01-11,2
+https://doi.org/10.1101/2022.11.17.516989,Running ahead of evolution - AI based simulation for predicting future high-risk SARS-CoV-2 variants,125.121765,2022,2022-11-19,1
+https://doi.org/10.2172/1986455,"Advanced Research Directions on AI for Science, Energy, and Security: Report on Summer 2022 Workshops",124.79691,2023,2023-05-01,7
+https://doi.org/10.1016/j.compedu.2020.104034,"Learning from text, video, or subtitles: A comparative analysis",123.47014,2020,2020-09-30,68
+https://doi.org/10.3390/rs15061686,Assessment of Machine and Deep Learning Approaches for Fault Diagnosis in Photovoltaic Systems Using Infrared Thermography,123.41687,2023,2023-03-21,17
+https://doi.org/10.1111/ele.14239,Getting the bugs out of <scp>AI</scp>: Advancing ecological research on arthropods through computer vision,123.14749,2023,2023-05-22,5
+https://doi.org/10.1101/2024.01.14.575543,OmniNA: A foundation model for nucleotide sequences,121.72524,2024,2024-01-15,1
+https://doi.org/10.1101/2024.01.16.575935,Advancing Transcription Factor Binding Site Prediction Using DNA Breathing Dynamics and Sequence Transformers via Cross Attention,120.09871,2024,2024-01-20,1
+https://doi.org/10.1101/2023.04.06.535859,CT Multi-Task Learning with a Large Image-Text (LIT) Model,119.33655,2023,2023-04-06,3
+https://doi.org/10.31219/osf.io/ac4sp,A Survey of Reasoning with Foundation Models,117.23018,2023,2023-12-13,3
+https://doi.org/10.1016/j.techfore.2023.122878,"Implementing and scaling artificial intelligence: A review, framework, and research agenda",116.164215,2023,2023-10-05,12
+https://doi.org/10.1016/j.yjbinx.2019.100002,On beyond Gruber: “Ontologies” in today’s biomedical information systems and the limits of OWL,115.10756,2019,2019-01-01,44
+https://doi.org/10.1101/2023.10.24.563625,Foundation Models Meet Imbalanced Single-Cell Data When Learning Cell Type Annotations,114.40079,2023,2023-10-27,5
+https://doi.org/10.1093/jamia/ocx121,DataMed – an open source discovery index for finding biomedical datasets,114.372894,2017,2017-09-28,59
+https://doi.org/10.1186/s12880-024-01192-w,A methodical exploration of imaging modalities from dataset to detection through machine learning paradigms in prominent lung disease diagnosis: a review,112.424065,2024,2024-02-01,7
+https://doi.org/10.18653/v1/2022.emnlp-main.273,TRIPS: Efficient Vision-and-Language Pre-training with Text-Relevant Image Patch Selection,110.38865,2022,2022-01-01,3
+https://doi.org/10.1101/2023.10.03.560734,CellPLM: Pre-training of Cell Language Model Beyond Single Cells,110.190315,2023,2023-10-05,4
+https://doi.org/10.1145/3657632,Visual Tuning,108.94352,2024,2024-04-12,3
+https://doi.org/10.1007/s41060-022-00371-8,Learning to discover medicines,107.105705,2022,2022-11-18,1
+https://doi.org/10.21203/rs.3.rs-3888891/v1,Revolutionizing Personalized Medicine with Generative AI: A Systematic Review,106.2186,2024,2024-01-24,2
+https://doi.org/10.1101/2024.03.12.584599,Harnessing Genome Representation Learning for Decoding Phage-Host Interactions,105.98961,2024,2024-03-14,1
+https://doi.org/10.1101/2023.12.13.571579,ATOM-1: A Foundation Model for RNA Structure and Function Built on Chemical Mapping Data,104.97827,2023,2023-12-14,4
+https://doi.org/10.1101/2023.04.03.535488,Improving deep models of protein-coding potential with a Fourier-transform architecture and machine translation task,104.79739,2023,2023-04-05,2
+https://doi.org/10.20892/j.issn.2095-3941.2023.0436,Deep-learning methods for unveiling large-scale single-cell transcriptomes,103.904594,2024,2024-02-05,1
+https://doi.org/10.1007/978-981-99-3814-8_16,Evolutionary Approaches to Explainable Machine Learning,103.36754,2023,2023-11-01,5
+https://doi.org/10.3390/su13105372,A Bibliometric Analysis and Network Visualisation of Human Mobility Studies from 1990 to 2020: Emerging Trends and Future Research Directions,103.31914,2021,2021-05-11,7
+https://doi.org/10.3390/diagnostics9030082,The IDO Metabolic Trap Hypothesis for the Etiology of ME/CFS,102.62584,2019,2019-07-26,29
+https://doi.org/10.1101/2024.02.25.581982,Evaluating generalizability of artificial intelligence models for molecular datasets,101.86286,2024,2024-02-28,2
+https://doi.org/10.35460/2546-1621.2023-0081,Bridging the Gap or Widening the Divide: A Call for Capacity-Building in Artificial Intelligence for Healthcare in the Philippines,101.43933,2023,2023-10-31,2
+https://doi.org/10.1101/2023.11.06.565787,Using natural language processing to extract plant functional traits from unstructured text,100.708244,2023,2023-11-06,1
+https://doi.org/10.1101/2024.02.24.581671,Ribonanza: deep learning of RNA structure through dual crowdsourcing,100.08356,2024,2024-02-27,1
+https://doi.org/10.1101/2020.04.07.030593,Bitbow: a digital format of Brainbow enables highly efficient neuronal lineage tracing and morphology reconstruction in single brains,100.08338,2020,2020-04-09,11
+https://doi.org/10.1007/978-3-319-98779-8_15,Knowledge Representation and Ontologies,99.83723,2019,2019-01-01,9
+https://doi.org/10.3389/fmed.2023.1280312,Artificial intelligence in rheumatoid arthritis: potential applications and future implications,99.36801,2023,2023-11-16,2
+https://doi.org/10.1002/evl3.134,Understanding the evolution of ecological sex differences: Integrating character displacement and the Darwin-Bateman paradigm,98.90043,2019,2019-08-26,47
+https://doi.org/10.1111/biom.13043,An iterative penalized least squares approach to sparse canonical correlation analysis,98.73474,2019,2019-02-04,33
+https://doi.org/10.1111/ajt.14941,Urinary metabolites predict prolonged duration of delayed graft function in DCD kidney transplant recipients,98.20441,2018,2018-05-22,20
+https://doi.org/10.1101/2020.09.28.316869,Simulation of bacterial populations with SLiM,98.0973,2020,2020-09-29,2
+https://doi.org/10.1007/978-3-031-23190-2_7,"Foundation Models for Speech, Images, Videos, and Control",97.98007,2023,2023-01-01,1
+https://doi.org/10.12688/f1000research.18236.1,BioHackathon 2015: Semantics of data for life sciences and reproducible research,97.70667,2020,2020-02-24,6
+https://doi.org/10.1007/s10539-017-9570-6,What are cultural attractors?,97.13772,2017,2017-03-17,58
+https://doi.org/10.1101/2024.03.07.583777,Multifaceted Representation of Genes via Deep Learning of Gene Expression Networks,96.863945,2024,2024-03-09,1
+https://doi.org/10.3389/fnhum.2020.00128,Species Classification for Neuroscience Literature Based on Span of Interest Using Sequence-to-Sequence Learning Model,95.98693,2020,2020-04-21,3
+https://doi.org/10.1109/access.2018.2881001,Mobile Health Technologies for Diabetes Mellitus: Current State and Future Challenges,95.86223,2018,2018-11-14,40
+https://doi.org/10.1016/j.eswa.2022.116616,A deep learning relation extraction approach to support a biomedical semi-automatic curation task: The case of the gluten bibliome,95.30024,2022,2022-02-01,5
+https://doi.org/10.1111/tpj.13483,The SUFBC<sub>2</sub>D complex is required for the biogenesis of all major classes of plastid Fe-S proteins,95.18048,2017,2017-01-20,43
+https://doi.org/10.1101/2021.06.03.446959,The mutational landscape of SARS-CoV-2 variants diversifies T cell targets in an HLA supertype-dependent manner,94.32291,2021,2021-06-03,2
+https://doi.org/10.1111/bioe.13283,A paradigm shift?—On the ethics of medical large language models,94.10484,2024,2024-03-25,2
+https://doi.org/10.9781/ijimai.2021.08.002,Emergent Models for Moral AI Spirituality,94.09032,2021,2021-01-01,8
+https://doi.org/10.7554/elife.25835,Building bridges between cellular and molecular structural biology,92.31847,2017,2017-07-06,53
+https://doi.org/10.1039/d4sc00966e,nach0: Multimodal Natural and Chemical Languages Foundation Model,91.796936,2024,2024-01-01,3
+https://doi.org/10.3390/ncrna9060070,An Overview of the Immune Modulatory Properties of Long Non-Coding RNAs and Their Potential Use as Therapeutic Targets in Cancer,89.61999,2023,2023-11-11,6
+https://doi.org/10.1101/2023.08.07.552217,AI in paleontology,88.65535,2023,2023-08-08,1
+https://doi.org/10.1038/s41467-023-36961-8,Interpretable and context-free deconvolution of multi-scale whole transcriptomic data with UniCell deconvolve,88.36751,2023,2023-03-11,18
+https://doi.org/10.1101/2024.03.13.584858,Toward generalizable phenotype prediction from single-cell morphology representations,88.17485,2024,2024-03-13,2
+https://doi.org/10.1093/bib/bbae136,"PCAO2: an ontology for integration of prostate cancer associated genotypic, phenotypic and lifestyle data",87.83041,2024,2024-03-12,5
+https://doi.org/10.22541/au.166568511.18706401/v1,Getting the Bugs Out: Entomology Using Computer Vision,87.617905,2022,2022-10-13,1
+https://doi.org/10.1101/2023.03.26.534264,A genomic and structural bioinformatic pipeline identifies candidate type VI secretion antibacterial effector-immunity pairs,87.2523,2023,2023-03-26,2
+https://doi.org/10.1186/s12864-018-5277-6,Constructing tissue-specific transcriptional regulatory networks via a Markov random field,86.21224,2018,2018-12-01,6
+https://doi.org/10.1101/2023.10.11.561938,A 5’ UTR Language Model for Decoding Untranslated Regions of mRNA and Function Predictions,85.05333,2023,2023-10-14,2
+https://doi.org/10.1101/2024.01.27.577455,Parameter-Efficient Fine-Tuning Enhances Adaptation of Single Cell Large Language Model for Cell Type Identification,83.33396,2024,2024-01-30,3
+https://doi.org/10.1007/s00259-023-06450-7,Medical image Generative Pre-Trained Transformer (MI-GPT): future direction for precision medicine,83.17213,2023,2023-10-07,2
+https://doi.org/10.1038/d41586-023-03302-0,An AI revolution is brewing in medicine. What will it look like?,82.92923,2023,2023-10-24,5
+https://doi.org/10.3390/math11244937,Analysis of Colorectal and Gastric Cancer Classification: A Mathematical Insight Utilizing Traditional Machine Learning Classifiers,82.8096,2023,2023-12-12,5
+https://doi.org/10.1145/3581783.3612577,Redundancy-aware Transformer for Video Question Answering,82.56982,2023,2023-10-26,4
+https://doi.org/10.31234/osf.io/4q8na,Deep Learning: A Primer for Psychologists,81.03677,2019,2019-08-29,4
+https://doi.org/10.1038/s42256-024-00836-4,Multi-purpose RNA language modelling with motif-aware pretraining and type-guided fine-tuning,80.12069,2024,2024-05-13,2
+https://doi.org/10.1038/d41586-024-01001-y,AI can help to tailor drugs for Africa — but Africans should lead the way,79.703476,2024,2024-04-09,2
+https://doi.org/10.1101/2021.07.01.450755,We get by with a little help from our friends: shared adaptive variation provides a bridge to novel ecological specialists during adaptive radiation,78.91547,2021,2021-07-02,3
+https://doi.org/10.1101/2023.03.31.535140,Transfer learning for cross-context prediction of protein expression from 5’UTR sequence,78.400986,2023,2023-04-01,1
+https://doi.org/10.3389/fgene.2024.1363896,Classifying breast cancer using multi-view graph neural network based on multi-omics data,77.6718,2024,2024-02-20,1
+https://doi.org/10.1038/s41698-024-00517-w,New regulatory thinking is needed for AI-based personalised drug and cell therapies in precision oncology,77.18343,2024,2024-01-30,10
+https://doi.org/10.12688/f1000research.18238.1,BioHackathon series in 2013 and 2014: improvements of semantic interoperability in life science data and services,76.68062,2019,2019-09-23,1
+https://doi.org/10.3233/ao-170181,Ontology Summit 2016 Communique: Ontologies within semantic interoperability ecosystems,76.00156,2017,2017-06-20,21
+https://doi.org/10.1093/icb/icab165,Charting a New Frontier Integrating Mathematical Modeling in Complex Biological Systems from Molecules to Ecosystems,75.94716,2021,2021-07-16,2
+https://doi.org/10.1101/2023.10.03.560661,Representational Learning from Healthy Multi-Tissue Human RNA-seq Data such that Latent Space Arithmetics Extracts Disease Modules,75.87369,2023,2023-10-05,2
+https://doi.org/10.32604/csse.2023.036985,MayGAN: Mayfly Optimization with Generative Adversarial Network-Based Deep Learning Method to Classify Leukemia Form Blood Smear Images,75.010666,2023,2023-01-01,7
+https://doi.org/10.1016/j.cviu.2024.104071,Vision and Structured-Language Pretraining for Cross-Modal Food Retrieval,74.11704,2024,2024-07-01,1
+https://doi.org/10.3390/info15020090,Emerging Applications and Translational Challenges for AI in Healthcare,73.80527,2024,2024-02-06,1
+https://doi.org/10.1053/j.semnuclmed.2024.06.003,Future Perspectives of Artificial Intelligence in Bone Marrow Dosimetry and Individualized Radioligand Therapy,73.080765,2024,2024-07-01,1
+https://doi.org/10.1002/cpt.1249,Influence of <scp>OCT</scp>1 Ontogeny and Genetic Variation on Morphine Disposition in Critically Ill Neonates: Lessons From <scp>PBPK</scp> Modeling and Clinical Study,73.03626,2018,2018-10-10,45
+https://doi.org/10.1101/cshperspect.a041473,Environmental Impacts of Machine Learning Applications in Protein Science,72.58634,2023,2023-12-01,2
+https://doi.org/10.3389/fimmu.2017.01844,Minimum Information about T Regulatory Cells: A Step toward Reproducibility and Standardization,72.31021,2018,2018-01-15,49
+https://doi.org/10.1086/697508,Models on the Runway: How Do We Make Replicas of the World?,72.01477,2018,2018-04-20,24
+https://doi.org/10.1109/access.2023.3329759,Explainable AI for Enhanced Interpretation of Liver Cirrhosis Biomarkers,71.901306,2023,2023-01-01,4
+https://doi.org/10.1101/2023.12.12.571389,Sequential Optimal Experimental Design of Perturbation Screens Guided by Multi-modal Priors,71.70387,2023,2023-12-13,1
+https://doi.org/10.1186/s12883-023-03192-9,Developing DELPHI expert consensus rules for a digital twin model of acute stroke care in the neuro critical care unit,70.84145,2023,2023-04-22,12
+https://doi.org/10.26434/chemrxiv-2023-bdkgm,COATI: multi-modal contrastive pre-training for representing and traversing chemical space,70.71624,2023,2023-08-25,2
+https://doi.org/10.21203/rs.3.rs-2961271/v1,Ecosystem Graphs: The Social Footprint of Foundation Models,70.443016,2023,2023-06-23,7
+https://doi.org/10.1093/bioinformatics/btad717,Multimodal learning in clinical proteomics: enhancing antimicrobial resistance prediction models with chemical information,70.1461,2023,2023-11-24,4
+https://doi.org/10.1017/s0031182017001986,"Pathogens collections, biobanks and related-data in a One Health legal and ethical perspective",69.62952,2017,2017-11-29,17
+https://doi.org/10.1158/2159-8290.cd-24-0101,Accelerating Drug Development Using Spatial Multi-omics,69.10872,2024,2024-04-04,1
+https://doi.org/10.1093/bib/bby015,Where to search top-K biomedical ontologies?,68.69966,2018,2018-02-14,6
+https://doi.org/10.1007/13836_2018_25,What Is a Pseudomonas syringae Population?,68.59208,2018,2018-01-01,2
+https://doi.org/10.1101/2023.05.25.542052,IAMSAM : Image-based Analysis of Molecular signatures using the Segment-Anything Model,67.42265,2023,2023-05-25,1
+https://doi.org/10.2172/2340139,Advanced Research Directions on AI for Energy,66.41507,2024,2024-04-01,1
+https://doi.org/10.1101/2024.03.23.586383,How do Large Language Models understand Genes and Cells,66.15486,2024,2024-03-27,1
+https://doi.org/10.1101/2024.03.06.24303800,Predicting drug outcome of population via clinical knowledge graph,65.947365,2024,2024-03-08,1
+https://doi.org/10.1101/2022.01.29.478324,Non-identifiability and the Blessings of Misspecification in Models of Molecular Fitness,65.57715,2022,2022-01-30,8
+https://doi.org/10.26686/pq.v19i2.8234,Synthetic Data and Public Policy: supporting real-world policymakers with algorithmically generated data,65.47979,2023,2023-05-31,2
+https://doi.org/10.1109/lcsys.2024.3406943,Towards a Systems Theory of Algorithms,64.566826,2024,2024-01-01,2
+https://doi.org/10.3390/biomedicines11102613,Emerging Insights into Molecular Mechanisms of Inflammation in Myelodysplastic Syndromes,64.46294,2023,2023-09-23,4
+https://doi.org/10.1007/978-3-319-60074-1_2,How Ontologies Can Help in Software Engineering,64.29469,2017,2017-01-01,14
+https://doi.org/10.1007/978-3-030-12381-9_8,Mathematical Foundations of Cellular Automata and Complexity Theory,64.122635,2019,2019-01-01,12
+https://doi.org/10.17849/insm-50-2-143-146.1,ChatGPT: How Closely Should We Be Watching?,64.048584,2023,2023-07-01,1
+https://doi.org/10.1145/3589132.3625611,Building Privacy-Preserving and Secure Geospatial Artificial Intelligence Foundation Models (Vision Paper),64.030174,2023,2023-11-13,3
+https://doi.org/10.1017/s0020589321000294,ARGUMENTS AGAINST THE INEQUITABLE DISTRIBUTION OF VACCINES USING THE ACCESS AND BENEFIT SHARING TRANSACTION,63.559242,2021,2021-10-01,7
+https://doi.org/10.3390/app132413126,Comparing Artificial Intelligence Algorithms with Empirical Correlations in Shear Wave Velocity Prediction,63.458435,2023,2023-12-09,3
+https://doi.org/10.5582/bst.2023.01148,Advances in deep learning: From diagnosis to treatment,63.37583,2023,2023-06-29,3
+https://doi.org/10.34133/icomputing.0055,The Digital Twin Brain: A Bridge between Biological and Artificial Intelligence,62.841194,2023,2023-01-01,7
+https://doi.org/10.1101/2023.09.08.555192,Evaluating the Utilities of Large Language Models in Single-cell Data Analysis,62.441704,2023,2023-09-08,8
+https://doi.org/10.1038/s41598-021-92999-y,Experimental infection of Asian house geckos with Enterococcus lacertideformus demonstrates multiple disease transmission routes and the in-vivo efficacy of antibiotics,62.18795,2021,2021-07-05,3
+https://doi.org/10.1787/f2050177-en,Collective action for responsible AI in health,62.119614,2024,2024-01-16,6
+https://doi.org/10.1007/s40123-023-00842-6,Deep Transfer Learning for Ethnically Distinct Populations: Prediction of Refractive Error Using Optical Coherence Tomography,61.99019,2023,2023-11-13,2
+https://doi.org/10.2505/9781681404776,"Engineering in the Life Sciences, 9-12",61.929226,2018,2018-01-01,6
+https://doi.org/10.1093/jamia/ocaa108,A review of auditing techniques for the Unified Medical Language System,61.836273,2020,2020-05-14,10
+https://doi.org/10.3389/fphar.2023.1289901,Multi-level advances in databases related to systems pharmacology in traditional Chinese medicine: a 60-year review,61.53198,2023,2023-11-14,1
+https://doi.org/10.14573/altex.2403281,Revolutionizing developmental neurotoxicity testing – a journey from animal models to advanced in vitro systems,60.712444,2024,2024-01-01,3
+https://doi.org/10.3390/plants12152790,Comparatively Evolution and Expression Analysis of GRF Transcription Factor Genes in Seven Plant Species,60.31619,2023,2023-07-27,1
+https://doi.org/10.3390/electronics12234775,Innovative Cucumber Phenotyping: A Smartphone-Based and Data-Labeling-Free Model,59.82492,2023,2023-11-25,2
+https://doi.org/10.31236/osf.io/w734a,Precision strength training: Data-driven artificial intelligence approach to strength and conditioning,58.497337,2021,2021-05-20,2
+https://doi.org/10.1136/bmjopen-2021-060556,"Cohort profile: Colombian Cohort for the Early Prediction of Preterm Birth (COLPRET): early prediction of preterm birth based on personal medical history, clinical characteristics, vaginal microbiome, biophysical characteristics of the cervix and maternal serum biochemical markers",58.277508,2022,2022-05-01,4
+https://doi.org/10.4324/9781003150718,Multimodal Literacy in School Science,58.24681,2021,2021-12-29,12
+https://doi.org/10.20944/preprints202103.0421.v1,A Bibliometric Analysis and Network Visualisation of Human Mobility Studies from 1990 to 2020: Emerging Trends and Future Research Directions,58.040504,2021,2021-03-16,3
+https://doi.org/10.1007/s00335-023-10005-4,Bridging mouse and human anatomies; a knowledge-based approach to comparative anatomy for disease model phenotyping,56.508743,2023,2023-07-08,6
+https://doi.org/10.1101/2023.07.28.551039,A systematic comparison of computational methods for expression forecasting,56.367973,2023,2023-07-31,1
+https://doi.org/10.1101/2024.05.14.594226,ProteinCLIP: enhancing protein language models with natural language,56.107666,2024,2024-05-17,2
+https://doi.org/10.1101/2023.09.15.558001,Evaluating batch correction methods for image-based cell profiling,55.843056,2023,2023-09-17,8
+https://doi.org/10.1038/d43747-023-00020-4,Understanding the company landscape in AI-driven biopharma R&amp;D,55.776897,2023,2023-05-17,2
+https://doi.org/10.6028/nist.ir.8373,Applied and Computational Mathematics Division :,55.617714,2021,2021-05-18,3
+https://doi.org/10.1038/s41597-022-01505-0,"HistoML, a markup language for representation and exchange of histopathological features in pathology images",54.78479,2022,2022-07-08,3
+https://doi.org/10.1109/access.2023.3334791,Fine-Tuning Multimodal Transformer Models for Generating Actions in Virtual and Real Environments,54.743942,2023,2023-01-01,1
+https://doi.org/10.1101/2023.10.13.562298,Explainable protein function annotation using local structure embeddings,54.243042,2023,2023-10-16,5
+https://doi.org/10.1038/s41597-023-02018-0,"Anatomical structures, cell types, and biomarkers of the healthy human blood vasculature",54.05513,2023,2023-07-19,4
+https://doi.org/10.1101/2024.01.29.577794,Aggregating Residue-Level Protein Language Model Embeddings with Optimal Transport,53.771423,2024,2024-01-31,3
+https://doi.org/10.1101/2022.03.30.486438,Human Digital Twin: Automated Cell Type Distance Computation and 3D Atlas Construction in Multiplexed Skin Biopsies,53.429497,2022,2022-03-30,4
+https://doi.org/10.1101/2024.03.05.583564,High-Throughput Phenotyping of Seed Quality Traits Using Imaging and Deep Learning in Dry Pea,52.110332,2024,2024-03-06,1
+https://doi.org/10.21428/e4baedd9.92e511e3,Closing the Execution Gap in Generative AI for Chemicals and Materials: Freeways or Safeguards,51.939312,2024,2024-03-27,1
+https://doi.org/10.1101/2024.04.18.590104,Revealing the Prevalence of Suboptimal Cells and Organs in Reference Cell Atlases: An Imperative for Enhanced Quality Control,51.37641,2024,2024-04-22,1
+https://doi.org/10.3390/en17040829,Comparative Analysis between Intelligent Machine Committees and Hybrid Deep Learning with Genetic Algorithms in Energy Sector Forecasting: A Case Study on Electricity Price and Wind Speed in the Brazilian Market,50.082153,2024,2024-02-09,1
+https://doi.org/10.1007/s10670-018-0091-8,Analytic Metaphysics Versus Naturalized Metaphysics: The Relevance of Applied Ontology,49.45353,2018,2018-12-01,20
+https://doi.org/10.3390/applbiosci2020020,An Event-Driven Architecture for Genomics-Based Diagnostic Data Processing,48.667606,2023,2023-06-02,1
+https://doi.org/10.15252/embr.201744065,Charities and the lure of capitalism,48.481827,2017,2017-03-08,5
+https://doi.org/10.18653/v1/2023.emnlp-main.56,Coarse-to-Fine Contrastive Learning in Image-Text-Graph Space for Improved Vision-Language Compositionality,48.31107,2023,2023-01-01,3
+https://doi.org/10.1101/2024.04.01.586509,Inferring gene regulatory networks by hypergraph variational autoencoder,48.17,2024,2024-04-02,1
+https://doi.org/10.3390/ijms242115829,Imaging and Genetic Tools for the Investigation of the Endocannabinoid System in the CNS,47.045868,2023,2023-10-31,2
+https://doi.org/10.1017/9781108568272.032,Wisdom in Medical Decision-Making,46.856354,2019,2019-03-18,17
+https://doi.org/10.18235/0004947,Deep Tech: The New Wave,44.541283,2023,2023-06-14,1
+https://doi.org/10.1038/s41598-024-57057-3,Prediction uncertainty estimates elucidate the limitation of current NSCLC subtype classification in representing mutational heterogeneity,44.367943,2024,2024-03-21,1
+https://doi.org/10.1186/s12911-023-02372-4,21st century (clinical) decision support in nursing and allied healthcare. Developing a learning health system: a reasoned design of a theoretical framework,44.34185,2023,2023-12-05,1
+https://doi.org/10.1186/s12964-017-0207-9,Predictive model identifies strategies to enhance TSP1-mediated apoptosis signaling,44.252117,2017,2017-12-01,23
+https://doi.org/10.1101/2022.07.05.498860,Predicting causal citations without full text,43.92816,2022,2022-07-07,1
+https://doi.org/10.1038/s41540-024-00339-3,MarkerMap: nonlinear marker selection for single-cell studies,43.110924,2024,2024-02-14,1
+https://doi.org/10.1145/3274442,Transforming Taxonomic Interfaces,43.001884,2018,2018-11-01,9
+https://doi.org/10.1515/9783111351490-003,ChatGPT als doppelte Herausforderung für die Wissenschaft,42.505157,2024,2024-01-05,1
+https://doi.org/10.3390/sym15101827,Dynamic Response of an Elastic Tube-like Nanostructure Embedded in a Vibrating Medium and under the Action of Moving Nano-Objects,42.146072,2023,2023-09-26,7
+https://doi.org/10.1038/s42003-023-04991-z,"3D reconstruction of skin and spatial mapping of immune cell density, vascular distance and effects of sun exposure and aging",41.59959,2023,2023-07-19,7
+https://doi.org/10.3390/ijms25021066,Graphene Oxide Nanoparticles and Organoids: A Prospective Advanced Model for Pancreatic Cancer Research,40.41295,2024,2024-01-15,2
+https://doi.org/10.21203/rs.3.rs-2644486/v1,The Nucleotide Transformer: Building and Evaluating Robust Foundation Models for Human Genomics,40.354797,2023,2023-03-21,0
+https://doi.org/10.1080/23299460.2024.2304381,Dual use concerns of generative AI and large language models,39.7631,2024,2024-01-29,4
+https://doi.org/10.3389/fnana.2018.00111,From Matrices to Knowledge: Using Semantic Networks to Annotate the Connectome,39.59318,2018,2018-12-07,6
+https://doi.org/10.1109/iccvw60793.2023.00013,Haystack: A Panoptic Scene Graph Dataset to Evaluate Rare Predicate Classes,38.05326,2023,2023-10-02,1
+https://doi.org/10.3389/fgene.2024.1335591,Comprehensive transcriptomic analysis unveils the interplay of mRNA and LncRNA expression in shaping collagen organization and skin development in Dezhou donkeys,37.594322,2024,2024-02-09,1
+https://doi.org/10.1186/s12859-019-2810-9,Multi-domain semantic similarity in biomedical research,37.397057,2019,2019-05-01,2
+https://doi.org/10.1177/0952695118804751,The global lexicostatistical database: A total archive of linguistic prehistory,35.97159,2018,2018-12-01,3
+https://doi.org/10.32942/osf.io/e2ahg,Understanding the Evolution of Ecological Sex Differences: Integrating Character Displacement and the Darwin-Bateman Paradigm,35.88015,2019,2019-05-27,3
+https://doi.org/10.1145/3572914,Dual Scene Graph Convolutional Network for Motivation Prediction,35.87156,2022,2022-12-01,3
+https://doi.org/10.1101/2022.12.06.519374,Learning the Drug-Target Interaction Lexicon,35.612522,2022,2022-12-10,1
+https://doi.org/10.1109/tip.2023.3266887,Plug-and-Play Regulators for Image-Text Matching,35.06333,2023,2023-01-01,6
+https://doi.org/10.1101/2024.06.04.596709,Cross-species plant genomes modeling at single nucleotide resolution using a pre-trained DNA language model,35.044315,2024,2024-06-05,0
+https://doi.org/10.1007/s43681-024-00465-y,Three different types of AI hype in healthcare,34.6874,2024,2024-03-14,1
+https://doi.org/10.1101/2024.03.11.583506,Discovering CRISPR-Cas system with self-processing pre-crRNA capability by foundation models,34.57215,2024,2024-03-11,0
+https://doi.org/10.3389/fpls.2023.1271070,The evolving definition of plant cell type,34.01403,2023,2023-08-25,1
+https://doi.org/10.1016/j.ins.2017.04.008,A new Dirichlet process for mining dynamic patterns in functional data,33.792217,2017,2017-04-07,5
+https://doi.org/10.1017/s0020589323000350,‘EQUITY’ IN THE PANDEMIC TREATY: THE FALSE HOPE OF ‘ACCESS AND BENEFIT-SHARING’,32.99413,2023,2023-10-01,4
+https://doi.org/10.4324/9780429401701,Transforming Agriculture in Southern Africa,32.74038,2019,2019-11-27,17
+https://doi.org/10.21203/rs.3.rs-3376641/v1,Evaluating the Utilities of Large Language Models in Single-cell Data Analysis,32.42105,2023,2023-10-12,1
+https://doi.org/10.1177/1053451218765212,Using Pinterest to Find and Share Evidence-Based Practices,32.16536,2018,2018-04-02,8
+https://doi.org/10.1101/2020.11.09.20228577,Movement disorders ontology for clinically oriented and clinicians-driven data mining of multi-center cohorts in Parkinson’s disease,32.02065,2020,2020-11-12,1
+https://doi.org/10.1101/2023.12.11.23299816,Exploratory electronic health record analysis with ehrapy,31.910635,2023,2023-12-11,1
+https://doi.org/10.1186/s43094-023-00569-y,"Pharmacokinetics of nanoparticles: current knowledge, future directions and its implications in drug delivery",31.904568,2023,2023-12-11,12
+https://doi.org/10.1101/2024.03.27.587041,Human BioMolecular Atlas Program (HuBMAP): 3D Human Reference Atlas Construction and Usage,31.710213,2024,2024-04-02,2
+https://doi.org/10.21203/rs.3.rs-3539732/v1,Deciphering Cell Types by Integrating scATAC-seq Data with Genome Sequences,31.653744,2024,2024-03-18,0
+https://doi.org/10.1007/s43615-022-00247-w,Circular and Networked Bioeconomies for Net-Zero Food Production: There is Nothing Magic About Circles,31.264248,2023,2023-01-21,2
+https://doi.org/10.21203/rs.3.rs-3367433/v1,Pretrained transformers applied to clinical studies improve predictions of treatment efficacy and associated biomarkers,31.159607,2023,2023-10-23,0
+https://doi.org/10.1088/2632-2153/acc8b8,Simulation-based inference of single-molecule force spectroscopy,31.13244,2023,2023-03-29,1
+https://doi.org/10.3390/systems6020018,Modeling Isomorphic Systems Processes Using Monterey Phoenix,30.9095,2018,2018-05-28,2
+https://doi.org/10.22214/ijraset.2023.55573,Healthcare: A Growing Role for Large Language Models and Generative AI,30.726196,2023,2023-08-31,0
+https://doi.org/10.3389/fphar.2022.988974,Landscape analysis for a neonatal disease progression model of bronchopulmonary dysplasia: Leveraging clinical trial experience and real-world data,29.997032,2022,2022-10-12,4
+https://doi.org/10.1093/nar/gkae201,The diversity of splicing modifiers acting on A-1 bulged 5′-splice sites reveals rules for rational drug design,29.93089,2024,2024-03-30,3
+https://doi.org/10.1101/2024.04.05.588133,wwLearning the language of proteins and predicting the impact of mutations,29.900375,2024,2024-04-06,0
+https://doi.org/10.1101/2024.03.20.585793,Perturbation-aware predictive modeling of RNA splicing using bidirectional transformers,29.733551,2024,2024-03-21,0
+https://doi.org/10.1101/2024.01.26.577402,Using large scale transfer learning to highlight the role of chromatin state in intron retention,29.157486,2024,2024-01-30,0
+https://doi.org/10.1101/2023.02.07.527497,GAUT10 is required for Arabidopsis root cell differentiation and elongation,28.170301,2023,2023-02-07,1
+https://doi.org/10.1007/978-3-031-23190-2_8,Summary and Outlook,26.871166,2023,2023-01-01,0
+https://doi.org/10.11116/9789461662507,Logic of Experimentation: Rethinking Music Performance Through Artistic Research,26.817928,2018,2018-12-05,36
+https://doi.org/10.2196/preprints.59792,Generative AI models in time varying biomedical data: a systematic review (Preprint),26.69099,2024,2024-04-30,0
+https://doi.org/10.1101/2024.04.11.589024,Current genomic deep learning architectures generalize across grass species but not alleles,26.584064,2024,2024-04-13,0
+https://doi.org/10.1136/jitc-2023-007841,Just how transformative will AI/ML be for immuno-oncology?,26.539082,2024,2024-03-01,0
+https://doi.org/10.1371/journal.pmed.1003780,Community-facility linkage models and maternal and infant health outcomes in Malawi’s PMTCT/ART program: A cohort study,26.20531,2021,2021-09-17,3
+https://doi.org/10.31223/x5609p,Machine Learning in Petrology: State-of-the-Art and Future Perspectives,25.516266,2023,2023-09-08,0
+https://doi.org/10.1101/2023.11.24.568626,AptaBERT: Predicting aptamer binding interactions,25.415583,2023,2023-11-25,0
+https://doi.org/10.36227/techrxiv.19502131.v1,Modern Views of Machine Learning for Precision Psychiatry,25.396029,2022,2022-04-08,0
+https://doi.org/10.1093/bib/bbae157,DSNetax: a deep learning species annotation method based on a deep-shallow parallel framework,24.93564,2024,2024-03-23,0
+https://doi.org/10.1186/s13731-022-00212-9,Balancing the perceptions of NK modelling with critical insights,24.874758,2022,2022-02-22,4
+https://doi.org/10.1007/s10463-018-0654-0,Spline estimator for ultra-high dimensional partially linear varying coefficient models,24.780182,2018,2018-03-13,3
+https://doi.org/10.3389/fphys.2023.1197224,The combined analysis of urine and blood metabolomics profiles provides an accurate prediction of the training and competitive status of Chinese professional swimmers,24.42437,2023,2023-06-14,2
+https://doi.org/10.7249/rra2838-1,Machine Learning and gene editing at the helm of a societal evolution,24.087406,2023,2023-01-01,0
+https://doi.org/10.1101/2020.01.08.899666,Drug repurposing for mitochondrial diseases using a pharmacological model of complex I deficiency in the yeast <i>Yarrowia lipolytica</i>,23.997501,2020,2020-01-09,1
+https://doi.org/10.1101/2023.11.27.568912,T-cell receptor sequences correlate with and predict gene expression levels in T cells,23.104097,2023,2023-11-28,0
+https://doi.org/10.1007/s12539-024-00605-2,A Combined Manual Annotation and Deep-Learning Natural Language Processing Study on Accurate Entity Extraction in Hereditary Disease Related Biomedical Literature,23.07107,2024,2024-02-10,0
+https://doi.org/10.7759/cureus.51963,"Machine Learning in Neurosurgery: Toward Complex Inputs, Actionable Predictions, and Generalizable Translations",23.0611,2024,2024-01-09,0
+https://doi.org/10.1101/2024.04.08.588634,BAITSAO: Building A Foundation Model for Drug Synergy Analysis Powered by Language Models,22.512459,2024,2024-04-12,0
+https://doi.org/10.1371/journal.pcbi.1011526,Improving deep models of protein-coding potential with a Fourier-transform architecture and machine translation task,22.467758,2023,2023-10-12,0
+https://doi.org/10.1016/j.jtho.2023.09.385,P1.20-05 Leveraging NLP to Identify Biomarker-Eligible Patients,21.588367,2023,2023-10-31,0
+https://doi.org/10.20944/preprints202403.0704.v1,"Fear of Artificial Intelligence? NLP, ML and LLMs Based Discovery of AI-Phobia and Fear Sentiment Propagation by AI News.",21.556948,2024,2024-03-13,0
+https://doi.org/10.1101/2023.06.24.546360,Fusion Neural Network (FusNet) for predicting protein-mediated loops,21.505838,2023,2023-06-26,0
+https://doi.org/10.1101/2024.04.23.590746,Optimizing biomedical information retrieval with a keyword frequency-driven Prompt Enhancement Strategy,21.423693,2024,2024-04-28,0
+https://doi.org/10.1007/978-3-031-23190-2_1,Introduction,21.354973,2023,2023-01-01,0
+https://doi.org/10.36227/techrxiv.171769139.99464428/v2,Foundation Models for Video Understanding: A Survey,21.2806,2024,2024-07-01,0
+https://doi.org/10.1109/access.2023.3341007,"NS-IL: Neuro-Symbolic Visual Question Answering using Incrementally Learnt, Independent Probabilistic Models for Small Sample Sizes.",20.671906,2023,2023-01-01,0
+https://doi.org/10.1101/2023.11.29.569320,BIOFORMERS: A SCALABLE FRAMEWORK FOR EXPLORING BIOSTATES USING TRANSFORMERS,20.600168,2023,2023-12-01,0
+https://doi.org/10.1002/9781394240197.index,Index,20.503021,2024,2024-01-05,0
+https://doi.org/10.1007/978-3-031-23190-2_5,Foundation Models for Information Extraction,20.379038,2023,2023-01-01,0
+https://doi.org/10.1186/s13326-022-00268-2,Anatomy and the type concept in biology show that ontologies must be adapted to the diagnostic needs of research,20.322245,2022,2022-06-27,2
+https://doi.org/10.56726/irjmets48495,Enhancing Antibiotic Prescribing in Urgent Care by Leveraging Large Language Models for Optimized Clinical Decision Support,20.10048,2024,2024-01-20,0
+https://doi.org/10.1101/2024.02.17.580852,Hist2Cell: Deciphering Fine-grained Cellular Architectures from Histology Images,19.951187,2024,2024-02-21,0
+https://doi.org/10.31235/osf.io/s4qdy,From Protoscience to Epistemic Monoculture: How Benchmarking Set the Stage for the Deep Learning Revolution,19.93613,2024,2024-04-12,0
+https://doi.org/10.1101/2024.02.13.580100,ChemGLaM: Chemical-Genomics Language Models for Compound-Protein Interaction Prediction,19.927938,2024,2024-02-15,0
+https://doi.org/10.3390/bioengineering10101134,AIMS: An Automatic Semantic Machine Learning Microservice Framework to Support Biomedical and Bioengineering Research,19.646524,2023,2023-09-27,0
+https://doi.org/10.1101/2024.01.06.24300926,Machine learning enabled prediction of digital biomarkers from whole slide histopathology images,19.306198,2024,2024-01-08,0
+https://doi.org/10.1609/aaai.v37i5.25809,Visually Grounded Commonsense Knowledge Acquisition,19.04504,2023,2023-06-26,0
+https://doi.org/10.1002/cam4.7253,Artificial intelligence to unlock <scp>real‐world</scp> evidence in clinical oncology: A primer on recent advances,18.68731,2024,2024-06-01,0
+https://doi.org/10.1109/globecom54140.2023.10436923,Author Index,18.637379,2023,2023-12-04,0
+https://doi.org/10.1101/2024.02.02.578533,OligoFormer: an accurate and robust prediction method for siRNA design,18.381413,2024,2024-02-07,0
+https://doi.org/10.1002/pbc.30980,Proteomic insights into paediatric cancer: Unravelling molecular signatures and therapeutic opportunities,18.120762,2024,2024-03-31,0
+https://doi.org/10.4995/thesis/10251/200227,Deep Learning Strategies for Overcoming Diagnosis Challenges with Limited Annotations,18.113482,2023,2023-10-26,0
+https://doi.org/10.1609/aaai.v38i2.27872,EVE: Efficient Vision-Language Pre-training with Masked Prediction and Modality-Aware MoE,18.063694,2024,2024-03-24,0
+https://doi.org/10.18122/td.1991.boisestate,Improving the Ribozyme Toolbox,17.688158,2022,2022-08-01,0
+https://doi.org/10.1002/9781394220649.oth,Conclusion,17.357641,2024,2024-01-12,0
+https://doi.org/10.21203/rs.3.rs-3854649/v1,A Deep Dive into GI Tract Imaging Transformation through Advanced Image Segmentation Analysis with Deep Learning,17.347092,2024,2024-01-18,0
+https://doi.org/10.3389/fneur.2021.708800,Traumatic Injury to the Developing Brain: Emerging Relationship to Early Life Stress,17.318249,2021,2021-08-18,3
+https://doi.org/10.21203/rs.3.rs-3705500/v1,Multiplexed tumor profiling with generative AI accelerates histopathology workflows and improves clinical predictions,17.313194,2023,2023-12-20,0
+https://doi.org/10.1101/2024.03.17.585376,ERNIE-RNA: An RNA Language Model with Structure-enhanced Representations,17.221333,2024,2024-03-17,0
+https://doi.org/10.1007/s44258-024-00019-1,AttSiOff: a self-attention-based approach on siRNA design with inhibition and off-target effect prediction,17.170353,2024,2024-04-23,0
+https://doi.org/10.1093/bjs/znae090,Foundation models: the future of surgical artificial intelligence?,17.112646,2024,2024-03-14,0
+https://doi.org/10.3233/faia230560,Using Self-Supervised Dual Constraint Contrastive Learning for Cross-Modal Retrieval,16.84344,2023,2023-09-28,0
+https://doi.org/10.1080/09699260.2017.1417805,"Cerebral gliomas: Treatment, prognosis and palliative alternatives",16.820019,2018,2018-01-02,1
+https://doi.org/10.20944/preprints202404.0431.v1,Twenty-Year Climatology of Solar UV and PAR in Cyprus: Integrating Satellite Earth Observations with Radiative Transfer Modeling,16.806133,2024,2024-04-05,1
+https://doi.org/10.1101/2023.11.28.568839,Interpretable Inflammation Landscape of Circulating Immune cells,16.78804,2023,2023-11-28,0
+https://doi.org/10.54688/ayd.1104830,PROBLEMS AND OPPORTUNITIES OF ARTIFICIAL INTELLIGENCE,16.67063,2022,2022-06-27,0
+https://doi.org/10.17932/ejeas.2021.024/2022.202,,16.652647,2021,2021-01-01,0
+https://doi.org/10.3389/fphys.2022.834211,"Image-Driven Modeling of Nanoscopic Cardiac Function: Where Have We Come From, and Where Are We Going?",16.401733,2022,2022-03-08,1
+https://doi.org/10.1101/2024.02.16.580624,Delineating the Effective Use of Self-Supervised Learning in Single-Cell Genomics,16.221369,2024,2024-02-18,0
+https://doi.org/10.17849/insm-50-2-1-4.2,ChatGPT: How Closely Should We Be Watching?,16.044395,2023,2023-12-08,0
+https://doi.org/10.17849/insm-50-2-1-4.1,ChatGPT: How Closely Should We Be Watching?,16.013481,2023,2023-12-08,0
+https://doi.org/10.1002/9781119509875.fmatter,Front Matter,15.887205,2018,2018-10-01,0
+https://doi.org/10.3390/app131810497,A Knowledge Graph Framework for Dementia Research Data,15.829127,2023,2023-09-20,0
+https://doi.org/10.1002/9781119764175.index,Index,15.626356,2021,2021-11-11,0
+https://doi.org/10.15439/978-83-969601-5-3,Proceedings of the Eighth International Conference on Research in Intelligent Computing in Engineering,15.483524,2022,2022-02-20,0
+https://doi.org/10.1561/9781638283454,High Performance Privacy Preserving AI,15.398394,2024,2024-01-01,0
+https://doi.org/10.1016/j.coisb.2017.11.004,Model forms most useful,15.004204,2017,2017-12-01,0
+https://doi.org/10.3390/jcm13020346,Advances and Applications of Lung Organoids in the Research on Acute Respiratory Distress Syndrome (ARDS),14.995935,2024,2024-01-08,1
+https://doi.org/10.1101/2023.11.24.568517,AttSiOff: A self-attention-based approach on siRNA design with inhibition and off-target effect prediction,14.483724,2023,2023-11-24,0
+https://doi.org/10.1177/15554120231219729,From Aesthetics to Asymmetry: Contradictions of Ecological Play in <i>Cities: Skylines</i>,14.478443,2023,2023-12-14,1
+https://doi.org/10.1145/3665869,Human Image Generation: A Comprehensive Survey,14.153292,2024,2024-05-22,0
+https://doi.org/10.1145/3581783.3612388,Enhancing Vision-Language Pre-Training with Jointly Learned Questioner and Dense Captioner,14.139404,2023,2023-10-26,0
+https://doi.org/10.21203/rs.3.rs-4047391/v1,Innovative and practical tools for monitoring and assessing biodiversity status and impacts of multiple human pressures in marine systems,14.0452795,2024,2024-03-11,0
+https://doi.org/10.1117/1.jmi.10.6.061405,"Picture archiving and communication systems: past, present, and future",14.014266,2023,2023-12-28,0
+https://doi.org/10.3390/math11204353,BLogic: A Bayesian Model Combination Approach in Logic Regression,13.902834,2023,2023-10-19,0
+https://doi.org/10.1093/nar/gkad580,iSMOD: an integrative browser for image-based single-cell multi-omics data,13.61608,2023,2023-07-13,0
+https://doi.org/10.5753/sbc.13058.5.8,"“A Nova Eletricidade”: Aplicações, Riscos e Tendências da IA Moderna",13.472934,2023,2023-10-05,0
+https://doi.org/10.1117/12.2650568,Quantum sensing and quantum engineering: a strategy for acceleration via metascience,13.470456,2023,2023-03-08,0
+https://doi.org/10.1101/2024.02.28.582494,Pathway-enhanced Transformer-based robust model for quantifying cell types of origin of cell-free transcriptome,12.932941,2024,2024-02-28,0
+https://doi.org/10.21203/rs.3.rs-3922651/v1,Enhancing the efficiency of protein language models with minimal wet-lab data through few-shot learning,12.928998,2024,2024-02-13,0
+https://doi.org/10.1109/iccvw60793.2023.00009,Knowledge Informed Sequential Scene Graph Verification Using VQA,12.81619,2023,2023-10-02,0
+https://doi.org/10.3389/fnbot.2024.1342786,A framework for neurosymbolic robot action planning using large language models,12.707704,2024,2024-06-04,0
+https://doi.org/10.1101/2024.01.23.576852,Robust Evaluation of Deep Learning-based Representation Methods for Survival and Gene Essentiality Prediction on Bulk RNA-seq Data,12.660351,2024,2024-01-26,0
+https://doi.org/10.1007/978-3-031-39355-6_3,An Appraisal and Operating Characteristics of Major ML Methods Applicable in Healthcare and Health Science,12.652853,2024,2024-01-01,0
+https://doi.org/10.21203/rs.3.rs-3546062/v1,A foundation model for bioactivity prediction using pairwise meta-learning,12.431228,2023,2023-12-21,0
+https://doi.org/10.1007/s12599-024-00870-x,Reimagining Digital Health,12.176594,2024,2024-05-27,0
+https://doi.org/10.1101/2023.12.05.570250,Evolutionary analyses of IDRs reveal widespread signals of conservation,12.11957,2023,2023-12-07,0
+https://doi.org/10.21203/rs.3.rs-4014784/v1,scELMo: Embeddings from Language Models are Good Learners for Single-cell Data Analysis,12.049088,2024,2024-03-27,0
+https://doi.org/10.52783/tjjpt.v44.i4.1080,Forecasting and Prediction of Solar Energy in Solar Photovoltaic Plants,12.0347395,2023,2023-10-24,0
+https://doi.org/10.1101/2022.03.14.22272372,Prospectively validated augmented intelligence for disease-agnostic predictions of clinical success for novel therapeutics,11.943214,2022,2022-03-15,0
+https://doi.org/10.2172/2345295,LABORATORY DIRECTED RESEARCH AND DEVELOPMENT PROGRAM FY 2023 COMPLETED PROJECTS REPORT,11.360639,2024,2024-03-31,0
+https://doi.org/10.55041/ijsrem25975,DEEP RESIDUAL LEARNING FOR RECOGNISING ADULTERATION IN PULSES VIA THERMAL IMAGING,11.1416645,2023,2023-10-01,0
+https://doi.org/10.1016/j.jbi.2018.11.008,50th anniversary retrospective: Computers and Biomedical Research and Journal of Biomedical Informatics,10.984051,2018,2018-11-15,0
+https://doi.org/10.20339/phs.6-22.082,The cognition of sleep in R. Irwin’s novel “The Arabian Nightmare”,10.94794,2022,2022-11-01,0
+https://doi.org/10.18653/v1/2023.findings-emnlp.683,ROME: Evaluating Pre-trained Vision-Language Models on Reasoning beyond Visual Common Sense,10.8806095,2023,2023-01-01,0
+https://doi.org/10.3390/life14010090,Improving Tumor-Infiltrating Lymphocytes Score Prediction in Breast Cancer with Self-Supervised Learning,10.595303,2024,2024-01-05,0
+https://doi.org/10.1609/aaai.v38i5.28278,GroundVLP: Harnessing Zero-Shot Visual Grounding from Vision-Language Pre-training and Open-Vocabulary Object Detection,10.367981,2024,2024-03-24,0
+https://doi.org/10.7249/cfa3220-1,Foundation Model Convening: Conference Summary,10.246304,2024,2024-01-01,0
+https://doi.org/10.1016/b978-0-12-809633-8.20398-1,Biological and Medical Ontologies: Human Phenotype Ontology (HPO),10.233742,2017,2017-12-20,0
+https://doi.org/10.1371/journal.pcbi.1012028,Evolutionary analyses of intrinsically disordered regions reveal widespread signals of conservation,10.228504,2024,2024-04-25,0
+https://doi.org/10.1101/2024.05.03.592325,Multi-Drug Artificial Neural Network Models for Predicting HIV-1 RTI Resistance,10.219107,2024,2024-05-06,0
+https://doi.org/10.1101/2024.04.16.24305922,How many microbial species are there in human tumor and normal tissues?,10.215727,2024,2024-04-19,0
+https://doi.org/10.1101/2023.10.30.564861,A foundation model for bioactivity prediction using pairwise meta-learning,10.147959,2023,2023-11-02,0
+https://doi.org/10.11606/t.5.2024.tde-23042024-111255,Regulação da inteligência artificial na saúde,10.094824,2024,2024-01-29,0
+https://doi.org/10.1093/ndt/gfad203,A spatially resolved atlas of healthy and injured kidney cell states,9.997898,2023,2023-09-14,0
+https://doi.org/10.1007/978-3-319-53300-1_12,Enhancing Data Access and Utilization: Federal Big Data Initiative and Relevance to Health Disparities Research,9.865702,2017,2017-01-01,0
+https://doi.org/10.1017/9781009417075,Beyond Compassion,9.776436,2023,2023-11-09,2
+https://doi.org/10.1080/15481603.2024.2348863,"Wildlife detection, counting and survey using satellite imagery: are we there yet?",9.736086,2024,2024-05-09,0
+https://doi.org/10.1101/2023.09.25.559244,CellPolaris: Decoding Cell Fate through Generalization Transfer Learning of Gene Regulatory Networks,9.624498,2023,2023-09-26,0
+https://doi.org/10.3389/frobt.2021.559380,On the Design of Social Robots Using Sheaf Theory and Smart Contracts,9.555792,2021,2021-08-18,0
+https://doi.org/10.23889/suthesis.61814,Time-Series Embedded Feature Selection Using Deep Learning: Data Mining Electronic Health Records for Novel Biomarkers,9.230068,2022,2022-01-01,0
+https://doi.org/10.21428/4f83582b.bfc5e9cb,Extracting insights from scientific publications using large language models,8.911781,2023,2023-11-15,0
+https://doi.org/10.1002/ece3.10013,Revisiting the historical scenario of a disease dissemination using genetic data and Approximate Bayesian Computation methodology: The case of <i>Pseudocercospora fijiensis</i> invasion in Africa,8.679881,2023,2023-04-01,0
+https://doi.org/10.18002/10612/18580,Botnet activity spotting with artificial intelligence: efficient bot malware detection and social bot identification,8.42963,2023,2023-11-30,0
+https://doi.org/10.1101/2024.04.26.591410,"Neural Net Derived Gene Targets For The Nervous System, &amp; Nervous System Derived Hierarchies For The Neural Net",8.415766,2024,2024-04-29,0
+https://doi.org/10.26481/dis.20181128js,Clinical data science in radiotherapy,8.167482,2018,2018-01-01,0
+https://doi.org/10.3410/f.738650621.793578675,Faculty Opinions recommendation of Efficient rational modification of non-ribosomal peptides by adenylation domain substitution.,8.044756,2020,2020-09-23,0
+https://doi.org/10.1609/aaai.v38i3.28064,LaViP: Language-Grounded Visual Prompting,8.014152,2024,2024-03-24,0
+https://doi.org/10.22533/at.ed.5362206129,DOSIMETRIA TERMOLUMINESCENTE,8.012814,2022,2022-12-06,1
+https://doi.org/10.11647/obp.0335.02,"2. Knowledge, Language and Reason",7.996756,2023,2023-11-17,0
+https://doi.org/10.1515/9783111351490-013,„Creating God“,7.725281,2024,2024-01-05,0
+https://doi.org/10.3389/fpubh.2023.1249277,Addressing unforeseen public health risks via the use of sustainable system and process management,7.4067597,2023,2023-11-10,0
+https://doi.org/10.1109/tsmc.2023.3335634,"2023 Index IEEE Transactions on Systems, Man, and Cybernetics: Systems Vol. 53",7.1938815,2023,2023-11-22,0
+https://doi.org/10.6035/14028.2017.513968,Biotea-Biolinks: A semantic infrastructure for exploring and analyzing scientific publications,7.1749983,2017,2017-06-23,0
+https://doi.org/10.1002/aisy.202300644,Green AI‐Driven Concept for the Development of Cost‐Effective and Energy‐Efficient Deep Learning Method: Application in the Detection of <i>Eimeria</i> Parasites as a Case Study,6.7605953,2024,2024-06-12,0
+https://doi.org/10.1101/2024.01.24.576988,"Rapid, automatic typing of Clostridioides difficile Ribotypes Using MALDI-TOF MS",6.646431,2024,2024-01-25,0
+https://doi.org/10.1523/hon.011011,Larry W. Swanson,6.403549,2020,2020-01-01,0
+https://doi.org/10.1155/2024/7967999,Preliminary Exploration of Potential Active Ingredients and Molecular Mechanisms of Yanggan Yishui Granules for Treating Hypertensive Nephropathy Using UPLC-Q-TOF/MS Coupled with Network Pharmacology and Molecular Docking Strategy,6.1749887,2024,2024-05-10,0
+https://doi.org/10.4236/jqis.2019.91004,Tribonacci Quantum Cosmology: Optimal Non-Antipodal Spherical Codes &amp;amp; Graphs,6.033227,2019,2019-01-01,0
+https://doi.org/10.4018/ijdwm.325059,Application of Improved Chameleon Swarm Algorithm and Improved Convolution Neural Network in Diagnosis of Skin Cancer,5.929843,2023,2023-06-21,0
+https://doi.org/10.1609/aaai.v38i16.29798,BOK-VQA: Bilingual outside Knowledge-Based Visual Question Answering via Graph Representation Pretraining,5.5836277,2024,2024-03-24,0
+https://doi.org/10.1101/2022.01.18.476858,Understanding the development of oral epithelial organs through single cell transcriptomic analysis,5.1474695,2022,2022-01-21,0
+https://doi.org/10.1093/oxfordhb/9780190633899.013.37,Amphibious Entrepreneurs and the Origins of Invention,4.893469,2019,2019-08-12,0
+https://doi.org/10.12688/openreseurope.17330.1,Person-centred data sharing: Empirical studies in private individuals’ attitudes,4.4439545,2024,2024-04-24,0
+https://doi.org/10.1007/s12110-023-09459-x,From the Ground Up: A Multidisciplinary Approach to Past Fertility and Population Narratives,3.5438771,2023,2023-09-01,0
+https://doi.org/10.1093/fmls/cqac026,"On Purpose: Interest, Disinterest and Literature We Can Live By",3.2528262,2022,2022-04-01,0
+https://doi.org/10.1017/9781139028776.005,Territory,2.8005042,2018,2018-07-27,0
+https://doi.org/10.31219/osf.io/x6h9b,Agent-based kinetics: A nonspatial stochastic method for simulating the dynamics of heterogeneous populations.,2.6654634,2019,2019-07-26,0
+https://doi.org/10.1515/9783111085692,Bilder unter Verdacht,2.456376,2024,2024-01-12,0
+https://doi.org/10.22533/at.ed.5362206121,COMPOSTOS COM CAPACIDADE ANTIOXIDANTE ENCONTRADOS EM PLANTAS MEDICINAIS E SEUS BENEFÍCIOS PARA SAÚDE: UMA REVISÃO,2.0336368,2022,2022-12-06,0
+https://doi.org/10.22533/at.ed.53622061211,FERRAMENTAS DE DESENVOLVIMENTO E CRIAÇÃO DE ONTOLOGIAS,2.0336368,2022,2022-12-06,0
+https://doi.org/10.22533/at.ed.5362206128,FALHAS NO COMPORTAMENTO DE SISTEMAS ROTATIVOS E POSSÍVEIS SOLUÇÕES,2.0336368,2022,2022-12-06,0
+https://doi.org/10.22533/at.ed.536220612,Ciências exatas e da terra e engenharias: Conhecimento e informação,2.0336368,2022,2022-12-06,0
+https://doi.org/10.22533/at.ed.5362206125,ANÁLISE TÉCNICO-ECONÔMICA DA EFICIÊNCIA ENERGÉTICA DE UM PRÉDIO PÚBLICO – UM ESTUDO DE CASO,2.0236511,2022,2022-12-06,0
+https://doi.org/10.22533/at.ed.5362206122,DOENÇAS COM ETIOLOGIA FÚNGICA EM PLANTAS DA FAMÍLIA ORCHIDACEAE,2.0202026,2022,2022-12-06,0
+https://doi.org/10.22533/at.ed.53622061210,CÓDIGO DE MONTE CARLO APLICADO A RADIOTERAPIA,2.0201492,2022,2022-12-06,0
+https://doi.org/10.22533/at.ed.5362206124,"CADASTRO TERRITORIAL URBANO: ESTUDO COMPARATIVO ENTRE PROCEDIMENTOS E EXIGENCIAS DOS MUNICIPIOS QUE COMPÕE A MICORREGIÃO DE MARINGÁ, PR",2.0177858,2022,2022-12-06,0
+https://doi.org/10.22533/at.ed.53622061212,PRODUÇÃO E CARACTERIZAÇÃO DE VITROCERÂMICAS OBTIDAS A PARTIR DE PÓ DE VIDRO RECICLADO DE PARA-BRISAS E ADIÇÃO DE Nb2O5,2.0177858,2022,2022-12-06,0
+https://doi.org/10.22533/at.ed.5362206126,ANALYSIS OF PRECIPITATION IN BELÉM-PA CITY (PERIOD 1967-2016),2.0141373,2022,2022-12-06,0
+https://doi.org/10.17760/d20405636,Cultural dexerity,1.5953021,2021,2021-01-01,0
