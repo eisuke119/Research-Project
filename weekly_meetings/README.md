@@ -13,7 +13,7 @@
 ##### Who helped you this week?
 
 * Youtube videos on state space models
-* Meeting with Veronica last week
+* Meeting with Veronika last week
 
 ##### What did you achieve?
 
@@ -32,6 +32,6 @@
 *  Model Testing/data sandbox
 *  HPC
 
-##### Where do you need help from Veronica?
+##### Where do you need help from Veronika?
 
 * Litterature Review
