@@ -54,7 +54,7 @@
 
 ##### What did you struggle with?
 
-* Optimal storage/access to data when processsing.
+* Optimal storage/access to data when processsing.  
 * Eligibility criteria for literature review.
 * OpenAlex API search query was giving funny results.
 
@@ -63,7 +63,15 @@
 *  Writing report for systematic literature review.
 *  Datasets.
 
+##### What would like to work on today?
+
+* Familiarise ourselves the the metagenomic binning methods / tools / evaluation used in VAMB and DNABERT-S
+    * Start Email correspondance with novonesis to verify new datasets and their eligibility - both for metagenomic binning and phenotype prediction.
+* Write systematic literature review methodology in overleaf.
+    * Start on introduction?
+
 ##### Where do you need help from Veronika?
 
 * Processing large files on HPC and optimal processing.
 * Discard systematic dataset review?
+* PRISMA guidelines
