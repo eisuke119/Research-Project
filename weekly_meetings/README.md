@@ -3,6 +3,7 @@
 [Overleaf report](https://www.overleaf.com/project/66fa55cd26323c2d085403fd)
 #### Meeting Outline
 * [03 October 2024](#date-03-october-2024)
+* [10 October 2024](#date-10-october-2024)
 
 #### Date: 03 October 2024
 
@@ -35,3 +36,34 @@
 ##### Where do you need help from Veronika?
 
 * Litterature Review
+
+#### Date: 10 October 2024
+
+
+##### Who helped you this week?
+
+* Novonesis on datasets
+* Veronika
+
+##### What did you achieve?
+
+* Literature review nearly done.
+    * Needs to be written in report.
+* Dataset review is in progress.
+    * Localized API endpoints and strategy to retrieve.
+
+##### What did you struggle with?
+
+* Optimal storage/access to data when processsing.
+* Eligibility criteria for literature review.
+* OpenAlex API search query was giving funny results.
+
+##### What would you like to work on next week?
+
+*  Writing report for systematic literature review.
+*  Datasets.
+
+##### Where do you need help from Veronika?
+
+* Processing large files on HPC and optimal processing.
+* Discard systematic dataset review?
