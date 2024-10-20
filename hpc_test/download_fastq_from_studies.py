@@ -77,7 +77,7 @@ def read_fastq_from_all_studies(file_path):
 def download_fastq(url, destination):
     """Download a fastq file using wget."""
     try:
-        subprocess.run(["wget", url, "-O", destination], check=True)
+        subprocess.run(["wget", "-q" url, "-O", destination], check=True)
         print(f"Downloaded Fastq: {destination}")
     except subprocess.CalledProcessError as e:
         print(f"Error downloading file: {e}")
