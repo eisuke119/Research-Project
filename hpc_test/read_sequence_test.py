@@ -26,7 +26,7 @@ def find_fastq_files(directory):
     # Walk through the directory
     for root, dirs, files in os.walk(directory):
         for file in files:
-            if file.endswith(".fastq"):
+            if file.endswith(".fastq.gz"):
                 fastq_files.append(os.path.join(root, file))
 
     return fastq_files
@@ -45,6 +45,7 @@ def get_sequences_count(file_path):
 
 if __name__ == "__main__":
     setup_data_paths()
+
     fastq_files = find_fastq_files(os.environ["DATA_PATH"])
 
     for fastq_file in fastq_files:
