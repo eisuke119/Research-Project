@@ -47,6 +47,7 @@ if __name__ == "__main__":
     setup_data_paths()
 
     fastq_files = find_fastq_files(os.environ["DATA_PATH"])
+    print(fastq_files)
 
     for fastq_file in fastq_files:
         total_records = get_sequences_count(fastq_file)
