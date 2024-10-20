@@ -4,15 +4,6 @@ import subprocess
 from Bio import SeqIO
 
 
-def download_file(url, destination):
-    """Download a file using wget."""
-    try:
-        subprocess.run(["wget", url, "-O", destination], check=True)
-        print(f"Downloaded: {destination}")
-    except subprocess.CalledProcessError as e:
-        print(f"Error downloading file: {e}")
-
-
 def read_fastq_gz(file_path):
     sequences = []
     total_records = 0
@@ -45,9 +36,6 @@ if __name__ == "__main__":
 
     # Specify the file name for the downloaded file
     file_path = "SRR6468499_1.fastq.gz"
-
-    # Download the file
-    download_file(url, file_path)
 
     # Read the FASTQ file
     sequences = read_fastq_gz(file_path)
