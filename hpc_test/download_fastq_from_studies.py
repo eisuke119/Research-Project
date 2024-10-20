@@ -112,5 +112,6 @@ if __name__ == "__main__":
     [fetch_fastq_from_study(study) for study in studies]
 
     all_studies_fastq = read_fastq_from_all_studies(os.environ["STUDIES_FASTQ_PATH"])
+    print(all_studies_fastq.keys())
 
-    # download_all_fastq_files(all_studies_fastq)
+    download_all_fastq_files(all_studies_fastq)
