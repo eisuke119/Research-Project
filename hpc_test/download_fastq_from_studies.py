@@ -55,7 +55,7 @@ def read_fastq_from_all_studies(file_path):
     studies_data = {}
 
     for filename in os.listdir(file_path):
-        if filename.endswith("_fastq.txt"):
+        if filename.endswith("_fastq_list.txt"):
             study_accession = filename.split("_")[0]
             study_file_path = os.path.join(file_path, filename)
 
@@ -114,4 +114,4 @@ if __name__ == "__main__":
     all_studies_fastq = read_fastq_from_all_studies(os.environ["STUDIES_FASTQ_PATH"])
     print(all_studies_fastq.keys())
 
-    download_all_fastq_files(all_studies_fastq)
+    # download_all_fastq_files(all_studies_fastq)
