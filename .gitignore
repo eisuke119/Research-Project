@@ -1,5 +1,6 @@
 .DS_Store
 .enviroment.yml
 .hpc_test/data/
+.data/
 *.job
 *.out
