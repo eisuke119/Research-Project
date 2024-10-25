@@ -1,0 +1,456 @@
+doi,title,relevance_score,publication_year,publication_date,cited_by_count,"Category ( 1=DNA FM, 2=DNA FM Benchmark)","Full text screening
+(0=exclude, 1=include)","Title & Abstract Screening
+(0=exclude, 1=include)"
+https://doi.org/10.1093/bioinformatics/btab083,dnabert pretrained bidirectional encoder representations from transformers model for dnalanguage in genome,268.5696,2021,2021-02-03,433,1,1,1
+https://doi.org/10.48550/arxiv.2306.15006,dnabert2 efficient foundation model and benchmark for multispecies genome,127.29818,2023,2023-01-01,21,1,1,1
+https://doi.org/10.48550/arXiv.2402.08777,dnaberts learning speciesaware dna embedding with genome foundation models,93.47865,2024,2024-02-15,1,1,1,1
+https://doi.org/10.1101/2024.03.14.584712,segmentnt annotating the genome at singlenucleotide resolution with dna foundation models,81.19441,2024,2024-03-15,5,0,0,1
+https://doi.org/10.1101/2023.01.11.523679,the nucleotide transformer building and evaluating robust foundation models for human genomics,66.1107,2023,2023-01-15,58,1,1,1
+https://doi.org/10.21203/rs.3.rs-2742561/v1,sequential labelling and dnabert for splice site prediction in homo sapiens dna,66.050125,2023,2023-04-07,2,0,0,0
+https://doi.org/10.1101/2024.02.27.582234,sequence modeling and design from molecular to genome scale with evo,46.07493,2024,2024-02-27,36,1,1,1
+https://doi.org/10.1016/j.csbj.2023.11.025,dnabertbased explainable lncrna identification in plant genome assemblies,38.672985,2023,2023-01-01,3,0,0,0
+https://doi.org/10.48550/arxiv.2306.15794,hyenadna longrange genomic sequence modeling at single nucleotide resolution,33.01914,2023,2023-01-01,13,1,1,1
+https://doi.org/10.1101/2024.02.09.579631,investigating the performance of foundation models on human 3’utr sequences,31.7685,2024,2024-02-12,1,0,0,1
+https://doi.org/10.1101/2023.09.20.558508,an rna foundation model enables discovery of disease mechanisms and candidate therapeutics,29.718496,2023,2023-09-26,11,0,0,0
+https://doi.org/10.26508/lsa.202301962,zflipon variants reveal the many roles of zdna and zrna in health and disease,27.142153,2023,2023-05-10,6,0,0,0
+https://doi.org/10.1101/2024.04.24.590879,deepgene an efficient foundation model for genomics based on pangenome graph transformer,26.516151,2024,2024-04-28,1,1,1,1
+https://doi.org/10.3389/fgene.2022.1067562,tssnotecyaprombert development of an integrated platform for highly accurate promoter prediction and visualization of synechococcus sp and synechocystis sp through a stateoftheart natural language processing model bert,26.1339,2022,2022-11-29,7,0,0,0
+https://doi.org/10.15302/j-qb-022-0315,prediction of chromatin looping using deep hybrid learning dhl,23.72051,2023,2023-02-21,2,0,0,0
+https://doi.org/10.48550/arxiv.2403.03234,caduceus bidirectional equivariant longrange dna sequence modeling,22.362648,2024,2024-03-04,5,1,1,1
+https://doi.org/10.1101/2022.02.07.479412,finetuning transformers for genomic tasks,22.01517,2022,2022-02-10,3,0,0,0
+https://doi.org/10.3390/sym15030731,m6abertstacking a tissuespecific predictor for identifying rna n6methyladenosine sites based on bert and stacking strategy,21.874962,2023,2023-03-15,6,0,0,0
+https://doi.org/10.1093/bib/bbae195,berttfbs a novel bertbased model for predicting transcription factor binding sites by transfer learning,20.372433,2024,2024-03-27,2,0,0,0
+https://doi.org/10.1101/2023.07.11.548593,distinguishing word identity and sequence context in dna language models,19.98036,2023,2023-07-12,5,0,0,1
+https://doi.org/10.1109/jbhi.2024.3349584,planner a multiscale deep language model for the origins of replication site prediction,19.733925,2024,2024-01-04,5,0,0,0
+https://doi.org/10.1016/j.tplants.2024.04.013,large language models in plant biology,19.45631,2024,2024-05-26,4,0,0,1
+https://doi.org/10.1002/bmb.21067,a focus on polarity investigating the role of orientation cues in mediating student performance on mrna synthesis tasks in an introductory cell and molecular biology course,19.100513,2017,2017-05-18,3,0,0,0
+https://doi.org/10.1101/2024.08.16.608288,benchmarking dna foundation models for genomic sequence classification,16.778095,2024,2024-08-18,0,2,1,1
+https://doi.org/10.1101/2023.11.09.566403,gfetm genome foundationbased embedded topic model for scatacseq modeling,16.756927,2023,2023-11-13,2,0,0,0
+https://doi.org/10.1016/j.eswa.2023.120439,gsrnet an adversarial trainingbased deep framework with multiscale cnn and bigru for predicting genomic signals and regions,16.730618,2023,2023-05-11,3,0,0,0
+https://doi.org/10.1093/bib/bbad093,miprobert identification of microrna promoters based on the pretrained model bert,16.155102,2023,2023-03-17,3,0,0,0
+https://doi.org/10.2217/epi-2020-0012,how to link genomics to physiology through epigenomics,15.988873,2020,2020-02-01,18,0,0,0
+https://doi.org/10.1007/978-3-031-13829-4_57,predicting proteindna binding sites by finetuning bert,15.317631,2022,2022-01-01,2,0,0,0
+https://doi.org/10.1101/2023.11.27.568764,polygraph a software framework for the systematic assessment of synthetic regulatory dna elements,15.2433605,2023,2023-11-27,1,0,0,0
+https://doi.org/10.1007/978-3-031-23190-2_7,foundation models for speech images videos and control,15.149591,2023,2023-01-01,1,0,0,0
+https://doi.org/10.1111/imr.13305,gene regulation in inborn errors of immunity implications for gene therapy design and efficacy,14.62036,2024,2024-01-17,3,0,0,0
+https://doi.org/10.1007/978-3-031-13829-4_8,comprehensive evaluation of bert model for dnalanguage for prediction of dna sequence binding specificities in finetuning phase,14.189508,2022,2022-01-01,1,0,0,0
+https://doi.org/10.1101/2024.04.30.591835,chatnt a multimodal conversational agent for dna rna and protein tasks,13.3059635,2024,2024-05-02,2,0,0,0
+https://doi.org/10.1093/nar/gkae783,dna breathing integration with deep learning foundational model advances genomewide binding prediction of human transcription factors,13.221615,2024,2024-09-13,0,0,0,0
+https://doi.org/10.1101/2024.01.14.575543,omnina a foundation model for nucleotide sequences,13.12783,2024,2024-01-15,1,1,1,1
+https://doi.org/10.1038/nature22971,improved maize reference genome with singlemolecule technologies,12.601143,2017,2017-06-01,1089,0,0,0
+https://doi.org/10.1038/s41598-024-68439-y,zdna formation in promoters conserved between human and mouse are associated with increased transcription reinitiation rates,12.48058,2024,2024-08-01,1,0,0,0
+https://doi.org/10.1016/j.omtn.2023.06.019,can artificial intelligencestrengthened chatgpt or other large language models transform nucleic acid research,12.470253,2023,2023-07-12,8,0,0,0
+https://doi.org/10.1016/j.ab.2024.115492,4 mc site recognition algorithm based on pruned pretrained dnabertpruning model and fused artificial feature encoding,11.196621,2024,2024-03-06,0,0,0,0
+https://doi.org/10.1016/j.xhgg.2024.100347,enhancing personalized gene expression prediction from dna sequences using genomic foundation models,10.995832,2024,2024-08-28,0,0,0,0
+https://doi.org/10.48550/arxiv.2311.02333,understanding the natural language of dna using encoderdecoder foundation models with bytelevel precision,10.907986,2023,2023-01-01,0,1,1,1
+https://doi.org/10.1093/bioinformatics/btae529,are genomic language models all you need exploring genomic language models on protein downstream tasks,10.829893,2024,2024-08-29,1,0,0,1
+https://doi.org/10.1093/nar/gkad055,deepbio an automated and interpretable deeplearning platform for highthroughput biological sequence prediction functional annotation and visualization analysis,10.811864,2023,2023-02-17,73,0,0,0
+https://doi.org/10.1101/2024.06.21.599985,analysis of live cell data with gdnabert supports a role for gquadruplexes in chromatin looping,10.667799,2024,2024-06-25,0,0,0,0
+https://doi.org/10.48550/arxiv.2405.08226,"senmo a selfnormalizing deep learning model for enhanced multiomics
+  data analysis in oncology",10.140851,2024,2024-05-13,1,0,0,0
+https://doi.org/10.1158/1538-7445.am2024-7402,abstract 7402 foundation ai models predict molecular measurements of tumor purity,8.876523,2024,2024-03-22,2,0,0,0
+https://doi.org/10.48550/arxiv.2406.13133,"patholm identifying pathogenicity from the dna sequence through the
+  genome foundation model",8.186985,2024,2024-06-18,0,0,0,0
+https://doi.org/10.1101/2024.06.18.599629,patholm identifying pathogenicity from the dna sequence through the genome foundation model,8.1559105,2024,2024-06-22,0,0,0,0
+https://doi.org/10.48550/arxiv.2311.02401,barcodebert transformers for biodiversity analysis,8.126835,2023,2023-01-01,0,0,0,0
+https://doi.org/10.1002/mef2.43,accelerating the integration of chatgpt and other large‐scale ai models into biomedical research and healthcare,6.7491345,2023,2023-05-17,63,0,0,0
+https://doi.org/10.1038/s41477-018-0136-7,gene retention fractionation and subgenome differences in polyploid plants,6.684834,2018,2018-04-25,286,0,0,0
+https://doi.org/10.1101/2024.01.26.577402,using large scale transfer learning to highlight the role of chromatin state in intron retention,6.5178113,2024,2024-01-30,0,0,0,0
+https://doi.org/10.1145/3611651,pretrained language models in biomedical domain a systematic survey,6.3014426,2023,2023-08-01,47,0,0,1
+https://doi.org/10.2139/ssrn.4178244,an evaluation of multitask transfer learning methods in identifying 6ma and 5mc methylation sites of rice and maize,6.2181473,2022,2022-01-01,0,0,0,0
+https://doi.org/10.1145/3665689.3665752,prediction of dna enhancers based on multispecies genomic base model dnabert2 and bigru network,6.075939,2024,2024-01-26,0,0,0,0
+https://doi.org/10.3233/faia230492,genemask fast pretraining of gene sequences to enable fewshot learning,5.8944426,2023,2023-09-28,0,1,1,1
+https://doi.org/10.1186/s13059-022-02780-1,idnaabf multiscale deep biological language learning model for the interpretable prediction of dna methylations,5.631373,2022,2022-10-17,61,0,0,0
+https://doi.org/10.1101/2022.08.22.504706,dna language models are powerful predictors of genomewide variant effects,5.508376,2022,2022-08-23,16,1,1,1
+https://doi.org/10.1007/978-3-031-31654-8_22,generating genomic maps of zdna with the transformer algorithm,5.448063,2023,2023-01-01,0,0,0,0
+https://doi.org/10.5281/zenodo.7953871,comparison between ribosomal assembly and machine learning tools for microbial identification of organisms with different characteristics,5.3099,2023,2023-05-19,0,0,0,0
+https://doi.org/10.1101/2023.06.12.544594,genalm a family of opensource foundational dna language models for long sequences,5.0080914,2023,2023-06-13,13,1,1,1
+https://doi.org/10.48550/arxiv.2310.15202,predicting transcription factor binding sites using transformer based capsule network,4.9690313,2023,2023-01-01,0,0,0,0
+https://doi.org/10.48550/arxiv.2408.07180,unlocking efficiency adaptive masking for gene transformer models,4.781714,2024,2024-08-13,0,1,1,1
+https://doi.org/10.1145/3535508.3545512,modna,4.5679564,2022,2022-07-28,8,1,1,1
+https://doi.org/10.1038/s41576-021-00386-0,gene drives gaining speed,4.4662914,2021,2021-08-06,139,0,0,0
+https://doi.org/10.48550/arxiv.2402.08075,"efficient and scalable finetune of language models for genome
+  understanding",4.3265443,2024,2024-02-12,0,0,0,0
+https://doi.org/10.1093/nar/gkad1031,multiple sequence alignmentbased rna language model and its application to structural inference,4.2866616,2023,2023-11-06,18,0,0,0
+https://doi.org/10.1007/978-3-031-23190-2_8,summary and outlook,4.273292,2023,2023-01-01,0,0,0,0
+https://doi.org/10.3390/genes13122323,mirbind a deep learning method for mirna binding classification,4.25552,2022,2022-12-09,7,0,0,0
+https://doi.org/10.1093/bioadv/vbad043,ienhancerelm improve enhancer identification by extracting positionrelated multiscale contextual information based on enhancer language models,4.190407,2023,2023-01-01,8,0,0,0
+https://doi.org/10.1101/2024.05.10.592927,lucaone generalized biological foundation model with unified nucleic acid and protein language,3.9894319,2024,2024-05-14,0,0,0,0
+https://doi.org/10.1101/2021.04.27.441365,prediction of rnaprotein interactions using a nucleotide language model,3.9838164,2021,2021-04-28,5,0,0,0
+https://doi.org/10.1007/978-3-030-73103-8_32,question and answer classification with deep contextualized transformer,3.9031115,2021,2021-01-01,3,0,0,0
+https://doi.org/10.1016/j.scitotenv.2024.172466,large language model for horizontal transfer of resistance gene from resistance gene prevalence detection to plasmid conjugation rate evaluation,3.9029648,2024,2024-04-16,0,0,0,0
+https://doi.org/10.52601/bpr.2024.240006,foundation models in molecular biology,3.8521152,2024,2024-01-01,0,0,0,1
+https://doi.org/10.21203/rs.3.rs-4018512/v1,zdna formation in promoters conserved between human and mouse are associated with increased transcription initiation rates,3.8251052,2024,2024-03-22,0,0,0,0
+https://doi.org/10.1186/s13059-023-02934-9,epiphany predicting hic contact maps from 1d epigenomic signals,3.6819227,2023,2023-06-06,23,0,0,0
+https://doi.org/10.1101/2023.01.31.526427,selfsupervised learning on millions of premrna sequences improves sequencebased rna splicing prediction,3.6561513,2023,2023-02-03,8,0,0,0
+https://doi.org/10.1101/2024.02.26.581496,exploring genomic large language models bridging the gap between natural language and gene sequences,3.5376658,2024,2024-02-29,0,0,0,0
+https://doi.org/10.1101/2022.09.30.510284,on the synergies between ribosomal assembly and machine learning tools for microbial identification,3.524379,2022,2022-10-03,0,0,0,0
+https://doi.org/10.1038/s41467-020-18365-0,efficient rational modification of nonribosomal peptides by adenylation domain substitution,3.5210204,2020,2020-09-11,72,0,0,0
+https://doi.org/10.1016/j.crmeth.2022.100384,applications of deep learning in understanding gene regulation,3.5086474,2023,2023-01-01,22,0,0,0
+https://doi.org/10.1101/2023.01.26.525670,speciesaware dna language models capture regulatory elements and their evolution,3.488718,2023,2023-01-27,6,0,0,1
+https://doi.org/10.1093/nar/gkae099,employing bimodal representations to predict dna bendability within a selfsupervised pretrained framework,3.3975928,2024,2024-02-20,0,0,0,0
+https://doi.org/10.1101/2024.03.11.583506,discovering crisprcas system with selfprocessing precrrna capability by foundation models,3.3906367,2024,2024-03-11,0,0,0,0
+https://doi.org/10.1093/bib/bbad476,h2opred a robust and efficient hybrid deep learning model for predicting 2’omethylation sites in human rna,3.375909,2023,2023-11-22,14,0,0,0
+https://doi.org/10.1093/bib/bbae157,dsnetax a deep learning species annotation method based on a deepshallow parallel framework,3.3754516,2024,2024-03-23,0,0,0,0
+https://doi.org/10.1109/jbhi.2023.3316750,large ai models in health informatics applications challenges and the future,3.3276973,2023,2023-09-22,64,0,0,0
+https://doi.org/10.1186/s13059-023-02955-4,decoding enhancer complexity with machine learning and highthroughput discovery,3.2686288,2023,2023-05-12,14,0,0,0
+https://doi.org/10.1186/s12859-022-04647-5,supervised promoter recognition a benchmark framework,3.2488341,2022,2022-04-02,4,0,0,0
+https://doi.org/10.1038/s43587-022-00326-5,nih sennet consortium to map senescent cells throughout the human lifespan to understand physiological health,3.2433987,2022,2022-12-20,54,0,0,0
+https://doi.org/10.1101/2022.09.29.509859,deepbio is an automated and interpretable deeplearning platform for biological sequence prediction functional annotation and visualization analysis,3.1953096,2022,2022-09-30,3,0,0,0
+https://doi.org/10.3390/genes15040404,dranetsplicer a splice site prediction model based on deep residual attention networks,3.1853418,2024,2024-03-26,0,0,0,0
+https://doi.org/10.1101/2024.08.26.609813,a long context rna foundation model for predicting transcriptome architecture,3.1348777,2024,2024-08-27,0,0,0,0
+https://doi.org/10.1101/2024.02.29.582810,evaluating the representational power of pretrained dna language models for regulatory genomics,3.1290975,2024,2024-03-04,4,2,1,1
+https://doi.org/10.1093/gigascience/giad054,mulanmethyl—multiple transformerbased language models for accurate dna methylation prediction,3.1265922,2022,2022-12-28,10,0,0,0
+https://doi.org/10.31979/etd.3pvx-z87v,visualizing classification errors and mislabeling in machine learning,3.113544,2023,2023-01-01,0,0,0,0
+https://doi.org/10.48550/arxiv.2406.01627,"genbench a benchmarking suite for systematic evaluation of genomic
+  foundation models",3.0979111,2024,2024-06-01,0,2,1,1
+https://doi.org/10.1080/15476286.2024.2315384,mrmbert a novel deep neural network predictor of multiple rna modifications by fusing bert representation and sequence features,3.0948162,2024,2024-02-15,0,0,0,0
+https://doi.org/10.1109/bigdataservice58306.2023.00010,finding bert errors using activation vectors,3.0619154,2023,2023-07-01,0,0,0,0
+https://doi.org/10.1101/2024.01.30.577935,viralm empowering virus discovery through the genome foundation model,3.0536797,2024,2024-01-31,1,0,0,0
+https://doi.org/10.1038/s41556-023-01194-w,advances and prospects for the human biomolecular atlas program hubmap,2.9867373,2023,2023-07-19,60,0,0,0
+https://doi.org/10.1101/2023.07.11.548588,unirna universal pretrained models revolutionize rna research,2.968726,2023,2023-07-12,11,0,0,0
+https://doi.org/10.1093/bib/bbae163,selfsupervised learning on millions of primary rna sequences from 72 vertebrates improves sequencebased rna splicing prediction,2.9204414,2024,2024-03-25,5,0,0,0
+https://doi.org/10.1128/mbio.02899-18,large circular plasmids from groundwater plasmidomes span multiple incompatibility groups and are enriched in multimetal resistance genes,2.919796,2019,2019-02-25,43,0,0,0
+https://doi.org/10.1016/j.compbiolchem.2024.108129,multiscale dna language model improves 6 ma binding sites prediction,2.916181,2024,2024-07-01,0,0,0,0
+https://doi.org/10.1101/2024.03.20.585793,perturbationaware predictive modeling of rna splicing using bidirectional transformers,2.895256,2024,2024-03-21,0,0,0,0
+https://doi.org/10.1146/annurev-psych-010418-103052,successful memory aging,2.882751,2018,2018-06-27,194,0,0,0
+https://doi.org/10.48550/arxiv.2307.10634,generative language models on nucleotide sequences of human genes,2.8374217,2023,2023-01-01,0,0,0,0
+https://doi.org/10.1101/2023.01.04.522704,mulanmethyl  multiple transformerbased language models for accurate dna methylation prediction,2.823841,2023,2023-01-04,5,0,0,0
+https://doi.org/10.2967/jnumed.123.265687,an opinion on chatgpt in health care—written by humans only,2.823543,2023,2023-04-13,40,0,0,0
+https://doi.org/10.1101/2023.07.19.549677,the human genome’s vocabulary as proposed by the dna language model grover,2.7934613,2023,2023-07-19,2,1,1,1
+https://doi.org/10.1186/s12859-023-05352-7,circssnn circrnabinding site prediction via sequence selfattention neural networks with prenormalization,2.7470608,2023,2023-05-30,4,0,0,0
+https://doi.org/10.1038/s42003-023-04866-3,svsbi sequencebased virtual screening of biomolecular interactions,2.7123628,2023,2023-05-18,7,0,0,0
+https://doi.org/10.1101/2021.09.25.461359,identification of bacteriophage genome sequences with representation learning,2.7000604,2021,2021-09-25,1,0,0,0
+https://doi.org/10.1101/2024.03.12.584599,harnessing genome representation learning for decoding phagehost interactions,2.6987033,2024,2024-03-14,1,0,0,0
+https://doi.org/10.1002/qub2.65,current opinions on large cellular models,2.690672,2024,2024-07-01,1,0,0,0
+https://doi.org/10.1007/s11060-018-2768-x,tumor treating fields a new approach to glioblastoma therapy,2.6893964,2018,2018-01-18,42,0,0,0
+https://doi.org/10.1038/s41437-021-00403-2,the population genomics of adaptive loss of function,2.6883316,2021,2021-02-11,41,0,0,0
+https://doi.org/10.1007/978-1-4939-9086-3_1,the applicability of mouse models to the study of human disease,2.6726053,2019,2019-01-01,94,0,0,0
+https://doi.org/10.1016/j.jbi.2019.103292,wikidata a largescale collaborative ontological medical database,2.6691222,2019,2019-09-23,49,0,0,0
+https://doi.org/10.1002/cpt.1249,influence of scpoctscp1 ontogeny and genetic variation on morphine disposition in critically ill neonates lessons from scppbpkscp modeling and clinical study,2.6197288,2018,2018-10-10,45,0,0,0
+https://doi.org/10.3389/fsysb.2024.1402664,de novo prediction of functional effects of genetic variants from dna sequences based on contextspecific molecular information,2.6147513,2024,2024-06-03,0,0,0,0
+https://doi.org/10.1016/j.copbio.2022.102881,perspectives for selfdriving labs in synthetic biology,2.6024086,2023,2023-01-03,30,0,0,0
+https://doi.org/10.1162/neco_a_01563,large language models and the reverse turing test,2.593171,2023,2023-02-06,91,0,0,0
+https://doi.org/10.1038/s41467-021-27390-6,maximizing response to intratumoral immunotherapy in mice by tuning local retention,2.5907438,2022,2022-01-10,53,0,0,0
+https://doi.org/10.3945/jn.117.250647,wholegrain rye and wheat affect some markers of gut health without altering the fecal microbiota in healthy overweight adults a 6week randomized trial,2.5895233,2017,2017-09-28,57,0,0,0
+https://doi.org/10.1016/j.artmed.2017.07.002,owlready ontologyoriented programming in python with automatic classification and high level constructs for biomedical ontologies,2.5519464,2017,2017-07-01,255,0,0,0
+https://doi.org/10.1101/2024.09.19.613754,scooby modeling multimodal genomic profiles from dna sequence at singlecell resolution,2.5013547,2024,2024-09-22,0,0,0,0
+https://doi.org/10.1242/jeb.183228,effects of flight activity and age on oxidative damage in the honey beeiapis melliferai,2.4765546,2018,2018-01-01,46,0,0,0
+https://doi.org/10.1101/2023.05.29.542705,large scale foundation model on singlecell transcriptomics,2.4486334,2023,2023-05-31,33,0,0,0
+https://doi.org/10.1101/2022.12.05.518770,dysfunctional analysis of the pretraining model on nucleotide sequences and the evaluation of different kmer embeddings,2.4129386,2022,2022-12-08,1,0,0,0
+https://doi.org/10.1101/2024.01.16.575935,advancing transcription factor binding site prediction using dna breathing dynamics and sequence transformers via cross attention,2.4113235,2024,2024-01-20,1,0,0,0
+https://doi.org/10.1186/s12863-023-01123-8,genomic benchmarks a collection of datasets for genomic sequence classification,2.4084058,2023,2023-05-01,7,0,0,0
+https://doi.org/10.1049/enb.2017.0004,biochemical complexity drives log‐normal variation in genetic expression,2.4014568,2017,2017-06-01,76,0,0,0
+https://doi.org/10.1101/2021.10.25.465745,hic resolution enhancement with genome sequence data,2.3919275,2021,2021-10-26,2,0,0,0
+https://doi.org/10.1200/jco.2018.79.0147,prognostication in kidney cancer recent advances and future directions,2.370541,2018,2018-10-29,61,0,0,0
+https://doi.org/10.1101/2023.11.07.566153,comprehensive evaluation of plant transcription factors binding sites discovery tools,2.3404908,2023,2023-11-11,2,0,0,0
+https://doi.org/10.1038/s42256-024-00836-4,multipurpose rna language modelling with motifaware pretraining and typeguided finetuning,2.324001,2024,2024-05-13,3,0,0,0
+https://doi.org/10.1101/2024.06.11.598549,detection and classification of long terminal repeat sequences in plant ltrretrotransposons and their analysis using explainable machine learning,2.3117137,2024,2024-06-14,0,0,0,0
+https://doi.org/10.1111/tpj.13483,the sufbcsub2subd complex is required for the biogenesis of all major classes of plastid fes proteins,2.2893875,2017,2017-01-20,43,0,0,0
+https://doi.org/10.1145/3535508.3545551,deepvifi,2.2570703,2022,2022-07-28,3,0,0,1
+https://doi.org/10.1101/2023.04.26.538471,evaluation and optimization of sequencebased gene regulatory deep learning models,2.2384372,2023,2023-04-28,5,0,0,1
+https://doi.org/10.3390/biology12071033,transformer architecture and attention mechanisms in genome data analysis a comprehensive review,2.2373462,2023,2023-07-22,33,0,0,1
+https://doi.org/10.1053/j.sempedsurg.2017.11.006,the science and necessity of using animal models in the study of necrotizing enterocolitis,2.236386,2017,2017-11-06,46,0,0,0
+https://doi.org/10.48550/arxiv.2408.09554,"screen them all highthroughput pancancer genetic and phenotypic
+  biomarker screening from he whole slide images",2.2130935,2024,2024-08-18,0,0,0,0
+https://doi.org/10.1146/annurev-pathmechdis-051222-113147,toward explainable artificial intelligence for precision pathology,2.213015,2023,2023-10-23,17,0,0,1
+https://doi.org/10.1097/01.gox.0000842684.79787.9e,92 ex vivo perfusion decellularization of rat hindlimb for vascular composite allotransplantation,2.1932535,2022,2022-06-01,0,0,0,0
+https://doi.org/10.1371/journal.pone.0175121,p53 pathway determines the cellular response to alcoholinduced dna damage in mcf7 breast cancer cells,2.1860003,2017,2017-04-03,23,0,0,0
+https://doi.org/10.1101/2023.11.28.568918,universal cell embeddings a foundation model for cell biology,2.1807225,2023,2023-11-29,20,0,0,0
+https://doi.org/10.1016/j.ins.2022.06.005,numeric lyndonbased feature embedding of sequencing reads for machine learning approaches,2.1781476,2022,2022-06-07,2,0,0,0
+https://doi.org/10.1186/s12864-021-08246-1,context dependency of nucleotide probabilities and variants in human dna,2.1720202,2022,2022-01-31,10,0,0,1
+https://doi.org/10.1016/j.compedu.2020.104034,learning from text video or subtitles a comparative analysis,2.1588254,2020,2020-09-30,68,0,0,0
+https://doi.org/10.1534/genetics.116.187864,the sustained impact of model organisms—in genetics and epigenetics,2.1510851,2017,2017-01-01,18,0,0,0
+https://doi.org/10.3389/fimmu.2017.01844,minimum information about t regulatory cells a step toward reproducibility and standardization,2.097691,2018,2018-01-15,49,0,0,0
+https://doi.org/10.1093/bib/bbad442,integrative approaches based on genomic techniques in the functional studies on enhancers,2.0768394,2023,2023-11-13,4,0,0,0
+https://doi.org/10.1093/bioinformatics/btad468,bertrand—peptidetcr binding prediction using bidirectional encoder representations from transformers augmented with random tcr pairing,2.0684392,2023,2023-08-01,8,0,0,0
+https://doi.org/10.1016/j.cemconcomp.2022.104721,estimating compressive strength of lightweight foamed concrete using neural genetic and ensemble machine learning approaches,2.0137413,2022,2022-08-21,63,0,0,0
+https://doi.org/10.18653/v1/2022.bionlp-1.14,snp2vec scalable selfsupervised pretraining for genomewide association study,1.9800963,2022,2022-01-01,5,0,0,1
+https://doi.org/10.1101/2023.09.09.556981,codonbert large language models for mrna design and optimization,1.9797628,2023,2023-09-12,12,0,0,0
+https://doi.org/10.1016/j.biosystems.2023.105095,setquence amp setomic deep set transformers for whole genome and exome tumour analysis,1.958391,2024,2024-01-01,1,0,0,1
+https://doi.org/10.1101/2023.12.16.570150,highactivity enhancer generation based on feedback gan with domain constraint and curriculum learning,1.9143057,2023,2023-12-17,1,0,0,0
+https://doi.org/10.1101/2023.09.26.559542,genecompass deciphering universal gene regulatory mechanisms with knowledgeinformed crossspecies foundation model,1.9130538,2023,2023-09-28,11,0,0,0
+https://doi.org/10.1093/bib/bbad307,a systematic benchmark of machine learning methods for protein–rna interaction prediction,1.8936045,2023,2023-08-26,7,0,0,0
+https://doi.org/10.1093/bib/bbad223,schime predicting singlecell dna methylation levels based on singlecell hic data,1.8819025,2023,2023-06-10,2,0,0,0
+https://doi.org/10.24072/pcjournal.72,simulation of bacterial populations with slim,1.8777643,2022,2022-01-13,21,0,0,0
+https://doi.org/10.2197/ipsjtbio.16.20,atlass a scheme for endtoend prediction of splice sites using attentionbased bilstm,1.8322755,2023,2023-01-01,1,0,0,0
+https://doi.org/10.1016/j.jbc.2023.105140,flipons and small rnas accentuate the asymmetries of pervasive transcription by the reset and sequencespecific microcoding of promoter conformation,1.7728564,2023,2023-08-06,12,0,0,0
+https://doi.org/10.1093/bioinformatics/btab492,pzlast an ultrafast amino acid sequence similarity search server against public metagenomes,1.7709618,2021,2021-07-01,9,0,0,0
+https://doi.org/10.1111/ele.14239,getting the bugs out of scpaiscp advancing ecological research on arthropods through computer vision,1.7521745,2023,2023-05-22,5,0,0,0
+https://doi.org/10.1146/annurev-micro-031021-084116,culturing human gut microbiomes in the laboratory,1.7503577,2021,2021-05-26,16,0,0,0
+https://doi.org/10.1186/s12859-023-05469-9,deepcac a deep learning approach on dna transcription factors classification based on multihead selfattention and concatenate convolutional neural network,1.7483969,2023,2023-09-18,5,0,0,0
+https://doi.org/10.1186/s13073-024-01282-y,spatial multiomics novel tools to study the complexity of cardiovascular diseases,1.7244849,2024,2024-01-18,11,0,0,0
+https://doi.org/10.1145/3584371.3613013,codonbert using bert for sentiment analysis to better predict genes with low expression,1.7169911,2023,2023-09-03,4,0,0,0
+https://doi.org/10.1007/s10539-017-9570-6,what are cultural attractors,1.7090557,2017,2017-03-17,58,0,0,0
+https://doi.org/10.1515/ntrev-2020-0020,advances in modelling and analysis of nano structures a review,1.6964679,2020,2020-01-01,72,0,0,0
+https://doi.org/10.3389/fcomm.2023.1129082,artificial intelligence for health message generation an empirical study using a large language model llm and prompt engineering,1.6587708,2023,2023-05-26,34,0,0,0
+https://doi.org/10.1145/3316480.3322886,mechanisms for celltocell and cellfree spread of hiv1 in cellular automata models,1.657828,2019,2019-05-29,10,0,0,0
+https://doi.org/10.3390/fi15100336,fluent but not factual a comparative analysis of chatgpt and other ai chatbots’ proficiency and originality in scientific writing for humanities,1.651354,2023,2023-10-13,21,0,0,0
+https://doi.org/10.1016/j.biotri.2021.100169,biotribology of vascular devices a review of tissuedevice friction research,1.6360661,2021,2021-02-09,23,0,0,0
+https://doi.org/10.1016/j.cbi.2019.04.019,computerdesigned active human butyrylcholinesterase double mutant with a new catalytic triad,1.6273365,2019,2019-04-19,33,0,0,0
+https://doi.org/10.3389/fbrio.2024.1326958,emerging applications of artificial intelligence in pathogen genomics,1.6269243,2024,2024-03-06,1,0,0,0
+https://doi.org/10.1089/aivt.2017.0017,creating a structured adverse outcome pathway knowledgebase via ontologybased annotations,1.5890363,2017,2017-12-01,56,0,0,0
+https://doi.org/10.1007/s00253-018-8887-7,lightregulated promoters for tunable temporal and affordable control of fungal gene expression,1.5878772,2018,2018-03-22,15,0,0,0
+https://doi.org/10.1101/2023.10.13.562246,teclass2 classification of transposable elements using transformers,1.5859904,2023,2023-10-16,5,0,0,1
+https://doi.org/10.1016/j.ajhg.2018.12.019,gene augmentation and readthrough rescue channelopathy in an ipscrpe model of congenital blindness,1.5712181,2019,2019-01-25,30,0,0,0
+https://doi.org/10.1158/1538-7445.am2024-908,abstract 908 senmo a selfnormalizing deep learning model for enhanced multiomics data analysis in oncology,1.5531759,2024,2024-03-22,0,0,0,0
+https://doi.org/10.1093/bioinformatics/btad248,cell type matching across species using protein embeddings and transfer learning,1.5531069,2023,2023-06-01,5,0,0,0
+https://doi.org/10.1017/s0031182017001986,pathogens collections biobanks and relateddata in a one health legal and ethical perspective,1.53399,2017,2017-11-29,17,0,0,0
+https://doi.org/10.1186/s12859-023-05303-2,semisupervised learning improves regulatory sequence prediction with unlabeled sequences,1.5201132,2023,2023-05-05,4,0,0,0
+https://doi.org/10.1161/jaha.118.009244,inhibition of microrna‐155 supports endothelial tight junction integrity following oxygen‐glucose deprivation,1.4889632,2018,2018-06-26,42,0,0,0
+https://doi.org/10.1101/2024.03.17.585376,ernierna an rna language model with structureenhanced representations,1.4636805,2024,2024-03-17,1,0,0,0
+https://doi.org/10.1093/bib/bbad422,from intuition to ai evolution of small molecule representations in drug discovery,1.4571824,2023,2023-11-22,11,0,0,0
+https://doi.org/10.1111/iju.13956,current status of prognostic factors in patients with metastatic renal cell carcinoma,1.4554548,2019,2019-04-08,25,0,0,0
+https://doi.org/10.1515/jib-2020-0020,open modeling and exchange omex metadata specification version 10,1.4476801,2020,2020-06-01,11,0,0,0
+https://doi.org/10.1007/978-3-030-12381-9_8,mathematical foundations of cellular automata and complexity theory,1.4461052,2019,2019-01-01,13,0,0,0
+https://doi.org/10.3390/ijms242115858,deep learning for genomics from early neural nets to modern large language models,1.4429828,2023,2023-11-01,7,0,0,1
+https://doi.org/10.1600/036364417x694539,phylogenetics of the african iasclepiasi complex apocynaceae based on three plastid dna regions,1.4415841,2017,2017-03-01,10,0,0,0
+https://doi.org/10.1101/2024.02.01.578352,dnadiffusion leveraging generative models for controlling chromatin accessibility and gene expression via synthetic regulatory elements,1.4353899,2024,2024-02-01,6,0,0,0
+https://doi.org/10.1016/j.cell.2023.02.018,the entex resource of multitissue personal epigenomes amp variantimpact models,1.4312445,2023,2023-03-01,31,0,0,0
+https://doi.org/10.1101/2023.12.13.571579,atom1 a foundation model for rna structure and function built on chemical mapping data,1.4201946,2023,2023-12-14,5,0,0,0
+https://doi.org/10.1136/bmjopen-2020-044353,longitudinal cohorts for harnessing the electronic health record for disease prediction in a us population,1.4151795,2021,2021-06-01,18,0,0,0
+https://doi.org/10.1038/s41598-019-47009-7,simplified platform for mosaic in vivo analysis of cellular maturation in the developing heart,1.4067699,2019,2019-07-24,9,0,0,0
+https://doi.org/10.1086/697508,models on the runway how do we make replicas of the world,1.366869,2018,2018-04-20,24,0,0,0
+https://doi.org/10.1111/jora.12411,puberty and the evolution of developmental science,1.365618,2019,2019-03-01,27,0,0,0
+https://doi.org/10.3390/ncrna9060070,an overview of the immune modulatory properties of long noncoding rnas and their potential use as therapeutic targets in cancer,1.362938,2023,2023-11-11,7,0,0,0
+https://doi.org/10.1101/2023.11.16.567355,ptfspot deep colearning on transcription factors and their binding regions attains impeccable universality in plants,1.3524069,2023,2023-11-20,2,0,0,0
+https://doi.org/10.1515/jib-2021-0020,omex metadata specification version 12,1.3347316,2021,2021-09-01,11,0,0,0
+https://doi.org/10.3389/fmicb.2023.1331233,prokbert family genomic language models for microbiome applications,1.3179286,2024,2024-01-12,1,1,1,1
+https://doi.org/10.2172/1986455,advanced research directions on ai for science energy and security report on summer 2022 workshops,1.3133004,2023,2023-05-01,7,0,0,0
+https://doi.org/10.59717/j.xinn-med.2023.100030,artificial intelligence for medicine progress challenges and perspectives,1.3104901,2023,2023-01-01,17,0,0,0
+https://doi.org/10.1134/s0026261717050162,microbiological and production characteristics of the dagang hightemperature heavy oil reservoir block no 1 during trials of the biotechnology for enhanced oil recovery,1.2995929,2017,2017-09-01,10,0,0,0
+https://doi.org/10.1101/2023.10.18.563023,bioinfobench a simple benchmark framework for llm bioinformatics skills evaluation,1.2982167,2023,2023-10-21,7,0,0,0
+https://doi.org/10.9781/ijimai.2021.08.002,emergent models for moral ai spirituality,1.2964678,2021,2021-01-01,9,0,0,0
+https://doi.org/10.18653/v1/2023.bionlp-1.30,evaluation of chatgpt on biomedical tasks a zeroshot comparison with finetuned generative transformers,1.2929412,2023,2023-01-01,18,0,0,0
+https://doi.org/10.1371/journal.pbio.3001732,estimating the transfer rates of bacterial plasmids with an adapted luria–delbrück fluctuation analysis,1.2781146,2022,2022-07-25,17,0,0,0
+https://doi.org/10.1186/s12864-023-09802-7,stablednam towards a stable and efficient model for predicting dna methylation based on adaptive feature correction learning,1.2640377,2023,2023-12-05,3,0,0,0
+https://doi.org/10.1111/nph.15201,accumulation of transposable elements in selfing populations of iarabidopsis lyratai supports the ectopic recombination model of transposon evolution,1.2616525,2018,2018-05-14,9,0,0,0
+https://doi.org/10.1142/s0217979217501442,monte carlo simulation on the diffusion of polymer in narrow periodical channels,1.2613499,2017,2017-04-04,6,0,0,0
+https://doi.org/10.1186/s12964-017-0207-9,predictive model identifies strategies to enhance tsp1mediated apoptosis signaling,1.2566698,2017,2017-12-01,23,0,0,0
+https://doi.org/10.1101/2022.03.30.486438,human digital twin automated cell type distance computation and 3d atlas construction in multiplexed skin biopsies,1.2494903,2022,2022-03-30,4,0,0,0
+https://doi.org/10.1136/bmjopen-2021-060556,cohort profile colombian cohort for the early prediction of preterm birth colpret early prediction of preterm birth based on personal medical history clinical characteristics vaginal microbiome biophysical characteristics of the cervix and maternal serum biochemical markers,1.2420325,2022,2022-05-01,4,0,0,0
+https://doi.org/10.1101/2023.08.15.553415,effect of tokenization on transformers for biological sequences,1.2418553,2023,2023-08-17,3,0,0,0
+https://doi.org/10.1177/1053451218765212,using pinterest to find and share evidencebased practices,1.2348343,2018,2018-04-02,8,0,0,0
+https://doi.org/10.1016/j.tibtech.2019.06.005,handson introduction to synthetic biology for security professionals,1.2274703,2019,2019-07-15,4,0,0,0
+https://doi.org/10.1101/2024.02.14.580373,reglm designing realistic regulatory dna with autoregressive language models,1.226712,2024,2024-02-18,3,0,0,0
+https://doi.org/10.1101/2023.09.15.558027,cdsbert  extending protein language models with codon awareness,1.2227671,2023,2023-09-17,3,0,0,0
+https://doi.org/10.1111/boc.201600060,vps15p regulates the distribution of cup‐shaped organelles containing the major eisosome protein pil1p to the extracellular fraction required for endocytosis of extracellular vesicles carrying metabolic enzymes,1.220797,2017,2017-03-01,9,0,0,0
+https://doi.org/10.20944/preprints202311.1819.v1,machine learning to advance human genome‐wide association studies,1.2183685,2023,2023-11-28,2,0,0,0
+https://doi.org/10.1159/000496442,physical activity and mobility differentially predict nondemented executive function trajectories do sex and ltbgtltigtapoeltigtltbgt moderate these associations,1.2160931,2019,2019-01-01,6,0,0,0
+https://doi.org/10.1101/2023.12.05.570173,enhancing recognition and interpretation of functional phenotypic sequences through finetuning pretrained genomic models,1.2154412,2023,2023-12-07,1,0,0,1
+https://doi.org/10.1002/wnan.1553,from isolated structures to continuous networks a categorization of cytoskeleton‐based motile engineered biological microstructures,1.2070805,2019,2019-02-11,8,0,0,0
+https://doi.org/10.1021/acs.jcim.3c00643,opensource machine learning in computational chemistry,1.2056564,2023,2023-07-19,21,0,0,0
+https://doi.org/10.3390/genes15010034,machine learning to advance human genomewide association studies,1.1940184,2023,2023-12-25,2,0,0,0
+https://doi.org/10.1101/2023.07.27.550754,splam a deeplearningbased splice site predictor that improves spliced alignments,1.1936762,2023,2023-07-29,3,0,0,0
+https://doi.org/10.1101/2023.09.08.556883,deciphering 3’ utr mediated gene regulation using interpretable deep representation learning,1.1922299,2023,2023-09-12,1,0,0,0
+https://doi.org/10.1002/9781119233275.ch5,regulation of gnrh gene expression,1.1857072,2018,2018-03-02,6,0,0,0
+https://doi.org/10.1101/2023.06.12.544613,bertrand  peptidetcr binding prediction using bidirectional encoder representations from transformers augmented with random tcr pairing,1.1829636,2023,2023-06-13,1,0,0,0
+https://doi.org/10.3390/sym15101827,dynamic response of an elastic tubelike nanostructure embedded in a vibrating medium and under the action of moving nanoobjects,1.1629069,2023,2023-09-26,7,0,0,0
+https://doi.org/10.1101/2024.03.18.585465,predicting celltypespecific exon inclusion in the human brain reveals more complex splicing mechanisms in neurons than glia,1.1623889,2024,2024-03-18,2,0,0,0
+https://doi.org/10.1007/s12975-018-0628-9,uncovering the rosetta stone report from the first annual conference on key elements in translating stroke therapeutics from preclinical to clinical,1.1612831,2018,2018-04-09,11,0,0,0
+https://doi.org/10.1101/2023.09.24.559168,get a foundation model of transcription across human cell types,1.1538656,2023,2023-09-24,2,0,0,0
+https://doi.org/10.1016/j.chemolab.2017.08.012,a reliable multiclass classification model for identifying the subtypes of parotid neoplasms constructed with variable combination population analysis and partial least squares regression based on raman spectra,1.1437622,2017,2017-09-06,4,0,0,0
+https://doi.org/10.1101/2023.02.14.528560,a systematic benchmark of machine learning methods for proteinrna interaction prediction,1.1274207,2023,2023-02-15,1,0,0,0
+https://doi.org/10.1038/s42003-023-04991-z,3d reconstruction of skin and spatial mapping of immune cell density vascular distance and effects of sun exposure and aging,1.125178,2023,2023-07-19,7,0,0,0
+https://doi.org/10.3389/fnana.2018.00111,from matrices to knowledge using semantic networks to annotate the connectome,1.1176838,2018,2018-12-07,6,0,0,0
+https://doi.org/10.1145/3657632,visual tuning,1.1134827,2024,2024-04-12,3,0,0,0
+https://doi.org/10.1101/2023.01.30.526193,selfsupervised learning for dna sequences with circular dilated convolutional networks,1.1120448,2023,2023-02-01,1,0,0,0
+https://doi.org/10.1093/bioinformatics/btae004,circsissl circrnabinding site identification based on selfsupervised learning,1.1020819,2024,2024-01-01,1,0,0,0
+https://doi.org/10.1101/2023.01.23.523471,polyaminerbulk a machine learning based bioinformatics algorithm to infer and decode alternative polyadenylation dynamics from bulk rnaseq data,1.0936403,2023,2023-01-24,1,0,0,0
+https://doi.org/10.1101/2024.02.25.581982,evaluating generalizability of artificial intelligence models for molecular datasets,1.0917526,2024,2024-02-28,2,0,0,0
+https://doi.org/10.4324/9781003150718,multimodal literacy in school science,1.0679543,2021,2021-12-29,13,0,0,0
+https://doi.org/10.1101/2023.10.07.561331,scaling crosstissue singlecell annotation models,1.067192,2023,2023-10-10,4,0,0,0
+https://doi.org/10.1039/d4sc00966e,nach0 multimodal natural and chemical languages foundation model,1.0623183,2024,2024-01-01,4,0,0,0
+https://doi.org/10.1101/2023.07.15.549134,epigept a pretrained transformer model for epigenomics,1.0576612,2023,2023-07-18,1,0,0,0
+https://doi.org/10.1186/s13731-022-00212-9,balancing the perceptions of nk modelling with critical insights,1.0574315,2022,2022-02-22,4,0,0,0
+https://doi.org/10.1080/23299460.2024.2304381,dual use concerns of generative ai and large language models,1.0521907,2024,2024-01-29,4,0,0,0
+https://doi.org/10.1038/s41598-021-92999-y,experimental infection of asian house geckos with enterococcus lacertideformus demonstrates multiple disease transmission routes and the invivo efficacy of antibiotics,1.0135019,2021,2021-07-05,3,0,0,0
+https://doi.org/10.1007/978-3-319-97427-9_19,evolution and adaptation in the maize genome,1.0125462,2018,2018-01-01,7,0,0,0
+https://doi.org/10.1016/j.physe.2018.05.028,investigation both actions of elastic foundation parameters and small scale effect on axisymmetric bending of annular singlelayered graphene sheet resting on an elastic medium,1.0106411,2018,2018-05-31,8,0,0,0
+https://doi.org/10.1101/2021.07.29.454133,deep learning identifies and quantifies recombination hotspot determinants,1.0093768,2021,2021-07-29,2,0,0,0
+https://doi.org/10.3390/sym12040515,ritz method in vibration analysis for embedded singlelayered graphene sheets subjected to inplane magnetic field,1.0036039,2020,2020-04-02,5,0,0,0
+https://doi.org/10.1145/3274442,transforming taxonomic interfaces,0.99380624,2018,2018-11-01,9,0,0,0
+https://doi.org/10.3390/math11244937,analysis of colorectal and gastric cancer classification a mathematical insight utilizing traditional machine learning classifiers,0.9873483,2023,2023-12-12,5,0,0,0
+https://doi.org/10.1016/j.ympev.2018.04.030,comparative transcriptomics and genomic patterns of discordance in capsiceae solanaceae,0.9860006,2018,2018-04-25,16,0,0,0
+https://doi.org/10.21926/obm.neurobiol.1802009,temporal lobe epilepsy stroke and traumatic brain injury mechanisms of hyperpolarized depolarized and flowthrough ion channels utilized as tricoordinate biomarkers of electrophysiologic dysfunction,0.9699164,2018,2018-06-01,15,0,0,0
+https://doi.org/10.22541/au.166568511.18706401/v1,getting the bugs out entomology using computer vision,0.9620904,2022,2022-10-13,1,0,0,0
+https://doi.org/10.31219/osf.io/ac4sp,a survey of reasoning with foundation models,0.9527501,2023,2023-12-13,3,0,0,0
+https://doi.org/10.1021/acs.jctc.6b00839,how intrinsic dynamics mediates the allosteric mechanism in the abc transporter nucleotide binding domain dimer,0.9457278,2017,2017-02-27,6,0,0,0
+https://doi.org/10.1002/wics.1479,multiscalar genetic pathway modeling with hybrid bayesian networks,0.9371125,2019,2019-07-03,2,0,0,0
+https://doi.org/10.26434/chemrxiv-2023-bdkgm,coati multimodal contrastive pretraining for representing and traversing chemical space,0.9017684,2023,2023-08-25,2,0,0,0
+https://doi.org/10.1101/2022.06.29.498185,decisive roles of sequence distributions in the generalizability ofide novoideep learning models for rna secondary structure prediction,0.89214754,2022,2022-07-02,1,0,0,0
+https://doi.org/10.1101/2023.09.08.555192,evaluating the utilities of large language models in singlecell data analysis,0.88785136,2023,2023-09-08,8,0,0,0
+https://doi.org/10.1186/s12864-018-5277-6,constructing tissuespecific transcriptional regulatory networks via a markov random field,0.88494176,2018,2018-12-01,6,0,0,0
+https://doi.org/10.21428/e4baedd9.92e511e3,closing the execution gap in generative ai for chemicals and materials freeways or safeguards,0.8838061,2024,2024-03-27,2,0,0,0
+https://doi.org/10.1186/s13326-022-00268-2,anatomy and the type concept in biology show that ontologies must be adapted to the diagnostic needs of research,0.87320054,2022,2022-06-27,2,0,0,0
+https://doi.org/10.1053/j.semnuclmed.2024.06.003,future perspectives of artificial intelligence in bone marrow dosimetry and individualized radioligand therapy,0.8729037,2024,2024-07-01,1,0,0,0
+https://doi.org/10.3389/fpls.2021.739282,identification and analysis of zinc efficiencyassociated loci in maize,0.8467119,2021,2021-11-15,5,0,0,0
+https://doi.org/10.1093/bioinformatics/btad717,multimodal learning in clinical proteomics enhancing antimicrobial resistance prediction models with chemical information,0.8426611,2023,2023-11-24,5,0,0,0
+https://doi.org/10.1101/2024.03.13.584858,toward generalizable phenotype prediction from singlecell morphology representations,0.841658,2024,2024-03-13,2,0,0,0
+https://doi.org/10.3389/fcell.2023.1197204,an integrative systems biology strategy to support the development of adverse outcome pathways aops a case study on radiationinduced microcephaly,0.833318,2023,2023-06-22,1,0,0,0
+https://doi.org/10.3389/frai.2023.1128153,cracking the genetic code with neural networks,0.83202493,2023,2023-04-06,1,0,0,0
+https://doi.org/10.3390/su13105372,a bibliometric analysis and network visualisation of human mobility studies from 1990 to 2020 emerging trends and future research directions,0.83032656,2021,2021-05-11,7,0,0,0
+https://doi.org/10.1101/2023.07.05.547496,xtrimopglm unified 100bscale pretrained transformer for deciphering the language of protein,0.8251863,2023,2023-07-06,34,0,0,0
+https://doi.org/10.1101/2023.06.24.546360,fusion neural network fusnet for predicting proteinmediated loops,0.821288,2023,2023-06-26,1,0,0,0
+https://doi.org/10.1093/icb/icab165,charting a new frontier integrating mathematical modeling in complex biological systems from molecules to ecosystems,0.81151885,2021,2021-07-16,2,0,0,0
+https://doi.org/10.36687/inetwp120,profits innovation and financialization in the insulin industry,0.8084249,2020,2020-04-20,2,0,0,0
+https://doi.org/10.1093/ve/veac047,modeling the therapeutic potential of defective interfering particles in the presence of immunity,0.80503225,2022,2022-06-21,4,0,0,0
+https://doi.org/10.22587/aeb.2018.12.1.1,molecular characterization of two maize hybrids based on primer bias,0.7985848,2018,2018-01-01,1,0,0,0
+https://doi.org/10.1371/journal.pmed.1003780,communityfacility linkage models and maternal and infant health outcomes in malawi’s pmtctart program a cohort study,0.78325796,2021,2021-09-17,3,0,0,0
+https://doi.org/10.1162/coli_a_00481,machine learning for ancient languages a survey,0.7781518,2023,2023-01-01,14,0,0,0
+https://doi.org/10.1155/2019/1574383,the functions and mechanism of a new oligopeptide bp9 from avian bursa on antibody responses immature b cell and autophagy,0.7549478,2019,2019-01-06,7,0,0,0
+https://doi.org/10.1101/2024.02.24.581671,ribonanza deep learning of rna structure through dual crowdsourcing,0.74761665,2024,2024-02-27,2,0,0,1
+https://doi.org/10.3389/fphys.2022.820683,nlimed natural language interface for model entity discovery in biosimulation model repositories,0.7465033,2022,2022-02-24,4,0,0,0
+https://doi.org/10.11116/9789461662507,logic of experimentation rethinking music performance through artistic research,0.73784566,2018,2018-12-05,36,0,0,0
+https://doi.org/10.3390/info15020090,emerging applications and translational challenges for ai in healthcare,0.7346426,2024,2024-02-06,1,0,0,0
+https://doi.org/10.1101/2024.03.23.586383,how do large language models understand genes and cells,0.7315863,2024,2024-03-27,2,0,0,0
+https://doi.org/10.1158/2159-8290.cd-24-0101,accelerating drug development using spatial multiomics,0.7312599,2024,2024-04-04,1,0,0,0
+https://doi.org/10.3390/biomedicines11102613,emerging insights into molecular mechanisms of inflammation in myelodysplastic syndromes,0.72574264,2023,2023-09-23,4,0,0,0
+https://doi.org/10.20944/preprints202401.1882.v1,artificial intelligence a promising tool for application in phytopathology,0.7158658,2024,2024-01-26,3,0,0,0
+https://doi.org/10.1146/annurev-biodatasci-080917-013356,opportunities and challenges of wholecell and tissue simulations of the outer retina in health and disease,0.7079264,2018,2018-05-01,4,0,0,0
+https://doi.org/10.20944/preprints202404.0431.v1,twentyyear climatology of solar uv and par in cyprus integrating satellite earth observations with radiative transfer modeling,0.69697696,2024,2024-04-05,1,0,0,0
+https://doi.org/10.3389/fgene.2024.1363896,classifying breast cancer using multiview graph neural network based on multiomics data,0.6956129,2024,2024-02-20,1,0,0,0
+https://doi.org/10.1101/2023.03.26.534264,a genomic and structural bioinformatic pipeline identifies candidate type vi secretion antibacterial effectorimmunity pairs,0.69502246,2023,2023-03-26,2,0,0,0
+https://doi.org/10.3389/frai.2023.1291136,artificial intelligence in biology and medicine and radioprotection research perspectives from jerusalem,0.69165164,2024,2024-01-11,2,0,0,0
+https://doi.org/10.1101/2023.10.11.561938,a 5’ utr language model for decoding untranslated regions of mrna and function predictions,0.67377895,2023,2023-10-14,3,0,0,0
+https://doi.org/10.3390/ijms25021066,graphene oxide nanoparticles and organoids a prospective advanced model for pancreatic cancer research,0.6450374,2024,2024-01-15,2,0,0,0
+https://doi.org/10.1101/2023.02.07.527497,gaut10 is required for arabidopsis root cell differentiation and elongation,0.64452356,2023,2023-02-07,1,0,0,0
+https://doi.org/10.1101/2024.05.14.594226,proteinclip enhancing protein language models with natural language,0.64131635,2024,2024-05-17,2,0,0,1
+https://doi.org/10.12688/f1000research.18236.1,biohackathon 2015 semantics of data for life sciences and reproducible research,0.64116186,2020,2020-02-24,6,0,0,0
+https://doi.org/10.1101/2023.09.12.23295357,pretrained transformers applied to clinical studies improve predictions of treatment efficacy and associated biomarkers,0.6295281,2023,2023-09-13,3,0,0,1
+https://doi.org/10.1017/s0020589321000294,arguments against the inequitable distribution of vaccines using the access and benefit sharing transaction,0.61582106,2021,2021-10-01,7,0,0,0
+https://doi.org/10.37815/rte.v34n2.927,methodological proposal to improve organizational innovation in the logistics sector of cartagena colombia,0.61393255,2022,2022-06-30,1,0,0,0
+https://doi.org/10.1080/09699260.2017.1417805,cerebral gliomas treatment prognosis and palliative alternatives,0.6108966,2018,2018-01-02,1,0,0,0
+https://doi.org/10.3390/ijms242115829,imaging and genetic tools for the investigation of the endocannabinoid system in the cns,0.61006445,2023,2023-10-31,2,0,0,0
+https://doi.org/10.3390/jcm13020346,advances and applications of lung organoids in the research on acute respiratory distress syndrome ards,0.6033323,2024,2024-01-08,1,0,0,0
+https://doi.org/10.1007/s12599-024-00870-x,reimagining digital health,0.5949358,2024,2024-05-27,2,0,0,0
+https://doi.org/10.1287/educ.2017.0165,metabolic networks and modern research problems in operations research,0.58543384,2017,2017-09-01,1,0,0,0
+https://doi.org/10.3390/plants12152790,comparatively evolution and expression analysis of grf transcription factor genes in seven plant species,0.5762671,2023,2023-07-27,1,0,0,0
+https://doi.org/10.3389/fneur.2021.708800,traumatic injury to the developing brain emerging relationship to early life stress,0.5653175,2021,2021-08-18,3,0,0,0
+https://doi.org/10.1101/2022.12.20.521331,multimodal learning of noncoding variant effects using genome sequence and chromatin structure,0.55016667,2022,2022-12-21,0,0,0,1
+https://doi.org/10.1186/s13395-023-00332-0,eldecalcitol prevents muscle loss and osteoporosis in disuse muscle atrophy via nfκb signaling in mice,0.54119325,2023,2023-12-19,1,0,0,0
+https://doi.org/10.1016/j.ins.2017.04.008,a new dirichlet process for mining dynamic patterns in functional data,0.54097086,2017,2017-04-07,5,0,0,0
+https://doi.org/10.12688/f1000research.18238.1,biohackathon series in 2013 and 2014 improvements of semantic interoperability in life science data and services,0.5389902,2019,2019-09-23,1,0,0,0
+https://doi.org/10.1093/bioinformatics/btae013,multiomicsintegrated deep language model enables iin silicoi genomewide detection of transcription factor binding site in unexplored biosamples,0.5380571,2024,2024-01-01,0,0,0,1
+https://doi.org/10.6028/nist.ir.8373,applied and computational mathematics division ,0.5365098,2021,2021-05-18,3,0,0,0
+https://doi.org/10.1093/bioinformatics/btad617,investigation of the bert model on nucleotide sequences with nonstandard pretraining and evaluation of different kmer embeddings,0.53624576,2023,2023-10-01,0,0,0,0
+https://doi.org/10.31236/osf.io/w734a,precision strength training datadriven artificial intelligence approach to strength and conditioning,0.5242943,2021,2021-05-20,2,0,0,0
+https://doi.org/10.1177/0952695118804751,the global lexicostatistical database a total archive of linguistic prehistory,0.5155167,2018,2018-12-01,3,0,0,0
+https://doi.org/10.7249/rra2838-1,machine learning and gene editing at the helm of a societal evolution,0.5046542,2023,2023-01-01,1,0,0,0
+https://doi.org/10.1016/j.polgeo.2024.103134,a world model on the political logics of generative ai,0.5033462,2024,2024-05-24,1,0,0,0
+https://doi.org/10.1101/2024.05.02.592257,predicting differentially methylated cytosines in tet and dnmt3 knockout mutants via a large language model,0.4909621,2024,2024-05-05,0,0,0,1
+https://doi.org/10.3389/fgene.2023.1254827,comparative evaluation and analysis of dna n4methylcytosine methylation sites using deep learning,0.4887794,2023,2023-08-21,0,0,0,1
+https://doi.org/10.1101/2024.01.03.574012,a bagofmotif model captures cell states at distal regulatory sequences,0.4860619,2024,2024-01-03,0,0,0,0
+https://doi.org/10.1101/2024.05.21.595047,improving celltypespecific 3d genome architectures prediction leveraging graph neural networks,0.48477814,2024,2024-05-21,0,0,0,1
+https://doi.org/10.1371/journal.pcbi.1012028,evolutionary analyses of intrinsically disordered regions reveal widespread signals of conservation,0.4817285,2024,2024-04-25,1,0,0,0
+https://doi.org/10.1124/pharmrev.122.000715,review of natural language processing in pharmacology,0.4702258,2023,2023-03-17,5,0,0,1
+https://doi.org/10.1101/2023.04.03.535488,improving deep models of proteincoding potential with a fouriertransform architecture and machine translation task,0.4694297,2023,2023-04-05,2,0,0,0
+https://doi.org/10.3389/fpls.2024.1343097,grass lignin biosynthesis biological roles and industrial applications,0.46679753,2024,2024-02-23,6,0,0,0
+https://doi.org/10.1101/2023.10.31.564984,zflipons conserved between human and mouse are associated with increased transcription initiation rates,0.46182117,2023,2023-11-03,0,0,0,0
+https://doi.org/10.1101/2023.08.07.552217,ai in paleontology,0.46084657,2023,2023-08-08,1,0,0,0
+https://doi.org/10.37044/osf.io/zytkj,machine learning of transcriptome data treated with dna base editor,0.45941085,2023,2023-07-12,0,0,0,0
+https://doi.org/10.1101/2022.01.29.478324,nonidentifiability and the blessings of misspecification in models of molecular fitness,0.45470014,2022,2022-01-30,8,0,0,0
+https://doi.org/10.1093/bib/bbae170,understanding ythdf2mediated mrna degradation by m6abertdeg,0.451233,2024,2024-03-27,0,0,0,0
+https://doi.org/10.3389/fphys.2022.834211,imagedriven modeling of nanoscopic cardiac function where have we come from and where are we going,0.4416318,2022,2022-03-08,1,0,0,0
+https://doi.org/10.1177/15554120231219729,from aesthetics to asymmetry contradictions of ecological play in icities skylinesi,0.4391085,2023,2023-12-14,1,0,0,0
+https://doi.org/10.3390/ijms25052869,interpretable multiscale deep learning for rna methylation analysis across multiple species,0.43234366,2024,2024-03-01,0,0,0,0
+https://doi.org/10.1101/2024.03.23.586408,generative models for prediction of nonb dna structures,0.41995043,2024,2024-03-28,0,0,0,0
+https://doi.org/10.1111/imcb.12678,singapores diverse immunology landscape interconnected research networks enabling blue sky ideas through to translation,0.40733123,2023,2023-08-07,0,0,0,0
+https://doi.org/10.1101/2022.12.16.520746,transformerbased tool recommendation system in galaxy,0.370646,2022,2022-12-19,0,0,0,0
+https://doi.org/10.21203/rs.3.rs-3209168/v1,cagi6 idchallenge assessment of phenotype and variant predictions in 415 children with neurodevelopmental disorders ndds,0.37049407,2023,2023-08-02,0,0,0,0
+https://doi.org/10.1017/9781009417075,beyond compassion,0.36825976,2023,2023-11-09,2,0,0,0
+https://doi.org/10.1007/978-3-030-95703-2_5,complex systems from the presocratics to pension funds,0.36452267,2022,2022-01-01,1,0,0,0
+https://doi.org/10.1101/2024.01.29.577794,aggregating residuelevel protein language model embeddings with optimal transport,0.35012802,2024,2024-01-31,3,0,0,0
+https://doi.org/10.1101/2021.11.18.468957,tis transformer remapping the human proteome using deep learning,0.31404877,2021,2021-11-19,0,0,0,0
+https://doi.org/10.21203/rs.3.rs-3915137/v1,methylbert‬ ‭a‬ ‭transformerbased‬ ‭model‬ ‭for‬ ‭readlevel‬ ‭dna‬ ‭methylation‬ pattern‬ ‭identification‬ ‭and‬ ‭tumour‬ ‭deconvolution‬,0.3123936,2024,2024-05-17,0,0,0,0
+https://doi.org/10.1101/2024.04.01.586509,inferring gene regulatory networks by hypergraph variational autoencoder,0.31050292,2024,2024-04-02,1,0,0,0
+https://doi.org/10.22533/at.ed.5362206129,dosimetria termoluminescente,0.28741565,2022,2022-12-06,1,0,0,0
+https://doi.org/10.7287/peerj.13666v0.1/reviews/4,peer review 4 of context dependent prediction in dna sequence using neural networks v01,0.2789916,2022,2022-09-20,0,0,0,0
+https://doi.org/10.7287/peerj.13666v0.1/reviews/1,peer review 1 of context dependent prediction in dna sequence using neural networks v01,0.2789916,2022,2022-09-20,0,0,0,0
+https://doi.org/10.7287/peerj.13666v0.2/reviews/4,peer review 4 of context dependent prediction in dna sequence using neural networks v02,0.2789916,2022,2022-09-20,0,0,0,0
+https://doi.org/10.7287/peerj.13666v0.2/reviews/3,peer review 3 of context dependent prediction in dna sequence using neural networks v02,0.2778028,2022,2022-09-20,0,0,0,0
+https://doi.org/10.7287/peerj.13666v0.1/reviews/2,peer review 2 of context dependent prediction in dna sequence using neural networks v01,0.27089876,2022,2022-09-20,0,0,0,0
+https://doi.org/10.1101/2023.12.21.572780,pretraining with pseudolabeling for regulatory sequence prediction,0.26896635,2023,2023-12-23,0,0,0,1
+https://doi.org/10.7287/peerj.13666v0.1/reviews/3,peer review 3 of context dependent prediction in dna sequence using neural networks v01,0.26830268,2022,2022-09-20,0,0,0,0
+https://doi.org/10.7287/peerj.13666v0.2/reviews/1,peer review 1 of context dependent prediction in dna sequence using neural networks v02,0.2669867,2022,2022-09-20,0,0,0,0
+https://doi.org/10.1101/2022.06.13.495896,exploration of dppiv inhibitory peptide design rules assisted by deep learning pipeline that identifies restriction enzyme cutting site,0.26427236,2022,2022-06-16,0,0,0,0
+https://doi.org/10.1101/2024.06.04.596709,crossspecies plant genomes modeling at single nucleotide resolution using a pretrained dna language model,0.23636682,2024,2024-06-05,0,0,0,1
+https://doi.org/10.1101/2023.11.27.568912,tcell receptor sequences correlate with and predict gene expression levels in t cells,0.23267475,2023,2023-11-28,0,0,0,0
+https://doi.org/10.1101/2023.12.27.573416,speciesspecific design of artificial promoters by transferlearning based generative deeplearning model,0.22804728,2023,2023-12-27,0,0,0,0
+https://doi.org/10.1186/s13059-024-03179-w,ssblazer a genomewide nucleotideresolution model for predicting singlestrand break sites,0.22149843,2024,2024-02-12,0,0,0,0
+https://doi.org/10.1002/pbc.30980,proteomic insights into paediatric cancer unravelling molecular signatures and therapeutic opportunities,0.21411139,2024,2024-03-31,0,0,0,0
+https://doi.org/10.1002/9781394220649.oth,conclusion,0.20460108,2024,2024-01-12,0,0,0,0
+https://doi.org/10.7287/peerj.16357v0.1/reviews/1,peer review 1 of increased academic stress is associated with decreased plasma bdnf in chilean college students v01,0.20303589,2023,2023-11-03,0,0,0,0
+https://doi.org/10.7287/peerj.16357v0.2/reviews/1,peer review 1 of increased academic stress is associated with decreased plasma bdnf in chilean college students v02,0.20040652,2023,2023-11-03,0,0,0,0
+https://doi.org/10.7287/peerj.16357v0.1/reviews/2,peer review 2 of increased academic stress is associated with decreased plasma bdnf in chilean college students v01,0.20040652,2023,2023-11-03,0,0,0,0
+https://doi.org/10.7287/peerj.16357v0.1/reviews/3,peer review 3 of increased academic stress is associated with decreased plasma bdnf in chilean college students v01,0.20003624,2023,2023-11-03,0,0,0,0
+https://doi.org/10.1007/978-3-031-23190-2_1,introduction,0.19873685,2023,2023-01-01,0,0,0,0
+https://doi.org/10.21203/rs.3.rs-4047391/v1,innovative and practical tools for monitoring and assessing biodiversity status and impacts of multiple human pressures in marine systems,0.19623792,2024,2024-03-11,0,0,0,0
+https://doi.org/10.1101/2024.04.11.589150,demixer a probabilistic generative model to delineate different strains of a microbial species in a mixed infection sample,0.19310191,2024,2024-04-15,0,0,0,0
+https://doi.org/10.3410/f.738650621.793578675,faculty opinions recommendation of efficient rational modification of nonribosomal peptides by adenylation domain substitution,0.19160339,2020,2020-09-23,0,0,0,0
+https://doi.org/10.1101/2023.11.24.568626,aptabert predicting aptamer binding interactions,0.19080472,2023,2023-11-25,0,0,0,0
+https://doi.org/10.1093/nar/gkad580,ismod an integrative browser for imagebased singlecell multiomics data,0.18692744,2023,2023-07-13,0,0,0,0
+https://doi.org/10.1609/aaai.v38i3.28064,lavip languagegrounded visual prompting,0.18421045,2024,2024-03-24,0,0,0,0
+https://doi.org/10.1016/s0169-5002(19)30103-5,prevalence of incidental interstitial lung disease in the manchester lung cancer screening pilot,0.18275577,2019,2019-01-01,0,0,0,0
+https://doi.org/10.2196/preprints.59792,generative ai models in time varying biomedical data a systematic review preprint,0.18069842,2024,2024-04-30,0,0,0,1
+https://doi.org/10.1101/2024.04.23.590746,optimizing biomedical information retrieval with a keyword frequencydriven prompt enhancement strategy,0.17908095,2024,2024-04-28,0,0,0,0
+https://doi.org/10.22541/au.166809902.28216147/v1,introducing the drosophila melanogaster model for cancer research,0.17775232,2022,2022-11-10,0,0,0,0
+https://doi.org/10.1101/2023.11.29.569320,bioformers a scalable framework for exploring biostates using transformers,0.17525989,2023,2023-12-01,0,0,0,0
+https://doi.org/10.21203/rs.3.rs-3922651/v1,enhancing the efficiency of protein language models with minimal wetlab data through fewshot learning,0.17370099,2024,2024-02-13,0,0,0,0
+https://doi.org/10.1016/b978-0-12-803480-4.00017-x,replicating chromatin in the eukaryotic genome,0.17212816,2017,2017-11-29,0,0,0,0
+https://doi.org/10.1101/2024.04.11.589024,current genomic deep learning architectures generalize across grass species but not alleles,0.17099869,2024,2024-04-13,0,0,0,0
+https://doi.org/10.1101/2024.01.06.24300926,machine learning enabled prediction of digital biomarkers from whole slide histopathology images,0.16926214,2024,2024-01-08,0,0,0,0
+https://doi.org/10.21203/rs.3.rs-3539732/v1,deciphering cell types by integrating scatacseq data with genome sequences,0.16897726,2024,2024-03-18,0,0,0,0
+https://doi.org/10.1101/2021.08.02.454784,evolutionary origin of sex differentiation system in insects,0.16807492,2021,2021-08-05,0,0,0,0
+https://doi.org/10.18122/td.1991.boisestate,improving the ribozyme toolbox,0.1627672,2022,2022-08-01,0,0,0,0
+https://doi.org/10.4995/thesis/10251/200227,deep learning strategies for overcoming diagnosis challenges with limited annotations,0.16126443,2023,2023-10-26,0,0,0,0
+https://doi.org/10.1101/2024.03.25.586622,the regulatory architecture of the primed pluripotent cell state,0.15691544,2024,2024-03-27,0,0,0,0
+https://doi.org/10.1101/2022.03.14.22272372,prospectively validated augmented intelligence for diseaseagnostic predictions of clinical success for novel therapeutics,0.15618382,2022,2022-03-15,0,0,0,0
+https://doi.org/10.21203/rs.3.rs-4014784/v1,scelmo embeddings from language models are good learners for singlecell data analysis,0.15574731,2024,2024-03-27,0,0,0,1
+https://doi.org/10.7249/cfa3220-1,foundation model convening conference summary,0.15446189,2024,2024-01-01,0,0,0,0
+https://doi.org/10.1101/2023.08.28.555041,moma large scale network model of microbes metabolites and aging hallmarks,0.15230808,2023,2023-08-28,0,0,0,0
+https://doi.org/10.1101/2024.03.15.585302,singleanimal singletube rna extraction for quantitative analysis of transcripts in the tardigradeihypsibius exemplarisi,0.14936608,2024,2024-03-16,0,0,0,0
+https://doi.org/10.1007/s12110-023-09459-x,from the ground up a multidisciplinary approach to past fertility and population narratives,0.14588055,2023,2023-09-01,0,0,0,0
+https://doi.org/10.55041/ijsrem25975,deep residual learning for recognising adulteration in pulses via thermal imaging,0.14210546,2023,2023-10-01,0,0,0,0
+https://doi.org/10.1002/9781119509875.fmatter,front matter,0.14113975,2018,2018-10-01,0,0,0,0
+https://doi.org/10.1101/2023.11.28.568839,interpretable inflammation landscape of circulating immune cells,0.13992028,2023,2023-11-28,0,0,0,0
+https://doi.org/10.20339/phs.6-22.082,the cognition of sleep in r irwin’s novel “the arabian nightmare”,0.13902164,2022,2022-11-01,0,0,0,0
+https://doi.org/10.1101/2024.05.03.592325,multidrug artificial neural network models for predicting hiv1 rti resistance,0.13819203,2024,2024-05-06,0,0,0,0
+https://doi.org/10.1007/978-3-031-23190-2_5,foundation models for information extraction,0.13644135,2023,2023-01-01,0,0,0,0
+https://doi.org/10.1145/3665869,human image generation a comprehensive survey,0.13586885,2024,2024-05-22,0,0,0,0
+https://doi.org/10.1101/2024.01.24.576988,rapid automatic typing of clostridioides difficile ribotypes using malditof ms,0.1306835,2024,2024-01-25,0,0,0,0
+https://doi.org/10.4018/ijdwm.325059,application of improved chameleon swarm algorithm and improved convolution neural network in diagnosis of skin cancer,0.1277264,2023,2023-06-21,0,0,0,0
+https://doi.org/10.1155/2024/7967999,preliminary exploration of potential active ingredients and molecular mechanisms of yanggan yishui granules for treating hypertensive nephropathy using uplcqtofms coupled with network pharmacology and molecular docking strategy,0.12564337,2024,2024-05-10,0,0,0,0
+https://doi.org/10.1093/fmls/cqac026,on purpose interest disinterest and literature we can live by,0.12450312,2022,2022-04-01,0,0,0,0
+https://doi.org/10.1007/s44258-024-00019-1,attsioff a selfattentionbased approach on sirna design with inhibition and offtarget effect prediction,0.12003029,2024,2024-04-23,0,0,0,0
+https://doi.org/10.1101/2023.12.05.570250,evolutionary analyses of idrs reveal widespread signals of conservation,0.11805559,2023,2023-12-07,0,0,0,0
+https://doi.org/10.1117/12.2650568,quantum sensing and quantum engineering a strategy for acceleration via metascience,0.117114134,2023,2023-03-08,0,0,0,0
+https://doi.org/10.4236/jqis.2019.91004,tribonacci quantum cosmology optimal nonantipodal spherical codes ampamp graphs,0.11059889,2019,2019-01-01,0,0,0,0
+https://doi.org/10.1080/15481603.2024.2348863,wildlife detection counting and survey using satellite imagery are we there yet,0.11046108,2024,2024-05-09,0,0,0,0
+https://doi.org/10.1002/aisy.202300644,green ai‐driven concept for the development of cost‐effective and energy‐efficient deep learning method application in the detection of ieimeriai parasites as a case study,0.107639536,2024,2024-06-12,0,0,0,0
+https://doi.org/10.1561/9781638283454,high performance privacy preserving ai,0.098712966,2024,2024-01-01,0,0,0,0
+https://doi.org/10.12688/openreseurope.17330.1,personcentred data sharing empirical studies in private individuals’ attitudes,0.09859688,2024,2024-04-24,0,0,0,0
+https://doi.org/10.1523/hon.011011,larry w swanson,0.0970629,2020,2020-01-01,0,0,0,0
+https://doi.org/10.1002/ece3.10013,revisiting the historical scenario of a disease dissemination using genetic data and approximate bayesian computation methodology the case of ipseudocercospora fijiensisi invasion in africa,0.09584779,2023,2023-04-01,0,0,0,0
+https://doi.org/10.1109/tsmc.2023.3335634,2023 index ieee transactions on systems man and cybernetics systems vol 53,0.093995914,2023,2023-11-22,0,0,0,0
+https://doi.org/10.1101/2023.09.04.556152,molecular basis of product recognition during pip5kmediated production of pi45psub2subwith positive feedback,0.09211689,2023,2023-09-04,0,0,0,0
+https://doi.org/10.11606/t.5.2024.tde-23042024-111255,regulação da inteligência artificial na saúde,0.0912634,2024,2024-01-29,0,0,0,0
+https://doi.org/10.1007/978-3-319-53300-1_12,enhancing data access and utilization federal big data initiative and relevance to health disparities research,0.08358459,2017,2017-01-01,0,0,0,0
+https://doi.org/10.1017/9781139028776.005,territory,0.08080627,2018,2018-07-27,0,0,0,0
+https://doi.org/10.22533/at.ed.5362206121,compostos com capacidade antioxidante encontrados em plantas medicinais e seus benefícios para saúde uma revisão,0.073326185,2022,2022-12-06,0,0,0,0
+https://doi.org/10.22533/at.ed.53622061211,ferramentas de desenvolvimento e criação de ontologias,0.073326185,2022,2022-12-06,0,0,0,0
+https://doi.org/10.22533/at.ed.5362206128,falhas no comportamento de sistemas rotativos e possíveis soluções,0.073326185,2022,2022-12-06,0,0,0,0
+https://doi.org/10.22533/at.ed.536220612,ciências exatas e da terra e engenharias conhecimento e informação,0.073326185,2022,2022-12-06,0,0,0,0
+https://doi.org/10.22533/at.ed.5362206124,cadastro territorial urbano estudo comparativo entre procedimentos e exigencias dos municipios que compõe a micorregião de maringá pr,0.072160155,2022,2022-12-06,0,0,0,0
+https://doi.org/10.22533/at.ed.53622061212,produção e caracterização de vitrocerâmicas obtidas a partir de pó de vidro reciclado de parabrisas e adição de nb2o5,0.072160155,2022,2022-12-06,0,0,0,0
+https://doi.org/10.22533/at.ed.5362206125,análise técnicoeconômica da eficiência energética de um prédio público – um estudo de caso,0.07028437,2022,2022-12-06,0,0,0,0
+https://doi.org/10.1109/globecom54140.2023.10436923,author index,0.070026144,2023,2023-12-04,0,0,0,0
+https://doi.org/10.22533/at.ed.5362206126,analysis of precipitation in belémpa city period 19672016,0.06982446,2022,2022-12-06,0,0,0,0
+https://doi.org/10.22533/at.ed.53622061210,código de monte carlo aplicado a radioterapia,0.06976803,2022,2022-12-06,0,0,0,0
+https://doi.org/10.22533/at.ed.5362206122,doenças com etiologia fúngica em plantas da família orchidaceae,0.06946313,2022,2022-12-06,0,0,0,0
+https://doi.org/10.31219/osf.io/x6h9b,agentbased kinetics a nonspatial stochastic method for simulating the dynamics of heterogeneous populations,0.06597712,2019,2019-07-26,0,0,0,0
+https://doi.org/10.5753/sbc.13058.5.8,“a nova eletricidade” aplicações riscos e tendências da ia moderna,0.060490236,2023,2023-10-05,0,0,0,0
+https://doi.org/10.11647/obp.0335.02,2 knowledge language and reason,0.04975696,2023,2023-11-17,0,0,0,0
+https://doi.org/10.17760/d20405636,cultural dexerity,0.047869846,2021,2021-01-01,0,0,0,0
+https://doi.org/10.18002/10612/18580,botnet activity spotting with artificial intelligence efficient bot malware detection and social bot identification,0.039538838,2023,2023-11-30,0,0,0,0
+https://doi.org/10.1515/9783111085692,bilder unter verdacht,0.037734777,2024,2024-01-12,0,0,0,0
