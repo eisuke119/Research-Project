@@ -5,11 +5,7 @@ pandas
 numpy
 openalexapi
 biopython
-argparse
 requests
-os
-sys
-re
 
 
 
