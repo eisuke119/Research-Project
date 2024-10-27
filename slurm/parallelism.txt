@@ -1,0 +1,57 @@
+
+If you want to run each model on a separate node, you could set up your SLURM job like this:
+Resource Allocation: Each job in the array will run on its own node, assuming the scheduler can allocate them. Each job would request:
+
+1 Node
+4 CPU cores
+2 GPUs
+Independent Execution: This ensures that each model runs independently on separate nodes, which can be beneficial if the models are resource-intensive and can benefit from full node capabilities without competing for resources.
+
+#!/bin/bash
+#SBATCH --nodes=5               # Request 5 nodes (1 for each model)
+#SBATCH -c 4                    # 4 CPU cores per job (each job runs on its own node)
+#SBATCH --gpus=2                # 2 GPUs per job (each job runs on its own node)
+#SBATCH -t 01:00:00             # Time limit
+#SBATCH -o benchmark-%j.out
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=your_email@example.com
+
+# Load software
+module load Anaconda3
+
+# Run Python script with a loop to handle each model
+for i in {1..5}; do
+    srun --exclusive --nodes=1 --ntasks=1 --cpus-per-task=4 --gpus=2 python benchmark.py $i &
+done
+
+
+
+Alternatively, you could set it up to run all models on a single node, sharing the resources:
+
+#!/bin/bash
+#SBATCH --array=1               # 5 different models, one for each node
+#SBATCH --nodes=5               # Request 5 nodes for 5 jobs (1 model per node)
+#SBATCH -c 4                    # 4 CPU cores per job
+#SBATCH --gpus=2                # 2 GPUs per job
+#SBATCH -t 01:00:00             # Time limit
+#SBATCH -o benchmark-%j.out
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=your_email@example.com
+
+# Load software
+module load Anaconda3
+
+# Run Python script with the SLURM_ARRAY_TASK_ID
+srun python benchmark.py $SLURM_ARRAY_TASK_ID
+
+
+import sys
+
+def benchmark_model(model_id):
+    # Logic to benchmark the specified model based on model_id
+    print(f"Benchmarking model {model_id}...")
+    # Add your benchmarking code here
+
+if __name__ == "__main__":
+    model_id = int(sys.argv[1])  # Get the model ID from command line
+    benchmark_model(model_id)
