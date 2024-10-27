@@ -1,6 +1,15 @@
 scikit-learn
+scipy
 matplotlib
 pandas
 numpy
 openalexapi
+biopython
+argparse
 requests
+os
+sys
+re
+
+
+
