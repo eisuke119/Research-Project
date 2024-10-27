@@ -1,7 +1,6 @@
 .DS_Store
 .enviroment.yml
 hpc_test/data/
-*.job
 *.out
 *.tsv
 *.gz
