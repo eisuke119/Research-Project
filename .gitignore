@@ -3,3 +3,5 @@
 hpc_test/data/
 *.job
 *.out
+*.tsv
+*.gz
