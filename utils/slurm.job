@@ -1,10 +1,9 @@
-#!/bin/bash
+#!/bin/bash 
 
-#SBATCH --job-name=gpu_job
-#SBATCH --output=job.%j.out
-#SBATCH --partition=brown  
-#SBATCH --gres=gpu:rtx8000 
-#SBATCH --cpus-per-task=8 
-#SBATCH --time=01:00:00    
+#SBATCH -J simple         
+#SBATCH -o job.%j.out     
+#SBATCH -c 1              # Schedule 2 cores
+#SBATCH -t 01:00:00       
+#SBATCH -p brown      
 
 python main_test.py
