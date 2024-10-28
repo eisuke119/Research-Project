@@ -1,7 +1,7 @@
 """This file loads the dna sequences and dumps a csv of labelled sequences"""
 
-from Bio import SeqIO
 import gzip
+from Bio import SeqIO
 
 
 def preprocess_contigs(data_path: str, csv_path: str, id_label_csv_path: str) -> None:
@@ -12,10 +12,10 @@ def preprocess_contigs(data_path: str, csv_path: str, id_label_csv_path: str) ->
         csv_path (str): csv path to labelled contigs
         id_label_csv_path (str): csv path to labelled ids
     """
-    with gzip.open(path, "rt") as f:
-        with open(store_csv_path, "w") as store_csv:
+    with gzip.open(data_path, "rt") as f:
+        with open(csv_path, "w") as store_csv:
             store_csv.write("id,sequence,species\n")
-            with open(id_to_species_path, "w") as id_to_species:
+            with open(id_label_csv_path, "w") as id_to_species:
                 id_to_species.write("id,species\n")
                 for i, contig in enumerate(SeqIO.parse(f, "fasta")):
                     seq = contig.seq
