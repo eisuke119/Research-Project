@@ -14,7 +14,6 @@ class DNADataset(Dataset):
 
     def __getitem__(self, idx):
         dna = self.data.iloc[idx]["sequence"]
-        print("Length of DNA sequence", len(dna))
         label = self.data.iloc[idx]["species"]
         inputs = self.tokenizer(dna, return_tensors="pt")["input_ids"].squeeze(0)
         return inputs, label
