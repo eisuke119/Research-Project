@@ -4,3 +4,4 @@ hpc_test/data/
 *.out
 *.tsv
 *.gz
+*.npy
