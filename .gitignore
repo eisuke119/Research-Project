@@ -1,3 +1,8 @@
 .DS_Store
 *.csv
 *.npy
+*.fna.gz
+*.tsv
+*__pycache__/
+outdated/
+results/DNABERT_S.json

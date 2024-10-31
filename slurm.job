@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#SBATCH -J DNA_BENCHMARK         # Job name
+#SBATCH -o DNA_BENCHMARK_%j.out
+#SBATCH --cpus-per-task=16       # Schedule 8 cores (includes hyperthreading)
+#SBATCH --gres=gpu:rtx8000       # Schedule a GPU
+#SBATCH --mem=48G:
+#SBATCH --time=3-00:00:00
+#SBATCH --mail-type=BEGIN,END,FAIL
+#SBATCH --partition=brown
+
+# Run python script
+srun python main.py

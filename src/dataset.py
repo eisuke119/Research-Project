@@ -1,5 +1,6 @@
 """Custom Dataloader for Contigs CSV file"""
 
+import torch
 from torch.utils.data import Dataset
 
 
@@ -17,8 +18,7 @@ class DNADataset(Dataset):
             csv_file (str): Filepath to contig csv
             tokenizer (object): Model Tokenizer
         """
-        self.sequence = [i[1] for i in data[1:]]
-        self.id = [i[0] for i in data[1:]]
+        self.sequences = data
 
     def __len__(self) -> int:
         """Get length of the dataset
@@ -26,9 +26,9 @@ class DNADataset(Dataset):
         Returns:
             int: N
         """
-        return len(self.sequence)
+        return len(self.sequences)
 
-    def __getitem__(self, idx: int) -> tuple[int, str]:
+    def __getitem__(self, idx: int):
         """Retrieve item from dataset
 
         Args:
@@ -37,6 +37,5 @@ class DNADataset(Dataset):
         Returns:
             str: DNA Sequence
         """
-        index = self.id[idx]
-        sequence = self.sequence[idx]
-        return index, sequence
+        sequence = self.sequences[idx]
+        return sequence
