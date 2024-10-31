@@ -1,5 +1,6 @@
 .DS_Store
-*.csv
+data/metahit/*
+data/*
 *.npy
 *.fna.gz
 *.tsv
