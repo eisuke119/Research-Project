@@ -7,78 +7,40 @@ from scipy.optimize import linear_sum_assignment
 import sklearn.metrics
 
 
-def load_contigs(file_path: str, min_length=2500, max_length=100000) -> np.array:
-    """Load contig data and their IDs.
-    Only keeps sequences with: min_length < seq_length < max_length
-    Example ID that is parsed: gi|224815735|ref|NZ_ACGB01000001.1|_[Acidaminococcus_D21_uid55871]_1-5871
+def preprocess_contigs(
+    data_path: str, csv_path: str, seq_min_length: int = 2500
+) -> None:
+    """Process contigs and dump both a csv of labelled sequences and csv of labelled ids.
 
     Args:
-        file_path (str): file path for contigs in format .fna.gz
-        min_length (int, optional): minimum length for the DNA strings. Defaults to 2500.
-        max_length (int, optional): maximum length for the DNA strings. Defaults to 100000.
-
-    Returns:
-            np.array: returns 1 array with numeric labels and 1 array with dna-sequences
-
-    Raises:
-        ValueError: When metadata from the fasta-id can not be parsed correctly.
-
+        data_path (str): metahit datapath
+        csv_path (str): Path to Contig CSV
+        seq_min_length (int): minimum length of sequence
     """
+    with gzip.open(data_path, "rt") as f:
+        with open(csv_path, "w") as contig_store_csv:
+            contig_store_csv.write("id,sequence,species\n")
+            # short_seq = 0
+            for i, contig in enumerate(SeqIO.parse(f, "fasta")):
+                seq = contig.seq
+                # if len(str(seq)) < seq_min_length:
+                #    short_seq += 1
+                #    continue
+                try:
+                    genome_id, scaffold = (
+                        contig.id.split("|")[1],
+                        contig.id.split("|")[3],
+                    )
+                    species, genome_positions = contig.id.split("_[")[-1].split("]_")
+                    start_position, end_position = genome_positions.split(
+                        "-"
+                    )  # if needed
+                    contig_store_csv.write(f"{i},{str(seq)},{species}\n")
+                except:
+                    raise ValueError(f"Could not extract metadata from ID: {contig.id}")
 
-    print(f"***** Start loading data from file path: {file_path} *****")
-
-    sequences = {}
-    # Regular expression to capture metadata from the FASTA header, e.g. gi|224815735|ref|NZ_ACGB01000001.1|_[Acidaminococcus_D21_uid55871]_1-5871
-    pattern = re.compile(r"gi\|[\d]+\|ref\|(.*?)\.(\d)\|_\[(.*?)\]_(\d+)-(\d+)")
-
-    with gzip.open(file_path, "rt") as handle:
-        for record in SeqIO.parse(handle, "fasta"):
-            match = pattern.search(record.id)
-            if match:
-                scaffold_id = int(match.group(2))
-                species = match.group(3)
-                start = int(match.group(4))
-                end = int(match.group(5))
-
-                sequences[record.id] = {
-                    "scaffold_id": scaffold_id,
-                    "species": species,
-                    "start": start,
-                    "end": end,
-                    "length": len(record.seq),
-                    "sequence": str(record.seq),
-                }
-
-            else:
-                raise ValueError(f"Could not extract metadata from ID: {record.id}")
-
-    labels = [seq["species"] for seq in sequences.values()]
-    dna_sequences = [seq["sequence"] for seq in sequences.values()]
-
-    # Filtering based on length
-    initial_count = len(sequences)
-    sequences = {
-        id_: seq
-        for id_, seq in sequences.items()
-        if min_length <= seq["length"] <= max_length
-    }
-    removed_count = initial_count - len(sequences)
-    print(
-        f"Removed {removed_count} sequences that were shorter than {min_length} or longer than {max_length}."
-    )
-
-    # Check nubmer of contigs in each species
-    label_counts = list(collections.Counter(labels).values())
-    print(
-        f"Number of contigs per species; Min: {min(label_counts)}, Max: {max(label_counts)}, Median: {np.median(label_counts)}"
-    )
-
-    # Convert label to numeric ID
-    label2id = {l: i for i, l in enumerate(set(labels))}
-    labels_id = np.array([label2id[l] for l in labels])
-    print(f"Got {len(sequences)} sequences, {len(label2id)} clusters")
-
-    return np.array(labels_id), np.array(dna_sequences)
+    # print(f"Removed {short_seq} sequences that were shorter than {seq_min_length}.")
+    return
 
 
 def KMediod(
@@ -131,6 +93,7 @@ def KMediod(
             similarities[:, idx], axis=1
         )  # updating density vector by the removed indices
         density_vector[idx] = -100  # discards the chosen instances from density vector
+        print(count)
 
     # remove bins that are too small
     unique, counts = np.unique(predictions, return_counts=True)
@@ -217,3 +180,77 @@ def compute_eval_metrics(true_labels: np.array, predicted_labels: np.array) -> d
         "f1_results": f1_results,
         "recall_results": recall_results,
     }
+
+
+def load_contigs(file_path: str, min_length=2500, max_length=100000) -> np.array:
+    """Load contig data and their IDs.
+    Only keeps sequences with: min_length < seq_length < max_length
+    Example ID that is parsed: gi|224815735|ref|NZ_ACGB01000001.1|_[Acidaminococcus_D21_uid55871]_1-5871
+
+    Args:
+        file_path (str): file path for contigs in format .fna.gz
+        min_length (int, optional): minimum length for the DNA strings. Defaults to 2500.
+        max_length (int, optional): maximum length for the DNA strings. Defaults to 100000.
+
+    Returns:
+            np.array: returns 1 array with numeric labels and 1 array with dna-sequences
+
+    Raises:
+        ValueError: When metadata from the fasta-id can not be parsed correctly.
+
+    """
+
+    print(f"***** Start loading data from file path: {file_path} *****")
+
+    sequences = {}
+    # Regular expression to capture metadata from the FASTA header, e.g. gi|224815735|ref|NZ_ACGB01000001.1|_[Acidaminococcus_D21_uid55871]_1-5871
+    pattern = re.compile(r"gi\|[\d]+\|ref\|(.*?)\.(\d)\|_\[(.*?)\]_(\d+)-(\d+)")
+
+    with gzip.open(file_path, "rt") as handle:
+        for record in SeqIO.parse(handle, "fasta"):
+            match = pattern.search(record.id)
+            if match:
+                scaffold_id = int(match.group(2))
+                species = match.group(3)
+                start = int(match.group(4))
+                end = int(match.group(5))
+
+                sequences[record.id] = {
+                    "scaffold_id": scaffold_id,
+                    "species": species,
+                    "start": start,
+                    "end": end,
+                    "length": len(record.seq),
+                    "sequence": str(record.seq),
+                }
+
+            else:
+                raise ValueError(f"Could not extract metadata from ID: {record.id}")
+
+    labels = [seq["species"] for seq in sequences.values()]
+    dna_sequences = [seq["sequence"] for seq in sequences.values()]
+
+    # Filtering based on length
+    initial_count = len(sequences)
+    sequences = {
+        id_: seq
+        for id_, seq in sequences.items()
+        if min_length <= seq["length"] <= max_length
+    }
+    removed_count = initial_count - len(sequences)
+    print(
+        f"Removed {removed_count} sequences that were shorter than {min_length} or longer than {max_length}."
+    )
+
+    # Check nubmer of contigs in each species
+    label_counts = list(collections.Counter(labels).values())
+    print(
+        f"Number of contigs per species; Min: {min(label_counts)}, Max: {max(label_counts)}, Median: {np.median(label_counts)}"
+    )
+
+    # Convert label to numeric ID
+    label2id = {l: i for i, l in enumerate(set(labels))}
+    labels_id = np.array([label2id[l] for l in labels])
+    print(f"Got {len(sequences)} sequences, {len(label2id)} clusters")
+
+    return np.array(labels_id), np.array(dna_sequences)

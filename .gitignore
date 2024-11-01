@@ -5,3 +5,5 @@ hpc_test/data/
 *.tsv
 *.gz
 *.npy
+*.csv
+__pycache__
