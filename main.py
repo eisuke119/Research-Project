@@ -46,23 +46,26 @@ def main():
         data = list(csv.reader(csvfile, delimiter=","))
     dna_sequences = [i[1] for i in data[1:]]
     label_ids, id2label = label_to_id(data)
+    label_ids = label_ids
 
     # Read Model Configs
     with open(model_configs, "r") as model_file:
         models_config = yaml.safe_load(model_file)
 
-    for model in list(models_config.keys()):
+    for model_name in list(models_config.keys()):
 
-        print(f"Using {model} to calculate embeddings")
+        print(f"Using {model_name} to calculate embeddings")
 
-        model_path = models_config[model]["model_path"]
-        save_path = models_config[model]["embedding_path"]
+        model_path = models_config[model_name]["model_path"]
+        save_path = models_config[model_name]["embedding_path"]
 
         try:
-            embeddings = get_embeddings(dna_sequences, model_path, save_path)
+            embeddings = get_embeddings(
+                dna_sequences, model_name, model_path, save_path
+            )
             embeddings = normalize(embeddings)
         except Exception as e:
-            print(f"Error in getting embeddings for {model} with error: {e}")
+            print(f"Error in getting embeddings for {model_name} with error: {e}")
             continue
 
         percentile_values, sampled_indices_list = (
@@ -71,22 +74,25 @@ def main():
 
         threshold = percentile_values[7]
         print(f"threshold: {threshold}")
+
         predictions = KMediod(embeddings, threshold)
         print(
             f"Found {len(np.unique(predictions))} out of {len(set(label_ids))} "
         )  # Ideal 290
 
-        label_ids = label_ids[predictions != -1]
+        labels_in_preds = label_ids[predictions != -1]
         predictions = predictions[predictions != -1]
 
-        label_mappings = align_labels_via_linear_sum_assignemt(label_ids, predictions)
+        label_mappings = align_labels_via_linear_sum_assignemt(
+            labels_in_preds, predictions
+        )
         predictions = [label_mappings[label] for label in predictions]
 
-        results = compute_eval_metrics(label_ids, predictions)
+        results = compute_eval_metrics(labels_in_preds, predictions)
 
-        model_results = {model: results}
-        results_path = os.path.join(results_path, model + ".json")
-        with open(results_path, "w") as results_file:
+        model_results = {model_name: results}
+        model_results_path = os.path.join(results_path, model_name + ".json")
+        with open(model_results_path, "w") as results_file:
             json.dump(model_results, results_file)
     return
 

@@ -1,39 +1,47 @@
-DNABERT_S:
-  model_path: "zhihan1996/DNABERT-S"
-  embedding_path: "DNABERT_S.npy"
+# DNABERT_S:
+#   model_path: "zhihan1996/DNABERT-S"
+#   embedding_path: "DNABERT_S.npy"
 
-DNABERT_2:
-  model_path: "zhihan1996/DNABERT-2-117M"
-  embedding_path: "DNABERT_2.npy"
+# DNABERT_2:
+#   model_path: "zhihan1996/DNABERT-2-117M"
+#   embedding_path: "DNABERT_2.npy"
 
-DNABERT_1:
-  model_path: "zhihan1996/DNA_bert_6"
-  embedding_path: "DNABERT_1.npy"
+# DNABERT_1:
+#   model_path: "zhihan1996/DNA_bert_6"
+#   embedding_path: "DNABERT_1.npy"
 
-HyenaDNA:
-  model_path: "LongSafari/hyenadna-large-1m-seqlen"
-  embedding_path: "HyenaDNA.npy"
+# HyenaDNA:
+#   model_path: "LongSafari/hyenadna-large-1m-seqlen"
+#   embedding_path: "HyenaDNA.npy"
 
-GROVER:
-  model_path: "PoetschLab/GROVER"
-  embedding_path: "GROVER.npy"
+# GROVER:
+#   model_path: "PoetschLab/GROVER"
+#   embedding_path: "GROVER.npy"
 
-NT:
-  model_path: "InstaDeepAI/nucleotide-transformer-2.5b-multi-species"
-  embedding_path: "NT.npy"
+# NT:
+#   model_path: "InstaDeepAI/nucleotide-transformer-2.5b-multi-species"
+#   embedding_path: "NT.npy"
 
-Caduceus:
-  model_path: "kuleshov-group/caduceus-ps_seqlen-131k_d_model-256_n_layer-16"
-  embedding_path: "Caduceus.npy"
+# Caduceus:
+#   model_path: "kuleshov-group/caduceus-ps_seqlen-131k_d_model-256_n_layer-16"
+#   embedding_path: "Caduceus.npy"
 
-EVO:
-  model_path: "togethercomputer/evo-1-8k-base"
-  embedding_path: "EVO.npy"
+# EVO:
+#   model_path: "togethercomputer/evo-1-8k-base"
+#   embedding_path: "EVO.npy"
 
-ProkBERT:
-  model_path: "neuralbioinfo/prokbert-mini-long"
-  embedding_path: "ProkBERT.npy"
+# ProkBERT:
+#   model_path: "neuralbioinfo/prokbert-mini-long"
+#   embedding_path: "ProkBERT.npy"
 
-GenALM:
-  model_path: "AIRI-Institute/gena-lm-bert-base-t2t"
-  embedding_path: "GenALM.npy"
+# GenALM:
+#   model_path: "AIRI-Institute/gena-lm-bert-base-t2t"
+#   embedding_path: "GenALM.npy"
+
+TNF:
+  model_path: "tnf"
+  embedding_path: "TNF.npy"
+
+DNA2Vec:
+  model_path: "helpers/4mer_embedding.npy"
+  embedding_path: "dna2vec.npy"
