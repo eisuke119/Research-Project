@@ -4,6 +4,7 @@
 #### Meeting Outline
 * [03 October 2024](#date-03-october-2024)
 * [10 October 2024](#date-10-october-2024)
+* [05 November 2024](#date-05-november-2024)
 
 #### Date: 03 October 2024
 
@@ -75,3 +76,56 @@
 * Processing large files on HPC and optimal processing.
 * Discard systematic dataset review?
 * PRISMA guidelines
+
+#### Date: 05 November 2024
+
+
+##### Who helped you this week?
+
+
+##### What did you achieve (since last time)?
+
+*  Literature review is finished.
+    * Found 17 foundation models and 3 benchmark papers
+*  We chose to pursue the metagenomics binning task, as phenotype prediction (discussed last time) was out of scope.
+    * We found a dataset used in one of the key papers (VAMB) called MetaHIT.
+    * Instead of raw reads as seen last time, this dataset consists of assembled raw reads into so called contigs (contiguous dna sequences)
+        * All contigs are labeled with a species or genus id.
+        * Contig lengths vary from 2500 to around 20000
+        * The task of metagenomic binning in this project is now to represent each contig with embeddings from model *X* and apply the K-medoid unsupervised clustering algorithm described in [DNABERT-S](https://arxiv.org/pdf/2402.08777). Contigs and clusters are then labeled and compared to the true labels.
+* Written source code for the whole metagenomics binning pipeline.
+    * We managed to get embeddings from the two simplest models.
+
+##### What did you struggle with?
+
+* We struggled with the queues on the HPC cluster to get embeddings from huggingface models. We are now trying the external ressources Ucloud.
+* We expect to use at least 24GB but probably more, as the K-medoid algorithm also uses some memory.
+
+##### What would you like to work on today and next week?
+
+* Get all embeddings. So getting the actual computation on the cluster to work.
+* Quality check of linear sum alignment algorithm used by DNABERT-S to align predicted labels with the true labels.
+    * This can be done locally using the already computed embeddings.
+
+##### Where do you need help from Veronika?
+
+* Decide on method for calculating threshold for the K-medoid clustering algorithm.
+    * The K-medoid algorithm is sensitive to changes in the threshold paramater, that governs whether two contigs should be clustered together or not. In DNABERT-S they use a seperate dataset to calculate an independent threshold for each of the models, as they claim the magnitudes of distances vary a lot from model to model. The threshold is calculated using the seperate dataset by computing all distances from each contig to its respective species centroid and pick the 70th percentile out of all of these distances (a bit arbitrary). 
+* Our method: 
+    * We do not have such a hold out dataset but emulate this by sampling a certain number of contigs from all the species in the data to calculate the 70th percentile of the distances and use this as our threshold for each of our models.
+    * Question 1: 
+        * Should we sample x amount of contigs from each species to assure we have all the clusters when calculating the threshold?
+        * Or should we sample all contigs within a percentage of the species, say 20% of the species?
+    * Question 2:
+        * The K-medoid algorithm is very sensitive to the threshold paramater, so the sampling could result in different threshold parameters by chanche. To avoid the randomness we could use the whole dataset to calculate the threshold. Would this be considered p-hacking (lack of better word)?
+    * Question 3:
+        * What are the pros and cons of using a threshold for each the seperate models instead of having a pre-set global threshold.
+        * All the embeddings are normalized, so this threshold calculation seems a bit suspicious.
+* Question 4:
+    In DNABERT-S they discard all contigs that were not assigned any label from the K-medoid algorithm when calculating their results. We think that they do this to make the linear sum alignment algorithm work, as it assumes all contigs are given a label. 
+    This is a clear downside where they discard unclassified contigs instead of reporting it. We thought to include the unclassified contigs in some way. Perhaps by randomly assigning them label, or using them in the results somehow.
+
+    * What are your thoughts on this?
+
+
+We would like to get feedback on our report and report structure so far.
