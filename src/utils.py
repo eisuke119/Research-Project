@@ -68,7 +68,7 @@ def sort_sequences(dna_sequences: list) -> tuple[list, np.array]:
     lengths = [len(seq) for seq in dna_sequences]
     idx_asc = np.argsort(lengths)
     idx_desc = idx_asc[::-1]
-    dna_sequences = [dna_sequences[i] for i in idx]
+    dna_sequences = [dna_sequences[i] for i in idx_desc]
 
     return dna_sequences, idx_desc
 
