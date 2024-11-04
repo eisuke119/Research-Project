@@ -63,7 +63,7 @@ def get_embeddings(dna_sequences, model_path, save_path):
 
 
 def calculate_llm_embedding(
-    dna_sequences, model_path, model_max_length=None, batch_size=10
+    dna_sequences, model_path, model_max_length=None, batch_size=5
 ):
     # To reduce Padding overhead
     sorted_dna_sequences, idx = sort_sequences(dna_sequences)
