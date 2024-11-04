@@ -61,7 +61,8 @@ def main():
         try:
             embeddings = get_embeddings(dna_sequences, model_path, save_path)
             embeddings = normalize(embeddings)
-        except:
+        except Exception as e:
+            print(f"Error in getting embeddings for {model} with error: {e}")
             continue
 
         percentile_values, sampled_indices_list = (
