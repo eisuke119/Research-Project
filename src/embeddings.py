@@ -106,6 +106,8 @@ def calculate_llm_embedding(
                 embeddings = embedding
             else:
                 embeddings = torch.cat((embeddings, embedding), dim=0)
+        if i == 50:
+            break
 
     embeddings = np.array(embeddings.detach().cpu())
 

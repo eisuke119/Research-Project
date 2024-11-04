@@ -66,10 +66,11 @@ def sort_sequences(dna_sequences: list) -> tuple[list, np.array]:
         tuple[list, list]: Sorted DNA Sequences and corresponding indices
     """
     lengths = [len(seq) for seq in dna_sequences]
-    idx = np.argsort(lengths)
+    idx_asc = np.argsort(lengths)
+    idx_desc = idx_asc[::-1]
     dna_sequences = [dna_sequences[i] for i in idx]
 
-    return dna_sequences, idx
+    return dna_sequences, idx_desc
 
 
 def label_to_id(data: list[list]) -> tuple[np.array, dict]:
