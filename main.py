@@ -2,8 +2,9 @@
 
 import os
 import csv
-import yaml
+import traceback
 import json
+import yaml
 
 import torch
 import numpy as np
@@ -64,8 +65,10 @@ def main():
                 dna_sequences, model_name, model_path, save_path
             )
             embeddings = normalize(embeddings)
-        except Exception as e:
-            print(f"Error in getting embeddings for {model_name} with error: {e}")
+        except Exception:
+            print(
+                f"|===========| Error in getting embeddings for {model_name}|===========|\n{traceback.format_exc()}"
+            )
             continue
 
         percentile_values, sampled_indices_list = (
