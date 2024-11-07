@@ -59,10 +59,11 @@ def main():
 
         model_path = models_config[model_name]["model_path"]
         save_path = models_config[model_name]["embedding_path"]
+        batch_sizes = models_config[model_name]["batch_sizes"]
 
         try:
             embeddings = get_embeddings(
-                dna_sequences, model_name, model_path, save_path
+                dna_sequences, batch_sizes, model_name, model_path, save_path
             )
             embeddings = normalize(embeddings)
         except Exception:

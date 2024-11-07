@@ -6,6 +6,7 @@ import torch.nn as nn
 from torch.utils.data import DataLoader
 
 from transformers import AutoTokenizer, AutoModel
+from transformers.models.bert.configuration_bert import BertConfig
 import tqdm
 import numpy as np
 
@@ -37,7 +38,7 @@ def get_available_device():
         return device, 1
 
 
-def get_embeddings(dna_sequences, model_name, model_path, save_path):
+def get_embeddings(dna_sequences, batch_sizes, model_name, model_path, save_path):
 
     embedding_dir = "embeddings"
     if os.path.exists(embedding_dir):
@@ -53,12 +54,41 @@ def get_embeddings(dna_sequences, model_name, model_path, save_path):
                 print(
                     f"Mismatch in number of embeddings from {save_path} and DNA sequences.\nRecalculating embeddings."
                 )
+
     if model_name == "TNF":
         embeddings = calculate_tnf(dna_sequences)
     elif model_name == "DNA2Vec":
         embeddings = calculate_dna2vec_embedding(dna_sequences, model_path)
     else:
-        embeddings = calculate_llm_embedding(dna_sequences, model_path)
+        min_sequence_lengths = [2500, 10000, 20000]
+        max_sequence_lengths = [10000, 20000, 100000]
+
+        processed_ids = []
+        processed_embeddings = []
+
+        for sequence_length_min, sequence_length_max, batch_size in zip(
+            min_sequence_lengths, max_sequence_lengths, batch_sizes
+        ):
+
+            indices_filtered, dna_sequences_filtered = [
+                (index, seq)
+                for (index, seq) in enumerate(dna_sequences)
+                if sequence_length_min <= len(seq) < sequence_length_max
+            ]
+
+            embeddings = calculate_llm_embedding(
+                dna_sequences_filtered, batch_size, model_name, model_path
+            )
+
+            processed_embeddings.append(embeddings)
+            processed_ids.extend(indices_filtered)
+
+        embeddings = np.stack(
+            processed_embeddings,
+            axis=0,
+        )
+
+        embeddings = embeddings[np.argsort(processed_ids)]
 
     with open(save_path, "wb") as f:
         np.save(f, embeddings)
@@ -67,7 +97,10 @@ def get_embeddings(dna_sequences, model_name, model_path, save_path):
 
 
 def calculate_llm_embedding(
-    dna_sequences, model_path, model_max_length=None, batch_size=10
+    dna_sequences,
+    batch_size,
+    model_name,
+    model_path,
 ):
     # To reduce Padding overhead
     sorted_dna_sequences, idx = sort_sequences(dna_sequences)
@@ -79,15 +112,25 @@ def calculate_llm_embedding(
 
     tokenizer = AutoTokenizer.from_pretrained(
         model_path,
-        model_max_length=model_max_length,
         padding_side="right",
         trust_remote_code=True,
         padding="max_length",
     )
-    model = AutoModel.from_pretrained(
-        model_path,
-        trust_remote_code=True,
-    )
+    if model_name == "DNABERT_2":
+        config = BertConfig.from_pretrained(
+            model_path,
+            trust_remote_code=True,
+        )
+        model = AutoModel.from_pretrained(
+            model_path,
+            config=config,
+            trust_remote_code=True,
+        )
+    else:
+        model = AutoModel.from_pretrained(
+            model_path,
+            trust_remote_code=True,
+        )
     if n_gpu > 1:
         model = nn.DataParallel(model)
 
