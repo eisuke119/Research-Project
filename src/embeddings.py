@@ -77,7 +77,7 @@ def get_embeddings(dna_sequences, batch_sizes, model_name, model_path, save_path
             ]
 
             embeddings = calculate_llm_embedding(
-                dna_sequences_filtered, batch_size, model_name, model_path
+                dna_sequences_filtered[:500], batch_size, model_name, model_path
             )
 
             processed_embeddings.append(embeddings)
