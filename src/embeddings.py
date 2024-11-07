@@ -70,11 +70,16 @@ def get_embeddings(dna_sequences, batch_sizes, model_name, model_path, save_path
             min_sequence_lengths, max_sequence_lengths, batch_sizes
         ):
 
-            indices_filtered, dna_sequences_filtered = [
-                (index, seq)
-                for (index, seq) in enumerate(dna_sequences)
-                if sequence_length_min <= len(seq) < sequence_length_max
-            ]
+            indices_filtered, dna_sequences_filtered = zip(
+                *[
+                    (index, seq)
+                    for (index, seq) in enumerate(dna_sequences)
+                    if sequence_length_min <= len(seq) < sequence_length_max
+                ]
+            )
+
+            indices_filtered = list(indices_filtered)
+            dna_sequences_filtered = list(dna_sequences_filtered)
 
             embeddings = calculate_llm_embedding(
                 dna_sequences_filtered[:500], batch_size, model_name, model_path
