@@ -12,7 +12,7 @@ dill==0.3.8
 filelock==3.13.1
 frozenlist==1.4.0
 fsspec==2024.3.1
-gmpy2==2.1.0a2
+# gmpy2==2.1.0a2
 huggingface_hub==0.24.6
 idna==3.7
 Jinja2==3.1.4
