@@ -13,10 +13,10 @@
 #   embedding_path: "HyenaDNA.npy"
 #   batch_sizes: [50, 14, 1]
 
-# GROVER:
-#   model_path: "PoetschLab/GROVER"
-#   embedding_path: "GROVER.npy"
-#   batch_sizes: [50, 14, 1]
+GROVER:
+  model_path: "PoetschLab/GROVER"
+  embedding_path: "GROVER.npy"
+  batch_sizes: [50, 14, 1]
 
 NT:
   model_path: "InstaDeepAI/nucleotide-transformer-2.5b-multi-species"
