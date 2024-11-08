@@ -160,9 +160,8 @@ def calculate_llm_embedding(
     for i, batch in enumerate(tqdm.tqdm(data_loader)):
         with torch.no_grad():
             inputs_tokenized = tokenizer.batch_encode_plus(
-                batch, return_tensors="pt", padding=True
+                batch, return_tensors="pt", return_attention_mask=True, padding=True
             )
-
             input_ids = inputs_tokenized["input_ids"].to(device)
             attention_mask = inputs_tokenized["attention_mask"].to(device)
             if model_name == "HyenaDNA":
