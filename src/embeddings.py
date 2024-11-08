@@ -78,7 +78,7 @@ def get_embeddings(dna_sequences, batch_sizes, model_name, model_path, save_path
                 ]
             )
             print(
-                f"Running for {len(dna_sequences_filtered)} sequences with max sequence {sequence_length_max}"
+                f"Running {len(dna_sequences_filtered)} sequences with max length {sequence_length_max}"
             )
 
             indices_filtered = list(indices_filtered)
@@ -151,21 +151,20 @@ def calculate_llm_embedding(
     )
     for i, batch in enumerate(tqdm.tqdm(data_loader)):
         with torch.no_grad():
-            inputs = tokenizer.batch_encode_plus(
-                batch, return_tensors="pt", padding=True
-            )["input_ids"].to(device)
-            print(f"Input shape: {inputs.shape}")
-            hidden_states = model(inputs)[0]
-            print(f"Hidden States shape within loop: {hidden_states.shape}")
-            embedding = torch.mean(hidden_states[0], dim=0)
-            print(f"Torch within loop Embedding shape: {embedding.shape}")
+            inputs = tokenizer(batch, return_tensors="pt", padding=True)[
+                "input_ids"
+            ].to(device)
+            hidden_states = model(inputs)[0]  # index tuple returned by model
+            embedding = torch.mean(
+                hidden_states, dim=1
+            )  # average over all tokens(dim. of seq length)
             if i == 0:
                 embeddings = embedding
             else:
-                embeddings = torch.cat((embeddings, embedding), dim=0)
-    print(
-        f"Concatenated Embeddings shape: {embeddings.shape}\n should be {len(dna_sequences)}x{hidden_states.shape[1]}"
-    )
+                embeddings = torch.cat(
+                    (embeddings, embedding), dim=0
+                )  # concatenate along the batch dimension
+
     embeddings = np.array(embeddings.detach().cpu())
 
     embeddings = embeddings[np.argsort(idx)]
