@@ -128,8 +128,8 @@ def calculate_llm_embedding(dna_sequences, batch_size, model_name, model_path):
         tokenization_parameters = {
             "kmer": 6,
             "shift": 2,
-            "max_segment_length": 200000,
-            "token_limit": 200000,
+            "max_segment_length": 10000,
+            "token_limit": 10000,
         }
         sequence_length_parameters = {"max_length": 2048}
         tokenizer = ProkBERTTokenizer(
