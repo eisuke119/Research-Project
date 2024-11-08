@@ -134,7 +134,7 @@ def calculate_llm_embedding(
             config=config,
             trust_remote_code=True,
         )
-    elif model_name == "Caduceus":
+    elif model_name == "GROVER":
         model = AutoModelForMaskedLM.from_pretrained(
             model_path,
             trust_remote_code=True,
