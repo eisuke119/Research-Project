@@ -1,6 +1,5 @@
 """Custom Dataloader for Contigs CSV file"""
 
-import torch
 from torch.utils.data import Dataset
 
 
