@@ -137,6 +137,7 @@ def calculate_llm_embedding(
     elif model_name == "Caduceus":
         model = AutoModelForMaskedLM.from_pretrained(
             model_path,
+            trust_remote_code=True,
         )
     else:
         model = AutoModel.from_pretrained(
