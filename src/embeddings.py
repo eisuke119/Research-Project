@@ -163,7 +163,7 @@ def calculate_llm_embedding(
                 embeddings = torch.cat((embeddings, embedding), dim=0)
 
     embeddings = np.array(embeddings.detach().cpu())
-
+    print(f"Embeddings shape: {embeddings.shape}")
     embeddings = embeddings[np.argsort(idx)]
 
     return embeddings
