@@ -84,6 +84,8 @@ def get_embeddings(dna_sequences, batch_sizes, model_name, model_path, save_path
             indices_filtered = list(indices_filtered)
             dna_sequences_filtered = list(dna_sequences_filtered)
 
+            if model_name == "GROVER":
+                dna_sequences_filtered = [seq[:1360] for seq in dna_sequences_filtered]
             embeddings = calculate_llm_embedding(
                 dna_sequences_filtered, batch_size, model_name, model_path
             )
