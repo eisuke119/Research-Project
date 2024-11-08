@@ -35,11 +35,6 @@
 #   embedding_path: "EVO.npy"
 #   batch_sizes: [50, 14, 1]
 
-ProkBERT:
-  model_path: "neuralbioinfo/prokbert-mini"
-  embedding_path: "ProkBERT.npy"
-  batch_sizes: [1, 1, 1]
-
 # GenALM:
 #   model_path: "AIRI-Institute/gena-lm-bert-base-t2t"
 #   embedding_path: "GenALM.npy"

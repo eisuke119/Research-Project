@@ -124,29 +124,13 @@ def calculate_llm_embedding(dna_sequences, batch_size, model_name, model_path):
 
     device, n_gpu = get_available_device()
     print(f"Using device: {device}\nwith {n_gpu} GPUs")
-    if model_name == "ProkBERT":
-        tokenization_parameters = {
-            "kmer": 6,
-            "shift": 2,
-            "max_segment_length": 100000,
-            "token_limit": 100000,
-        }
-        sequence_length_parameters = {"max_length": 2048}
-        tokenizer = ProkBERTTokenizer(
-            tokenization_params=tokenization_parameters,
-            operation_space="sequence",
-            segmentation_params=sequence_length_parameters,
-        )
-        model = MegatronBertForMaskedLM.from_pretrained(
-            "neuralbioinfo/prokbert-mini-long"
-        )
-    else:
-        tokenizer = AutoTokenizer.from_pretrained(
-            model_path,
-            padding_side="right",
-            trust_remote_code=True,
-            padding="max_length",
-        )
+
+    tokenizer = AutoTokenizer.from_pretrained(
+        model_path,
+        padding_side="right",
+        trust_remote_code=True,
+        padding="max_length",
+    )
     print(f"{model_name} tokenizer max length: {tokenizer.model_max_length}")
 
     if model_name == "DNABERT_2":
@@ -205,12 +189,6 @@ def calculate_llm_embedding(dna_sequences, batch_size, model_name, model_path):
             attention_mask = inputs_tokenized["attention_mask"].to(device)
             if model_name == "HyenaDNA":
                 model_output = model.forward(input_ids=input_ids)[0].detach().cpu()
-            elif model_name == "ProkBERT":
-                inputs = {
-                    key: value.unsqueeze(0) for key, value in inputs_tokenized.items()
-                }
-                # Generate outputs from the model
-                model_output = model(**inputs)
             else:
                 model_output = (
                     model.forward(input_ids=input_ids, attention_mask=attention_mask)[0]
