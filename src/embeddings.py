@@ -91,11 +91,12 @@ def get_embeddings(dna_sequences, batch_sizes, model_name, model_path, save_path
             processed_embeddings.append(embeddings)
             processed_ids.extend(indices_filtered)
 
+        print("Concatenating embeddings")
+        print([np.shape(x) for x in processed_embeddings])
         embeddings = np.stack(
             processed_embeddings,
             axis=0,
         )
-
         embeddings = embeddings[np.argsort(processed_ids)]
 
     with open(save_path, "wb") as f:
