@@ -5,7 +5,7 @@ import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader
 
-from transformers import AutoTokenizer, AutoModel
+from transformers import AutoTokenizer, AutoModel, AutoModelForMaskedLM
 from transformers.models.bert.configuration_bert import BertConfig
 import tqdm
 import numpy as np
@@ -132,6 +132,11 @@ def calculate_llm_embedding(
         model = AutoModel.from_pretrained(
             model_path,
             config=config,
+            trust_remote_code=True,
+        )
+    elif model_name == "Caduceus":
+        model = AutoModelForMaskedLM.from_pretrained(
+            model_path,
             trust_remote_code=True,
         )
     else:
