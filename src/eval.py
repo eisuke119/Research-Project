@@ -70,6 +70,7 @@ def compute_class_center_medium_similarity(
     # Compute and return percentile values for the aggregated similarities
     all_similarities = np.array(all_similarities)
     all_similarities.sort()
+    print("ALL SIMILARITIES", all_similarities)
     percentile_values = [
         np.percentile(all_similarities, p) for p in [10, 20, 30, 40, 50, 60, 70, 80, 90]
     ]
