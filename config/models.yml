@@ -28,15 +28,15 @@
 #   embedding_path: "Caduceus.npy"
 #   batch_sizes: [50, 14, 1]
 
-EVO:
-  model_path: "togethercomputer/evo-1-8k-base"
-  embedding_path: "EVO.npy"
-  batch_sizes: [50, 14, 1]
-
-# ProkBERT:
-#   model_path: "neuralbioinfo/prokbert-mini-long"
-#   embedding_path: "ProkBERT.npy"
+# EVO:
+#   model_path: "togethercomputer/evo-1-8k-base"
+#   embedding_path: "EVO.npy"
 #   batch_sizes: [50, 14, 1]
+
+ProkBERT:
+  model_path: "neuralbioinfo/prokbert-mini-long"
+  embedding_path: "ProkBERT.npy"
+  batch_sizes: [50, 14, 1]
 
 # GenALM:
 #   model_path: "AIRI-Institute/gena-lm-bert-base-t2t"
