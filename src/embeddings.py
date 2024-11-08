@@ -162,8 +162,9 @@ def calculate_llm_embedding(
             )
 
             input_ids = inputs_tokenized["input_ids"].to(device)
+            print(f"Input IDs: {input_ids.shape}")
             attention_mask = inputs_tokenized["attention_mask"].to(device)
-
+            print(f"Attention Mask: {attention_mask.shape}")
             if model_name == "HyenaDNA":
                 model_output = model.forward(input_ids=input_ids)[0].detach().cpu()
             else:
