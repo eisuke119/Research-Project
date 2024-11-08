@@ -73,7 +73,7 @@ def get_embeddings(dna_sequences, batch_sizes, model_name, model_path, save_path
             indices_filtered, dna_sequences_filtered = zip(
                 *[
                     (index, seq)
-                    for (index, seq) in enumerate(dna_sequences[:5000])
+                    for (index, seq) in enumerate(dna_sequences[:100])
                     if sequence_length_min <= len(seq) < sequence_length_max
                 ]
             )
@@ -112,7 +112,7 @@ def calculate_llm_embedding(
 ):
     # To reduce Padding overhead
     sorted_dna_sequences, idx = sort_sequences(dna_sequences)
-
+    print(f"Sorted {len(dna_sequences)} sequences", idx)
     dna_sequences = DNADataset(sorted_dna_sequences)
 
     device, n_gpu = get_available_device()
