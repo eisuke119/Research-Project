@@ -152,18 +152,18 @@ def calculate_llm_embedding(
     )
     for i, batch in enumerate(tqdm.tqdm(data_loader)):
         with torch.no_grad():
-            inputs = tokenizer(batch, return_tensors="pt", padding=True)[
-                "input_ids"
-            ].to(device)
+            inputs = tokenizer.batch_encode_plus(
+                batch, return_tensors="pt", padding=True
+            )["input_ids"].to(device)
             hidden_states = model(inputs)[0]
             embedding = torch.mean(hidden_states[0], dim=0).unsqueeze(0)
             if i == 0:
                 embeddings = embedding
             else:
                 embeddings = torch.cat((embeddings, embedding), dim=0)
-    print(f"Embeddings shape: {embeddings.shape}")
+
     embeddings = np.array(embeddings.detach().cpu())
-    print(f"Embeddings shape: {embeddings.shape}")
+
     embeddings = embeddings[np.argsort(idx)]
 
     return embeddings
