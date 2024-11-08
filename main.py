@@ -54,7 +54,7 @@ def main():
         models_config = yaml.safe_load(model_file)
 
     for model_name in list(models_config.keys()):
-        print("========================================= \n")
+        print("\n========================================= \n")
         print(f"Using {model_name} to calculate embeddings\n")
         print("========================================= \n\n")
         model_path = models_config[model_name]["model_path"]
