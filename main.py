@@ -60,7 +60,6 @@ def main():
         model_path = models_config[model_name]["model_path"]
         save_path = models_config[model_name]["embedding_path"]
         batch_sizes = models_config[model_name]["batch_sizes"]
-        max_tokens_length = models_config[model_name]["max_tokens_length"]
 
         try:
             embeddings = get_embeddings(
@@ -69,7 +68,6 @@ def main():
                 model_name,
                 model_path,
                 save_path,
-                max_tokens_length,
             )
             embeddings = normalize(embeddings)
         except Exception:
