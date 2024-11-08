@@ -127,7 +127,6 @@ def calculate_llm_embedding(
         padding_side="right",
         trust_remote_code=True,
         padding="max_length",
-        max_length=2048,
     )
 
     if model_name == "DNABERT_2":
@@ -164,7 +163,11 @@ def calculate_llm_embedding(
     for i, batch in enumerate(tqdm.tqdm(data_loader)):
         with torch.no_grad():
             inputs_tokenized = tokenizer.batch_encode_plus(
-                batch, return_tensors="pt", return_attention_mask=True, padding=True
+                batch,
+                return_tensors="pt",
+                return_attention_mask=True,
+                padding=True,
+                max_length=2048,
             )
             input_ids = inputs_tokenized["input_ids"].to(device)
             attention_mask = inputs_tokenized["attention_mask"].to(device)
