@@ -2,53 +2,64 @@
 #   model_path: "zhihan1996/DNABERT-S"
 #   embedding_path: "DNABERT_S.npy"
 #   batch_sizes: [40, 14, 1]
+#   max_tokens_length: None
 
 # DNABERT_2:
 #   model_path: "zhihan1996/DNABERT-2-117M"
 #   embedding_path: "DNABERT_2.npy"
 #   batch_sizes: [50, 14, 1]
+#   max_tokens_length: None
 
 # HyenaDNA:
 #   model_path: "LongSafari/hyenadna-large-1m-seqlen-hf"
 #   embedding_path: "HyenaDNA.npy"
 #   batch_sizes: [50, 14, 1]
+#   max_tokens_length: None
 
 GROVER:
   model_path: "PoetschLab/GROVER"
   embedding_path: "GROVER.npy"
   batch_sizes: [50, 14, 1]
+  max_tokens_length: 512
 
 NT:
-  model_path: "InstaDeepAI/nucleotide-transformer-v2-500m-multi-species"
+  model_path: "InstaDeepAI/nucleotide-transformer-v2-100m-multi-species"
   embedding_path: "NT.npy"
   batch_sizes: [50, 14, 1]
+  max_tokens_length: 2048
 
 # Caduceus:
 #   model_path: "kuleshov-group/caduceus-ps_seqlen-131k_d_model-256_n_layer-16"
 #   embedding_path: "Caduceus.npy"
 #   batch_sizes: [50, 14, 1]
+#   max_tokens_length: None
 
 # EVO:
 #   model_path: "togethercomputer/evo-1-8k-base"
 #   embedding_path: "EVO.npy"
 #   batch_sizes: [50, 14, 1]
+#   max_tokens_length: None
 
 # ProkBERT:
 #   model_path: "neuralbioinfo/prokbert-mini-long"
 #   embedding_path: "ProkBERT.npy"
 #   batch_sizes: [50, 14, 1]
+#   max_tokens_length: None
 
 # GenALM:
 #   model_path: "AIRI-Institute/gena-lm-bert-base-t2t"
 #   embedding_path: "GenALM.npy"
 #   batch_sizes: [50, 14, 1]
+#   max_tokens_length: None
 
 # TNF:
 #   model_path: "tnf"
 #   embedding_path: "TNF.npy"
 #   batch_sizes: [50, 14, 1]
+#   max_tokens_length: None
 
 # DNA2Vec:
 #   model_path: "helpers/4mer_embedding.npy"
 #   embedding_path: "dna2vec.npy"
 #   batch_sizes: [50, 14, 1]
+#   max_tokens_length: None

@@ -38,7 +38,9 @@ def get_available_device():
         return device, 1
 
 
-def get_embeddings(dna_sequences, batch_sizes, model_name, model_path, save_path):
+def get_embeddings(
+    dna_sequences, batch_sizes, model_name, model_path, save_path, max_tokens_length
+):
 
     embedding_dir = "embeddings"
     if os.path.exists(embedding_dir):
@@ -84,13 +86,14 @@ def get_embeddings(dna_sequences, batch_sizes, model_name, model_path, save_path
             indices_filtered = list(indices_filtered)
             dna_sequences_filtered = list(dna_sequences_filtered)
 
-            if model_name == "GROVER":
-                dna_sequences_filtered = [seq[:1360] for seq in dna_sequences_filtered]
+            # if model_name == "GROVER":
+            # dna_sequences_filtered = [seq[:1360] for seq in dna_sequences_filtered]
             embeddings = calculate_llm_embedding(
                 dna_sequences_filtered,
                 batch_size,
                 model_name,
                 model_path,
+                max_tokens_length,
             )
 
             processed_embeddings.append(embeddings)
@@ -110,10 +113,7 @@ def get_embeddings(dna_sequences, batch_sizes, model_name, model_path, save_path
 
 
 def calculate_llm_embedding(
-    dna_sequences,
-    batch_size,
-    model_name,
-    model_path,
+    dna_sequences, batch_size, model_name, model_path, max_tokens_length
 ):
     # To reduce Padding overhead
     sorted_dna_sequences, idx = sort_sequences(dna_sequences)
@@ -128,6 +128,7 @@ def calculate_llm_embedding(
         trust_remote_code=True,
         padding="max_length",
     )
+    print(f"{model_name} tokenizer max length: {tokenizer.model_max_length}")
 
     if model_name == "DNABERT_2":
         config = BertConfig.from_pretrained(
@@ -167,7 +168,7 @@ def calculate_llm_embedding(
                 return_tensors="pt",
                 return_attention_mask=True,
                 padding=True,
-                max_length=2048,
+                max_length=max_tokens_length,
             )
             input_ids = inputs_tokenized["input_ids"].to(device)
             attention_mask = inputs_tokenized["attention_mask"].to(device)
