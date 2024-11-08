@@ -87,7 +87,7 @@ def get_embeddings(dna_sequences, batch_sizes, model_name, model_path, save_path
 
             if model_name == "GROVER":
                 # dna_sequences_filtered = [seq[:1360] for seq in dna_sequences_filtered]
-                model_max_length = 1360
+                model_max_length = 512
             embeddings = calculate_llm_embedding(
                 dna_sequences_filtered,
                 batch_size,
