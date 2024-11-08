@@ -127,6 +127,7 @@ def calculate_llm_embedding(
         padding_side="right",
         trust_remote_code=True,
         padding="max_length",
+        max_length=2048,
     )
 
     if model_name == "DNABERT_2":
