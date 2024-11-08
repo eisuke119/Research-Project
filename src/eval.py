@@ -96,7 +96,7 @@ def KMediod(
         Returns:
             np.array: predicted predictions for each instance with dimensions (n_samples,)
     """
-    embeddings = embeddings.astype(np.float32)
+    embeddings = embeddings.astype(np.float16)
     similarities = np.dot(embeddings, embeddings.T)  # EE^T
 
     similarities[similarities < min_similarity] = 0
