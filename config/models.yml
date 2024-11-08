@@ -9,7 +9,7 @@
 #   batch_sizes: [50, 14, 1]
 
 HyenaDNA:
-  model_path: "LongSafari/hyenadna-large-1m-seqlen"
+  model_path: "LongSafari/hyenadna-medium-450k-seqlen"
   embedding_path: "HyenaDNA.npy"
   batch_sizes: [50, 14, 1]
 
