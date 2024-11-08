@@ -18,7 +18,7 @@ from transformers.models.bert.configuration_bert import BertConfig
 import tqdm
 import numpy as np
 
-from .utils import sort_sequences
+from .utils import sort_sequences, validate_input_array
 from .dataset import DNADataset
 
 warnings.simplefilter("ignore", UserWarning)
@@ -67,6 +67,8 @@ def get_embeddings(dna_sequences, batch_sizes, model_name, model_path, save_path
         embeddings = calculate_tnf(dna_sequences)
     elif model_name == "DNA2Vec":
         embeddings = calculate_dna2vec_embedding(dna_sequences, model_path)
+    elif model_name == "VAMB":
+        embeddings = calculate_vamb_embedding(dna_sequences, model_path)
     else:
         min_sequence_lengths = [2500, 10000, 20000]
         max_sequence_lengths = [10000, 20000, 100000]
@@ -110,9 +112,9 @@ def get_embeddings(dna_sequences, batch_sizes, model_name, model_path, save_path
             processed_embeddings,
             axis=0,
         )
-        print(f"Embeddings shape: {embeddings.shape}")
-        embeddings = embeddings[np.argsort(processed_ids)]
 
+        embeddings = embeddings[np.argsort(processed_ids)]
+    print(f"Embeddings shape: {embeddings.shape}")
     with open(save_path, "wb") as f:
         np.save(f, embeddings)
 
@@ -298,5 +300,37 @@ def calculate_dna2vec_embedding(dna_sequences: list[str], model_path: str) -> np
 
     pretrained_4mer_embedding = np.load(model_path)  # dim (256,100)
     embeddings = np.dot(tnf_embeddings, pretrained_4mer_embedding)
+
+    return embeddings
+
+
+def calculate_vamb_embedding(dna_sequences: list[str], model_path: str) -> np.array:
+    """
+    Calculates the VAMB embeddings for a list of DNA sequences.
+
+    The function then multiplies the TNF embedding with the vamb embedding matrix to obtain
+    the VAMB embeddings.
+    Args:
+        dna_sequences (List[str]): A list of DNA sequences, where each sequence is a list
+                                         of nucleotide characters (A, T, C, or G).
+        model_path (str): Path to the model to be used for the embeddings.
+    Returns:
+        np.ndarray: A 2D numpy array representing the DNA2Vec embedding, where each row corresponds
+                    to the embedding of a DNA sequence.
+    """
+    tnf_embeddings = os.path.join("embeddings", "TNF.npy")
+
+    if os.path.exists(tnf_embeddings):
+        print(f"Load TNF-embedding from file {tnf_embeddings}")
+        tnf_embeddings = np.load(tnf_embeddings)
+    else:
+        tnf_embeddings = calculate_tnf(dna_sequences)
+
+    vamb_embeddings = np.load(model_path)
+    vamb_embeddings = validate_input_array(vamb_embeddings["arr_0"])
+
+    tnf_embeddings += -(1 / 256)
+
+    embeddings = np.dot(tnf_embeddings, vamb_embeddings)
 
     return embeddings

@@ -83,3 +83,15 @@ def label_to_id(data: list[list]) -> tuple[np.array, dict]:
 
     label_ids = np.array([label2id[l] for l in labels])
     return label_ids, id2label
+
+
+def validate_input_array(array):
+    "Returns array similar to input array but C-contiguous and with own data."
+    if not array.flags["C_CONTIGUOUS"]:
+        array = np.ascontiguousarray(array)
+    if not array.flags["OWNDATA"]:
+        array = array.copy()
+
+    assert array.flags["C_CONTIGUOUS"] and array.flags["OWNDATA"]
+
+    return array
