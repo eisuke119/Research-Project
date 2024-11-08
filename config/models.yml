@@ -35,9 +35,9 @@
 #   embedding_path: "EVO.npy"
 #   batch_sizes: [50, 14, 1]
 
-GenALM:
+GENALM:
   model_path: "AIRI-Institute/gena-lm-bert-base-t2t"
-  embedding_path: "GenALM.npy"
+  embedding_path: "GENALM.npy"
   batch_sizes: [50, 14, 1]
 
 # TNF:
