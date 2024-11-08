@@ -11,7 +11,9 @@ from transformers import (
     AutoModelForMaskedLM,
     AutoConfig,
     AutoModelForCausalLM,
+    MegatronBertForMaskedLM,
 )
+from prokbert.prokbert_tokenizer import ProkBERTTokenizer
 from transformers.models.bert.configuration_bert import BertConfig
 import tqdm
 import numpy as np
@@ -122,13 +124,21 @@ def calculate_llm_embedding(dna_sequences, batch_size, model_name, model_path):
 
     device, n_gpu = get_available_device()
     print(f"Using device: {device}\nwith {n_gpu} GPUs")
-
-    tokenizer = AutoTokenizer.from_pretrained(
-        model_path,
-        padding_side="right",
-        trust_remote_code=True,
-        padding="max_length",
-    )
+    if model_name == "ProkBERT":
+        tokenization_parameters = {"kmer": 6, "shift": 2}
+        tokenizer = ProkBERTTokenizer(
+            tokenization_params=tokenization_parameters, operation_space="sequence"
+        )
+        model = MegatronBertForMaskedLM.from_pretrained(
+            "neuralbioinfo/prokbert-mini-long"
+        )
+    else:
+        tokenizer = AutoTokenizer.from_pretrained(
+            model_path,
+            padding_side="right",
+            trust_remote_code=True,
+            padding="max_length",
+        )
     print(f"{model_name} tokenizer max length: {tokenizer.model_max_length}")
 
     if model_name == "DNABERT_2":
