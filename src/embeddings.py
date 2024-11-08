@@ -206,7 +206,9 @@ def calculate_llm_embedding(dna_sequences, batch_size, model_name, model_path):
             if model_name == "HyenaDNA":
                 model_output = model.forward(input_ids=input_ids)[0].detach().cpu()
             elif model_name == "ProkBERT":
-                inputs = {key: value.unsqueeze(0) for key, value in inputs.items()}
+                inputs = {
+                    key: value.unsqueeze(0) for key, value in inputs_tokenized.items()
+                }
                 # Generate outputs from the model
                 model_output = model(**inputs)
             else:
