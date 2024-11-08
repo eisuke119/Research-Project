@@ -126,7 +126,7 @@ def calculate_llm_embedding(dna_sequences, batch_size, model_name, model_path):
     print(f"Using device: {device}\nwith {n_gpu} GPUs")
     if model_name == "ProkBERT":
         tokenization_parameters = {"kmer": 6, "shift": 2}
-        sequence_length_parameters = {"max": 2048}
+        sequence_length_parameters = {"max_length": 2048}
         tokenizer = ProkBERTTokenizer(
             tokenization_params=tokenization_parameters,
             operation_space="sequence",
