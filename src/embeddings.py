@@ -154,17 +154,19 @@ def calculate_llm_embedding(
             inputs = tokenizer.batch_encode_plus(
                 batch, return_tensors="pt", padding=True
             )["input_ids"].to(device)
+            print(f"Input shape: {inputs.shape}")
             hidden_states = model(inputs)[0]
             print(f"Hidden States shape within loop: {hidden_states.shape}")
-            embedding = torch.mean(hidden_states[0], dim=0)
+            embedding = torch.mean(hidden_states[0], dim=0).unsqueeze(0)
             print(f"Torch within loop Embedding shape: {embedding.shape}")
             if i == 0:
                 embeddings = embedding
             else:
                 embeddings = torch.cat((embeddings, embedding), dim=0)
-    print(f"Torch Embeddings shape: {embeddings.shape}")
+    print(
+        f"Concatenated Embeddings shape: {embeddings.shape}\n should be {len(dna_sequences)}x{hidden_states.shape[1]}"
+    )
     embeddings = np.array(embeddings.detach().cpu())
-    print(f"Numpy Embeddings shape: {embeddings.shape}")
 
     embeddings = embeddings[np.argsort(idx)]
 
