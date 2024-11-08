@@ -84,7 +84,7 @@ def main():
             f"Found {len(np.unique(predictions))} out of {len(set(label_ids))} "
         )  # Ideal 290
 
-        labels_in_preds = label_ids[predictions != -1]
+        labels_in_preds = label_ids[0:100][predictions != -1]
         predictions = predictions[predictions != -1]
 
         label_mappings = align_labels_via_linear_sum_assignemt(
