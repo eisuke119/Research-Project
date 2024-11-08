@@ -123,6 +123,7 @@ def calculate_llm_embedding(
         trust_remote_code=True,
         padding="max_length",
     )
+
     if model_name == "DNABERT_2":
         config = BertConfig.from_pretrained(
             model_path,
@@ -151,13 +152,27 @@ def calculate_llm_embedding(
     )
     for i, batch in enumerate(tqdm.tqdm(data_loader)):
         with torch.no_grad():
-            inputs = tokenizer(batch, return_tensors="pt", padding=True)[
-                "input_ids"
-            ].to(device)
-            hidden_states = model(inputs)[0]  # index tuple returned by model
-            embedding = torch.mean(
-                hidden_states, dim=1
-            )  # average over all tokens(dim. of seq length)
+            inputs_tokenized = tokenizer.batch_encode_plus(
+                batch, return_tensors="pt", padding=True
+            )
+
+            input_ids = inputs_tokenized["input_ids"].to(device)
+            attention_mask = inputs_tokenized["attention_mask"].to(device)
+
+            if model_name == "HyenaDNA":
+                model_output = model.forward(input_ids=input_ids)[0].detach().cpu()
+            else:
+                model_output = (
+                    model.forward(input_ids=input_ids, attention_mask=attention_mask)[0]
+                    .detach()
+                    .cpu()
+                )
+
+            attention_mask = attention_mask.unsqueeze(-1).detach().cpu()
+            embedding = torch.sum(model_output * attention_mask, dim=1) / torch.sum(
+                attention_mask, dim=1
+            )  # along the sequence length
+
             if i == 0:
                 embeddings = embedding
             else:
