@@ -98,6 +98,7 @@ def get_embeddings(dna_sequences, batch_sizes, model_name, model_path, save_path
             processed_embeddings,
             axis=0,
         )
+        print(f"Embeddings shape: {embeddings.shape}")
         embeddings = embeddings[np.argsort(processed_ids)]
 
     with open(save_path, "wb") as f:
@@ -164,9 +165,7 @@ def calculate_llm_embedding(
             )
 
             input_ids = inputs_tokenized["input_ids"].to(device)
-            print(f"Input IDs: {input_ids.shape}")
             attention_mask = inputs_tokenized["attention_mask"].to(device)
-            print(f"Attention Mask: {attention_mask.shape}")
             if model_name == "HyenaDNA":
                 model_output = model.forward(input_ids=input_ids)[0].detach().cpu()
             else:
