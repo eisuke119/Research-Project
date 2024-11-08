@@ -93,7 +93,6 @@ def get_embeddings(dna_sequences, batch_sizes, model_name, model_path, save_path
             processed_embeddings.append(embeddings)
             processed_ids.extend(indices_filtered)
 
-        print("Concatenating embeddings")
         embeddings = np.concatenate(
             processed_embeddings,
             axis=0,
