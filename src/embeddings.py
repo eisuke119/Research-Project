@@ -5,7 +5,13 @@ import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader
 
-from transformers import AutoTokenizer, AutoModel, AutoModelForMaskedLM
+from transformers import (
+    AutoTokenizer,
+    AutoModel,
+    AutoModelForMaskedLM,
+    AutoConfig,
+    AutoModelForCausalLM,
+)
 from transformers.models.bert.configuration_bert import BertConfig
 import tqdm
 import numpy as np
@@ -134,6 +140,18 @@ def calculate_llm_embedding(dna_sequences, batch_size, model_name, model_path):
             model_path,
             config=config,
             trust_remote_code=True,
+        )
+    elif model_name == "EVO":
+        config = AutoConfig.from_pretrained(
+            model_path,
+            trust_remote_code=True,
+            revision="1.1_fix",
+        )
+        model = AutoModelForCausalLM.from_pretrained(
+            model_path,
+            config=config,
+            trust_remote_code=True,
+            revision="1.1_fix",
         )
     elif model_name in ["NT", "GROVER"]:
         model = AutoModelForMaskedLM.from_pretrained(
