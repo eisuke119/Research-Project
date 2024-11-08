@@ -106,7 +106,7 @@ def KMediod(
     predictions = np.ones(len(embeddings)) * -1
     predictions = predictions.astype(int)
     count = 0
-    print("Running KMedoid")
+    print(f"Running KMedoid on {embeddings.shape[0]} samples.")
     while np.any(predictions == -1):
         count += 1
         if count > max_iter:
