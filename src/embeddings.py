@@ -125,9 +125,12 @@ def calculate_llm_embedding(dna_sequences, batch_size, model_name, model_path):
     device, n_gpu = get_available_device()
     print(f"Using device: {device}\nwith {n_gpu} GPUs")
     if model_name == "ProkBERT":
-        tokenization_parameters = {"kmer": 6, "shift": 6}
+        tokenization_parameters = {"kmer": 6, "shift": 2}
+        sequence_length_parameters = {"max": 2048}
         tokenizer = ProkBERTTokenizer(
-            tokenization_params=tokenization_parameters, operation_space="sequence"
+            tokenization_params=tokenization_parameters,
+            operation_space="sequence",
+            segmentation_params=sequence_length_parameters,
         )
         model = MegatronBertForMaskedLM.from_pretrained(
             "neuralbioinfo/prokbert-mini-long"
