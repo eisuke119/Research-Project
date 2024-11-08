@@ -18,10 +18,10 @@ GROVER:
   embedding_path: "GROVER.npy"
   batch_sizes: [50, 14, 1]
 
-# NT:
-#   model_path: "InstaDeepAI/nucleotide-transformer-2.5b-multi-species"
-#   embedding_path: "NT.npy"
-#   batch_sizes: [50, 14, 1]
+NT:
+  model_path: "InstaDeepAI/nucleotide-transformer-v2-500m-multi-species"
+  embedding_path: "NT.npy"
+  batch_sizes: [50, 14, 1]
 
 # Caduceus:
 #   model_path: "kuleshov-group/caduceus-ps_seqlen-131k_d_model-256_n_layer-16"
