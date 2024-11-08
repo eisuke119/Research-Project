@@ -34,7 +34,7 @@
 #   batch_sizes: [50, 14, 1]
 
 ProkBERT:
-  model_path: "neuralbioinfo/prokbert-mini-long"
+  model_path: "neuralbioinfo/prokbert-mini"
   embedding_path: "ProkBERT.npy"
   batch_sizes: [30, 14, 1]
 
