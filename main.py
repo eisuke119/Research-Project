@@ -83,7 +83,7 @@ def main():
         threshold = percentile_values[7]
         print(f"threshold: {threshold}")
 
-        predictions = KMediod(embeddings, threshold)
+        predictions = KMediod(embeddings[0:2000, :], threshold)
         print(
             f"Found {len(np.unique(predictions))} out of {len(set(label_ids))} "
         )  # Ideal 290
