@@ -73,7 +73,7 @@ def main():
             continue
 
         percentile_values, sampled_indices_list = (
-            compute_class_center_medium_similarity(embeddings, label_ids)
+            compute_class_center_medium_similarity(embeddings, label_ids[0:10])
         )
 
         threshold = percentile_values[7]
