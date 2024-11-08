@@ -6,7 +6,7 @@ DNABERT_S:
 DNABERT_2:
   model_path: "zhihan1996/DNABERT-2-117M"
   embedding_path: "DNABERT_2.npy"
-  batch_sizes: [80, 14, 1]
+  batch_sizes: [50, 14, 1]
 
 HyenaDNA:
   model_path: "LongSafari/hyenadna-medium-450k-seqlen"
