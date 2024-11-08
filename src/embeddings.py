@@ -157,7 +157,7 @@ def calculate_llm_embedding(
             print(f"Input shape: {inputs.shape}")
             hidden_states = model(inputs)[0]
             print(f"Hidden States shape within loop: {hidden_states.shape}")
-            embedding = torch.mean(hidden_states, dim=0).unsqueeze(0)
+            embedding = torch.mean(hidden_states, dim=0)
             print(f"Torch within loop Embedding shape: {embedding.shape}")
             if i == 0:
                 embeddings = embedding
