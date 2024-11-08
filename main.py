@@ -54,9 +54,9 @@ def main():
         models_config = yaml.safe_load(model_file)
 
     for model_name in list(models_config.keys()):
-
-        print(f"Using {model_name} to calculate embeddings")
-
+        print("========================================= \n")
+        print(f"Using {model_name} to calculate embeddings\n")
+        print("========================================= \n\n")
         model_path = models_config[model_name]["model_path"]
         save_path = models_config[model_name]["embedding_path"]
         batch_sizes = models_config[model_name]["batch_sizes"]
@@ -99,6 +99,7 @@ def main():
         with open(model_results_path, "w") as results_file:
             json.dump(model_results, results_file)
         torch.cuda.empty_cache()
+        print("========================================= \n \n")
     return
 
 
