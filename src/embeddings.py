@@ -60,6 +60,7 @@ def get_embeddings(dna_sequences, batch_sizes, model_name, model_path, save_path
     elif model_name == "DNA2Vec":
         embeddings = calculate_dna2vec_embedding(dna_sequences, model_path)
     else:
+        model_max_length = None
         min_sequence_lengths = [2500, 10000, 20000]
         max_sequence_lengths = [10000, 20000, 100000]
 
@@ -85,9 +86,14 @@ def get_embeddings(dna_sequences, batch_sizes, model_name, model_path, save_path
             dna_sequences_filtered = list(dna_sequences_filtered)
 
             if model_name == "GROVER":
-                dna_sequences_filtered = [seq[:1360] for seq in dna_sequences_filtered]
+                # dna_sequences_filtered = [seq[:1360] for seq in dna_sequences_filtered]
+                model_max_length = 1360
             embeddings = calculate_llm_embedding(
-                dna_sequences_filtered, batch_size, model_name, model_path
+                dna_sequences_filtered,
+                batch_size,
+                model_name,
+                model_path,
+                model_max_length,
             )
 
             processed_embeddings.append(embeddings)
@@ -111,6 +117,7 @@ def calculate_llm_embedding(
     batch_size,
     model_name,
     model_path,
+    tokenizer_max_length=None,
 ):
     # To reduce Padding overhead
     sorted_dna_sequences, idx = sort_sequences(dna_sequences)
@@ -124,6 +131,7 @@ def calculate_llm_embedding(
         padding_side="right",
         trust_remote_code=True,
         padding="max_length",
+        max_length=tokenizer_max_length,
     )
 
     if model_name == "DNABERT_2":
@@ -136,7 +144,7 @@ def calculate_llm_embedding(
             config=config,
             trust_remote_code=True,
         )
-    elif model_name == "GROVER":
+    elif model_name in ["NT", "GROVER"]:
         model = AutoModelForMaskedLM.from_pretrained(
             model_path,
             trust_remote_code=True,
