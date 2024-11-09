@@ -112,7 +112,9 @@ def get_embeddings(dna_sequences, batch_sizes, model_name, model_path, save_path
                 model_name,
                 model_path,
             )
-            print(f"Embeddings shape: {embeddings.shape}")
+            print(
+                f"Embeddings shape: {embeddings.shape}, length {len(dna_sequences_filtered)}"
+            )
             processed_embeddings.append(embeddings)
             processed_ids.extend(indices_filtered)
             if not test_embedding_bool:
