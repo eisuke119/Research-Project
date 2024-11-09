@@ -101,6 +101,7 @@ def KMediod(
     device, n_gpus = get_available_device()
     embeddings = torch.from_numpy(embeddings).to(device)
     similarities = torch.matmul(embeddings, embeddings.T)
+    embeddings = embeddings.cpu().numpy()
     similarities = similarities.cpu().numpy()
 
     # embeddings = embeddings.astype(np.float16)
