@@ -74,6 +74,7 @@ def get_embeddings(dna_sequences, batch_sizes, model_name, model_path, save_path
         max_sequence_lengths = [10000, 20000, 100000]
         test_embedding_id = None
         test_embedding = None
+        test_embedding_bool = False
         processed_ids = (
             []
         )  # [index in the original list, so if dna_seq is in position 4512, teh index is 4512]
@@ -95,7 +96,7 @@ def get_embeddings(dna_sequences, batch_sizes, model_name, model_path, save_path
             )
 
             indices_filtered = list(indices_filtered)
-            print(print(f"Processed IDS WITHIN LOOP {indices_filtered[0:10]}"))
+            print(f"Processed IDS WITHIN LOOP {indices_filtered[0:10]}")
             dna_sequences_filtered = list(dna_sequences_filtered)
             if not test_embedding_id:
                 test_embedding_id = indices_filtered[0]
@@ -112,8 +113,9 @@ def get_embeddings(dna_sequences, batch_sizes, model_name, model_path, save_path
 
             processed_embeddings.append(embeddings)
             processed_ids.extend(indices_filtered)
-            if not test_embedding:
+            if not test_embedding_bool:
                 test_embedding = embeddings[test_embedding_id, :]
+                test_embedding_bool = True
             print(
                 f"Processed embedding with id {test_embedding_id} has embedding: {embeddings[test_embedding_id,:]}"
             )
