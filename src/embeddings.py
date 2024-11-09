@@ -72,7 +72,7 @@ def get_embeddings(dna_sequences, batch_sizes, model_name, model_path, save_path
     else:
         min_sequence_lengths = [2500, 10000, 20000]
         max_sequence_lengths = [10000, 20000, 100000]
-        test_embedding_id =None 
+        test_embedding_id = None
         test_embedding = None
         processed_ids = (
             []
@@ -113,8 +113,10 @@ def get_embeddings(dna_sequences, batch_sizes, model_name, model_path, save_path
             processed_embeddings.append(embeddings)
             processed_ids.extend(indices_filtered)
             if not test_embedding:
-                test_embedding = embeddings[test_embedding_id,;]
-            print(f"Processed embedding with id {test_embedding_id} has embedding: {embeddings[test_embedding_id,:]}")
+                test_embedding = embeddings[test_embedding_id, :]
+            print(
+                f"Processed embedding with id {test_embedding_id} has embedding: {embeddings[test_embedding_id,:]}"
+            )
 
         embeddings = np.concatenate(
             processed_embeddings,
@@ -122,7 +124,9 @@ def get_embeddings(dna_sequences, batch_sizes, model_name, model_path, save_path
         )
         embeddings = embeddings[np.argsort(processed_ids)]
     print(f"{processed_ids[0]} should be the same as {test_embedding_id}")
-    print(f"IS EMBEDDING SAME: {np.array_equal(embeddings[processed_ids[0],:], test_embedding)}\n and in position {processed_ids[0]}")
+    print(
+        f"IS EMBEDDING SAME: {np.array_equal(embeddings[processed_ids[0],:], test_embedding)}\n and in position {processed_ids[0]}"
+    )
     print(f"Embeddings shape: {embeddings.shape}")
     with open(save_path, "wb") as f:
         np.save(f, embeddings)
