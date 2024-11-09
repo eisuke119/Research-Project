@@ -116,9 +116,6 @@ def get_embeddings(dna_sequences, batch_sizes, model_name, model_path, save_path
             if not test_embedding_bool:
                 test_embedding = embeddings[test_embedding_id, :]
                 test_embedding_bool = True
-            print(
-                f"Processed embedding with id {test_embedding_id} has embedding: {embeddings[test_embedding_id,:]}"
-            )
 
         embeddings = np.concatenate(
             processed_embeddings,
