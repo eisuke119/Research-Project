@@ -1,5 +1,6 @@
 import warnings
 import os
+import random
 
 import torch
 import torch.nn as nn
@@ -94,12 +95,13 @@ def get_embeddings(dna_sequences, batch_sizes, model_name, model_path, save_path
             print(
                 f"Running {len(dna_sequences_filtered)} sequences with max length {sequence_length_max}"
             )
-
             indices_filtered = list(indices_filtered)
             print(f"Processed IDS WITHIN LOOP {indices_filtered[0:10]}")
             dna_sequences_filtered = list(dna_sequences_filtered)
             if not test_embedding_id:
-                test_embedding_id = indices_filtered[0]
+                test_embedding_id = indices_filtered[
+                    random.randint(0, len(indices_filtered) - 1)
+                ]
             if model_name == "GROVER":
                 dna_sequences_filtered = [seq[:1360] for seq in dna_sequences_filtered]
             elif model_name == "GENALM":
