@@ -96,7 +96,7 @@ def get_embeddings(dna_sequences, batch_sizes, model_name, model_path, save_path
                 f"Running {len(dna_sequences_filtered)} sequences with max length {sequence_length_max}"
             )
             indices_filtered = list(indices_filtered)
-            print(f"Processed IDS WITHIN LOOP {indices_filtered[0:10]}")
+            print(f"Processed IDS WITHIN LOOP {indices_filtered}")
             dna_sequences_filtered = list(dna_sequences_filtered)
             if not test_embedding_id:
                 test_embedding_id = indices_filtered[
