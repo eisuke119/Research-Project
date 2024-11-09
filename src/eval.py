@@ -109,8 +109,8 @@ def KMediod(
     # similarities = np.dot(embeddings, embeddings.T)  # EE^T
 
     similarities = []
-    for i in range(0, embeddings.shape[0], 10000):
-        j = min(i + 10000, embeddings.shape[0])
+    for i in range(0, embeddings.shape[0], 5000):
+        j = min(i + 5000, embeddings.shape[0])
         similarities.append(np.dot(embeddings[i:j, :], embeddings.T))
     similarities = np.concatenate(similarities, axis=0)
 
