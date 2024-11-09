@@ -75,7 +75,7 @@ def main():
                 f"|===========| Error in getting embeddings for {model_name}|===========|\n{traceback.format_exc()}"
             )
             continue
-
+        torch.cuda.empty_cache()
         percentile_values, sampled_indices_list = (
             compute_class_center_medium_similarity(embeddings, label_ids[0:100])
         )
@@ -102,7 +102,6 @@ def main():
         model_results_path = os.path.join(results_path, model_name + ".json")
         with open(model_results_path, "w") as results_file:
             json.dump(model_results, results_file)
-        torch.cuda.empty_cache()
         print("========================================= \n \n")
     return
 
