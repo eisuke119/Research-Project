@@ -1,6 +1,8 @@
 import numpy as np
 from scipy.optimize import linear_sum_assignment
+from .embeddings import get_available_device
 import sklearn.metrics
+import torch
 
 
 def compute_class_center_medium_similarity(
@@ -96,8 +98,20 @@ def KMediod(
         Returns:
             np.array: predicted predictions for each instance with dimensions (n_samples,)
     """
-    embeddings = embeddings.astype(np.float16)
-    similarities = np.dot(embeddings, embeddings.T)  # EE^T
+    device = get_available_device()
+    embeddings = torch.from_numpy(embeddings).to(device)
+    similarities = torch.matmul(embeddings, embeddings.T)
+    similarities = similarities.cpu().numpy()
+
+    # embeddings = embeddings.astype(np.float16)
+
+    # similarities = np.dot(embeddings, embeddings.T)  # EE^T
+
+    # similarities = []
+    # for i in range(0, embeddings.shape[0], 10000):
+    #     j = min(i + 10000, embeddings.shape[0])
+    #     similarities.append(np.dot(embeddings[i:j, :], embeddings.T))
+    # similarities = np.concatenate(similarities, axis=0)
 
     similarities[similarities < min_similarity] = 0
     density_vector = np.sum(similarities, axis=1)
