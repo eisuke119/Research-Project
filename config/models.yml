@@ -40,17 +40,17 @@ DNABERT_S:
 #   embedding_path: "GENALM.npy"
 #   batch_sizes: [50, 14, 1]
 
-# TNF:
-#   model_path: "tnf"
-#   embedding_path: "TNF.npy"
-#   batch_sizes: [50, 14, 1]
+TNF:
+  model_path: "tnf"
+  embedding_path: "TNF.npy"
+  batch_sizes: [50, 14, 1]
 
 # DNA2Vec:
 #   model_path: "helpers/4mer_embedding.npy"
 #   embedding_path: "dna2vec.npy"
 #   batch_sizes: [50, 14, 1]
 
-# VAMB:
-#   model_path: "helpers/vamb_embedding.npz"
-#   embedding_path: "vamb.npy"
-#   batch_sizes: [50, 14, 1]
+VAMB:
+  model_path: "helpers/vamb_embedding.npz"
+  embedding_path: "vamb.npy"
+  batch_sizes: [50, 14, 1]
