@@ -47,7 +47,6 @@ def main():
         data = list(csv.reader(csvfile, delimiter=","))
     dna_sequences = [i[1] for i in data[1:]]
     label_ids, id2label = label_to_id(data)
-    label_ids = label_ids
 
     # Read Model Configs
     with open(model_configs, "r") as model_file:
@@ -76,34 +75,34 @@ def main():
             )
             continue
 
-        percentile_values, sampled_indices_list = (
-            compute_class_center_medium_similarity(embeddings, label_ids[0:100])
-        )
+        # percentile_values, sampled_indices_list = (
+        #     compute_class_center_medium_similarity(embeddings, label_ids[0:100])
+        # )
 
-        threshold = percentile_values[7]
-        print(f"threshold: {threshold}")
+        # threshold = percentile_values[7]
+        # print(f"threshold: {threshold}")
 
-        predictions = KMediod(embeddings, threshold)
-        print(
-            f"Found {len(np.unique(predictions))} out of {len(set(label_ids))} "
-        )  # Ideal 290
+        # predictions = KMediod(embeddings, threshold)
+        # print(
+        #     f"Found {len(np.unique(predictions))} out of {len(set(label_ids))} "
+        # )  # Ideal 290
 
-        labels_in_preds = label_ids[0:100][predictions != -1]
-        predictions = predictions[predictions != -1]
+        # labels_in_preds = label_ids[0:100][predictions != -1]
+        # predictions = predictions[predictions != -1]
 
-        label_mappings = align_labels_via_linear_sum_assignemt(
-            labels_in_preds, predictions
-        )
-        predictions = [label_mappings[label] for label in predictions]
+        # label_mappings = align_labels_via_linear_sum_assignemt(
+        #     labels_in_preds, predictions
+        # )
+        # predictions = [label_mappings[label] for label in predictions]
 
-        results = compute_eval_metrics(labels_in_preds, predictions)
+        # results = compute_eval_metrics(labels_in_preds, predictions)
 
-        model_results = {model_name: results}
-        model_results_path = os.path.join(results_path, model_name + ".json")
-        with open(model_results_path, "w") as results_file:
-            json.dump(model_results, results_file)
-        torch.cuda.empty_cache()
-        print("========================================= \n \n")
+        # model_results = {model_name: results}
+        # model_results_path = os.path.join(results_path, model_name + ".json")
+        # with open(model_results_path, "w") as results_file:
+        #     json.dump(model_results, results_file)
+        # torch.cuda.empty_cache()
+        # print("========================================= \n \n")
     return
 
 

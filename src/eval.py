@@ -98,7 +98,7 @@ def KMediod(
         Returns:
             np.array: predicted predictions for each instance with dimensions (n_samples,)
     """
-    device = get_available_device()
+    device, n_gpus = get_available_device()
     embeddings = torch.from_numpy(embeddings).to(device)
     similarities = torch.matmul(embeddings, embeddings.T)
     similarities = similarities.cpu().numpy()

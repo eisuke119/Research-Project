@@ -72,8 +72,11 @@ def get_embeddings(dna_sequences, batch_sizes, model_name, model_path, save_path
     else:
         min_sequence_lengths = [2500, 10000, 20000]
         max_sequence_lengths = [10000, 20000, 100000]
-
-        processed_ids = []
+        test_embedding_id =None 
+        test_embedding = None
+        processed_ids = (
+            []
+        )  # [index in the original list, so if dna_seq is in position 4512, teh index is 4512]
         processed_embeddings = []
 
         for sequence_length_min, sequence_length_max, batch_size in zip(
@@ -92,8 +95,10 @@ def get_embeddings(dna_sequences, batch_sizes, model_name, model_path, save_path
             )
 
             indices_filtered = list(indices_filtered)
+            print(print(f"Processed IDS WITHIN LOOP {indices_filtered[0:10]}"))
             dna_sequences_filtered = list(dna_sequences_filtered)
-
+            if not test_embedding_id:
+                test_embedding_id = indices_filtered[0]
             if model_name == "GROVER":
                 dna_sequences_filtered = [seq[:1360] for seq in dna_sequences_filtered]
             elif model_name == "GENALM":
@@ -107,13 +112,17 @@ def get_embeddings(dna_sequences, batch_sizes, model_name, model_path, save_path
 
             processed_embeddings.append(embeddings)
             processed_ids.extend(indices_filtered)
+            if not test_embedding:
+                test_embedding = embeddings[test_embedding_id,;]
+            print(f"Processed embedding with id {test_embedding_id} has embedding: {embeddings[test_embedding_id,:]}")
 
         embeddings = np.concatenate(
             processed_embeddings,
             axis=0,
         )
-
         embeddings = embeddings[np.argsort(processed_ids)]
+    print(f"{processed_ids[0]} should be the same as {test_embedding_id}")
+    print(f"IS EMBEDDING SAME: {np.array_equal(embeddings[processed_ids[0],:], test_embedding)}\n and in position {processed_ids[0]}")
     print(f"Embeddings shape: {embeddings.shape}")
     with open(save_path, "wb") as f:
         np.save(f, embeddings)
