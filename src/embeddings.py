@@ -124,7 +124,7 @@ def get_embeddings(dna_sequences, batch_sizes, model_name, model_path, save_path
         )
         embeddings = embeddings[np.argsort(processed_ids)]
     print(
-        f"IS EMBEDDING SAME: {np.array_equal(embeddings[processed_ids[1],:], test_embedding)}\n and in position {processed_ids[0]}"
+        f"IS EMBEDDING SAME: {np.array_equal(embeddings[processed_ids[1],:], test_embedding)}\n and in position {processed_ids[1]}"
     )
     print(f"Embeddings shape: {embeddings.shape}")
     with open(save_path, "wb") as f:
