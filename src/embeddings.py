@@ -1,6 +1,5 @@
 import warnings
 import os
-import random
 
 import torch
 import torch.nn as nn
@@ -99,9 +98,7 @@ def get_embeddings(dna_sequences, batch_sizes, model_name, model_path, save_path
             print(f"Processed IDS WITHIN LOOP {indices_filtered}")
             dna_sequences_filtered = list(dna_sequences_filtered)
             if not test_embedding_id:
-                test_embedding_id = indices_filtered[
-                    random.randint(0, len(indices_filtered) - 1)
-                ]
+                test_embedding_id = indices_filtered[1]
             if model_name == "GROVER":
                 dna_sequences_filtered = [seq[:1360] for seq in dna_sequences_filtered]
             elif model_name == "GENALM":
@@ -126,9 +123,8 @@ def get_embeddings(dna_sequences, batch_sizes, model_name, model_path, save_path
             axis=0,
         )
         embeddings = embeddings[np.argsort(processed_ids)]
-    print(f"{processed_ids[0]} should be the same as {test_embedding_id}")
     print(
-        f"IS EMBEDDING SAME: {np.array_equal(embeddings[test_embedding_id,:], test_embedding)}\n and in position {processed_ids[0]}"
+        f"IS EMBEDDING SAME: {np.array_equal(embeddings[processed_ids[1],:], test_embedding)}\n and in position {processed_ids[0]}"
     )
     print(f"Embeddings shape: {embeddings.shape}")
     with open(save_path, "wb") as f:
