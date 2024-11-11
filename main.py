@@ -39,7 +39,7 @@ def main():
     contig_processed_path = "data/species_labelled_contigs.csv"
     threshold_dataset_indices_path = "data/threshold_dataset_indices.npy"
     model_configs = "config/models.yml"
-    results_path = "results/"
+    binning_results_path = "results/binning"
     results_threshold_similarities_path = "results/threshold_similarities"
 
     # Read DNA Sequences
@@ -85,7 +85,7 @@ def main():
             split_dataset(embeddings, label_ids, threshold_dataset_indices_path)
         )
 
-        threshold = compute_species_center_similarity(
+        threshold, percentile_threshold = compute_species_center_similarity(
             embeddings_threshold,
             labels_threshold,
             results_threshold_similarities_path,
@@ -93,27 +93,32 @@ def main():
             percentile_threshold=70,
         )
 
-    #     predictions = KMediod(embeddings, threshold)
-    #     print(
-    #         f"Found {len(np.unique(predictions))} out of {len(set(label_ids))} "
-    #     )  # Ideal 290
+        predictions = KMediod(embeddings_evaluate, threshold)
+        print(
+            f"Found {len(np.unique(predictions))} out of {len(set(label_ids))} "
+        )  # Ideal 290
 
-    #     labels_in_preds = label_ids[0:100][predictions != -1]
-    #     predictions = predictions[predictions != -1]
+        labels_in_preds = labels_evaluate[0:100][predictions != -1]
+        predictions = predictions[predictions != -1]
 
-    #     label_mappings = align_labels_via_linear_sum_assignemt(
-    #         labels_in_preds, predictions
-    #     )
-    #     predictions = [label_mappings[label] for label in predictions]
+        label_mappings = align_labels_via_linear_sum_assignemt(
+            labels_in_preds, predictions
+        )
+        predictions = [label_mappings[label] for label in predictions]
 
-    #     results = compute_eval_metrics(labels_in_preds, predictions)
+        results = compute_eval_metrics(labels_in_preds, predictions)
 
-    #     model_results = {model_name: results}
-    #     model_results_path = os.path.join(results_path, model_name + ".json")
-    #     with open(model_results_path, "w") as results_file:
-    #         json.dump(model_results, results_file)
-    #     print("========================================= \n \n")
-    # return
+        model_results = {
+            model_name: {
+                "percentile threshold": percentile_threshold,
+                "results": results,
+            }
+        }
+        model_results_path = os.path.join(binning_results_path, model_name + ".json")
+        with open(model_results_path, "w") as results_file:
+            json.dump(model_results, results_file)
+        print("========================================= \n \n")
+    return
 
 
 if __name__ == "__main__":

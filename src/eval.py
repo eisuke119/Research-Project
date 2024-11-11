@@ -55,7 +55,7 @@ def compute_species_center_similarity(
             f"Saved threshold similarities to path {results_threshold_similarities_file}"
         )
 
-    return threshold
+    return threshold, percentile_threshold
 
 
 def KMediod(

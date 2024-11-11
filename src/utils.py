@@ -126,6 +126,10 @@ def get_threshold_dataset_indices(
         with open(threshold_dataset_indices_path, "r") as f:
             threshold_dataset_indices = np.load(threshold_dataset_indices_path)
 
+        assert len(threshold_dataset_indices) == len(
+            label_ids
+        ), "Dimensions of loaded threshold indices and label_ids do not match"
+
         print(
             f"Loading threshold dataset indices\nThreshold dataset comprise {sum(threshold_dataset_indices)} contigs ({sum(threshold_dataset_indices)/len(threshold_dataset_indices)*100:.1f}%)"
         )
@@ -159,7 +163,7 @@ def split_dataset(
     threshold_dataset_indices_path: str,
     sample_rate=0.1,
 ) -> tuple[np.array, np.array, np.array, np.array]:
-    """Split the dataset into an evaluation dataset and a threshold dataset.
+    """Split the dataset into an evaluation dataset and a threshold dataset according to the indices returned by get_threshold_dataset_indices.
 
     Args:
         embeddings (np.array): Array of embeddings from the model.
