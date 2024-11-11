@@ -5,6 +5,8 @@ import numpy as np
 from Bio import SeqIO
 import pandas as pd
 
+np.random.seed(42)
+
 
 def preprocess_contigs(
     contig_path: str, contig_processed_path: str, seq_min_length: int = 2500
@@ -77,8 +79,11 @@ def label_to_id(data: list[list]) -> tuple[np.array, dict]:
     """Convert labels to numeric values"""
 
     labels = [label[2] for label in data[1:]]
+    sorted_set_labels = sorted(
+        set(labels)
+    )  # sort to ensure same ordering every time the fuhnction is run
 
-    label2id = {label: i for i, label in enumerate(set(labels))}
+    label2id = {label: i for i, label in enumerate(sorted_set_labels)}
     id2label = {i: label for label, i in label2id.items()}
 
     label_ids = np.array([label2id[l] for l in labels])
@@ -95,3 +100,102 @@ def validate_input_array(array):
     assert array.flags["C_CONTIGUOUS"] and array.flags["OWNDATA"]
 
     return array
+
+
+def get_threshold_dataset_indices(
+    label_ids: list,
+    threshold_dataset_indices_path: str,
+    sample_rate=0.1,
+) -> np.array:
+    """Generates or loads a threshold dataset for calculating model-specific thresholds.
+
+    This function samples a specified proportion of species, setting aside their contigs to form the threshold dataset.
+    If the specified path exists, the function loads the dataset from it. Otherwise, it creates a new threshold dataset.
+
+    Args:
+        label_ids (list): List of species labels converted to IDs.
+        threshold_dataset_indices_path (str): Path where the threshold dataset indices should be saved or loaded.
+        sample_rate (float, optional): Proportion of species to include in the threshold dataset. Defaults to 0.1.
+
+    Returns:
+        np.array: An array of the same length as `label_ids`, with `1` for indices included in the threshold dataset,
+                    and `0` for those not included.
+    """
+
+    if os.path.exists(threshold_dataset_indices_path):
+        with open(threshold_dataset_indices_path, "r") as f:
+            threshold_dataset_indices = np.load(threshold_dataset_indices_path)
+
+        print(
+            f"Loading threshold dataset indices\nThreshold dataset comprise {sum(threshold_dataset_indices)} contigs ({sum(threshold_dataset_indices)/len(threshold_dataset_indices)*100:.1f}%)"
+        )
+
+        return threshold_dataset_indices
+
+    else:
+        unique_label_ids = np.unique(label_ids)
+
+        threshold_dataset_species_sampled = np.random.choice(
+            unique_label_ids, int(len(unique_label_ids) * sample_rate), replace=False
+        )
+
+        threshold_dataset_indices = np.where(
+            np.isin(label_ids, threshold_dataset_species_sampled), 1, 0
+        )
+        print(
+            f"Sampling new threshold dataset indices\nThreshold dataset comprise {sum(threshold_dataset_indices)} contigs ({sum(threshold_dataset_indices)/len(threshold_dataset_indices)*100:.1f}%) "
+        )
+
+        with open(threshold_dataset_indices_path, "w") as f:
+            for line in threshold_dataset_indices:
+                f.write(str(line) + "\n")
+
+        return threshold_dataset_indices
+
+
+def split_dataset(
+    embeddings: np.array,
+    label_ids: list,
+    threshold_dataset_indices_path: str,
+    sample_rate=0.1,
+) -> tuple[np.array, np.array, np.array, np.array]:
+    """Split the dataset into an evaluation dataset and a threshold dataset.
+
+    Args:
+        embeddings (np.array): Array of embeddings from the model.
+        label_ids (list): List of species labels converted to IDs.
+        threshold_dataset_indices_path (str): Path where the threshold dataset indices should be saved/loaded.
+        sample_rate (float, optional): Proportion of species to use for the threshold dataset. Defaults to 0.1.
+
+     Returns:
+        tuple[np.array, np.array, np.array, np.array]: Tuple containing:
+            - embeddings for evaluation,
+            - embeddings for threshold calculation,
+            - label IDs for evaluation,
+            - label IDs for threshold calculation.
+
+    """
+
+    threshold_dataset_indices = get_threshold_dataset_indices(
+        label_ids, threshold_dataset_indices_path, sample_rate
+    )
+
+    assert (
+        len(threshold_dataset_indices) == len(embeddings) == len(label_ids)
+    ), "Dimensions of threshold indices, embeddings, and label_ids do not match"
+
+    embeddings_evaluate = embeddings[threshold_dataset_indices == 0]
+    embeddings_threshold = embeddings[threshold_dataset_indices == 1]
+
+    label_ids_evaluate = label_ids[threshold_dataset_indices == 0]
+    label_ids_threshold = label_ids[threshold_dataset_indices == 1]
+
+    assert len(embeddings_evaluate) + len(embeddings_threshold) == len(embeddings)
+    assert len(label_ids_evaluate) + len(label_ids_threshold) == len(label_ids)
+
+    return (
+        embeddings_evaluate,
+        embeddings_threshold,
+        label_ids_evaluate,
+        label_ids_threshold,
+    )

@@ -121,7 +121,21 @@ def get_embeddings(dna_sequences, batch_sizes, model_name, model_path, save_path
     return embeddings
 
 
-def calculate_llm_embedding(dna_sequences, batch_size, model_name, model_path):
+def calculate_llm_embedding(
+    dna_sequences, batch_size, model_name, model_path
+) -> np.array:
+    """_summary_
+
+    Args:
+        dna_sequences (_type_): _description_
+        batch_size (_type_): _description_
+        model_name (_type_): _description_
+        model_path (_type_): _description_
+
+    Returns:
+        np.array: array of embeddings for the llm model
+    """
+
     # To reduce Padding overhead
     sorted_dna_sequences, idx = sort_sequences(dna_sequences)
     dna_sequences = DNADataset(sorted_dna_sequences)

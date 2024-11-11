@@ -1,80 +1,61 @@
+import os
 import numpy as np
 from scipy.optimize import linear_sum_assignment
 import sklearn.metrics
 import tqdm
 
 
-def compute_class_center_medium_similarity(
-    embeddings, labels, sample_rate=0.2, sample_type="class_sample"
-):
-    """
-    Compute similarity metrics by sampling embeddings within each class or among classes.
+def compute_species_center_similarity(
+    embeddings: np.array,
+    label_ids: np.array,
+    results_threshold_similarities_path: str,
+    model_name: str,
+    percentile_threshold=70,
+) -> float:
+    """Computes the similarities between each contig and its species center. Concatenates all similarites across species to a list. A specified percentile of all similarities is returned as the threshold. Also saves all similarites results folder.
+    N.B: Use the threshold dataset (or other holdout data) for this function.
 
     Args:
-        embeddings (np.ndarray): Embeddings of data points.
-        labels (np.ndarray): Class labels for the embeddings.
-        sample_rate (float): Proportion of data to sample from each class or number of classes.
-        sample_type (str): 'class_sample' for sampling within each class,
-                           'classwise_sample' for sampling whole classes.
+        embeddings (np.array): embeddings from the model
+        label_ids (np.array): labels correspondiong to the embeddings
+        percentile_threshold (int, optional): The percentile that is used to obtain the threshold from the list of all similarities. Defaults to 70.
 
     Returns:
-        tuple: List of percentile values representing similarity distributions,
-               List of indices of sampled data points,
-               List of labels of sampled classes if sample_type is 'classwise_sample'.
+        float: Threshold using the specified percentile_threshold
     """
-    unique_labels = np.unique(labels)
+
     all_similarities = []
-    sampled_indices_list = []  # To store indices of sampled points
-
-    # Sampled labels only if sample_type is 'classwise_sample'
-    sampled_labels = None
-    if sample_type == "classwise_sample":
-        sampled_labels = np.random.choice(
-            unique_labels, int(len(unique_labels) * sample_rate), replace=False
-        )
-
-    # Process each class based on the specified sampling strategy
+    unique_labels = np.unique(label_ids)
     for label in unique_labels:
-        class_indices = np.where(labels == label)[0]
-        class_embeddings = embeddings[class_indices]
+        label_ids_filtered = np.where(label_ids == label)[0]
+        embeddings_filtered = embeddings[label_ids_filtered]
 
-        # Skip classes with fewer than 10 samples
-        if len(class_embeddings) <= 10:
-            continue
+        label_centroid = np.mean(embeddings_filtered, axis=0)
+        similarities_to_centroid = np.dot(embeddings_filtered, label_centroid)
 
-        if sample_type == "class_sample":
-            # Sample a percentage of data points within the class
-            n_sample = max(1, int(len(class_embeddings) * sample_rate))
-            sampled_indices = np.random.choice(
-                len(class_embeddings), n_sample, replace=False
-            )
-            sampled_embeddings = class_embeddings[sampled_indices]
-            sampled_original_indices = class_indices[sampled_indices]
+        all_similarities.extend(similarities_to_centroid)
 
-        elif sample_type == "classwise_sample":
-            # Check if the current class is in the sampled labels
-            if label not in sampled_labels:
-                continue
-            sampled_embeddings = class_embeddings
-            sampled_original_indices = class_indices  # Use all indices in this class
-
-        # Calculate the mean and similarities for the sampled embeddings
-        mean_embedding = np.mean(sampled_embeddings, axis=0)
-        similarities = np.dot(sampled_embeddings, mean_embedding)
-
-        # Collect all similarities and sampled indices for percentile calculation
-        all_similarities.extend(similarities)
-        sampled_indices_list.extend(
-            sampled_original_indices
-        )  # Add original indices to the list
-
-    # Compute and return percentile values for the aggregated similarities
     all_similarities = np.array(all_similarities)
     all_similarities.sort()
-    percentile_values = [
-        np.percentile(all_similarities, p) for p in [10, 20, 30, 40, 50, 60, 70, 80, 90]
-    ]
-    return percentile_values, sampled_indices_list
+
+    percentiles = [10, 20, 30, 40, 50, 60, 70, 80, 90]
+    percentile_values = [np.percentile(all_similarities, p) for p in percentiles]
+    threshold = np.percentile(all_similarities, percentile_threshold)
+    print(f"Threshold: {threshold}")
+
+    results_threshold_similarities_file = os.path.join(
+        results_threshold_similarities_path,
+        model_name + "_" + str(percentile_threshold) + ".npy",
+    )
+
+    if not os.path.exists(results_threshold_similarities_file):
+        with open(results_threshold_similarities_file, "wb") as f:
+            np.save(f, all_similarities)
+        print(
+            f"Saved threshold similarities to path {results_threshold_similarities_file}"
+        )
+
+    return threshold
 
 
 def KMediod(
