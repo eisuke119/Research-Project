@@ -6,3 +6,5 @@
 *__pycache__/
 outdated/
 results/DNABERT_S.json
+
+!data/threshold_dataset_indices.npy
