@@ -108,7 +108,7 @@ def KMediod(
     # similarities = np.dot(embeddings, embeddings.T)  # EE^T
 
     similarities = []
-    step_size = 1000
+    step_size = 100
     for i in tqdm.tqdm(
         range(0, embeddings.shape[0], step_size), desc="Computing Similarities"
     ):
