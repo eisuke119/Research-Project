@@ -90,3 +90,15 @@ def calculate_dna2vec_embedding(dna_sequences: List[List[str]]) -> np.array:
     embedding = np.dot(tnf_embedding, pretrained_4mer_embedding)
 
     return embedding
+
+
+def calculate_similarities(embeddings: np.array, step_size: int):
+
+    embeddings = torch.from_numpy(embeddings)
+
+    for i in tqdm.tqdm(
+        range(start_index, end_index, step_size), desc="Computing Similarities"
+    ):
+        j = min(start_index + step_size, embeddings.shape[0])
+        similarities.append(np.dot(embeddings[i:j, :], embeddings.T))
+    similarities = np.concatenate(similarities, axis=0)
