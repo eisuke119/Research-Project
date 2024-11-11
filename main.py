@@ -39,8 +39,10 @@ def main():
     contig_processed_path = "data/species_labelled_contigs.csv"
     threshold_dataset_indices_path = "data/threshold_dataset_indices.npy"
     model_configs = "config/models.yml"
+
     binning_results_path = "results/binning"
     results_threshold_similarities_path = "results/threshold_similarities"
+    entropy_in_predictions_path = "results/entropy_in_predictions"
 
     # Read DNA Sequences
     preprocess_contigs(contig_path, contig_processed_path)
@@ -93,20 +95,19 @@ def main():
             percentile_threshold=70,
         )
 
-        predictions = KMediod(embeddings_evaluate, threshold)
+        all_predictions = KMediod(embeddings_evaluate, threshold)
         print(
-            f"Found {len(np.unique(predictions))} out of {len(set(label_ids))} "
+            f"Found {len(np.unique(all_predictions))} out of {len(set(label_ids))} "
         )  # Ideal 290
 
-        labels_in_preds = labels_evaluate[0:100][predictions != -1]
-        predictions = predictions[predictions != -1]
-
+        labels_in_preds = labels_evaluate[all_predictions != -1]
+        valid_predictions = all_predictions[all_predictions != -1]
         label_mappings = align_labels_via_linear_sum_assignemt(
-            labels_in_preds, predictions
+            labels_in_preds, valid_predictions
         )
-        predictions = [label_mappings[label] for label in predictions]
+        valid_predictions = [label_mappings[label] for label in valid_predictions]
 
-        results = compute_eval_metrics(labels_in_preds, predictions)
+        results = compute_eval_metrics(labels_in_preds, valid_predictions)
 
         model_results = {
             model_name: {
