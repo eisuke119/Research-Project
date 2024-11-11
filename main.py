@@ -59,6 +59,7 @@ def main():
         print("========================================= \n\n")
         model_path = models_config[model_name]["model_path"]
         save_path = models_config[model_name]["embedding_path"]
+        hd5_path = models_config[model_name]["similarities_path"]
         batch_sizes = models_config[model_name]["batch_sizes"]
 
         try:
@@ -83,7 +84,7 @@ def main():
         threshold = percentile_values[7]
         print(f"threshold: {threshold}")
 
-        predictions = KMediod(embeddings, threshold)
+        predictions = KMediod(embeddings, threshold, hd5_path)
         print(
             f"Found {len(np.unique(predictions))} out of {len(set(label_ids))} "
         )  # Ideal 290

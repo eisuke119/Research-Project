@@ -1,6 +1,8 @@
 import gzip
 import os
+import tables as tb
 
+import tqdm
 import numpy as np
 from Bio import SeqIO
 import pandas as pd
@@ -95,3 +97,45 @@ def validate_input_array(array):
     assert array.flags["C_CONTIGUOUS"] and array.flags["OWNDATA"]
 
     return array
+
+
+def calculate_similarity_matrix(
+    embeddings: np.array, min_similarity: float, output_file_path: str
+) -> None:
+    """Use pytables to store similarity matrix in HDF5 format and calculate similarity matrix
+    in blocks to ease memory overhead. Inspiration for the solution is found here:
+    https://medium.com/@ph_singer/handling-huge-matrices-in-python-dff4e31d4417.
+    As we evaluate the similarities with the min_similarity within the calculation loop,
+    the embeddings passed to the function must be normalized.
+
+
+    Args:
+        embeddings (np.array): IMPORTANT: Normalized embeddings
+        min_similarity (float): distance min_similarity
+        output_file_path (str): hd5 storage path
+
+    Returns:
+        None
+    """
+    output_file_path = os.path.join("similarities", output_file_path)
+    embeddings = embeddings.astype(np.float32)
+    n = embeddings.shape[0]
+    f = tb.open_file(output_file_path, "w")
+    filters = tb.Filters(complevel=4, complib="blosc")
+    similarities_h5 = f.create_carray(
+        f.root, "similarities", tb.Float32Atom(), shape=(n, n), filters=filters
+    )
+
+    block_size = 10
+    for i in tqdm.tqdm(
+        range(0, n, block_size), desc=f"Computing Similarities from {i}-{i+block_size}"
+    ):
+        end_i = min(i + block_size, n)
+        for j in range(0, n, block_size):
+            end_j = min(j + block_size, n)
+            block = np.dot(embeddings[i:end_i], embeddings[j:end_j].T)  # EE^T
+            block[block < min_similarity] = 0  # Apply similarity threshold
+            similarities_h5[i:end_i, j:end_j] = block  # Store the block
+    f.close()
+
+    return

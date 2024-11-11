@@ -6,3 +6,5 @@
 *__pycache__/
 outdated/
 results/DNABERT_S.json
+*.ipynb_checkpoints/
+*.ipynb
