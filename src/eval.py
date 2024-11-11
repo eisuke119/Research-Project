@@ -103,7 +103,7 @@ def KMediod(
     # embeddings = embeddings.cpu().numpy()
     # similarities = similarities.cpu().numpy()
 
-    # embeddings = embeddings.astype(np.float16)
+    embeddings = embeddings.astype(np.float32)
 
     # similarities = np.dot(embeddings, embeddings.T)  # EE^T
 
