@@ -1,6 +1,7 @@
 import numpy as np
 from scipy.optimize import linear_sum_assignment
 import sklearn.metrics
+import tqdm
 
 
 def compute_class_center_medium_similarity(
@@ -108,7 +109,9 @@ def KMediod(
 
     similarities = []
     step_size = 1000
-    for i in range(0, embeddings.shape[0], step_size):
+    for i in tqdm.tqdm(
+        range(0, embeddings.shape[0], step_size), desc="Computing Similarities"
+    ):
         j = min(i + step_size, embeddings.shape[0])
         similarities.append(np.dot(embeddings[i:j, :], embeddings.T))
     similarities = np.concatenate(similarities, axis=0)
