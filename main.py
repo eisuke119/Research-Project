@@ -42,7 +42,6 @@ def main():
 
     binning_results_path = "results/binning"
     results_threshold_similarities_path = "results/threshold_similarities"
-    entropy_in_predictions_path = "results/entropy_in_predictions"
 
     # Read DNA Sequences
     preprocess_contigs(contig_path, contig_processed_path)
