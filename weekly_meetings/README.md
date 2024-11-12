@@ -5,6 +5,7 @@
 * [03 October 2024](#date-03-october-2024)
 * [10 October 2024](#date-10-october-2024)
 * [05 November 2024](#date-05-november-2024)
+* [14 November 2024](#date-14-november-2024)
 
 #### Date: 03 October 2024
 
@@ -162,11 +163,11 @@ We would like to get feedback on our report and report structure so far.
       * In DNABERT-S they are simply discarded.
       * Assign unclassified contigs to nearest species centroid
       * Other assignment rules?
-   3. Examine predictions and their embeddings across models. Good clusters should have a high within-similarity and low between similarity. We want a metric that can be given to each contig, so we can make a histogram of each this metric and compare across models. Some suggestions:
-      *  For each contig, calculate similarity with all species centroids to get matrix of (N, num_centroids). Treat these similarities as a probability distribution by applying softmax to each contig, then calculate entropy or get the argmax of these probabilities. Rationale: Good embeddings should have high entropy, or should have high argmax. 
+   3. Examine predictions and their embeddings across models. Good clusters should have a high inter-similarity and low intra-similarity. We want a metric that can be given to each contig, so we can make a histogram of the values and compare across models. Some suggestions:
+      *  For each contig, calculate similarity with all species centroids to get matrix of (N, num_centroids). Treat these similarities as a probability distribution by applying softmax to each contig, then calculate entropy or get the argmax of these probabilities. Rationale: Good embeddings should have low entropy, or should have high argmax. 
       *  These metrics may not be so good, and we want to know if you have some ideas.  
-   4. Plot histogram of similaries used for calculating threshold for each model. 
-   5. Make a outer for-loop with percentiles in the threshold. 
+   4. Plot histogram of similarities used for calculating the threshold for each model. 
+   5. Make an outer loop going through the threshold percentile values and: 
       * See whether results are robust to changes in the percentile.
       * Are more species/contigs classified?
    6. Use other distance functions instead of np.dot on l2-normalised embeddings.   
