@@ -129,3 +129,57 @@
 
 
 We would like to get feedback on our report and report structure so far.
+
+
+
+#### Date: 14 November 2024
+
+**Note that the latest code is found in** [branch andreas on our github](https://github.com/eisuke119/Research-Project/tree/andreas). 
+
+##### Who helped you this week?
+
+  * Lottie Greenwood was very helpful in helping us using Ucloud.
+
+##### What did you achieve (since last time)?
+
+  * Access to compute power on Ucloud. Here there is no queue compared to the cluster.
+  * Code working for 6 DNA foundation models (LLMs) and 3 non-LLMs.  
+  * The NxN similarity matrix in the k-mediod algoritm caused out-of-memory-errors. We made a new memory-efficient implementation.
+  * Set aside 10% of species for calculating threshold. 
+
+
+
+##### What did you struggle with?
+
+  * Debugging code, out-of-memory-erorrs
+
+
+
+##### What would you like to work on today and next week?
+
+   1. Run the whole main.py.
+   2. Compare results of different strategies for dealing with unclassified contigs:
+      * In DNABERT-S they are simply discarded.
+      * Assign unclassified contigs to nearest species centroid
+      * Other assignment rules?
+   3. Examine predictions and their embeddings across models. Good clusters should have a high within-similarity and low between similarity. We want a metric that can be given to each contig, so we can make a histogram of each this metric and compare across models. Some suggestions:
+      *  For each contig, calculate similarity with all species centroids to get matrix of (N, num_centroids). Treat these similarities as a probability distribution by applying softmax to each contig, then calculate entropy or get the argmax of these probabilities. Rationale: Good embeddings should have high entropy, or should have high argmax. 
+      *  These metrics may not be so good, and we want to know if you have some ideas.  
+   4. Plot histogram of similaries used for calculating threshold for each model. 
+   5. Make a outer for-loop with percentiles in the threshold. 
+      * See whether results are robust to changes in the percentile.
+      * Are more species/contigs classified?
+   6. Use other distance functions instead of np.dot on l2-normalised embeddings.   
+   
+
+
+
+
+##### Where do you need help from Veronika?
+
+  * Point 2, 3, 4, 5, 6 above
+  * We are very open to hear if you have some interresting experiments/vizualisations. 
+  * Note that in our literature review, we found 17 DNA foundation models, and we got 6 of them to work at the moment. We know that we will not get all models up and running. 
+
+
+
