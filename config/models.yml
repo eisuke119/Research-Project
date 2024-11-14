@@ -11,7 +11,7 @@
 HyenaDNA:
   model_path: "LongSafari/hyenadna-large-1m-seqlen-hf"
   embedding_path: "HyenaDNA.npy"
-  batch_sizes: [100, 25, 10]
+  batch_sizes: [200, 50, 20]
 
 # GROVER:
 #   model_path: "PoetschLab/GROVER"
