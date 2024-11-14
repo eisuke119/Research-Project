@@ -9,6 +9,7 @@ import yaml
 import torch
 import numpy as np
 from sklearn.preprocessing import normalize
+import sklearn.metrics as metrics
 
 from src.utils import (
     preprocess_contigs,
@@ -22,7 +23,6 @@ from src.eval import (
     KMediod,
     align_labels_via_linear_sum_assignemt,
     compute_eval_metrics,
-    compute_silhouette_score,
     process_unpredicted_contigs,
 )
 
@@ -39,9 +39,8 @@ def main():
     threshold_dataset_indices_path = "data/threshold_dataset_indices.npy"
     model_configs = "config/models.yml"
 
-    binning_results_path = "results/binning"
+    results_path = "results/main_results"
     results_threshold_similarities_path = "results/threshold_similarities"
-    results_silhouette_score_path = "results/silhouette_score"
 
     # Read DNA Sequences
     preprocess_contigs(contig_path, contig_processed_path)
@@ -63,7 +62,6 @@ def main():
         print("========================================= \n\n")
         model_path = models_config[model_name]["model_path"]
         save_path = models_config[model_name]["embedding_path"]
-        # hd5_path = models_config[model_name]["hd5_path"]
         batch_sizes = models_config[model_name]["batch_sizes"]
 
         try:
@@ -100,35 +98,39 @@ def main():
             f"Found {len(np.unique(all_predictions))} out of {len(set(label_ids))} "
         )  # Ideal 290
 
-        for postprocessing_method in ["remove", "nearest_centroid"]:
-            postprocessed_predictions, postprosessed_labels, n_unpredicted_contigs = (
-                process_unpredicted_contigs(
-                    all_predictions,
-                    labels_evaluate,
-                    embeddings_evaluate,
-                    postprocessing_method,
-                )
+        for pp_method in ["remove", "nearest_centroid"]:
+            (
+                pp_predictions,
+                pp_labels,
+                n_unclassified_contigs,
+                pp_embeddings,
+            ) = process_unpredicted_contigs(
+                all_predictions,
+                labels_evaluate,
+                embeddings_evaluate,
+                pp_method,
             )
 
+            print("Aligning labels via linear sum assignment")
             label_mappings = align_labels_via_linear_sum_assignemt(
-                postprosessed_labels, postprocessed_predictions
+                pp_labels, pp_predictions
             )
-            postprocessed_predictions_alignedlabels = [
-                label_mappings[label] for label in postprocessed_predictions
-            ]
 
-        compute_eval_metrics(
-            labels_in_preds,
-            valid_predictions,
-            results_threshold_similarities_path,
-            model_name,
-        )
-        compute_silhouette_score(
-            embeddings_evaluate,
-            labels_in_preds,
-            results_silhouette_score_path,
-            model_name,
-        )
+            pp_assigned_labels = [label_mappings[label] for label in pp_predictions]
+
+            print("Calculating silhouette score")
+            silhouette_score = metrics.silhouette_score(pp_embeddings, pp_labels)
+
+            compute_eval_metrics(
+                pp_labels,
+                pp_assigned_labels,
+                results_path,
+                model_name,
+                pp_method,
+                percentile_threshold,
+                silhouette_score,
+                n_unclassified_contigs,
+            )
 
         print("========================================= \n \n")
     return

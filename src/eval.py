@@ -1,11 +1,10 @@
 import os
+import json
 
-# import tables as tb
 import numpy as np
 from scipy.optimize import linear_sum_assignment
 import sklearn.metrics
 
-# from .utils import calculate_similarity_matrix
 import tqdm
 
 
@@ -215,7 +214,16 @@ def align_labels_via_linear_sum_assignemt(
     return label_mapping
 
 
-def compute_eval_metrics(true_labels: np.array, predicted_labels: np.array, path: str, model_name: str) -> None:
+def compute_eval_metrics(
+    true_labels: np.array,
+    predicted_labels: np.array,
+    results_path: str,
+    model_name: str,
+    postprocessing_method: str,
+    percentile_threshold: float,
+    silhouette_score: float,
+    n_unclassified_contigs: int,
+) -> None:
     """
     Calculates recall and F1 score, and provides results at thresholds.
 
@@ -252,47 +260,24 @@ def compute_eval_metrics(true_labels: np.array, predicted_labels: np.array, path
         f1_results.append(len(np.where(f1_bin > threshold)[0]))
 
     model_results = {
-            model_name: {
-                "thresholds": thresholds,
-                "f1_results": f1_results,
-                "recall_results": recall_results
-            }
-        }
-    
-    model_results_path = os.path.join(binning_results_path, model_name + ".json")
-        
-    with open(model_results_path, "w") as results_file:
-        json.dump(model_results, results_file)
-
-def compute_silhouette_score(embeddings: np.ndarray, predicted_labels: np.ndarray, path: str, model_name: str) -> None:
-    """
-    Calculates the silhouette score based on embeddings and predicted labels, and saves the result as a JSON file.
-
-    Args:
-        embeddings (np.ndarray): Embedding vectors representing the data points.
-        predicted_labels (np.ndarray): Predicted cluster labels for each data point.
-        path (str): Directory path where the result JSON file will be saved.
-        model_name (str): Name of the model, used for naming the JSON file and as a key in the JSON content.
-
-    Returns:
-        None
-    """
-
-    # Calculate the silhouette score
-    score = sklearn.metrics.silhouette_score(embeddings, predicted_labels)
-
-    # Organize the result into a dictionary
-    model_ss = {
         model_name: {
-            "silhouette_score": score,
+            "percentile_threshold": percentile_threshold,
+            "thresholds": thresholds,
+            "f1_results": f1_results,
+            "recall_results": recall_results,
+            "silhouette_score": silhouette_score,
+            "n_unclassified_contigs": n_unclassified_contigs,
         }
     }
-    # Generate the file path for saving the results
-    model_ss_path = os.path.join(path, model_name + ".json")
 
-    # Save the results as a JSON file
-    with open(model_ss_path, "w") as results_file:
-        json.dump(model_ss, results_file)
+    model_results_path = os.path.join(
+        results_path, model_name + "_" + postprocessing_method + ".json"
+    )
+
+    with open(model_results_path, "w") as results_file:
+        json.dump(model_results, results_file)
+    return
+
 
 def process_unpredicted_contigs(
     all_predictions: np.array,
@@ -325,21 +310,30 @@ def process_unpredicted_contigs(
               to the postprocessed predictions.
             - n_unpredicted_contigs (int): Count of unassigned contigs before processing.
     """
-
-    n_unpredicted_contigs = len(all_predictions[all_predictions == -1])
-
     if processing_method == "remove":
+        n_unpredicted_contigs = len(all_predictions[all_predictions == -1])
         postprocessed_predictions = all_predictions[all_predictions != -1]
         postprosessed_labels = all_labels[all_predictions != -1]
+        postprocessed_embeddings = embeddings[all_predictions != -1]
+
+        return (
+            postprocessed_predictions,
+            postprosessed_labels,
+            n_unpredicted_contigs,
+            postprocessed_embeddings,
+        )
 
     elif processing_method == "nearest_centroid":
 
         assert len(all_predictions) == len(all_labels) == len(embeddings)
-
+        n_unpredicted_contigs = 0
         # calculate species centroid
         unique_predictions = np.unique(all_predictions[all_predictions != -1])
         all_prediction_centroids = []
-        for prediction in unique_predictions:
+        for prediction in tqdm.tqdm(
+            unique_predictions,
+            desc="Calculating Nearest Centroids to Unassigned Contigs",
+        ):
             predictions_filtered = np.where(all_predictions == prediction)[0]
             embeddings_filtered = embeddings[predictions_filtered]
 
@@ -358,10 +352,7 @@ def process_unpredicted_contigs(
             np.argmax(similarities_to_centroids, axis=1)
         ]  # dim(n_unclassified_contigs, )
 
-        postprocessed_predictions = all_predictions.copy()
-        postprocessed_predictions[unassigned_embeddings_indices] = (
-            nearest_centroid_predictions
-        )
-        postprosessed_labels = all_labels
+        # postprocessed_predictions = all_predictions.copy()
+        all_predictions[unassigned_embeddings_indices] = nearest_centroid_predictions
 
-    return postprocessed_predictions, postprosessed_labels, n_unpredicted_contigs
+        return all_predictions, all_labels, n_unpredicted_contigs, embeddings
