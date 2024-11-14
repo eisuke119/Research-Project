@@ -13,15 +13,15 @@
 #   embedding_path: "HyenaDNA.npy"
 #   batch_sizes: [200, 50, 20]
 
-# GROVER:
-#   model_path: "PoetschLab/GROVER"
-#   embedding_path: "GROVER.npy"
-#   batch_sizes: [200, 50, 20]
+GROVER:
+  model_path: "PoetschLab/GROVER"
+  embedding_path: "GROVER.npy"
+  batch_sizes: [200, 200, 200]
 
 NT:
   model_path: "InstaDeepAI/nucleotide-transformer-v2-100m-multi-species"
   embedding_path: "NT.npy"
-  batch_sizes: [70, 40, 20]
+  batch_sizes: [70, 25, 20]
 
 # requires mamba_ssm & flash_attn which are not available in the current environment
 # Caduceus:
@@ -38,7 +38,7 @@ NT:
 # GENALM:
 #   model_path: "AIRI-Institute/gena-lm-bert-base-t2t"
 #   embedding_path: "GENALM.npy"
-#   batch_sizes: [50, 14, 1]
+#   batch_sizes: [50, 50, 50]
 
 # TNF:
 #   model_path: "tnf"
