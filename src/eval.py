@@ -213,3 +213,76 @@ def compute_eval_metrics(true_labels: np.array, predicted_labels: np.array) -> d
         "f1_results": f1_results,
         "recall_results": recall_results,
     }
+
+
+def process_unpredicted_contigs(
+    all_predictions: np.array,
+    all_labels: np.array,
+    embeddings: np.array,
+    processing_method: str,
+) -> tuple[np.array, np.array, int]:
+    """
+    Processes unpredicted contigs (contigs assigned -1 by the K-medoid algorithm).
+    This function handles unpredicted contigs by either removing them or assigning them
+    to the nearest species centroid based on the specified processing method.
+
+    Args:
+        all_predictions (np.array): Array of predictions from the K-medoid algorithm,
+                                    where -1 indicates unassigned contigs.
+        all_labels (np.array): Array of true labels for each contig.
+        embeddings (np.array): Array of embeddings for each contig, used to compute
+                               distances to centroids if required.
+        processing_method (str): Specifies the handling method for unassigned contigs.
+                                 Options are:
+                                 - "remove": Removes all unassigned contigs.
+                                 - "nearest_centroid": Assigns each unassigned contig
+                                   to the nearest species centroid.
+
+    Returns:
+        tuple[np.array, np.array, int]: A tuple containing:
+            - postprocessed_predictions (np.array): Updated predictions array with
+              unassigned contigs handled based on the specified method.
+            - postprocessed_labels (np.array): Updated labels array, corresponding
+              to the postprocessed predictions.
+            - n_unpredicted_contigs (int): Count of unassigned contigs before processing.
+    """
+
+    n_unpredicted_contigs = len(all_predictions[all_predictions == -1])
+
+    if processing_method == "remove":
+        postprocessed_predictions = all_predictions[all_predictions != -1]
+        postprosessed_labels = all_labels[all_predictions != -1]
+
+    elif processing_method == "nearest_centroid":
+
+        assert len(all_predictions) == len(all_labels) == len(embeddings)
+
+        # calculate species centroid
+        unique_predictions = np.unique(all_predictions[all_predictions != -1])
+        all_prediction_centroids = []
+        for prediction in unique_predictions:
+            predictions_filtered = np.where(all_predictions == prediction)[0]
+            embeddings_filtered = embeddings[predictions_filtered]
+
+            prediction_centroid = np.mean(embeddings_filtered, axis=0)
+            all_prediction_centroids.append(prediction_centroid)
+
+        all_prediction_centroids = np.array(all_prediction_centroids)
+
+        unassigned_embeddings_indices = np.where(all_predictions == -1)[0]
+        unassigned_embeddings = embeddings[all_predictions == -1]
+
+        similarities_to_centroids = np.dot(
+            unassigned_embeddings, all_prediction_centroids.T
+        )  #  dim (n_unassigned_embeddings, n_centroids)
+        nearest_centroid_predictions = unique_predictions[
+            np.argmax(similarities_to_centroids, axis=1)
+        ]  # dim(n_unclassified_contigs, )
+
+        postprocessed_predictions = all_predictions.copy()
+        postprocessed_predictions[unassigned_embeddings_indices] = (
+            nearest_centroid_predictions
+        )
+        postprosessed_labels = all_labels
+
+    return postprocessed_predictions, postprosessed_labels, n_unpredicted_contigs

@@ -22,6 +22,7 @@ from src.eval import (
     KMediod,
     align_labels_via_linear_sum_assignemt,
     compute_eval_metrics,
+    process_unpredicted_contigs,
 )
 
 import warnings
@@ -97,25 +98,38 @@ def main():
             f"Found {len(np.unique(all_predictions))} out of {len(set(label_ids))} "
         )  # Ideal 290
 
-        labels_in_preds = labels_evaluate[all_predictions != -1]
-        valid_predictions = all_predictions[all_predictions != -1]
+        for postprocessing_method in ["remove", "nearest_centroid"]:
+            postprocessed_predictions, postprosessed_labels, n_unpredicted_contigs = (
+                process_unpredicted_contigs(
+                    all_predictions,
+                    labels_evaluate,
+                    embeddings_evaluate,
+                    postprocessing_method,
+                )
+            )
 
-        label_mappings = align_labels_via_linear_sum_assignemt(
-            labels_in_preds, valid_predictions
-        )
-        valid_predictions = [label_mappings[label] for label in valid_predictions]
+            label_mappings = align_labels_via_linear_sum_assignemt(
+                postprosessed_labels, postprocessed_predictions
+            )
+            postprocessed_predictions_alignedlabels = [
+                label_mappings[label] for label in postprocessed_predictions
+            ]
 
-        results = compute_eval_metrics(labels_in_preds, valid_predictions)
+            results = compute_eval_metrics(
+                postprosessed_labels, postprocessed_predictions_alignedlabels
+            )
 
-        model_results = {
-            model_name: {
-                "percentile threshold": percentile_threshold,
-                "results": results,
+            model_results = {
+                model_name: {
+                    "percentile threshold": percentile_threshold,
+                    "results": results,
+                }
             }
-        }
-        model_results_path = os.path.join(binning_results_path, model_name + ".json")
-        with open(model_results_path, "w") as results_file:
-            json.dump(model_results, results_file)
+            model_results_path = os.path.join(
+                binning_results_path, model_name + ".json"
+            )
+            with open(model_results_path, "w") as results_file:
+                json.dump(model_results, results_file)
         print("========================================= \n \n")
     return
 
