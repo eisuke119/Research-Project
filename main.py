@@ -60,7 +60,7 @@ def main():
         print("========================================= \n\n")
         model_path = models_config[model_name]["model_path"]
         save_path = models_config[model_name]["embedding_path"]
-        hd5_path = models_config[model_name]["similarities_path"]
+        hd5_path = models_config[model_name]["hd5_path"]
         batch_sizes = models_config[model_name]["batch_sizes"]
 
         try:
