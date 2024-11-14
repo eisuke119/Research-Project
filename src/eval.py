@@ -215,16 +215,18 @@ def align_labels_via_linear_sum_assignemt(
     return label_mapping
 
 
-def compute_eval_metrics(true_labels: np.array, predicted_labels: np.array) -> dict:
+def compute_eval_metrics(true_labels: np.array, predicted_labels: np.array, path: str, model_name: str) -> None:
     """
     Calculates recall and F1 score, and provides results at thresholds.
 
     Args:
         true_labels_bin (np.array): True labels.
         predicted_labels_bin (np.array): Predicted labels that are aligned to the true labels (e.g. using align_labels_via_linear_sum_assignemt).
+        path (str): Directory path where the result JSON file will be saved.
+        model_name (str): Name of the model, used for naming the JSON file and as a key in the JSON content.
 
     Returns:
-        dict: Contains recall and F1 counts above thresholds.
+        None
     """
 
     # Calculate recall for each class
@@ -249,8 +251,117 @@ def compute_eval_metrics(true_labels: np.array, predicted_labels: np.array) -> d
         recall_results.append(len(np.where(recall_bin > threshold)[0]))
         f1_results.append(len(np.where(f1_bin > threshold)[0]))
 
-    return {
-        "thresholds": thresholds,
-        "f1_results": f1_results,
-        "recall_results": recall_results,
+    model_results = {
+            model_name: {
+                "thresholds": thresholds,
+                "f1_results": f1_results,
+                "recall_results": recall_results
+            }
+        }
+    
+    model_results_path = os.path.join(binning_results_path, model_name + ".json")
+        
+    with open(model_results_path, "w") as results_file:
+        json.dump(model_results, results_file)
+
+def compute_silhouette_score(embeddings: np.ndarray, predicted_labels: np.ndarray, path: str, model_name: str) -> None:
+    """
+    Calculates the silhouette score based on embeddings and predicted labels, and saves the result as a JSON file.
+
+    Args:
+        embeddings (np.ndarray): Embedding vectors representing the data points.
+        predicted_labels (np.ndarray): Predicted cluster labels for each data point.
+        path (str): Directory path where the result JSON file will be saved.
+        model_name (str): Name of the model, used for naming the JSON file and as a key in the JSON content.
+
+    Returns:
+        None
+    """
+
+    # Calculate the silhouette score
+    score = sklearn.metrics.silhouette_score(embeddings, predicted_labels)
+
+    # Organize the result into a dictionary
+    model_ss = {
+        model_name: {
+            "silhouette_score": score,
+        }
     }
+    # Generate the file path for saving the results
+    model_ss_path = os.path.join(path, model_name + ".json")
+
+    # Save the results as a JSON file
+    with open(model_ss_path, "w") as results_file:
+        json.dump(model_ss, results_file)
+
+def process_unpredicted_contigs(
+    all_predictions: np.array,
+    all_labels: np.array,
+    embeddings: np.array,
+    processing_method: str,
+) -> tuple[np.array, np.array, int]:
+    """
+    Processes unpredicted contigs (contigs assigned -1 by the K-medoid algorithm).
+    This function handles unpredicted contigs by either removing them or assigning them
+    to the nearest species centroid based on the specified processing method.
+
+    Args:
+        all_predictions (np.array): Array of predictions from the K-medoid algorithm,
+                                    where -1 indicates unassigned contigs.
+        all_labels (np.array): Array of true labels for each contig.
+        embeddings (np.array): Array of embeddings for each contig, used to compute
+                               distances to centroids if required.
+        processing_method (str): Specifies the handling method for unassigned contigs.
+                                 Options are:
+                                 - "remove": Removes all unassigned contigs.
+                                 - "nearest_centroid": Assigns each unassigned contig
+                                   to the nearest species centroid.
+
+    Returns:
+        tuple[np.array, np.array, int]: A tuple containing:
+            - postprocessed_predictions (np.array): Updated predictions array with
+              unassigned contigs handled based on the specified method.
+            - postprocessed_labels (np.array): Updated labels array, corresponding
+              to the postprocessed predictions.
+            - n_unpredicted_contigs (int): Count of unassigned contigs before processing.
+    """
+
+    n_unpredicted_contigs = len(all_predictions[all_predictions == -1])
+
+    if processing_method == "remove":
+        postprocessed_predictions = all_predictions[all_predictions != -1]
+        postprosessed_labels = all_labels[all_predictions != -1]
+
+    elif processing_method == "nearest_centroid":
+
+        assert len(all_predictions) == len(all_labels) == len(embeddings)
+
+        # calculate species centroid
+        unique_predictions = np.unique(all_predictions[all_predictions != -1])
+        all_prediction_centroids = []
+        for prediction in unique_predictions:
+            predictions_filtered = np.where(all_predictions == prediction)[0]
+            embeddings_filtered = embeddings[predictions_filtered]
+
+            prediction_centroid = np.mean(embeddings_filtered, axis=0)
+            all_prediction_centroids.append(prediction_centroid)
+
+        all_prediction_centroids = np.array(all_prediction_centroids)
+
+        unassigned_embeddings_indices = np.where(all_predictions == -1)[0]
+        unassigned_embeddings = embeddings[all_predictions == -1]
+
+        similarities_to_centroids = np.dot(
+            unassigned_embeddings, all_prediction_centroids.T
+        )  #  dim (n_unassigned_embeddings, n_centroids)
+        nearest_centroid_predictions = unique_predictions[
+            np.argmax(similarities_to_centroids, axis=1)
+        ]  # dim(n_unclassified_contigs, )
+
+        postprocessed_predictions = all_predictions.copy()
+        postprocessed_predictions[unassigned_embeddings_indices] = (
+            nearest_centroid_predictions
+        )
+        postprosessed_labels = all_labels
+
+    return postprocessed_predictions, postprosessed_labels, n_unpredicted_contigs
