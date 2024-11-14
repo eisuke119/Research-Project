@@ -22,6 +22,7 @@ from src.eval import (
     KMediod,
     align_labels_via_linear_sum_assignemt,
     compute_eval_metrics,
+    compute_silhouette_score
 )
 
 import warnings
@@ -39,6 +40,7 @@ def main():
 
     binning_results_path = "results/binning"
     results_threshold_similarities_path = "results/threshold_similarities"
+    results_silhouette_score_path = "results/silhouette_score"
 
     # Read DNA Sequences
     preprocess_contigs(contig_path, contig_processed_path)
@@ -105,17 +107,9 @@ def main():
         )
         valid_predictions = [label_mappings[label] for label in valid_predictions]
 
-        results = compute_eval_metrics(labels_in_preds, valid_predictions)
+        compute_eval_metrics(labels_in_preds, valid_predictions, results_threshold_similarities_path, model_name)
+        compute_silhouette_score(embeddings_evaluate, labels_in_preds, results_silhouette_score_path, model_name)
 
-        model_results = {
-            model_name: {
-                "percentile threshold": percentile_threshold,
-                "results": results,
-            }
-        }
-        model_results_path = os.path.join(binning_results_path, model_name + ".json")
-        with open(model_results_path, "w") as results_file:
-            json.dump(model_results, results_file)
         print("========================================= \n \n")
     return
 

@@ -175,16 +175,18 @@ def align_labels_via_linear_sum_assignemt(
     return label_mapping
 
 
-def compute_eval_metrics(true_labels: np.array, predicted_labels: np.array) -> dict:
+def compute_eval_metrics(true_labels: np.array, predicted_labels: np.array, path: str, model_name: str) -> None:
     """
     Calculates recall and F1 score, and provides results at thresholds.
 
     Args:
         true_labels_bin (np.array): True labels.
         predicted_labels_bin (np.array): Predicted labels that are aligned to the true labels (e.g. using align_labels_via_linear_sum_assignemt).
+        path (str): Directory path where the result JSON file will be saved.
+        model_name (str): Name of the model, used for naming the JSON file and as a key in the JSON content.
 
     Returns:
-        dict: Contains recall and F1 counts above thresholds.
+        None
     """
 
     # Calculate recall for each class
@@ -209,8 +211,47 @@ def compute_eval_metrics(true_labels: np.array, predicted_labels: np.array) -> d
         recall_results.append(len(np.where(recall_bin > threshold)[0]))
         f1_results.append(len(np.where(f1_bin > threshold)[0]))
 
-    return {
-        "thresholds": thresholds,
-        "f1_results": f1_results,
-        "recall_results": recall_results,
+    model_results = {
+            model_name: {
+                "thresholds": thresholds,
+                "f1_results": f1_results,
+                "recall_results": recall_results
+            }
+        }
+    
+    model_results_path = os.path.join(binning_results_path, model_name + ".json")
+        
+    with open(model_results_path, "w") as results_file:
+        json.dump(model_results, results_file)
+
+def compute_silhouette_score(embeddings: np.ndarray, predicted_labels: np.ndarray, path: str, model_name: str) -> None:
+    """
+    Calculates the silhouette score based on embeddings and predicted labels, and saves the result as a JSON file.
+
+    Args:
+        embeddings (np.ndarray): Embedding vectors representing the data points.
+        predicted_labels (np.ndarray): Predicted cluster labels for each data point.
+        path (str): Directory path where the result JSON file will be saved.
+        model_name (str): Name of the model, used for naming the JSON file and as a key in the JSON content.
+
+    Returns:
+        None
+    """
+
+    # Calculate the silhouette score
+    score = sklearn.metrics.silhouette_score(embeddings, predicted_labels)
+
+    # Organize the result into a dictionary
+    model_ss = {
+        model_name: {
+            "silhouette_score": score,
+        }
     }
+
+    # Generate the file path for saving the results
+    model_ss_path = os.path.join(path, model_name + ".json")
+
+    # Save the results as a JSON file
+    with open(model_ss_path, "w") as results_file:
+        json.dump(model_ss, results_file)
+
