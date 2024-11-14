@@ -125,8 +125,7 @@ def get_threshold_dataset_indices(
     """
 
     if os.path.exists(threshold_dataset_indices_path):
-        with open(threshold_dataset_indices_path, "r") as f:
-            threshold_dataset_indices = np.load(threshold_dataset_indices_path)
+        threshold_dataset_indices = np.load(threshold_dataset_indices_path)
 
         assert len(threshold_dataset_indices) == len(
             label_ids
@@ -229,6 +228,7 @@ def calculate_similarity_matrix(
     if os.path.exists(output_file_path):
         print(f"Similarity file already exists at {output_file_path}")
         return
+
     print(f"Calculating similarities and storing in {output_file_path}")
     embeddings = embeddings.astype(np.float32)
     n = embeddings.shape[0]
