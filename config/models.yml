@@ -8,15 +8,15 @@
 #   embedding_path: "DNABERT_2.npy"
 #   batch_sizes: [50, 10, 2]
 
-HyenaDNA:
-  model_path: "LongSafari/hyenadna-large-1m-seqlen-hf"
-  embedding_path: "HyenaDNA.npy"
-  batch_sizes: [200, 50, 20]
+# HyenaDNA:
+#   model_path: "LongSafari/hyenadna-large-1m-seqlen-hf"
+#   embedding_path: "HyenaDNA.npy"
+#   batch_sizes: [200, 50, 20]
 
-# GROVER:
-#   model_path: "PoetschLab/GROVER"
-#   embedding_path: "GROVER.npy"
-#   batch_sizes: [50, 14, 1]
+GROVER:
+  model_path: "PoetschLab/GROVER"
+  embedding_path: "GROVER.npy"
+  batch_sizes: [50, 10, 2]
 
 # NT:
 #   model_path: "InstaDeepAI/nucleotide-transformer-v2-100m-multi-species"
