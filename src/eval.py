@@ -90,7 +90,7 @@ def KMediod(
 
     predictions = np.ones(n) * -1
     predictions = predictions.astype(int)
-    density_vector = np.zeros(l)
+    density_vector = np.zeros(n)
     print("=========================================\n")
     print(f"Running KMedoid on {n} samples.\n")
     print("=========================================\n")
