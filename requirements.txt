@@ -50,7 +50,6 @@ tokenizers==0.20.1
 torch==2.5.1
 tqdm==4.66.5
 transformers==4.45.1
-triton==3.1.0
 typing_extensions==4.11.0
 urllib3==1.26.8
 wheel==0.44.0
