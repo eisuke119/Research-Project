@@ -81,18 +81,18 @@ def KMediod(
         Returns:
             np.array: predicted predictions for each instance with dimensions (n_samples,)
     """
-    hd5_path = os.path.join("similarities", hd5_path)
 
     n = embeddings.shape[0]
 
-    print(f"Calculating similarity matrix with {n} samples.")
+    print(f"Calculating similarity matrix with {n} samples.\n")
 
-    calculate_similarity_matrix(embeddings, min_similarity, hd5_path)
+    hd5_path = calculate_similarity_matrix(embeddings, min_similarity, hd5_path)
 
     predictions = np.ones(n) * -1
     predictions = predictions.astype(int)
-
-    print(f"Running KMedoid on {n} samples.")
+    print("=========================================\n")
+    print(f"Running KMedoid on {n} samples.\n")
+    print("=========================================\n")
     with tb.open_file(hd5_path, "r") as f:
         similarities = f.root.similarities
 

@@ -78,7 +78,7 @@ def get_embeddings(
         save_path = os.path.join(embedding_dir, save_path)
         if os.path.exists(save_path):
             # Load already computed Embeddings
-            print(f"Load embedding from file {save_path}")
+            print(f"Load embedding from file {save_path}\n")
             embeddings = np.load(save_path)
 
             if embeddings.shape[0] == len(dna_sequences):

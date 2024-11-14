@@ -132,7 +132,7 @@ def get_threshold_dataset_indices(
         ), "Dimensions of loaded threshold indices and label_ids do not match"
 
         print(
-            f"Loading threshold dataset indices\nThreshold dataset comprise {sum(threshold_dataset_indices)} contigs ({sum(threshold_dataset_indices)/len(threshold_dataset_indices)*100:.1f}%)"
+            f"Loading threshold dataset indices\nThreshold dataset comprise {sum(threshold_dataset_indices)} contigs ({sum(threshold_dataset_indices)/len(threshold_dataset_indices)*100:.1f}%)\n"
         )
 
         return threshold_dataset_indices
@@ -151,9 +151,7 @@ def get_threshold_dataset_indices(
             f"Sampling new threshold dataset indices\nThreshold dataset comprise {sum(threshold_dataset_indices)} contigs ({sum(threshold_dataset_indices)/len(threshold_dataset_indices)*100:.1f}%) "
         )
 
-        with open(threshold_dataset_indices_path, "w") as f:
-            for line in threshold_dataset_indices:
-                f.write(str(line) + "\n")
+        np.save(threshold_dataset_indices_path, threshold_dataset_indices)
 
         return threshold_dataset_indices
 
@@ -208,7 +206,7 @@ def split_dataset(
 
 def calculate_similarity_matrix(
     embeddings: np.array, min_similarity: float, output_file_path: str
-) -> None:
+) -> str:
     """Use pytables to store similarity matrix in HDF5 format and calculate similarity matrix
     in blocks to ease memory overhead. Inspiration for the solution is found here:
     https://medium.com/@ph_singer/handling-huge-matrices-in-python-dff4e31d4417.
@@ -222,33 +220,34 @@ def calculate_similarity_matrix(
         output_file_path (str): hd5 storage path
 
     Returns:
-        None
+        str: Path to the stored similarity matrix
     """
     output_file_path = os.path.join("similarities", output_file_path)
     if os.path.exists(output_file_path):
-        print(f"Similarity file already exists at {output_file_path}")
-        return
+        print(f"Similarity file already exists at {output_file_path}\n")
+        return output_file_path
 
-    print(f"Calculating similarities and storing in {output_file_path}")
-    embeddings = embeddings.astype(np.float32)
-    n = embeddings.shape[0]
-    f = tb.open_file(output_file_path, "w")
-    filters = tb.Filters(complevel=4, complib="blosc")
-    similarities_h5 = f.create_carray(
-        f.root, "similarities", tb.Float32Atom(), shape=(n, n), filters=filters
-    )
+    else:
+        print(f"Calculating similarities and storing in {output_file_path}")
+        embeddings = embeddings.astype(np.float32)
+        n = embeddings.shape[0]
+        f = tb.open_file(output_file_path, "w")
+        filters = tb.Filters(complevel=4, complib="blosc")
+        similarities_h5 = f.create_carray(
+            f.root, "similarities", tb.Float32Atom(), shape=(n, n), filters=filters
+        )
 
-    block_size = 10
-    for i in tqdm.tqdm(
-        range(0, n, block_size),
-        desc=f"Computing Similarities from {i}-{i+block_size}",
-    ):
-        end_i = min(i + block_size, n)
-        for j in range(0, n, block_size):
-            end_j = min(j + block_size, n)
-            block = np.dot(embeddings[i:end_i], embeddings[j:end_j].T)  # EE^T
-            block[block < min_similarity] = 0  # Apply similarity threshold
-            similarities_h5[i:end_i, j:end_j] = block  # Store the block
-    f.close()
+        block_size = 5000
+        for i in tqdm.tqdm(
+            range(0, n, block_size),
+            desc=f"Computing Similarities from {i}-{i+block_size}",
+        ):
+            end_i = min(i + block_size, n)
+            for j in range(0, n, block_size):
+                end_j = min(j + block_size, n)
+                block = np.dot(embeddings[i:end_i], embeddings[j:end_j].T)  # EE^T
+                block[block < min_similarity] = 0  # Apply similarity threshold
+                similarities_h5[i:end_i, j:end_j] = block  # Store the block
+        f.close()
 
-    return
+        return output_file_path
