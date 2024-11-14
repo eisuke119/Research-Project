@@ -237,7 +237,7 @@ def calculate_similarity_matrix(
             f.root, "similarities", tb.Float32Atom(), shape=(n, n), filters=filters
         )
 
-        block_size = 5000
+        block_size = 100
         for i in tqdm.tqdm(
             range(0, n, block_size),
             desc=f"Computing Similarities",
