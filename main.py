@@ -117,8 +117,18 @@ def main():
                 label_mappings[label] for label in postprocessed_predictions
             ]
 
-        compute_eval_metrics(labels_in_preds, valid_predictions, results_threshold_similarities_path, model_name)
-        compute_silhouette_score(embeddings_evaluate, labels_in_preds, results_silhouette_score_path, model_name)
+        compute_eval_metrics(
+            labels_in_preds,
+            valid_predictions,
+            results_threshold_similarities_path,
+            model_name,
+        )
+        compute_silhouette_score(
+            embeddings_evaluate,
+            labels_in_preds,
+            results_silhouette_score_path,
+            model_name,
+        )
 
         print("========================================= \n \n")
     return
