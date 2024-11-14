@@ -51,7 +51,7 @@
 TNF:
   model_path: "tnf"
   embedding_path: "TNF.npy"
-  hd5_path: "TNF.h5"
+  # hd5_path: "TNF.h5"
   batch_sizes: [50, 14, 1]
 
 # DNA2Vec:
@@ -63,5 +63,5 @@ TNF:
 VAMB:
   model_path: "helpers/vamb_embedding.npz"
   embedding_path: "vamb.npy"
-  hd5_path: "vamb.h5"
+  # hd5_path: "vamb.h5"
   batch_sizes: [50, 14, 1]

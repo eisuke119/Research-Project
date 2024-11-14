@@ -6,6 +6,7 @@ from scipy.optimize import linear_sum_assignment
 import sklearn.metrics
 
 from .utils import calculate_similarity_matrix
+import tqdm
 
 
 def compute_species_center_similarity(
@@ -61,79 +62,118 @@ def compute_species_center_similarity(
 
 def KMediod(
     embeddings: np.array,
-    min_similarity,
-    hd5_path: str,
-    min_bin_size=10,
+    min_similarity=0.8,
+    min_bin_size=100,
     num_steps=3,
     max_iter=1000,
 ) -> np.array:
-    """Performs K-mediod clustering algorithm as described in DNABERT-S (
-    https://doi.org/10.48550/arXiv.2402.08777). Code is modified from https://github.com/MAGICS-LAB/DNABERT_S/tree/main.
+    """
+    Performs the K-medoid clustering algorithm as described in DNABERT-S.
+    Original code modified from: https://github.com/MAGICS-LAB/DNABERT_S/tree/main.
 
-        Args:
-            embeddings (np.array): normalized embeddings with dimensions (n_samples, n_embeddings)
-            min_similarity (float, optional): threshold used to decide whether two embeddings are neighbours. Has to be computed for each model.
-            hd5_path (str): path to the the similarity matrix in hd5 format.
-            min_bin_size (int, optional): minimum binning size; clusters with fewer instances than min_bin_size will be discarded. Defaults to 10.
-            num_steps (int, optional): number of steps that the seed is moved. Defaults to 3.
-            max_iter (int, optional): number of iterations, where one iteration corresponds to one cluster. Defaults to 1000.
+    Args:
+        embeddings (np.array): Normalized embeddings with shape (n_samples, d).
+        min_similarity (float, optional): Threshold to decide if two embeddings are neighbors.
+        min_bin_size (int, optional): Minimum cluster size; clusters smaller than this will be discarded.
+        num_steps (int, optional): Number of steps to move the seed.
+        max_iter (int, optional): Maximum number of iterations; one iteration corresponds to one cluster.
 
-        Returns:
-            np.array: predicted predictions for each instance with dimensions (n_samples,)
+    Returns:
+        np.array: Predicted cluster labels for each instance with shape (n_samples,).
     """
 
-    n = embeddings.shape[0]
+    embeddings = embeddings.astype(np.float32)
+    n_samples = embeddings.shape[0]
+    block_size = 1000  # Adjust according to your available memory
 
-    print(f"Calculating similarity matrix with {n} samples.\n")
+    # Initialize the density vector
+    density_vector = np.zeros(n_samples, dtype=np.float32)
 
-    hd5_path = calculate_similarity_matrix(embeddings, min_similarity, hd5_path)
+    # Compute the density vector using block processing
+    for i in tqdm.tqdm(
+        range(0, n_samples, block_size), desc="Computing Density Vector"
+    ):
+        end_i = min(i + block_size, n_samples)
+        embeddings_block_i = embeddings[i:end_i]
 
-    predictions = np.ones(n) * -1
-    predictions = predictions.astype(int)
-    density_vector = np.zeros(n)
+        for j in range(0, n_samples, block_size):
+            end_j = min(j + block_size, n_samples)
+            embeddings_block_j = embeddings[j:end_j]
+
+            # Compute partial similarity matrix
+            similarities_block = np.dot(embeddings_block_i, embeddings_block_j.T)
+
+            # Zero out similarities below the threshold
+            similarities_block[similarities_block < min_similarity] = 0
+
+            # Update the density vector
+            density_vector[i:end_i] += np.sum(similarities_block, axis=1)
+
+    predictions = np.full(n_samples, -1, dtype=int)
+    count = 0
     print("=========================================\n")
-    print(f"Running KMedoid on {n} samples.\n")
+    print(f"Running KMedoid on {n_samples} samples.\n")
     print("=========================================\n")
-    with tb.open_file(hd5_path, "r") as f:
-        similarities = f.root.similarities
+    while np.any(predictions == -1):
+        count += 1
+        if count > max_iter:
+            break
 
-        density_vector[:] = np.sum(similarities[:, :], axis=1)
+        # Get the index with the maximum density
+        i = np.argmax(density_vector)
+        density_vector[i] = -100  # Exclude the seed from the density vector
 
-        count = 0
-        while np.any(predictions == -1):
-            count += 1
-            if count > max_iter:
+        seed = embeddings[i]
+        idx_available = predictions == -1
+
+        for _ in range(num_steps):
+            similarity = np.zeros(n_samples, dtype=np.float32)
+
+            # Compute similarities between the seed and other points using block processing
+            for j in range(0, n_samples, block_size):
+                end_j = min(j + block_size, n_samples)
+                embeddings_block = embeddings[j:end_j]
+
+                similarities_block = np.dot(embeddings_block, seed)
+                similarity[j:end_j] = similarities_block
+
+            idx_within = similarity >= min_similarity
+            idx = np.where(np.logical_and(idx_within, idx_available))[0]
+
+            if len(idx) == 0:
                 break
-            i = np.argmax(density_vector)
-            density_vector[i] = -100  # discards the seed from density vector
 
-            seed = embeddings[i]
-            idx_within = np.zeros(len(embeddings), dtype=bool)
-            idx_available = predictions == -1
+            # Update the seed to be the mean of neighboring points
+            seed = np.mean(embeddings[idx], axis=0)
 
-            for _ in range(num_steps):
-                similarity = np.dot(embeddings, seed)
-                idx_within = similarity >= min_similarity
-                idx = np.where(np.logical_and(idx_within, idx_available))[0]
-                seed = np.mean(
-                    embeddings[idx], axis=0
-                )  # seed is the mean of neighbours
+        # Update predictions
+        predictions[idx] = count
 
-            # assign predictions
-            predictions[idx] = count
-            density_vector -= np.sum(
-                similarities[:, idx], axis=1
-            )  # updating density vector by the removed indices
-            density_vector[idx] = (
-                -100
-            )  # discards the chosen instances from density vector
-            if count % 20 == 0:
-                print(f"KMedoid Step {count} completed.")
-        # remove bins that are too small
-        unique, counts = np.unique(predictions, return_counts=True)
-        for i, c in zip(unique, counts):
-            if c < min_bin_size:
-                predictions[predictions == i] = -1
+        # Update the density vector by removing the influence of selected indices
+        for i_dv in tqdm.tqdm(
+            range(0, n_samples, block_size), desc="Updating Density Vector"
+        ):
+            end_i_dv = min(i_dv + block_size, n_samples)
+            embeddings_block_i = embeddings[i_dv:end_i_dv]
+
+            # Compute similarities with the selected indices
+            for j in idx:
+                sim_block = np.dot(embeddings_block_i, embeddings[j])
+
+                # Zero out similarities below the threshold
+                sim_block[sim_block < min_similarity] = 0
+
+                density_vector[i_dv:end_i_dv] -= sim_block
+
+        density_vector[idx] = -100  # Exclude selected indices from the density vector
+        if count % 20 == 0:
+            print(f"KMedoid Step {count} completed.")
+
+    # Remove clusters that are too small
+    unique, counts = np.unique(predictions, return_counts=True)
+    for i, c in zip(unique, counts):
+        if c < min_bin_size:
+            predictions[predictions == i] = -1
 
     return predictions
 
