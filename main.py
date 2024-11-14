@@ -92,15 +92,15 @@ def main():
             percentile_threshold=70,
         )
 
-        predictions = KMediod(embeddings_evaluate, threshold, hd5_path)
-        
+        all_predictions = KMediod(embeddings_evaluate, threshold, hd5_path)
+
         print(
             f"Found {len(np.unique(all_predictions))} out of {len(set(label_ids))} "
         )  # Ideal 290
 
         labels_in_preds = labels_evaluate[all_predictions != -1]
         valid_predictions = all_predictions[all_predictions != -1]
-        
+
         label_mappings = align_labels_via_linear_sum_assignemt(
             labels_in_preds, valid_predictions
         )
