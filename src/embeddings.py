@@ -110,7 +110,7 @@ def get_embeddings(
             indices_filtered, dna_sequences_filtered = zip(
                 *[
                     (index, seq)
-                    for (index, seq) in enumerate(dna_sequences)
+                    for (index, seq) in enumerate(dna_sequences[0:1000])
                     if sequence_length_min <= len(seq) < sequence_length_max
                 ]
             )
