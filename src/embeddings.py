@@ -166,7 +166,6 @@ def calculate_llm_embedding(
     Returns:
         np.array: Array of embeddings for the input DNA sequences, with shape (num_sequences, embedding_dimension).
     """
-    torch.cuda.empty_cache()
     # To reduce Padding overhead
     sorted_dna_sequences, idx = sort_sequences(dna_sequences)
     dna_sequences = DNADataset(sorted_dna_sequences)
