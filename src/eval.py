@@ -90,13 +90,14 @@ def KMediod(
 
     predictions = np.ones(n) * -1
     predictions = predictions.astype(int)
+    density_vector = np.zeros(l)
     print("=========================================\n")
     print(f"Running KMedoid on {n} samples.\n")
     print("=========================================\n")
     with tb.open_file(hd5_path, "r") as f:
         similarities = f.root.similarities
 
-        density_vector = np.sum(similarities, axis=1)
+        density_vector[:] = np.sum(similarities[:, :], axis=1)
 
         count = 0
         while np.any(predictions == -1):
