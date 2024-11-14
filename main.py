@@ -14,7 +14,6 @@ from src.utils import (
     preprocess_contigs,
     summary_stats,
     label_to_id,
-    get_threshold_dataset_indices,
     split_dataset,
 )
 from src.embeddings import get_embeddings
