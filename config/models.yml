@@ -1,56 +1,67 @@
-DNABERT_S:
-  model_path: "zhihan1996/DNABERT-S"
-  embedding_path: "DNABERT_S.npy"
-  batch_sizes: [10, 1, 1]
+# DNABERT_S:
+#   model_path: "zhihan1996/DNABERT-S"
+#   embedding_path: "DNABERT_S.npy"
+#   hd5_path: "DNABERT_S.h5"
+#   batch_sizes: [10, 1, 1]
 
 # DNABERT_2:
 #   model_path: "zhihan1996/DNABERT-2-117M"
 #   embedding_path: "DNABERT_2.npy"
+#   hd5_path: "DNABERT_2.h5"
 #   batch_sizes: [50, 14, 1]
 
 # HyenaDNA:
 #   model_path: "LongSafari/hyenadna-large-1m-seqlen-hf"
 #   embedding_path: "HyenaDNA.npy"
+#   hd5_path: "HyenaDNA.h5"
 #   batch_sizes: [50, 14, 1]
 
 # GROVER:
 #   model_path: "PoetschLab/GROVER"
 #   embedding_path: "GROVER.npy"
+#   hd5_path: "GROVER.h5"
 #   batch_sizes: [50, 14, 1]
 
 # NT:
 #   model_path: "InstaDeepAI/nucleotide-transformer-v2-100m-multi-species"
 #   embedding_path: "NT.npy"
+#   hd5_path: "NT.h5"
 #   batch_sizes: [50, 14, 1]
 
 # requires mamba_ssm & flash_attn which are not available in the current environment
 # Caduceus:
 #   model_path: "kuleshov-group/caduceus-ps_seqlen-131k_d_model-256_n_layer-16"
 #   embedding_path: "Caduceus.npy"
+#   hd5_path: "Caduceus.h5"
 #   batch_sizes: [50, 14, 1]
 
 # requires mamba_ssm & flash_attn which are not available in the current environment
 # EVO:
 #   model_path: "togethercomputer/evo-1-8k-base"
 #   embedding_path: "EVO.npy"
+#   hd5_path: "EVO.h5"
 #   batch_sizes: [50, 14, 1]
 
 # GENALM:
 #   model_path: "AIRI-Institute/gena-lm-bert-base-t2t"
 #   embedding_path: "GENALM.npy"
+#   hd5_path: "GENALM.h5"
 #   batch_sizes: [50, 14, 1]
 
 TNF:
   model_path: "tnf"
   embedding_path: "TNF.npy"
+  hd5_path: "TNF.h5"
   batch_sizes: [50, 14, 1]
 
 # DNA2Vec:
 #   model_path: "helpers/4mer_embedding.npy"
 #   embedding_path: "dna2vec.npy"
+#   hd5_path: "dna2vec.h5"
 #   batch_sizes: [50, 14, 1]
 
 VAMB:
   model_path: "helpers/vamb_embedding.npz"
   embedding_path: "vamb.npy"
+  hd5_path: "vamb.h5"
   batch_sizes: [50, 14, 1]

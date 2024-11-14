@@ -1,8 +1,11 @@
 import os
+
+from utils import calculate_similarity_matrix
+
+import tables as tb
 import numpy as np
 from scipy.optimize import linear_sum_assignment
 import sklearn.metrics
-import tqdm
 
 
 def compute_species_center_similarity(
@@ -60,7 +63,8 @@ def compute_species_center_similarity(
 
 def KMediod(
     embeddings: np.array,
-    min_similarity=0.8,
+    min_similarity,
+    hd5_path: str,
     min_bin_size=10,
     num_steps=3,
     max_iter=1000,
@@ -70,7 +74,8 @@ def KMediod(
 
         Args:
             embeddings (np.array): normalized embeddings with dimensions (n_samples, n_embeddings)
-            min_similarity (float, optional): threshold used to decide whether two embeddings are neighbours. Has to be computed for each model. Defaults to 0.8.
+            min_similarity (float, optional): threshold used to decide whether two embeddings are neighbours. Has to be computed for each model.
+            hd5_path (str): path to the the similarity matrix in hd5 format.
             min_bin_size (int, optional): minimum binning size; clusters with fewer instances than min_bin_size will be discarded. Defaults to 10.
             num_steps (int, optional): number of steps that the seed is moved. Defaults to 3.
             max_iter (int, optional): number of iterations, where one iteration corresponds to one cluster. Defaults to 1000.
@@ -78,62 +83,58 @@ def KMediod(
         Returns:
             np.array: predicted predictions for each instance with dimensions (n_samples,)
     """
-    # device, n_gpus = get_available_device()
-    # embeddings = torch.from_numpy(embeddings).to(device)
-    # similarities = torch.matmul(embeddings, embeddings.T)
-    # embeddings = embeddings.cpu().numpy()
-    # similarities = similarities.cpu().numpy()
+    hd5_path = os.path.join("similarities", hd5_path)
 
-    embeddings = embeddings.astype(np.float32)
+    n = embeddings.shape[0]
 
-    # similarities = np.dot(embeddings, embeddings.T)  # EE^T
+    print(f"Calculating similarity matrix with {n} samples.")
 
-    similarities = []
-    step_size = 100
-    for i in tqdm.tqdm(
-        range(0, embeddings.shape[0], step_size), desc="Computing Similarities"
-    ):
-        j = min(i + step_size, embeddings.shape[0])
-        similarities.append(np.dot(embeddings[i:j, :], embeddings.T))
-    similarities = np.concatenate(similarities, axis=0)
+    calculate_similarity_matrix(embeddings, min_similarity, hd5_path)
 
-    similarities[similarities < min_similarity] = 0
-    density_vector = np.sum(similarities, axis=1)
-
-    predictions = np.ones(len(embeddings)) * -1
+    predictions = np.ones(n) * -1
     predictions = predictions.astype(int)
-    count = 0
-    print(f"Running KMedoid on {embeddings.shape[0]} samples.")
-    while np.any(predictions == -1):
-        count += 1
-        if count > max_iter:
-            break
-        i = np.argmax(density_vector)
-        density_vector[i] = -100  # discards the seed from density vector
 
-        seed = embeddings[i]
-        idx_within = np.zeros(len(embeddings), dtype=bool)
-        idx_available = predictions == -1
+    print(f"Running KMedoid on {n} samples.")
+    with tb.open_file(hd5_path, "r") as f:
+        similarities = f.root.similarities
 
-        for _ in range(num_steps):
-            similarity = np.dot(embeddings, seed)
-            idx_within = similarity >= min_similarity
-            idx = np.where(np.logical_and(idx_within, idx_available))[0]
-            seed = np.mean(embeddings[idx], axis=0)  # seed is the mean of neighbours
+        density_vector = np.sum(similarities, axis=1)
 
-        # assign predictions
-        predictions[idx] = count
-        density_vector -= np.sum(
-            similarities[:, idx], axis=1
-        )  # updating density vector by the removed indices
-        density_vector[idx] = -100  # discards the chosen instances from density vector
-        if count % 20 == 0:
-            print(f"KMedoid Step {count} completed.")
-    # remove bins that are too small
-    unique, counts = np.unique(predictions, return_counts=True)
-    for i, c in zip(unique, counts):
-        if c < min_bin_size:
-            predictions[predictions == i] = -1
+        count = 0
+        while np.any(predictions == -1):
+            count += 1
+            if count > max_iter:
+                break
+            i = np.argmax(density_vector)
+            density_vector[i] = -100  # discards the seed from density vector
+
+            seed = embeddings[i]
+            idx_within = np.zeros(len(embeddings), dtype=bool)
+            idx_available = predictions == -1
+
+            for _ in range(num_steps):
+                similarity = np.dot(embeddings, seed)
+                idx_within = similarity >= min_similarity
+                idx = np.where(np.logical_and(idx_within, idx_available))[0]
+                seed = np.mean(
+                    embeddings[idx], axis=0
+                )  # seed is the mean of neighbours
+
+            # assign predictions
+            predictions[idx] = count
+            density_vector -= np.sum(
+                similarities[:, idx], axis=1
+            )  # updating density vector by the removed indices
+            density_vector[idx] = (
+                -100
+            )  # discards the chosen instances from density vector
+            if count % 20 == 0:
+                print(f"KMedoid Step {count} completed.")
+        # remove bins that are too small
+        unique, counts = np.unique(predictions, return_counts=True)
+        for i, c in zip(unique, counts):
+            if c < min_bin_size:
+                predictions[predictions == i] = -1
 
     return predictions
 

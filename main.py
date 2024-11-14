@@ -8,8 +8,6 @@ import yaml
 
 import torch
 import numpy as np
-from torch.utils.data import DataLoader
-from transformers import AutoTokenizer, AutoModel
 from sklearn.preprocessing import normalize
 
 from src.utils import (
@@ -51,7 +49,6 @@ def main():
     with open(contig_processed_path) as csvfile:
         data = list(csv.reader(csvfile, delimiter=","))
     dna_sequences = [i[1] for i in data[1:]]
-    ids = [i[0] for i in data[1:]]
     label_ids, id2label = label_to_id(data)
 
     # Read Model Configs
@@ -64,6 +61,7 @@ def main():
         print("========================================= \n\n")
         model_path = models_config[model_name]["model_path"]
         save_path = models_config[model_name]["embedding_path"]
+        hd5_path = models_config[model_name]["similarities_path"]
         batch_sizes = models_config[model_name]["batch_sizes"]
 
         try:
@@ -94,13 +92,15 @@ def main():
             percentile_threshold=70,
         )
 
-        all_predictions = KMediod(embeddings_evaluate, threshold)
+        predictions = KMediod(embeddings_evaluate, threshold, hd5_path)
+        
         print(
             f"Found {len(np.unique(all_predictions))} out of {len(set(label_ids))} "
         )  # Ideal 290
 
         labels_in_preds = labels_evaluate[all_predictions != -1]
         valid_predictions = all_predictions[all_predictions != -1]
+        
         label_mappings = align_labels_via_linear_sum_assignemt(
             labels_in_preds, valid_predictions
         )
