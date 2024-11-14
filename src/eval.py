@@ -41,8 +41,6 @@ def compute_species_center_similarity(
     all_similarities = np.array(all_similarities)
     all_similarities.sort()
 
-    percentiles = [10, 20, 30, 40, 50, 60, 70, 80, 90]
-    percentile_values = [np.percentile(all_similarities, p) for p in percentiles]
     threshold = np.percentile(all_similarities, percentile_threshold)
     print(f"Threshold: {threshold}")
 
