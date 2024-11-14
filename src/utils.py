@@ -206,6 +206,7 @@ def split_dataset(
         label_ids_threshold,
     )
 
+
 def calculate_similarity_matrix(
     embeddings: np.array, min_similarity: float, output_file_path: str
 ) -> None:
@@ -225,6 +226,10 @@ def calculate_similarity_matrix(
         None
     """
     output_file_path = os.path.join("similarities", output_file_path)
+    if os.path.exists(output_file_path):
+        print(f"Similarity file already exists at {output_file_path}")
+        return
+    print(f"Calculating similarities and storing in {output_file_path}")
     embeddings = embeddings.astype(np.float32)
     n = embeddings.shape[0]
     f = tb.open_file(output_file_path, "w")
@@ -235,7 +240,8 @@ def calculate_similarity_matrix(
 
     block_size = 10
     for i in tqdm.tqdm(
-        range(0, n, block_size), desc=f"Computing Similarities from {i}-{i+block_size}"
+        range(0, n, block_size),
+        desc=f"Computing Similarities from {i}-{i+block_size}",
     ):
         end_i = min(i + block_size, n)
         for j in range(0, n, block_size):
