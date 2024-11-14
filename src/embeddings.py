@@ -46,7 +46,32 @@ def get_available_device():
         return device, 1
 
 
-def get_embeddings(dna_sequences, batch_sizes, model_name, model_path, save_path):
+def get_embeddings(
+    dna_sequences: list[str],
+    batch_sizes: list[int],
+    model_name: str,
+    model_path: str,
+    save_path: str,
+) -> np.array:
+    """
+    Generate or load embeddings for a given set of DNA sequences using the specified model.
+
+    This function generates embeddings using different models based on the specified `model_name`.
+    If embeddings have already been computed and saved, it loads them from the provided path.
+    Otherwise, it calculates new embeddings, saves them, and returns the result.
+    This function calls other functions to calculate embeddings.
+
+    Args:dings will be generated.
+    batch_sizes (list of int): Batch sizes to use for processing sequences, depending on sequence length. Only used for LLMs.
+    model_name (str): Name of the model to use for embedding generation. Models can be found in congis/model.yml.
+    model_path (str): Path to the pretrained model file or directory
+    dna_sequences (list of str): List of DNA sequences for which embed required for specific models.
+    save_path (str): Path to save the computed embeddings or to load existing ones.
+
+    Returns:
+    np.array: Array of embeddings with shape (num_sequences, embedding_dimension).
+
+    """
 
     embedding_dir = "embeddings"
     if os.path.exists(embedding_dir):
@@ -98,6 +123,7 @@ def get_embeddings(dna_sequences, batch_sizes, model_name, model_path, save_path
                 dna_sequences_filtered = [seq[:1360] for seq in dna_sequences_filtered]
             elif model_name == "GENALM":
                 dna_sequences_filtered = [seq[:2500] for seq in dna_sequences_filtered]
+
             embeddings = calculate_llm_embedding(
                 dna_sequences_filtered,
                 batch_size,
@@ -121,7 +147,26 @@ def get_embeddings(dna_sequences, batch_sizes, model_name, model_path, save_path
     return embeddings
 
 
-def calculate_llm_embedding(dna_sequences, batch_size, model_name, model_path):
+def calculate_llm_embedding(
+    dna_sequences: list[str],
+    batch_size: list[int],
+    model_name: str,
+    model_path: str,
+) -> np.array:
+    """Calculates embeddings for DNA sequences using a specified language model (LLM).
+
+    This function uses a pretrained model to generate embeddings for each DNA sequence.
+
+    Args:
+        dna_sequences (list[str]): List of DNA sequences for which embeddings are generated.
+        batch_size (int): Size of batches for processing sequences.
+        model_name (str): Name of the model to use for generating embeddings (e.g., "DNABERT_2", "EVO", "NT", "GROVER").
+        model_path (str): Path to the pretrained model files (e.g. from Huggingface)
+
+    Returns:
+        np.array: Array of embeddings for the input DNA sequences, with shape (num_sequences, embedding_dimension).
+    """
+
     # To reduce Padding overhead
     sorted_dna_sequences, idx = sort_sequences(dna_sequences)
     dna_sequences = DNADataset(sorted_dna_sequences)
@@ -219,9 +264,7 @@ def calculate_llm_embedding(dna_sequences, batch_size, model_name, model_path):
     return embeddings
 
 
-def calculate_tnf(
-    dna_sequences: list[str], kernel: bool = False
-) -> tuple[np.ndarray, int]:
+def calculate_tnf(dna_sequences: list[str]) -> tuple[np.ndarray, int]:
     """Calculates tetranucleotide frequencies in a list of DNA sequences.
 
     This function computes the frequencies of all possible tetranucleotides (sequences of four nucleotides)
@@ -231,7 +274,6 @@ def calculate_tnf(
 
     Args:
         dna_sequences (List[str]): A list of DNA sequences, where each sequence is a list of nucleotide characters (A, T, C, or G).
-        kernel (bool, optional): If True, applies a kernel transformation to the calculated frequencies using a pre-defined kernel matrix. Defaults to False.
 
     Returns:
         Tuple[np.ndarray, int]: A tuple containing:

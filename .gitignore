@@ -6,5 +6,5 @@
 *__pycache__/
 outdated/
 results/DNABERT_S.json
-*.ipynb_checkpoints/
-*.ipynb
+!data/threshold_dataset_indices.npy
+!helpers/pretrained_4mer_embedding.npy

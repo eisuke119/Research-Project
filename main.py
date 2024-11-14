@@ -14,10 +14,12 @@ from src.utils import (
     preprocess_contigs,
     summary_stats,
     label_to_id,
+    get_threshold_dataset_indices,
+    split_dataset,
 )
 from src.embeddings import get_embeddings
 from src.eval import (
-    compute_class_center_medium_similarity,
+    compute_species_center_similarity,
     KMediod,
     align_labels_via_linear_sum_assignemt,
     compute_eval_metrics,
@@ -33,8 +35,11 @@ def main():
     # Define Paths
     contig_path = "data/metahit/contigs.fna.gz"
     contig_processed_path = "data/species_labelled_contigs.csv"
+    threshold_dataset_indices_path = "data/threshold_dataset_indices.npy"
     model_configs = "config/models.yml"
-    results_path = "results/"
+
+    binning_results_path = "results/binning"
+    results_threshold_similarities_path = "results/threshold_similarities"
 
     # Read DNA Sequences
     preprocess_contigs(contig_path, contig_processed_path)
@@ -74,30 +79,42 @@ def main():
             )
             continue
         torch.cuda.empty_cache()
-        percentile_values, sampled_indices_list = (
-            compute_class_center_medium_similarity(embeddings, label_ids)
+
+        embeddings_evaluate, embeddings_threshold, labels_evaluate, labels_threshold = (
+            split_dataset(embeddings, label_ids, threshold_dataset_indices_path)
         )
 
-        threshold = percentile_values[7]
-        print(f"threshold: {threshold}")
+        threshold, percentile_threshold = compute_species_center_similarity(
+            embeddings_threshold,
+            labels_threshold,
+            results_threshold_similarities_path,
+            model_name,
+            percentile_threshold=70,
+        )
 
-        predictions = KMediod(embeddings, threshold, hd5_path)
+        predictions = KMediod(embeddings_evaluate, threshold, hd5_path)
+        
         print(
-            f"Found {len(np.unique(predictions))} out of {len(set(label_ids))} "
+            f"Found {len(np.unique(all_predictions))} out of {len(set(label_ids))} "
         )  # Ideal 290
 
-        labels_in_preds = label_ids[predictions != -1]
-        predictions = predictions[predictions != -1]
-
+        labels_in_preds = labels_evaluate[all_predictions != -1]
+        valid_predictions = all_predictions[all_predictions != -1]
+        
         label_mappings = align_labels_via_linear_sum_assignemt(
-            labels_in_preds, predictions
+            labels_in_preds, valid_predictions
         )
-        predictions = [label_mappings[label] for label in predictions]
+        valid_predictions = [label_mappings[label] for label in valid_predictions]
 
-        results = compute_eval_metrics(labels_in_preds, predictions)
+        results = compute_eval_metrics(labels_in_preds, valid_predictions)
 
-        model_results = {model_name: results}
-        model_results_path = os.path.join(results_path, model_name + ".json")
+        model_results = {
+            model_name: {
+                "percentile threshold": percentile_threshold,
+                "results": results,
+            }
+        }
+        model_results_path = os.path.join(binning_results_path, model_name + ".json")
         with open(model_results_path, "w") as results_file:
             json.dump(model_results, results_file)
         print("========================================= \n \n")
