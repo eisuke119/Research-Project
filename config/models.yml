@@ -21,7 +21,7 @@
 NT:
   model_path: "InstaDeepAI/nucleotide-transformer-v2-100m-multi-species"
   embedding_path: "NT.npy"
-  batch_sizes: [70, 20, 10]
+  batch_sizes: [70, 20, 2]
 
 # requires mamba_ssm & flash_attn which are not available in the current environment
 # Caduceus:
