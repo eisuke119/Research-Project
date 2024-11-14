@@ -1,11 +1,11 @@
 import os
 
-from utils import calculate_similarity_matrix
-
 import tables as tb
 import numpy as np
 from scipy.optimize import linear_sum_assignment
 import sklearn.metrics
+
+from .utils import calculate_similarity_matrix
 
 
 def compute_species_center_similarity(
