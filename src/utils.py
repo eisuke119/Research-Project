@@ -240,7 +240,7 @@ def calculate_similarity_matrix(
         block_size = 5000
         for i in tqdm.tqdm(
             range(0, n, block_size),
-            desc=f"Computing Similarities from {i}-{i+block_size}",
+            desc=f"Computing Similarities",
         ):
             end_i = min(i + block_size, n)
             for j in range(0, n, block_size):
