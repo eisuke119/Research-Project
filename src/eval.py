@@ -1,9 +1,8 @@
 import os
+
 from utils import calculate_similarity_matrix
 
 import tables as tb
-
-import tqdm
 import numpy as np
 from scipy.optimize import linear_sum_assignment
 import sklearn.metrics

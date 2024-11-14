@@ -8,8 +8,6 @@ import yaml
 
 import torch
 import numpy as np
-from torch.utils.data import DataLoader
-from transformers import AutoTokenizer, AutoModel
 from sklearn.preprocessing import normalize
 
 from src.utils import (
@@ -46,7 +44,6 @@ def main():
     with open(contig_processed_path) as csvfile:
         data = list(csv.reader(csvfile, delimiter=","))
     dna_sequences = [i[1] for i in data[1:]]
-    ids = [i[0] for i in data[1:]]
     label_ids, id2label = label_to_id(data)
 
     # Read Model Configs
@@ -78,7 +75,7 @@ def main():
             continue
         torch.cuda.empty_cache()
         percentile_values, sampled_indices_list = (
-            compute_class_center_medium_similarity(embeddings, label_ids[0:100])
+            compute_class_center_medium_similarity(embeddings, label_ids)
         )
 
         threshold = percentile_values[7]
@@ -89,7 +86,7 @@ def main():
             f"Found {len(np.unique(predictions))} out of {len(set(label_ids))} "
         )  # Ideal 290
 
-        labels_in_preds = label_ids[0:100][predictions != -1]
+        labels_in_preds = label_ids[predictions != -1]
         predictions = predictions[predictions != -1]
 
         label_mappings = align_labels_via_linear_sum_assignemt(
