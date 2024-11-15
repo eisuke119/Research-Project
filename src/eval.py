@@ -265,7 +265,7 @@ def compute_eval_metrics(
             "thresholds": thresholds,
             "f1_results": f1_results,
             "recall_results": recall_results,
-            "silhouette_score": silhouette_score,
+            "silhouette_score": float(silhouette_score),
             "n_unclassified_contigs": n_unclassified_contigs,
         }
     }
