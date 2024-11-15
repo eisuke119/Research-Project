@@ -113,6 +113,7 @@ def KMediod(
     print("=========================================\n")
     print(f"Running KMedoid on {n_samples} samples.\n")
     print("=========================================\n")
+    progress_bar = tqdm.tqdm(total=max_iter, desc="KMedoid Progress")
     while np.any(predictions == -1):
         count += 1
         if count > max_iter:
@@ -149,9 +150,7 @@ def KMediod(
         predictions[idx] = count
 
         # Update the density vector by removing the influence of selected indices
-        for i_dv in tqdm.tqdm(
-            range(0, n_samples, block_size), desc="Updating Density Vector"
-        ):
+        for i_dv in range(0, n_samples, block_size):
             end_i_dv = min(i_dv + block_size, n_samples)
             embeddings_block_i = embeddings[i_dv:end_i_dv]
 
@@ -165,6 +164,7 @@ def KMediod(
                 density_vector[i_dv:end_i_dv] -= sim_block
 
         density_vector[idx] = -100  # Exclude selected indices from the density vector
+        progress_bar.update(count)
         if count % 20 == 0:
             print(f"KMedoid Step {count} completed.")
 
