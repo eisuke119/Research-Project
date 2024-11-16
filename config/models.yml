@@ -1,27 +1,27 @@
-DNABERT_S:
-  model_path: "zhihan1996/DNABERT-S"
-  embedding_path: "DNABERT_S.npy"
-  batch_sizes: [40, 8, 1]
+# DNABERT_S:
+#   model_path: "zhihan1996/DNABERT-S"
+#   embedding_path: "DNABERT_S.npy"
+#   batch_sizes: [40, 8, 1]
 
-DNABERT_2:
-  model_path: "zhihan1996/DNABERT-2-117M"
-  embedding_path: "DNABERT_2.npy"
-  batch_sizes: [40, 8, 1]
+# DNABERT_2:
+#   model_path: "zhihan1996/DNABERT-2-117M"
+#   embedding_path: "DNABERT_2.npy"
+#   batch_sizes: [40, 8, 1]
 
 HyenaDNA:
   model_path: "LongSafari/hyenadna-large-1m-seqlen-hf"
   embedding_path: "HyenaDNA.npy"
   batch_sizes: [200, 50, 20]
 
-GROVER:
-  model_path: "PoetschLab/GROVER"
-  embedding_path: "GROVER.npy"
-  batch_sizes: [200, 200, 200]
+# GROVER:
+#   model_path: "PoetschLab/GROVER"
+#   embedding_path: "GROVER.npy"
+#   batch_sizes: [200, 200, 200]
 
 NT:
   model_path: "InstaDeepAI/nucleotide-transformer-v2-100m-multi-species"
   embedding_path: "NT.npy"
-  batch_sizes: [50, 12, 1]
+  batch_sizes: [40, 8, 1]
 
 # requires mamba_ssm & flash_attn which are not available in the current environment
 # Caduceus:
@@ -38,7 +38,7 @@ NT:
 GENALM:
   model_path: "AIRI-Institute/gena-lm-bert-base-t2t"
   embedding_path: "GENALM.npy"
-  batch_sizes: [200, 200, 200]
+  batch_sizes: [100, 100, 100]
 
 TNF:
   model_path: "tnf"

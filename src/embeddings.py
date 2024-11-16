@@ -213,7 +213,7 @@ def calculate_llm_embedding(
             model_path,
             trust_remote_code=True,
         )
-    if n_gpu > 1:
+    if n_gpu > 1 and model_name != "HyenaDNA":
         model = nn.DataParallel(model)
 
     model = model.to(device)
