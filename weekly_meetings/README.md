@@ -6,6 +6,7 @@
 * [10 October 2024](#date-10-october-2024)
 * [05 November 2024](#date-05-november-2024)
 * [14 November 2024](#date-14-november-2024)
+* [21 November 2024](#date-21-november-2024)
 
 #### Date: 03 October 2024
 
@@ -174,13 +175,49 @@ We would like to get feedback on our report and report structure so far.
    
 
 
-
-
 ##### Where do you need help from Veronika?
 
   * Point 2, 3, 4, 5, 6 above
   * We are very open to hear if you have some interresting experiments/vizualisations. 
   * Note that in our literature review, we found 17 DNA foundation models, and we got 6 of them to work at the moment. We know that we will not get all models up and running. 
+
+
+#### Date: 21 November 2024
+
+**Note that the latest code is found in** [branch andreas on our github](https://github.com/eisuke119/Research-Project/tree/andreas). 
+
+##### Who helped you this week?
+
+  * 
+
+##### What did you achieve (since last time)?
+
+  * We got results from the models and our experiments:
+
+
+##### What did you struggle with?
+
+  * Vizualizing the N x N similarity matrix as heatmap. 
+  * What is a decent species cluster (how high f1-score does it need to be?)
+  * What do transformers normally do when the input is too long?
+    * Simply cut-off the input
+    * Or run multiple instances and concatenate
+
+
+
+
+##### What would you like to work on today and next week?
+
+  * Make figures and tables
+  * Write the report
+
+   
+
+##### Where do you need help from Veronika?
+
+  * Last time you mentioned a webpage for t-sne embeddings. Which one is that?
+
+
 
 
 
