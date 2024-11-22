@@ -24,6 +24,7 @@ from src.eval import (
     align_labels_via_linear_sum_assignemt,
     compute_eval_metrics,
     process_unpredicted_contigs,
+    compute_baseline_metrics,
 )
 
 import warnings
@@ -55,6 +56,8 @@ def main():
     # Read Model Configs
     with open(model_configs, "r") as model_file:
         models_config = yaml.safe_load(model_file)
+
+    compute_baseline_metrics(label_ids, results_path)
 
     for model_name in list(models_config.keys()):
         print("\n========================================= \n")
