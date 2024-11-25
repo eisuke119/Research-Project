@@ -279,6 +279,42 @@ def compute_eval_metrics(
     return
 
 
+def compute_baseline_metrics(true_labels: list, results_path: str) -> None:
+    """Compute f1 and recall for shuffled predicted labels.
+
+    Args:
+        true_labels_bin (list): True labels.
+        path (str): Directory path where the result JSON file will be saved.
+
+    Returns:
+        None
+    """
+
+    true_labels = np.array(true_labels)
+    shuffled_predicted_labels = np.random.randint(
+        1, len(np.unique(true_labels)) + 1, size=len(true_labels)
+    )
+    assert len(shuffled_predicted_labels) == len(true_labels)
+
+    # Calculate recall for each class
+    recall_bin = sklearn.metrics.recall_score(
+        true_labels, shuffled_predicted_labels, average="macro", zero_division=0
+    )
+
+    # Calculate F1 scores for each class
+    f1_bin = sklearn.metrics.f1_score(
+        true_labels, shuffled_predicted_labels, average="macro", zero_division=0
+    )
+
+    baseline_results = {"f1_baseline": f1_bin, "recall_baseline": recall_bin}
+
+    baseline_results_path = os.path.join(results_path, "baseline_results" + ".json")
+
+    with open(baseline_results_path, "w") as results_file:
+        json.dump(baseline_results, results_file)
+    return
+
+
 def process_unpredicted_contigs(
     all_predictions: np.array,
     all_labels: np.array,
