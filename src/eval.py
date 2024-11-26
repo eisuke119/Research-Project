@@ -229,7 +229,7 @@ def compute_eval_metrics(true_labels: np.array, predicted_labels: np.array, path
             }
         }
     
-    model_results_path = os.path.join(binning_results_path, model_name + ".json")
+    model_results_path = os.path.join(path, model_name + ".json")
         
     with open(model_results_path, "w") as results_file:
         json.dump(model_results, results_file)
