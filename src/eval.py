@@ -7,6 +7,16 @@ import sklearn.metrics
 
 from .utils import calculate_similarity_matrix
 
+from sklearn.metrics.pairwise import euclidean_distances
+import matplotlib.pyplot as plt
+import scipy.cluster.hierarchy as sch
+import seaborn as sns
+from scipy.cluster.hierarchy import fcluster
+from sklearn.manifold import TSNE
+from mpl_toolkits.mplot3d import Axes3D
+
+
+
 
 def compute_species_center_similarity(
     embeddings: np.array,
@@ -255,3 +265,155 @@ def compute_silhouette_score(embeddings: np.ndarray, predicted_labels: np.ndarra
     with open(model_ss_path, "w") as results_file:
         json.dump(model_ss, results_file)
 
+
+def calculate_species_distance_matrix(embeddings, ids) -> tuple[np.array, np.array]:
+    """
+    Calculate the similarity matrix for groups of embeddings based on labels.
+
+    Parameters:
+    embeddings (np.ndarray): N*d array of embeddings.
+    ids (np.ndarray): N*1 array of sorted ids.
+
+    Returns:
+    np.ndarray: Distance matrix of size (number of unique ids) * (number of unique ids).
+    np.ndarray: Unique ids in order (number of unique ids) * 1.
+    """
+    # Get unique ids
+    unique_ids, idx = np.unique(ids, return_index=True)
+    num_ids = len(unique_ids)
+
+    unique_id_ordered = ids[np.sort(idx)]
+
+    # Initialize distance matrix
+    distance_matrix = np.zeros((num_ids, num_ids))
+
+    # Compute Hausdorff distance between species
+    for i, id1 in enumerate(unique_ids):
+        for j, id2 in enumerate(unique_ids):
+            if i <= j:  # Distance matrix is symmetric
+                species1 = embeddings[ids==id1]
+                species2 = embeddings[ids==id2]
+
+                # Compute the distant matrix for each speicies
+                dist_mtrx = euclidean_distances(species1, species2)
+                dist_1 = dist_mtrx.min(axis=0).max()
+                dist_2 = dist_mtrx.min(axis=1).max()
+
+                # Calculate Hausdorff distance
+                distance = max(dist_1, dist_2)
+                distance_matrix[i, j] = distance
+                distance_matrix[j, i] = distance  # Symmetry
+
+    return (distance_matrix, unique_id_ordered)
+
+
+def plot_hierarchical_clustering_with_labels(distance_matrix, path: str, model_name: str, color_threshold=0.7):
+    """
+    Generate a heatmap with hierarchical clustering based on an N x N distance matrix,
+    and return the cluster labels as an N x 1 array.
+
+    Parameters:
+    distance_matrix (numpy.ndarray): A symmetric N x N matrix representing pairwise distances.
+    path (str): Directory path where the result JSON file will be saved.
+    model_name (str): Name of the model, used for naming the JSON file and as a key in the JSON content.
+    color_threshold (float): Threshold for coloring clusters in the dendrogram.
+
+    Returns:
+    numpy.ndarray: An N x 1 array of cluster labels.
+    """
+    # Generate the file path for saving the results
+    model_results_path = os.path.join(path, model_name + "_heatmap.png")
+
+    # Create a hierarchical linkage matrix
+    linkage = sch.linkage(distance_matrix, method='ward')
+
+    # Create cluster labels using fcluster
+    cluster_labels = fcluster(linkage, t=color_threshold, criterion='distance')
+
+    # Create a figure for the plot
+    fig, ax = plt.subplots(1, 2, figsize=(12, 8), gridspec_kw={'width_ratios': [1, 5]})
+
+    # Plot the dendrogram on the left with custom color scheme
+    dendrogram = sch.dendrogram(
+        linkage, 
+        orientation='left', 
+        ax=ax[0], 
+        no_labels=True, 
+        color_threshold=color_threshold
+    )
+    ax[0].axis('off')
+
+    # Custom color mapping for the dendrogram (coolwarm)
+    colors = plt.cm.coolwarm(np.linspace(0, 1, len(dendrogram['color_list'])))
+    for color, line in zip(dendrogram['color_list'], ax[0].collections):
+        line.set_color(colors[np.random.randint(0, len(colors))])
+
+    # Sort the matrix rows/columns according to the clustering result
+    sorted_idx = sch.leaves_list(linkage)
+    sorted_matrix = distance_matrix[sorted_idx][:, sorted_idx]
+
+    # Create a heatmap of the sorted matrix
+    sns.heatmap(sorted_matrix, ax=ax[1], cmap='coolwarm', cbar=True, xticklabels=False, yticklabels=False)
+    ax[1].set_title("Heatmap with Hierarchical Clustering")
+
+    # Adjust layout
+    plt.tight_layout()
+
+    # Save the image to the specified file
+    plt.savefig(model_results_path, dpi=300)
+    plt.close()
+
+    # Return the cluster labels
+    return cluster_labels
+
+
+def create_tsne_plot(distance_matrix, path: str, model_name: str) -> None:
+    """
+    Computes a 3D t-SNE embedding from a given N x N distance matrix and saves the plot.
+
+    Parameters:
+    distance_matrix (numpy.ndarray): A square N x N distance matrix.
+    path (str): Directory path where the result JSON file will be saved.
+    model_name (str): Name of the model, used for naming the JSON file and as a key in the JSON content.
+    
+    Returns:
+    None
+    """
+    # Generate the file path for saving the results
+    model_results_path = os.path.join(path, model_name + "_tsne.png")
+
+    # Initialize t-SNE with 3 components and precomputed metric
+    tsne = TSNE(n_components=3, metric='precomputed', random_state=42, init='random')
+
+    # Compute the t-SNE embedding
+    tsne_results = tsne.fit_transform(distance_matrix)
+
+    # Create a 3D plot
+    fig = plt.figure(figsize=(8, 6))
+    ax = fig.add_subplot(111, projection='3d')
+
+    # Scatter plot the t-SNE results
+    scatter = ax.scatter(
+        tsne_results[:, 0],  # X-axis values
+        tsne_results[:, 1],  # Y-axis values
+        tsne_results[:, 2],  # Z-axis values
+        c='blue',             # Color of the points
+        s=50,                 # Size of the points
+        alpha=0.6             # Transparency of the points
+    )
+
+    # Set plot title and axis labels with increased labelpad
+    ax.set_title('3D t-SNE Visualization', fontsize=18, pad=20)
+    ax.set_xlabel('TSNE Dimension 1', fontsize=12, labelpad=10)
+    ax.set_ylabel('TSNE Dimension 2', fontsize=12, labelpad=10)
+    ax.set_zlabel('TSNE Dimension 3', fontsize=12, labelpad=10)
+
+    # Optionally, adjust the viewing angle for better visualization
+    ax.view_init(elev=30, azim=45)
+
+    # Adjust the layout to make room for the z-axis label
+    plt.tight_layout(pad=2.0)  # Added padding to ensure labels are within the figure
+
+    # Save the plot to the specified path with additional padding
+    plt.savefig(model_results_path, dpi=300, bbox_inches='tight', pad_inches=0.5)
+    plt.close(fig)  # Close the figure to free memory

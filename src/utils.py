@@ -7,10 +7,6 @@ import numpy as np
 from Bio import SeqIO
 import pandas as pd
 
-from PIL import Image
-import matplotlib.pyplot as plt
-from matplotlib import cm
-from matplotlib.colors import Normalize
 
 np.random.seed(42)
 
@@ -256,58 +252,3 @@ def calculate_similarity_matrix(
         f.close()
 
         return output_file_path
-
-
-def compute_and_save_heatmap_downsampled(
-    embeddings: np.ndarray,
-    output_image: str,
-    downsample_factor: int
-) -> None:
-    """
-    Computes a downsampled heatmap of the cosine similarity matrix and saves the image in RGB mode.
-
-    Args:
-        embeddings (np.ndarray): An array of shape (N, d) containing the normalized embeddings.
-        output_image (str): The path where the heatmap image will be saved.
-        downsample_factor (int): Factor by which to downsample the heatmap.
-    """
-    N = embeddings.shape[0]
-    ds_N = N // downsample_factor
-
-    # Initialize an array for the downsampled heatmap
-    heatmap_array = np.zeros((ds_N, ds_N), dtype=np.float32)
-
-    # Compute the heatmap incrementally
-    for i in tqdm(range(ds_N), desc='Processing rows'):
-        # Compute indices for the downsampled block
-        i_start = i * downsample_factor
-        i_end = min((i + 1) * downsample_factor, N)
-        embeddings_i = embeddings[i_start:i_end]
-
-        for j in range(ds_N):
-            j_start = j * downsample_factor
-            j_end = min((j + 1) * downsample_factor, N)
-            embeddings_j = embeddings[j_start:j_end]
-
-            # Compute cosine similarities between blocks
-            similarities = np.dot(embeddings_i, embeddings_j.T)
-
-            # Compute the average similarity for the block
-            avg_similarity = np.mean(similarities)
-            heatmap_array[i, j] = avg_similarity
-
-    # Normalize similarities to [0, 1] for colormap mapping
-    norm = Normalize(vmin=-1, vmax=1)
-    heatmap_normalized = norm(heatmap_array)
-
-    # Apply a colormap to map the normalized data to RGB values
-    cmap = cm.get_cmap('viridis')  # You can choose other colormaps like 'hot', 'plasma', etc.
-    heatmap_colored = cmap(heatmap_normalized)  # Returns an (M, N, 4) array (RGBA)
-
-    # Convert the RGBA values to 8-bit unsigned integers
-    heatmap_rgb = (heatmap_colored[:, :, :3] * 255).astype(np.uint8)  # Extract RGB channels
-
-    # Create an image from the RGB array and save it
-    heatmap_image = Image.fromarray(heatmap_rgb, mode='RGB')
-    heatmap_image.save(output_image)
-
