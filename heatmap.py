@@ -6,6 +6,7 @@ import yaml
 
 import torch
 import numpy as np
+import pandas as pd
 from sklearn.preprocessing import normalize
 import sklearn.metrics as metrics
 
@@ -19,7 +20,6 @@ from src.embeddings import get_embeddings
 from src.eval import (
     align_labels_via_linear_sum_assignemt,
     compute_eval_metrics,
-    process_unpredicted_contigs,
     calculate_species_distance_matrix,
     plot_hierarchical_clustering_with_labels,
     create_tsne_plot
@@ -88,7 +88,7 @@ def main():
             split_dataset(embeddings, label_ids, threshold_dataset_indices_path)
         )
 
-        dist_mtx, unique_labels = calculate_species_distance_matrix(embeddings, labels_evaluate)
+        dist_mtx, unique_labels = calculate_species_distance_matrix(embeddings_evaluate, labels_evaluate)
 
         true_labels_genus = np.array([genus2id[species2genus[id2label[l]]] for l in unique_labels])
         cluster_labels = plot_hierarchical_clustering_with_labels(dist_mtx, results_path, model_name)
