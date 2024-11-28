@@ -1,0 +1,1 @@
+{"TNF": {"percentile_threshold": 70, "thresholds": [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9], "f1_results": [53, 28, 20, 11, 7, 4, 1, 1, 0], "recall_results": [54, 38, 24, 18, 14, 7, 4, 0, 0], "silhouette_score": -0.05461777792664511, "n_unclassified_contigs": 11427}}
