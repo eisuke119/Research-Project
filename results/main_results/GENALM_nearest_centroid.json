@@ -1,0 +1,1 @@
+{"GENALM": {"percentile_threshold": 70, "thresholds": [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9], "f1_results": [17, 4, 1, 0, 0, 0, 0, 0, 0], "recall_results": [25, 16, 10, 6, 3, 2, 0, 0, 0], "silhouette_score": -0.11919298022985458, "n_unclassified_contigs": 0}}

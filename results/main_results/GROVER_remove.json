@@ -1,0 +1,1 @@
+{"GROVER": {"percentile_threshold": 70, "thresholds": [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9], "f1_results": [7, 3, 1, 0, 0, 0, 0, 0, 0], "recall_results": [16, 13, 10, 6, 5, 3, 1, 0, 0], "silhouette_score": -0.173068106174469, "n_unclassified_contigs": 1508}}

@@ -1,0 +1,1 @@
+{"DNABERT_S": {"percentile_threshold": 70, "thresholds": [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9], "f1_results": [109, 87, 67, 56, 48, 36, 27, 20, 16], "recall_results": [102, 87, 74, 68, 62, 55, 42, 32, 21], "silhouette_score": -0.0031424646731466055, "n_unclassified_contigs": 21415}}
