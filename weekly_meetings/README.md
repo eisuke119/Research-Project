@@ -7,6 +7,7 @@
 * [05 November 2024](#date-05-november-2024)
 * [14 November 2024](#date-14-november-2024)
 * [21 November 2024](#date-21-november-2024)
+* [28 November 2024](#date-28-november-2024)
 
 #### Date: 03 October 2024
 
@@ -216,6 +217,45 @@ We would like to get feedback on our report and report structure so far.
 ##### Where do you need help from Veronika?
 
   * Last time you mentioned a webpage for t-sne embeddings. Which one is that?
+
+
+
+
+#### Date: 28 November 2024
+
+**Note that the latest code is found in** [branch andreas on our github](https://github.com/eisuke119/Research-Project/tree/andreas). 
+
+##### Who helped you this week?
+
+  * Lottie Greenwood
+  * 
+
+##### What did you achieve (since last time)?
+
+  * Started writing introduction/background
+  * Started on the similarity matrix with Hausdorff distance
+  * Baseline results (baseline F1 is 0.03). 
+
+
+##### What did you struggle with?
+
+ *    
+
+
+
+
+##### What would you like to work on today and next week?
+
+  * Make figures and tables
+  * Write the report
+
+   
+
+##### Where do you need help from Veronika?
+
+ * Should we define biological terms such as DNA, genome, nucleotide, basepair etc.
+
+
 
 
 
