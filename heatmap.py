@@ -61,6 +61,9 @@ def main():
         models_config = yaml.safe_load(model_file)
 
     for model_name in list(models_config.keys()):
+        output_path = os.path.join(results_path, model_name + "_heatmap.png")
+        if os.path.exists(output_path):
+            continue
         print("\n========================================= \n")
         print(f"Using {model_name} to calculate embeddings\n")
         print("========================================= \n\n")
@@ -88,18 +91,7 @@ def main():
             split_dataset(embeddings, label_ids, threshold_dataset_indices_path)
         )
 
-        dist_mtx, unique_labels = calculate_species_distance_matrix(embeddings_evaluate, labels_evaluate)
-
-        true_labels_genus = np.array([genus2id[species2genus[id2label[l]]] for l in unique_labels])
-        cluster_labels = plot_hierarchical_clustering_with_labels(dist_mtx, results_path, model_name)
-
-        label_mappings = align_labels_via_linear_sum_assignemt(
-            true_labels_genus, cluster_labels
-        )
-        pred_labels_genus = [label_mappings[label] for label in cluster_labels]
-
-        compute_eval_metrics(true_labels_genus, pred_labels_genus, results_path, model_name)
-        create_tsne_plot(dist_mtx, results_path, model_name)
+        calculate_species_distance_matrix(embeddings_evaluate, labels_evaluate, results_path, model_name)
         
 
         print("========================================= \n \n")

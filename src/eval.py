@@ -266,23 +266,31 @@ def compute_silhouette_score(embeddings: np.ndarray, predicted_labels: np.ndarra
         json.dump(model_ss, results_file)
 
 
-def calculate_species_distance_matrix(embeddings, ids) -> tuple[np.array, np.array]:
+def calculate_species_distance_matrix(embeddings, ids, path: str, model_name: str) -> None:
     """
-    Calculate the similarity matrix for groups of embeddings based on labels.
+    Calculate the distance matrix for groups of embeddings based on labels.
 
     Parameters:
     embeddings (np.ndarray): N*d array of embeddings.
     ids (np.ndarray): N*1 array of sorted ids.
+    path (str): Directory path where the result JSON file will be saved.
+    model_name (str): Name of the model, used for naming the JSON file and as a key in the JSON content.
+    
 
     Returns:
     np.ndarray: Distance matrix of size (number of unique ids) * (number of unique ids).
-    np.ndarray: Unique ids in order (number of unique ids) * 1.
     """
-    # Get unique ids
-    unique_ids, idx = np.unique(ids, return_index=True)
-    num_ids = len(unique_ids)
+    # Generate the file path for saving the results
+    model_results_path = os.path.join(path, model_name + "_dist_mtx")
 
-    unique_id_ordered = ids[np.sort(idx)]
+    # Remove entries with specific ids (287 and 288)
+    mask = (ids != 287) & (ids != 288)
+    embeddings = embeddings[mask]
+    ids = ids[mask]
+
+    # Get unique ids
+    unique_ids = np.unique(ids)
+    num_ids = len(unique_ids)
 
     # Initialize distance matrix
     distance_matrix = np.zeros((num_ids, num_ids))
@@ -296,15 +304,15 @@ def calculate_species_distance_matrix(embeddings, ids) -> tuple[np.array, np.arr
 
                 # Compute the distant matrix for each speicies
                 dist_mtrx = euclidean_distances(species1, species2)
-                dist_1 = dist_mtrx.min(axis=0).max()
-                dist_2 = dist_mtrx.min(axis=1).max()
+                dist_1 = np.percentile(dist_mtrx.min(axis=0), 95)
+                dist_2 = np.percentile(dist_mtrx.min(axis=1), 95)
 
                 # Calculate Hausdorff distance
                 distance = max(dist_1, dist_2)
                 distance_matrix[i, j] = distance
                 distance_matrix[j, i] = distance  # Symmetry
 
-    return (distance_matrix, unique_id_ordered)
+    np.save(model_results_path, distance_matrix)
 
 
 def plot_hierarchical_clustering_with_labels(distance_matrix, path: str, model_name: str, color_threshold=0.7):
