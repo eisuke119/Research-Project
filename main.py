@@ -25,6 +25,7 @@ from src.eval import (
     compute_eval_metrics,
     process_unpredicted_contigs,
     compute_baseline_metrics,
+    calculate_species_distance_matrix
 )
 
 import warnings
@@ -42,6 +43,7 @@ def main():
 
     results_path = "results/main_results"
     results_threshold_similarities_path = "results/threshold_similarities"
+    results_heatmap_path = "results/heatmap"
 
     # Read DNA Sequences
     preprocess_contigs(contig_path, contig_processed_path)
@@ -96,6 +98,8 @@ def main():
         )
 
         all_predictions = KMediod(embeddings_evaluate, threshold)
+
+        calculate_species_distance_matrix(embeddings_evaluate, labels_evaluate, results_heatmap_path, model_name)
 
         print(
             f"Found {len(np.unique(all_predictions))} out of {len(set(label_ids))} "

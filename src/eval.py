@@ -59,6 +59,56 @@ def compute_species_center_similarity(
     return threshold, percentile_threshold
 
 
+def calculate_species_distance_matrix(embeddings, ids, path: str, model_name: str) -> None:
+    """
+    Calculate the distance matrix for groups of embeddings based on labels.
+
+    Parameters:
+    embeddings (np.ndarray): N*d array of embeddings.
+    ids (np.ndarray): N*1 array of sorted ids.
+    path (str): Directory path where the result JSON file will be saved.
+    model_name (str): Name of the model, used for naming the JSON file and as a key in the JSON content.
+    
+
+    Returns:
+    None
+    """
+    # Generate the file path for saving the results
+    model_results_path = os.path.join(path, model_name + "_dist_mtx")
+
+    # Remove entries with specific ids (287 and 288)
+    mask = (ids != 287) & (ids != 288)
+    embeddings = embeddings[mask]
+    ids = ids[mask]
+
+    # Get unique ids
+    unique_ids = np.unique(ids)
+    num_ids = len(unique_ids)
+
+    # Initialize distance matrix
+    distance_matrix = np.zeros((num_ids, num_ids))
+
+    # Compute Hausdorff distance between species
+    for i, id1 in enumerate(unique_ids):
+        for j, id2 in enumerate(unique_ids):
+            if i <= j:  # Distance matrix is symmetric
+                species1 = embeddings[ids==id1]
+                species2 = embeddings[ids==id2]
+
+                # Compute the distant matrix for each speicies
+                dist_mtrx = euclidean_distances(species1, species2)
+                dist_1 = np.percentile(dist_mtrx.min(axis=0), 95)
+                dist_2 = np.percentile(dist_mtrx.min(axis=1), 95)
+
+                # Calculate Hausdorff distance
+                distance = max(dist_1, dist_2)
+                distance_matrix[i, j] = distance
+                distance_matrix[j, i] = distance  # Symmetry
+
+    np.save(model_results_path, distance_matrix)
+
+
+
 def KMediod(
     embeddings: np.array,
     min_similarity=0.8,

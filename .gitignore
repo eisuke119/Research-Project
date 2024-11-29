@@ -8,3 +8,4 @@ outdated/
 !data/threshold_dataset_indices.npy
 !helpers/4mer_embedding.npy
 !results/threshold_similarities/*.npy
+!results/heatmap/*.npy
