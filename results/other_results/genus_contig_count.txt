@@ -1,11 +1,17 @@
 Acidaminococcus & Acidaminococcus\_D21\_uid55871 & 385 \\
 Acidaminococcus & Acidaminococcus\_fermentans\_DSM\_20731\_uid43471 & 367 \\
 Acidaminococcus & Acidaminococcus\_intestini\_RyC\_MR95\_uid74445 & 382 \\
+\hline
 Actinomyces & Actinomyces\_ICM47\_uid170984 & 448 \\
+\hline
 Adlercreutzia & Adlercreutzia\_equolifaciens\_DSM\_19450\_uid223286 & 472 \\
+\hline
 Aeromicrobium & Aeromicrobium\_JC14\_uid199535 & 731 \\
+\hline
 Akkermansia & Akkermansia\_muciniphila\_ATCC\_BAA\_835\_uid58985 & 430 \\
+\hline
 Alcanivorax & Alcanivorax\_hongdengensis\_A\_11\_3\_uid176602 & 42 \\
+\hline
 Alistipes & Alistipes\_AP11\_uid199714 & 466 \\
 Alistipes & Alistipes\_HGB5\_uid67587 & 555 \\
 Alistipes & Alistipes\_JC50\_uid199660 & 640 \\
@@ -14,9 +20,13 @@ Alistipes & Alistipes\_indistinctus\_YIT\_12060\_uid75115 & 455 \\
 Alistipes & Alistipes\_onderdonkii\_DSM\_19147\_uid199292 & 649 \\
 Alistipes & Alistipes\_putredinis\_DSM\_17216\_uid54803 & 403 \\
 Alistipes & Alistipes\_shahii\_WAL\_8301\_uid197175 & 525 \\
+\hline
 Anaerococcus & Anaerotruncus\_colihominis\_DSM\_17241\_uid54807 & 626 \\
+\hline
 Anaerotruncus & Bacteroidales\_bacterium\_ph8\_uid199652 & 514 \\
+\hline
 Bacteroidales & Bacteroides\_1\_1\_14\_uid49709 & 1062 \\
+\hline
 Bacteroides & Bacteroides\_1\_1\_30\_uid68191 & 1017 \\
 Bacteroides & Bacteroides\_1\_1\_6\_uid55577 & 1165 \\
 Bacteroides & Bacteroides\_20\_3\_uid50765 & 978 \\
@@ -91,7 +101,9 @@ Bacteroides & Bacteroides\_vulgatus\_PC510\_uid47771 & 784 \\
 Bacteroides & Bacteroides\_xylanisolvens\_CL03T12C04\_uid181622 & 987 \\
 Bacteroides & Bacteroides\_xylanisolvens\_XB1A\_uid197168 & 884 \\
 Bacteroides & Barnesiella\_intestinihominis\_YIT\_11860\_uid175259 & 557 \\
+\hline
 Barnesiella & Bifidobacterium\_12\_1\_47BFAA\_uid61873 & 421 \\
+\hline
 Bifidobacterium & Bifidobacterium\_adolescentis\_ATCC\_15703\_uid58559 & 368 \\
 Bifidobacterium & Bifidobacterium\_adolescentis\_L2\_32\_uid54549 & 363 \\
 Bifidobacterium & Bifidobacterium\_bifidum\_BGN4\_uid167988 & 370 \\
@@ -103,16 +115,24 @@ Bifidobacterium & Bifidobacterium\_longum\_BBMN68\_uid60163 & 332 \\
 Bifidobacterium & Bifidobacterium\_longum\_infantis\_ATCC\_55813\_uid55465 & 383 \\
 Bifidobacterium & Bifidobacterium\_pseudocatenulatum\_DSM\_20438\_uid55303 & 371 \\
 Bifidobacterium & Bilophila\_4\_1\_30\_uid72973 & 660 \\
+\hline
 Bilophila & Bilophila\_wadsworthia\_3\_1\_6\_uid61875 & 708 \\
 Bilophila & Blautia\_hansenii\_DSM\_20583\_uid55275 & 464 \\
+\hline
 Blautia & Blautia\_hydrogenotrophica\_DSM\_10507\_uid54939 & 573 \\
 Blautia & Bryantella\_formatexigens\_DSM\_14469\_uid54943 & 396 \\
+\hline
 Bryantella & Burkholderiales\_bacterium\_1\_1\_47\_uid51545 & 420 \\
+\hline
 Burkholderiales & Butyrivibrio\_crossotus\_DSM\_2876\_uid55091 & 438 \\
+\hline
 Butyrivibrio & Catenibacterium\_mitsuokai\_DSM\_15897\_uid54829 & 437 \\
+\hline
 Catenibacterium & Clostridiales\_bacterium\_1\_7\_47FAA\_uid55287 & 1043 \\
+\hline
 Clostridiales & Clostridiales\_bacterium\_OBRC5\_5\_uid175258 & 357 \\
 Clostridiales & Clostridium\_D5\_uid63427 & 875 \\
+\hline
 Clostridium & Clostridium\_HGF2\_uid61051 & 678 \\
 Clostridium & Clostridium\_L2\_50\_uid54559 & 475 \\
 Clostridium & Clostridium\_M62\_1\_uid54557 & 661 \\
@@ -138,26 +158,36 @@ Clostridium & Clostridium\_spiroforme\_DSM\_1552\_uid54607 & 404 \\
 Clostridium & Clostridium\_symbiosum\_WAL\_14163\_uid63097 & 861 \\
 Clostridium & Clostridium\_symbiosum\_WAL\_14673\_uid63157 & 770 \\
 Clostridium & Collinsella\_aerofaciens\_ATCC\_25986\_uid54525 & 392 \\
+\hline
 Collinsella & Coprobacillus\_29\_1\_uid62161 & 629 \\
+\hline
 Coprobacillus & Coprobacillus\_8\_2\_54BFAA\_uid82733 & 594 \\
 Coprobacillus & Coprococcus\_ART55\_1\_uid197176 & 442 \\
+\hline
 Coprococcus & Coprococcus\_catus\_GD\_7\_uid197174 & 569 \\
 Coprococcus & Coprococcus\_comes\_ATCC\_27758\_uid54883 & 534 \\
 Coprococcus & Coprococcus\_eutactus\_ATCC\_27759\_uid54541 & 534 \\
 Coprococcus & Desulfovibrio\_piger\_ATCC\_29098\_uid54519 & 454 \\
+\hline
 Desulfovibrio & Dialister\_invisus\_DSM\_15470\_uid55761 & 313 \\
+\hline
 Dialister & Dialister\_succinatiphilus\_YIT\_11850\_uid81763 & 359 \\
 Dialister & Dorea\_formicigenerans\_4\_6\_53AFAA\_uid73033 & 604 \\
+\hline
 Dorea & Dorea\_formicigenerans\_ATCC\_27755\_uid54513 & 519 \\
 Dorea & Dorea\_longicatena\_DSM\_13814\_uid54515 & 494 \\
 Dorea & Eggerthella\_1\_3\_56FAA\_uid61877 & 539 \\
+\hline
 Eggerthella & Enterococcus\_faecium\_1\_230\_933\_uid55701 & 418 \\
+\hline
 Enterococcus & Enterococcus\_faecium\_Aus0085\_uid214432 & 272 \\
 Enterococcus & Erysipelotrichaceae\_bacterium\_2\_2\_44A\_uid73037 & 825 \\
+\hline
 Erysipelotrichaceae & Erysipelotrichaceae\_bacterium\_3\_1\_53\_uid59459 & 742 \\
 Erysipelotrichaceae & Erysipelotrichaceae\_bacterium\_5\_2\_54FAA\_uid46995 & 503 \\
 Erysipelotrichaceae & Erysipelotrichaceae\_bacterium\_6\_1\_45\_uid181401 & 780 \\
 Erysipelotrichaceae & Escherichia\_1\_1\_43\_uid55599 & 745 \\
+\hline
 Escherichia & Escherichia\_3\_2\_53FAA\_uid55601 & 839 \\
 Escherichia & Escherichia\_4\_1\_40B\_uid55603 & 764 \\
 Escherichia & Escherichia\_coli\_042\_uid161985 & 874 \\
@@ -168,6 +198,7 @@ Escherichia & Escherichia\_coli\_AA86\_uid179782 & 794 \\
 Escherichia & Escherichia\_coli\_JJ1886\_uid226103 & 862 \\
 Escherichia & Escherichia\_coli\_KTE150\_uid184560 & 801 \\
 Escherichia & Eubacterium\_3\_1\_31\_uid81761 & 884 \\
+\hline
 Eubacterium & Eubacterium\_biforme\_DSM\_3989\_uid55117 & 365 \\
 Eubacterium & Eubacterium\_cylindroides\_T2\_87\_uid197177 & 234 \\
 Eubacterium & Eubacterium\_dolichum\_DSM\_3991\_uid54609 & 357 \\
@@ -182,21 +213,30 @@ Eubacterium & Eubacterium\_siraeum\_V10Sc8a\_uid197178 & 454 \\
 Eubacterium & Eubacterium\_siraeum\_uid197160 & 424 \\
 Eubacterium & Eubacterium\_ventriosum\_ATCC\_27560\_uid54517 & 479 \\
 Eubacterium & Faecalibacterium\_cf\_\_prausnitzii\_KLE1255\_uid60645 & 494 \\
+\hline
 Faecalibacterium & Faecalibacterium\_prausnitzii\_A2\_165\_uid54551 & 536 \\
 Faecalibacterium & Faecalibacterium\_prausnitzii\_L2\_6\_uid197183 & 518 \\
 Faecalibacterium & Faecalibacterium\_prausnitzii\_M21\_2\_uid54555 & 509 \\
 Faecalibacterium & Faecalibacterium\_prausnitzii\_uid197157 & 501 \\
 Faecalibacterium & Flavonifractor\_plautii\_ATCC\_29863\_uid80691 & 687 \\
+\hline
 Flavonifractor & Fusobacterium\_gonidiaformans\_ATCC\_25563\_uid55569 & 268 \\
+\hline
 Fusobacterium & Fusobacterium\_mortiferum\_ATCC\_9817\_uid55571 & 393 \\
 Fusobacterium & Gordonibacter\_pamelaeae\_7\_10\_1\_b\_uid197167 & 462 \\
+\hline
 Gordonibacter & Haemophilus\_parainfluenzae\_ATCC\_33392\_uid63561 & 323 \\
+\hline
 Haemophilus & Haemophilus\_parainfluenzae\_HK2019\_uid180434 & 365 \\
 Haemophilus & Haemophilus\_parainfluenzae\_T3T1\_uid72801 & 337 \\
 Haemophilus & Holdemania\_filiformis\_DSM\_12042\_uid55297 & 572 \\
+\hline
 Holdemania & Johnsonella\_ignava\_ATCC\_51276\_uid77897 & 123 \\
+\hline
 Johnsonella & Klebsiella\_4\_1\_44FAA\_uid80417 & 863 \\
+\hline
 Klebsiella & Lachnospiraceae\_bacterium\_1\_1\_57FAA\_uid68209 & 502 \\
+\hline
 Lachnospiraceae & Lachnospiraceae\_bacterium\_1\_4\_56FAA\_uid68205 & 521 \\
 Lachnospiraceae & Lachnospiraceae\_bacterium\_2\_1\_58FAA\_uid68203 & 502 \\
 Lachnospiraceae & Lachnospiraceae\_bacterium\_3\_1\_46FAA\_uid66427 & 456 \\
@@ -206,6 +246,7 @@ Lachnospiraceae & Lachnospiraceae\_bacterium\_5\_1\_63FAA\_uid61883 & 521 \\
 Lachnospiraceae & Lachnospiraceae\_bacterium\_7\_1\_58FAA\_uid81607 & 951 \\
 Lachnospiraceae & Lachnospiraceae\_bacterium\_9\_1\_43BFAA\_uid66425 & 433 \\
 Lachnospiraceae & Lactobacillus\_acidophilus\_30SC\_uid63605 & 343 \\
+\hline
 Lactobacillus & Lactobacillus\_amylovorus\_GRL1118\_uid160233 & 331 \\
 Lactobacillus & Lactobacillus\_johnsonii\_DPC\_6026\_uid162057 & 329 \\
 Lactobacillus & Lactobacillus\_reuteri\_DSM\_20016\_uid58471 & 295 \\
@@ -213,17 +254,26 @@ Lactobacillus & Lactobacillus\_rossiae\_DSM\_15814\_uid199472 & 41 \\
 Lactobacillus & Lactobacillus\_ruminis\_ATCC\_25644\_uid179878 & 396 \\
 Lactobacillus & Lactobacillus\_ruminis\_SPM0211\_uid67955 & 337 \\
 Lactobacillus & Lactococcus\_raffinolactis\_4877\_uid178066 & 623 \\
+\hline
 Lactococcus & Megamonas\_funiformis\_YIT\_11815\_uid82999 & 415 \\
+\hline
 Megamonas & Megamonas\_hypermegale\_uid197163 & 335 \\
 Megamonas & Megasphaera\_elsdenii\_DSM\_20460\_uid71135 & 397 \\
+\hline
 Megasphaera & Methanobrevibacter\_smithii\_ATCC\_35061\_uid58827 & 281 \\
+\hline
 Methanobrevibacter & Methanobrevibacter\_smithii\_DSM\_2374\_uid55123 & 277 \\
 Methanobrevibacter & Methanobrevibacter\_smithii\_DSM\_2375\_uid54983 & 247 \\
 Methanobrevibacter & Methanomassiliicoccus\_Mx1\_Issoire\_uid207287 & 318 \\
+\hline
 Methanomassiliicoccus & Mitsuokella\_multacida\_DSM\_20544\_uid55073 & 399 \\
+\hline
 Mitsuokella & Odoribacter\_splanchnicus\_DSM\_20712\_uid63397 & 693 \\
+\hline
 Odoribacter & Oscillibacter\_ruminantium\_GH1\_uid199475 & 299 \\
+\hline
 Oscillibacter & Parabacteroides\_D13\_uid55997 & 853 \\
+\hline
 Parabacteroides & Parabacteroides\_distasonis\_ATCC\_8503\_uid58301 & 783 \\
 Parabacteroides & Parabacteroides\_distasonis\_CL03T12C09\_uid181647 & 805 \\
 Parabacteroides & Parabacteroides\_goldsteinii\_CL02T12C30\_uid178274 & 1064 \\
@@ -233,21 +283,29 @@ Parabacteroides & Parabacteroides\_merdae\_ATCC\_43184\_uid54545 & 681 \\
 Parabacteroides & Parabacteroides\_merdae\_CL03T12C32\_uid181650 & 768 \\
 Parabacteroides & Parabacteroides\_merdae\_CL09T00C40\_uid181721 & 682 \\
 Parabacteroides & Paraprevotella\_clara\_YIT\_11840\_uid76949 & 673 \\
+\hline
 Paraprevotella & Paraprevotella\_xylaniphila\_YIT\_11841\_uid66381 & 617 \\
 Paraprevotella & Parasutterella\_excrementihominis\_YIT\_11859\_uid66383 & 495 \\
+\hline
 Parasutterella & Phascolarctobacterium\_YIT\_12067\_uid62745 & 383 \\
+\hline
 Phascolarctobacterium & Porphyromonas\_somerae\_DSM\_23386\_uid199036 & 411 \\
+\hline
 Porphyromonas & Prevotella\_bivia\_DSM\_20514\_uid182041 & 396 \\
+\hline
 Prevotella & Prevotella\_copri\_DSM\_18205\_uid55277 & 612 \\
 Prevotella & Prevotella\_disiens\_FB035\_09AN\_uid51531 & 512 \\
 Prevotella & Prevotella\_stercorea\_DSM\_18206\_uid78321 & 489 \\
 Prevotella & Roseburia\_hominis\_A2\_183\_uid73419 & 588 \\
+\hline
 Roseburia & Roseburia\_intestinalis\_L1\_82\_uid55267 & 704 \\
 Roseburia & Roseburia\_intestinalis\_XB6B4\_uid197179 & 638 \\
 Roseburia & Roseburia\_intestinalis\_uid197164 & 669 \\
 Roseburia & Roseburia\_inulinivorans\_DSM\_16841\_uid55375 & 746 \\
 Roseburia & Ruminococcaceae\_bacterium\_D16\_uid52825 & 539 \\
+\hline
 Ruminococcaceae & Ruminococcus\_5\_1\_39BFAA\_uid55629 & 595 \\
+\hline
 Ruminococcus & Ruminococcus\_JC304\_uid199662 & 506 \\
 Ruminococcus & Ruminococcus\_bromii\_uid197158 & 399 \\
 Ruminococcus & Ruminococcus\_champanellensis\_18P13\_uid197169 & 421 \\
@@ -259,6 +317,7 @@ Ruminococcus & Ruminococcus\_torques\_ATCC\_27756\_uid54511 & 435 \\
 Ruminococcus & Ruminococcus\_torques\_uid197166 & 527 \\
 Ruminococcus & Ruminococcus\_uid197156 & 560 \\
 Ruminococcus & Streptococcus\_parasanguinis\_ATCC\_15912\_uid49313 & 356 \\
+\hline
 Streptococcus & Streptococcus\_parasanguinis\_ATCC\_903\_uid62541 & 345 \\
 Streptococcus & Streptococcus\_parasanguinis\_F0405\_uid60563 & 364 \\
 Streptococcus & Streptococcus\_parasanguinis\_F0449\_uid180419 & 389 \\
@@ -272,19 +331,28 @@ Streptococcus & Streptococcus\_thermophilus\_CNRZ1066\_uid58221 & 280 \\
 Streptococcus & Streptococcus\_vestibularis\_ATCC\_49124\_uid62665 & 279 \\
 Streptococcus & Streptococcus\_vestibularis\_F0396\_uid60559 & 314 \\
 Streptococcus & Subdoligranulum\_4\_3\_54A2FAA\_uid80415 & 702 \\
+\hline
 Subdoligranulum & Subdoligranulum\_variabile\_DSM\_15176\_uid54539 & 486 \\
 Subdoligranulum & Sutterella\_wadsworthensis\_2\_1\_59BFAA\_uid181408 & 462 \\
+\hline
 Sutterella & Sutterella\_wadsworthensis\_3\_1\_45B\_uid62165 & 543 \\
 Sutterella & Synergistes\_3\_1\_syn1\_uid80429 & 506 \\
+\hline
 Synergistes & Tannerella\_6\_1\_58FAA\_CT1\_uid80413 & 616 \\
+\hline
 Tannerella & Veillonella\_3\_1\_44\_uid47845 & 340 \\
+\hline
 Veillonella & Veillonella\_6\_1\_27\_uid47835 & 350 \\
 Veillonella & Veillonella\_ACP1\_uid172974 & 354 \\
 Veillonella & Veillonella\_atypica\_ACS\_049\_V\_Sch6\_uid51525 & 363 \\
 Veillonella & Veillonella\_dispar\_ATCC\_17748\_uid55331 & 338 \\
 Veillonella & Veillonella\_oral\_taxon\_158\_F0412\_uid61047 & 354 \\
 Veillonella & Weissella\_confusa\_LBAE\_C39\_2\_uid168254 & 393 \\
+\hline
 Weissella & archaeon\_Mx1201\_uid196597 & 264 \\
+\hline
 Methanomethylophilus & butyrate\_producing\_bacterium\_SM4\_1\_uid197180 & 327 \\
+\hline
 butyrate_producing_bacterium_SM4_1_uid197180 & butyrate\_producing\_bacterium\_SS3\_4\_uid197159 & 525 \\
+\hline
 butyrate_producing_bacterium_SS3_4_uid197159 & butyrate\_producing\_bacterium\_SSC\_2\_uid197181 & 432 \\
