@@ -6,15 +6,13 @@ Anders Hjulmand, Andreas Flensted, Eisuke Okuda
 
 
 ### Data
-----
-
 
 1. Download the data [here](https://figshare.com/articles/dataset/MetaHIT_error-free_contigs_from_MetaBAT/27933807?file=50894283).
 
 2. Move the file `contigs.fna.gz` to the folder `data/metahit` .
 
 ### Usage
-----
+
 
 #### 1. Data format
 
@@ -45,7 +43,7 @@ id, sequence, genome
 3. Run `NEED` to reproduce figures.
 
 
-#### 3. Notes
+#### 4. Notes
 
 1. The computed embeddings take up 30GB of space. 
 2. We used 4x L40 GPUs to compute the embeddings. 
