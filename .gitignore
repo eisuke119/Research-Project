@@ -9,3 +9,4 @@ outdated/
 !helpers/4mer_embedding.npy
 !results/threshold_similarities/*.npy
 !results/heatmap/*.npy
+!literature_OpenAlex/*.csv
