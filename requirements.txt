@@ -56,3 +56,4 @@ wheel==0.44.0
 xxhash==2.0.2
 yarl==1.11.0
 prokbert==0.0.44
+openalexapi
