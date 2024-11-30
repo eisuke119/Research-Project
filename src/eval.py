@@ -135,7 +135,7 @@ def KMediod(
 
     embeddings = embeddings.astype(np.float32)
     n_samples = embeddings.shape[0]
-    block_size = 1000  # Adjust according to your available memory
+    block_size = 10000  # Adjust according to your available memory
 
     # Initialize the density vector
     density_vector = np.zeros(n_samples, dtype=np.float32)
