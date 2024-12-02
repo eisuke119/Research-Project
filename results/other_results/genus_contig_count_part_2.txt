@@ -1,0 +1,72 @@
+genus & Bacteroides & Bacteroides\_fragilis\_HMW\_610\_uid181634 & 919 \\
+genus & Bacteroides & Bacteroides\_fragilis\_HMW\_615\_uid181635 & 909 \\
+genus & Bacteroides & Bacteroides\_fragilis\_HMW\_616\_uid181809 & 840 \\
+genus & Bacteroides & Bacteroides\_fragilis\_NCTC\_9343\_uid57639 & 839 \\
+genus & Bacteroides & Bacteroides\_fragilis\_YCH46\_uid58195 & 834 \\
+genus & Bacteroides & Bacteroides\_gallinarum\_DSM\_18171\_uid199285 & 619 \\
+genus & Bacteroides & Bacteroides\_intestinalis\_DSM\_17393\_uid54881 & 1005 \\
+genus & Bacteroides & Bacteroides\_massiliensis\_B84634\_\_\_DSM\_17679\_uid199226 & 748 \\
+genus & Bacteroides & Bacteroides\_nordii\_CL02T12C05\_uid170043 & 968 \\
+genus & Bacteroides & Bacteroides\_oleiciplenus\_YIT\_12058\_uid182882 & 907 \\
+genus & Bacteroides & Bacteroides\_ovatus\_3\_8\_47FAA\_uid68195 & 1069 \\
+genus & Bacteroides & Bacteroides\_ovatus\_ATCC\_8483\_uid54543 & 1082 \\
+genus & Bacteroides & Bacteroides\_ovatus\_CL02T12C04\_uid181636 & 1223 \\
+genus & Bacteroides & Bacteroides\_ovatus\_CL03T12C18\_uid181637 & 1119 \\
+genus & Bacteroides & Bacteroides\_ovatus\_SD\_CMC\_3f\_uid46973 & 1096 \\
+genus & Bacteroides & Bacteroides\_pectinophilus\_ATCC\_43243\_uid54987 & 501 \\
+genus & Bacteroides & Bacteroides\_plebeius\_DSM\_17135\_uid54991 & 688 \\
+genus & Bacteroides & Bacteroides\_salanitronis\_DSM\_18170\_uid63269 & 686 \\
+genus & Bacteroides & Bacteroides\_salyersiae\_CL02T12C01\_uid170041 & 919 \\
+genus & Bacteroides & Bacteroides\_stercoris\_ATCC\_43183\_uid54825 & 615 \\
+genus & Bacteroides & Bacteroides\_thetaiotaomicron\_VPI\_5482\_uid62913 & 958 \\
+genus & Bacteroides & Bacteroides\_uniformis\_ATCC\_8492\_uid54547 & 749 \\
+genus & Bacteroides & Bacteroides\_uniformis\_CL03T00C23\_uid181639 & 789 \\
+genus & Bacteroides & Bacteroides\_uniformis\_CL03T12C37\_uid181640 & 792 \\
+genus & Bacteroides & Bacteroides\_vulgatus\_ATCC\_8482\_uid58253 & 843 \\
+genus & Bacteroides & Bacteroides\_vulgatus\_CL09T03C04\_uid181641 & 795 \\
+genus & Bacteroides & Bacteroides\_vulgatus\_PC510\_uid47771 & 784 \\
+genus & Bacteroides & Bacteroides\_xylanisolvens\_CL03T12C04\_uid181622 & 987 \\
+genus & Bacteroides & Bacteroides\_xylanisolvens\_XB1A\_uid197168 & 884 \\
+\hline
+genus & Barnesiella & Barnesiella\_intestinihominis\_YIT\_11860\_uid175259 & 557 \\
+\hline
+genus & Bifidobacterium & Bifidobacterium\_12\_1\_47BFAA\_uid61873 & 421 \\
+genus & Bifidobacterium & Bifidobacterium\_adolescentis\_ATCC\_15703\_uid58559 & 368 \\
+genus & Bifidobacterium & Bifidobacterium\_adolescentis\_L2\_32\_uid54549 & 363 \\
+genus & Bifidobacterium & Bifidobacterium\_bifidum\_BGN4\_uid167988 & 370 \\
+genus & Bifidobacterium & Bifidobacterium\_bifidum\_IPLA\_20015\_uid180937 & 410 \\
+genus & Bifidobacterium & Bifidobacterium\_catenulatum\_DSM\_16992\_uid55369 & 345 \\
+genus & Bifidobacterium & Bifidobacterium\_longum\_1\_6B\_uid180435 & 452 \\
+genus & Bifidobacterium & Bifidobacterium\_longum\_2\_2B\_uid180437 & 452 \\
+genus & Bifidobacterium & Bifidobacterium\_longum\_BBMN68\_uid60163 & 332 \\
+genus & Bifidobacterium & Bifidobacterium\_longum\_infantis\_ATCC\_55813\_uid55465 & 383 \\
+genus & Bifidobacterium & Bifidobacterium\_pseudocatenulatum\_DSM\_20438\_uid55303 & 371 \\
+\hline
+genus & Bilophila & Bilophila\_4\_1\_30\_uid72973 & 660 \\
+genus & Bilophila & Bilophila\_wadsworthia\_3\_1\_6\_uid61875 & 708 \\
+\hline
+genus & Blautia & Blautia\_hansenii\_DSM\_20583\_uid55275 & 464 \\
+genus & Blautia & Blautia\_hydrogenotrophica\_DSM\_10507\_uid54939 & 573 \\
+\hline
+genus & Bryantella & Bryantella\_formatexigens\_DSM\_14469\_uid54943 & 396 \\
+\hline
+order & Burkholderiales & Burkholderiales\_bacterium\_1\_1\_47\_uid51545 & 420 \\
+\hline
+genus & Butyrivibrio & Butyrivibrio\_crossotus\_DSM\_2876\_uid55091 & 438 \\
+\hline
+genus & Catenibacterium & Catenibacterium\_mitsuokai\_DSM\_15897\_uid54829 & 437 \\
+\hline
+order & Clostridiales & Clostridiales\_bacterium\_1\_7\_47FAA\_uid55287 & 1043 \\
+order & Clostridiales & Clostridiales\_bacterium\_OBRC5\_5\_uid175258 & 357 \\
+\hline
+genus & Clostridium & Clostridium\_D5\_uid63427 & 875 \\
+genus & Clostridium & Clostridium\_HGF2\_uid61051 & 678 \\
+genus & Clostridium & Clostridium\_L2\_50\_uid54559 & 475 \\
+genus & Clostridium & Clostridium\_M62\_1\_uid54557 & 661 \\
+genus & Clostridium & Clostridium\_SS2\_1\_uid54553 & 521 \\
+genus & Clostridium & Clostridium\_SY8519\_uid68705 & 154 \\
+genus & Clostridium & Clostridium\_asparagiforme\_DSM\_15981\_uid55115 & 955 \\
+genus & Clostridium & Clostridium\_bartlettii\_DSM\_16795\_uid54809 & 491 \\
+genus & Clostridium & Clostridium\_bolteae\_ATCC\_BAA\_613\_uid54523 & 1116 \\
+genus & Clostridium & Clostridium\_cf\_saccharolyticum\_K10\_uid197201 & 585 \\
+genus & Clostridium & Clostridium\_citroniae\_WAL\_17108\_uid76581 & 1051 \\

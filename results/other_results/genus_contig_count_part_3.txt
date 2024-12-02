@@ -1,0 +1,72 @@
+genus & Clostridium & Clostridium\_clostridioforme\_2\_1\_49FAA\_uid76955 & 896 \\
+genus & Clostridium & Clostridium\_difficile\_ATCC\_43255\_uid67589 & 144 \\
+genus & Clostridium & Clostridium\_difficile\_NAP08\_uid49121 & 93 \\
+genus & Clostridium & Clostridium\_difficile\_QCD\_63q42\_uid54949 & 59 \\
+genus & Clostridium & Clostridium\_difficile\_R20291\_uid40921 & 43 \\
+genus & Clostridium & Clostridium\_hathewayi\_DSM\_13479\_uid55373 & 1135 \\
+genus & Clostridium & Clostridium\_leptum\_DSM\_753\_uid54605 & 578 \\
+genus & Clostridium & Clostridium\_methylpentosum\_DSM\_5476\_uid55281 & 554 \\
+genus & Clostridium & Clostridium\_nexile\_DSM\_1787\_uid55077 & 600 \\
+genus & Clostridium & Clostridium\_ramosum\_DSM\_1402\_uid54811 & 499 \\
+genus & Clostridium & Clostridium\_saccharolyticum\_WM1\_uid51419 & 178 \\
+genus & Clostridium & Clostridium\_spiroforme\_DSM\_1552\_uid54607 & 404 \\
+genus & Clostridium & Clostridium\_symbiosum\_WAL\_14163\_uid63097 & 861 \\
+genus & Clostridium & Clostridium\_symbiosum\_WAL\_14673\_uid63157 & 770 \\
+\hline
+genus & Collinsella & Collinsella\_aerofaciens\_ATCC\_25986\_uid54525 & 392 \\
+\hline
+genus & Coprobacillus & Coprobacillus\_29\_1\_uid62161 & 629 \\
+genus & Coprobacillus & Coprobacillus\_8\_2\_54BFAA\_uid82733 & 594 \\
+\hline
+genus & Coprococcus & Coprococcus\_ART55\_1\_uid197176 & 442 \\
+genus & Coprococcus & Coprococcus\_catus\_GD\_7\_uid197174 & 569 \\
+genus & Coprococcus & Coprococcus\_comes\_ATCC\_27758\_uid54883 & 534 \\
+genus & Coprococcus & Coprococcus\_eutactus\_ATCC\_27759\_uid54541 & 534 \\
+\hline
+genus & Desulfovibrio & Desulfovibrio\_piger\_ATCC\_29098\_uid54519 & 454 \\
+\hline
+genus & Dialister & Dialister\_invisus\_DSM\_15470\_uid55761 & 313 \\
+genus & Dialister & Dialister\_succinatiphilus\_YIT\_11850\_uid81763 & 359 \\
+\hline
+genus & Dorea & Dorea\_formicigenerans\_4\_6\_53AFAA\_uid73033 & 604 \\
+genus & Dorea & Dorea\_formicigenerans\_ATCC\_27755\_uid54513 & 519 \\
+genus & Dorea & Dorea\_longicatena\_DSM\_13814\_uid54515 & 494 \\
+\hline
+genus & Eggerthella & Eggerthella\_1\_3\_56FAA\_uid61877 & 539 \\
+\hline
+genus & Enterococcus & Enterococcus\_faecium\_1\_230\_933\_uid55701 & 418 \\
+genus & Enterococcus & Enterococcus\_faecium\_Aus0085\_uid214432 & 272 \\
+\hline
+family & Erysipelotrichaceae & Erysipelotrichaceae\_bacterium\_2\_2\_44A\_uid73037 & 825 \\
+family & Erysipelotrichaceae & Erysipelotrichaceae\_bacterium\_3\_1\_53\_uid59459 & 742 \\
+family & Erysipelotrichaceae & Erysipelotrichaceae\_bacterium\_5\_2\_54FAA\_uid46995 & 503 \\
+family & Erysipelotrichaceae & Erysipelotrichaceae\_bacterium\_6\_1\_45\_uid181401 & 780 \\
+\hline
+genus & Escherichia & Escherichia\_1\_1\_43\_uid55599 & 745 \\
+genus & Escherichia & Escherichia\_3\_2\_53FAA\_uid55601 & 839 \\
+genus & Escherichia & Escherichia\_4\_1\_40B\_uid55603 & 764 \\
+genus & Escherichia & Escherichia\_coli\_042\_uid161985 & 874 \\
+genus & Escherichia & Escherichia\_coli\_07798\_uid181911 & 778 \\
+genus & Escherichia & Escherichia\_coli\_0\_1288\_uid181931 & 844 \\
+genus & Escherichia & Escherichia\_coli\_2362\_75\_uid60613 & 843 \\
+genus & Escherichia & Escherichia\_coli\_AA86\_uid179782 & 794 \\
+genus & Escherichia & Escherichia\_coli\_JJ1886\_uid226103 & 862 \\
+genus & Escherichia & Escherichia\_coli\_KTE150\_uid184560 & 801 \\
+\hline
+genus & Eubacterium & Eubacterium\_3\_1\_31\_uid81761 & 884 \\
+genus & Eubacterium & Eubacterium\_biforme\_DSM\_3989\_uid55117 & 365 \\
+genus & Eubacterium & Eubacterium\_cylindroides\_T2\_87\_uid197177 & 234 \\
+genus & Eubacterium & Eubacterium\_dolichum\_DSM\_3991\_uid54609 & 357 \\
+genus & Eubacterium & Eubacterium\_eligens\_ATCC\_27750\_uid59171 & 457 \\
+genus & Eubacterium & Eubacterium\_hadrum\_DSM\_3319\_uid183778 & 460 \\
+genus & Eubacterium & Eubacterium\_hallii\_DSM\_3353\_uid54535 & 580 \\
+genus & Eubacterium & Eubacterium\_rectale\_ATCC\_33656\_uid59169 & 614 \\
+genus & Eubacterium & Eubacterium\_rectale\_uid197161 & 509 \\
+genus & Eubacterium & Eubacterium\_rectale\_uid197162 & 594 \\
+genus & Eubacterium & Eubacterium\_siraeum\_DSM\_15702\_uid54603 & 467 \\
+genus & Eubacterium & Eubacterium\_siraeum\_V10Sc8a\_uid197178 & 454 \\
+genus & Eubacterium & Eubacterium\_siraeum\_uid197160 & 424 \\
+genus & Eubacterium & Eubacterium\_ventriosum\_ATCC\_27560\_uid54517 & 479 \\
+\hline
+genus & Faecalibacterium & Faecalibacterium\_cf\_\_prausnitzii\_KLE1255\_uid60645 & 494 \\
+genus & Faecalibacterium & Faecalibacterium\_prausnitzii\_A2\_165\_uid54551 & 536 \\
