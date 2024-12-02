@@ -1,0 +1,72 @@
+genus & Acidaminococcus & Acidaminococcus\_D21\_uid55871 & 385 \\
+genus & Acidaminococcus & Acidaminococcus\_fermentans\_DSM\_20731\_uid43471 & 367 \\
+genus & Acidaminococcus & Acidaminococcus\_intestini\_RyC\_MR95\_uid74445 & 382 \\
+\hline
+genus & Actinomyces & Actinomyces\_ICM47\_uid170984 & 448 \\
+\hline
+genus & Adlercreutzia & Adlercreutzia\_equolifaciens\_DSM\_19450\_uid223286 & 472 \\
+\hline
+genus & Aeromicrobium & Aeromicrobium\_JC14\_uid199535 & 731 \\
+\hline
+genus & Akkermansia & Akkermansia\_muciniphila\_ATCC\_BAA\_835\_uid58985 & 430 \\
+\hline
+genus & Alcanivorax & Alcanivorax\_hongdengensis\_A\_11\_3\_uid176602 & 42 \\
+\hline
+genus & Alistipes & Alistipes\_AP11\_uid199714 & 466 \\
+genus & Alistipes & Alistipes\_HGB5\_uid67587 & 555 \\
+genus & Alistipes & Alistipes\_JC50\_uid199660 & 640 \\
+genus & Alistipes & Alistipes\_finegoldii\_DSM\_17242\_uid168180 & 602 \\
+genus & Alistipes & Alistipes\_indistinctus\_YIT\_12060\_uid75115 & 455 \\
+genus & Alistipes & Alistipes\_onderdonkii\_DSM\_19147\_uid199292 & 649 \\
+genus & Alistipes & Alistipes\_putredinis\_DSM\_17216\_uid54803 & 403 \\
+genus & Alistipes & Alistipes\_shahii\_WAL\_8301\_uid197175 & 525 \\
+\hline
+genus & Anaerotruncus & Anaerotruncus\_colihominis\_DSM\_17241\_uid54807 & 626 \\
+\hline
+order & Bacteroidales & Bacteroidales\_bacterium\_ph8\_uid199652 & 514 \\
+\hline
+genus & Bacteroides & Bacteroides\_1\_1\_14\_uid49709 & 1062 \\
+genus & Bacteroides & Bacteroides\_1\_1\_30\_uid68191 & 1017 \\
+genus & Bacteroides & Bacteroides\_1\_1\_6\_uid55577 & 1165 \\
+genus & Bacteroides & Bacteroides\_20\_3\_uid50765 & 978 \\
+genus & Bacteroides & Bacteroides\_2\_1\_16\_uid41707 & 837 \\
+genus & Bacteroides & Bacteroides\_2\_1\_22\_uid41621 & 923 \\
+genus & Bacteroides & Bacteroides\_2\_1\_33B\_uid41591 & 783 \\
+genus & Bacteroides & Bacteroides\_2\_1\_56FAA\_uid68193 & 926 \\
+genus & Bacteroides & Bacteroides\_2\_1\_7\_uid55579 & 853 \\
+genus & Bacteroides & Bacteroides\_2\_2\_4\_uid55581 & 1142 \\
+genus & Bacteroides & Bacteroides\_3\_1\_19\_uid49705 & 824 \\
+genus & Bacteroides & Bacteroides\_3\_1\_23\_uid49963 & 1053 \\
+genus & Bacteroides & Bacteroides\_3\_1\_33FAA\_uid41705 & 852 \\
+genus & Bacteroides & Bacteroides\_3\_1\_40A\_uid62053 & 864 \\
+genus & Bacteroides & Bacteroides\_3\_2\_5\_uid55583 & 858 \\
+genus & Bacteroides & Bacteroides\_4\_1\_36\_uid61871 & 731 \\
+genus & Bacteroides & Bacteroides\_4\_3\_47FAA\_uid55585 & 854 \\
+genus & Bacteroides & Bacteroides\_9\_1\_42FAA\_uid55587 & 894 \\
+genus & Bacteroides & Bacteroides\_D20\_uid42369 & 709 \\
+genus & Bacteroides & Bacteroides\_D22\_uid49721 & 1036 \\
+genus & Bacteroides & Bacteroides\_D2\_uid55591 & 1154 \\
+genus & Bacteroides & Bacteroides\_barnesiae\_DSM\_18169\_uid199296 & 561 \\
+genus & Bacteroides & Bacteroides\_caccae\_ATCC\_43185\_uid54521 & 692 \\
+genus & Bacteroides & Bacteroides\_caccae\_CL03T12C61\_uid181623 & 893 \\
+genus & Bacteroides & Bacteroides\_capillosus\_ATCC\_29799\_uid54531 & 709 \\
+genus & Bacteroides & Bacteroides\_cellulosilyticus\_CL02T12C19\_uid181624 & 1206 \\
+genus & Bacteroides & Bacteroides\_cellulosilyticus\_DSM\_14838\_uid55279 & 1039 \\
+genus & Bacteroides & Bacteroides\_clarus\_YIT\_12056\_uid66155 & 629 \\
+genus & Bacteroides & Bacteroides\_coprocola\_DSM\_17136\_uid54879 & 722 \\
+genus & Bacteroides & Bacteroides\_coprophilus\_DSM\_18228\_uid55301 & 595 \\
+genus & Bacteroides & Bacteroides\_dorei\_5\_1\_36\_D4\_uid55593 & 893 \\
+genus & Bacteroides & Bacteroides\_dorei\_CL02T00C15\_uid181625 & 998 \\
+genus & Bacteroides & Bacteroides\_dorei\_CL03T12C01\_uid181626 & 875 \\
+genus & Bacteroides & Bacteroides\_dorei\_DSM\_17855\_uid54993 & 826 \\
+genus & Bacteroides & Bacteroides\_eggerthii\_1\_2\_48FAA\_uid61869 & 1463 \\
+genus & Bacteroides & Bacteroides\_eggerthii\_DSM\_20697\_uid54989 & 668 \\
+genus & Bacteroides & Bacteroides\_faecis\_MAJ27\_uid86875 & 1008 \\
+genus & Bacteroides & Bacteroides\_finegoldii\_CL09T03C10\_uid181638 & 1556 \\
+genus & Bacteroides & Bacteroides\_finegoldii\_DSM\_17565\_uid54985 & 836 \\
+genus & Bacteroides & Bacteroides\_fluxus\_YIT\_12057\_uid66157 & 417 \\
+genus & Bacteroides & Bacteroides\_fragilis\_3\_1\_12\_uid55575 & 938 \\
+genus & Bacteroides & Bacteroides\_fragilis\_638R\_uid84217 & 788 \\
+genus & Bacteroides & Bacteroides\_fragilis\_CL03T00C08\_uid181628 & 830 \\
+genus & Bacteroides & Bacteroides\_fragilis\_CL05T00C42\_uid181632 & 1617 \\
+genus & Bacteroides & Bacteroides\_fragilis\_CL07T00C01\_uid181630 & 875 \\
