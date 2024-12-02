@@ -4,6 +4,8 @@ import json
 import numpy as np
 from scipy.optimize import linear_sum_assignment
 import sklearn.metrics
+from sklearn.metrics import euclidean_distances
+
 
 import tqdm
 
@@ -59,7 +61,9 @@ def compute_species_center_similarity(
     return threshold, percentile_threshold
 
 
-def calculate_species_distance_matrix(embeddings, ids, path: str, model_name: str) -> None:
+def calculate_species_distance_matrix(
+    embeddings, ids, path: str, model_name: str
+) -> None:
     """
     Calculate the distance matrix for groups of embeddings based on labels.
 
@@ -68,7 +72,7 @@ def calculate_species_distance_matrix(embeddings, ids, path: str, model_name: st
     ids (np.ndarray): N*1 array of sorted ids.
     path (str): Directory path where the result JSON file will be saved.
     model_name (str): Name of the model, used for naming the JSON file and as a key in the JSON content.
-    
+
 
     Returns:
     None
@@ -92,8 +96,8 @@ def calculate_species_distance_matrix(embeddings, ids, path: str, model_name: st
     for i, id1 in enumerate(unique_ids):
         for j, id2 in enumerate(unique_ids):
             if i <= j:  # Distance matrix is symmetric
-                species1 = embeddings[ids==id1]
-                species2 = embeddings[ids==id2]
+                species1 = embeddings[ids == id1]
+                species2 = embeddings[ids == id2]
 
                 # Compute the distant matrix for each speicies
                 dist_mtrx = euclidean_distances(species1, species2)
@@ -108,11 +112,10 @@ def calculate_species_distance_matrix(embeddings, ids, path: str, model_name: st
     np.save(model_results_path, distance_matrix)
 
 
-
 def KMediod(
     embeddings: np.array,
     min_similarity=0.8,
-    min_bin_size=100,
+    min_bin_size=10,
     num_steps=3,
     max_iter=1000,
 ) -> np.array:
@@ -133,7 +136,7 @@ def KMediod(
 
     embeddings = embeddings.astype(np.float32)
     n_samples = embeddings.shape[0]
-    block_size = 1000  # Adjust according to your available memory
+    block_size = 30000  # Adjust according to your available memory
 
     # Initialize the density vector
     density_vector = np.zeros(n_samples, dtype=np.float32)
