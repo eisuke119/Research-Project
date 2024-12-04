@@ -1,0 +1,69 @@
+\hline
+genus & Phascolarctobacterium & Phascolarctobacterium\_YIT\_12067\_uid62745 & 383 \\
+\hline
+genus & Porphyromonas & Porphyromonas\_somerae\_DSM\_23386\_uid199036 & 411 \\
+\hline
+genus & Prevotella & Prevotella\_bivia\_DSM\_20514\_uid182041 & 396 \\
+genus & Prevotella & Prevotella\_copri\_DSM\_18205\_uid55277 & 612 \\
+genus & Prevotella & Prevotella\_disiens\_FB035\_09AN\_uid51531 & 512 \\
+genus & Prevotella & Prevotella\_stercorea\_DSM\_18206\_uid78321 & 489 \\
+\hline
+genus & Roseburia & Roseburia\_hominis\_A2\_183\_uid73419 & 588 \\
+genus & Roseburia & Roseburia\_intestinalis\_L1\_82\_uid55267 & 704 \\
+genus & Roseburia & Roseburia\_intestinalis\_XB6B4\_uid197179 & 638 \\
+genus & Roseburia & Roseburia\_intestinalis\_uid197164 & 669 \\
+genus & Roseburia & Roseburia\_inulinivorans\_DSM\_16841\_uid55375 & 746 \\
+\hline
+family & Ruminococcaceae & Ruminococcaceae\_bacterium\_D16\_uid52825 & 539 \\
+\hline
+genus & Ruminococcus & Ruminococcus\_5\_1\_39BFAA\_uid55629 & 595 \\
+genus & Ruminococcus & Ruminococcus\_JC304\_uid199662 & 506 \\
+genus & Ruminococcus & Ruminococcus\_bromii\_uid197158 & 399 \\
+genus & Ruminococcus & Ruminococcus\_champanellensis\_18P13\_uid197169 & 421 \\
+genus & Ruminococcus & Ruminococcus\_gnavus\_ATCC\_29149\_uid54537 & 553 \\
+genus & Ruminococcus & Ruminococcus\_lactaris\_ATCC\_29176\_uid54903 & 489 \\
+genus & Ruminococcus & Ruminococcus\_obeum\_ATCC\_29174\_uid54509 & 612 \\
+genus & Ruminococcus & Ruminococcus\_obeum\_uid197165 & 610 \\
+genus & Ruminococcus & Ruminococcus\_torques\_ATCC\_27756\_uid54511 & 435 \\
+genus & Ruminococcus & Ruminococcus\_torques\_uid197166 & 527 \\
+genus & Ruminococcus & Ruminococcus\_uid197156 & 560 \\
+\hline
+genus & Streptococcus & Streptococcus\_parasanguinis\_ATCC\_15912\_uid49313 & 356 \\
+genus & Streptococcus & Streptococcus\_parasanguinis\_ATCC\_903\_uid62541 & 345 \\
+genus & Streptococcus & Streptococcus\_parasanguinis\_F0405\_uid60563 & 364 \\
+genus & Streptococcus & Streptococcus\_parasanguinis\_F0449\_uid180419 & 389 \\
+genus & Streptococcus & Streptococcus\_salivarius\_CCHSS3\_uid70481 & 393 \\
+genus & Streptococcus & Streptococcus\_salivarius\_JIM8777\_uid162145 & 362 \\
+genus & Streptococcus & Streptococcus\_salivarius\_K12\_uid180858 & 413 \\
+genus & Streptococcus & Streptococcus\_salivarius\_M18\_uid179893 & 378 \\
+genus & Streptococcus & Streptococcus\_salivarius\_SK126\_uid55863 & 335 \\
+genus & Streptococcus & Streptococcus\_thermophilus\_CNCM\_I\_1630\_uid179896 & 307 \\
+genus & Streptococcus & Streptococcus\_thermophilus\_CNRZ1066\_uid58221 & 280 \\
+genus & Streptococcus & Streptococcus\_vestibularis\_ATCC\_49124\_uid62665 & 279 \\
+genus & Streptococcus & Streptococcus\_vestibularis\_F0396\_uid60559 & 314 \\
+\hline
+genus & Subdoligranulum & Subdoligranulum\_4\_3\_54A2FAA\_uid80415 & 702 \\
+genus & Subdoligranulum & Subdoligranulum\_variabile\_DSM\_15176\_uid54539 & 486 \\
+\hline
+genus & Sutterella & Sutterella\_wadsworthensis\_2\_1\_59BFAA\_uid181408 & 462 \\
+genus & Sutterella & Sutterella\_wadsworthensis\_3\_1\_45B\_uid62165 & 543 \\
+\hline
+genus & Synergistes & Synergistes\_3\_1\_syn1\_uid80429 & 506 \\
+\hline
+genus & Tannerella & Tannerella\_6\_1\_58FAA\_CT1\_uid80413 & 616 \\
+\hline
+genus & Veillonella & Veillonella\_3\_1\_44\_uid47845 & 340 \\
+genus & Veillonella & Veillonella\_6\_1\_27\_uid47835 & 350 \\
+genus & Veillonella & Veillonella\_ACP1\_uid172974 & 354 \\
+genus & Veillonella & Veillonella\_atypica\_ACS\_049\_V\_Sch6\_uid51525 & 363 \\
+genus & Veillonella & Veillonella\_dispar\_ATCC\_17748\_uid55331 & 338 \\
+genus & Veillonella & Veillonella\_oral\_taxon\_158\_F0412\_uid61047 & 354 \\
+\hline
+genus & Weissella & Weissella\_confusa\_LBAE\_C39\_2\_uid168254 & 393 \\
+\hline
+genus & Methanomethylophilus & archaeon\_Mx1201\_uid196597 & 264 \\
+\hline
+order & Clostridiales & butyrate\_producing\_bacterium\_SM4\_1\_uid197180 & 327 \\
+order & Clostridiales & butyrate\_producing\_bacterium\_SS3\_4\_uid197159 & 525 \\
+\hline
+genus & Anaerostipes & butyrate\_producing\_bacterium\_SSC\_2\_uid197181 & 432 \\
