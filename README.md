@@ -40,7 +40,7 @@ id, sequence, genome
 
 1. Run the main processing script: `python main.py`.
 2. If you do not want to run all models go to `config/models.yml` and comment out the models.
-3. Run `NEED` to reproduce figures.
+3. To reproduce figures, run the notebooks in the folder *figure_notebooks/*.
 
 
 #### 4. Notes
