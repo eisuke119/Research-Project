@@ -23,18 +23,6 @@ NT:
   embedding_path: "NT.npy"
   batch_sizes: [40, 8, 1]
 
-# requires mamba_ssm & flash_attn which are not available in the current environment
-# Caduceus:
-#   model_path: "kuleshov-group/caduceus-ps_seqlen-131k_d_model-256_n_layer-16"
-#   embedding_path: "Caduceus.npy"
-#   batch_sizes: [50, 14, 1]
-
-# requires mamba_ssm & flash_attn which are not available in the current environment
-# EVO:
-#   model_path: "togethercomputer/evo-1-8k-base"
-#   embedding_path: "EVO.npy"
-#   batch_sizes: [50, 14, 1]
-
 GENALM:
   model_path: "AIRI-Institute/gena-lm-bert-base-t2t"
   embedding_path: "GENALM.npy"
