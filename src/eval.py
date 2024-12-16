@@ -4,7 +4,7 @@ import json
 import numpy as np
 from scipy.optimize import linear_sum_assignment
 import sklearn.metrics
-from sklearn.metrics import euclidean_distances
+from sklearn.metrics.pairwise import cosine_distances
 
 
 import tqdm
@@ -100,7 +100,7 @@ def calculate_species_distance_matrix(
                 species2 = embeddings[ids == id2]
 
                 # Compute the distant matrix for each speicies
-                dist_mtrx = euclidean_distances(species1, species2)
+                dist_mtrx = cosine_distances(species1, species2)
                 dist_1 = np.percentile(dist_mtrx.min(axis=0), 95)
                 dist_2 = np.percentile(dist_mtrx.min(axis=1), 95)
 

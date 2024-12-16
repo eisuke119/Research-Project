@@ -1,11 +1,11 @@
-# Benchmarking DNA Foundation Models on Binning Human Gut Microorganisms
-Anders Hjulmand, Andreas Flensted, Eisuke Okuda
+# Benchmarking DNA Foundation Models on Binning Human Gut Microbial Strains
+Anders Hjulmand, Andreas Flensted, Eisuke Okuda.
 
 
 ### 1. Introduction
 We benchmark six DNA foundation models along with three baselines on metagenomics binning using strain-level resolution data from the human gut micro-biome. Additionally, we perform a genus-level clustering.
 
-**Result:** One DNA foundation model, DNABERT-S, outperforms the others, whilst the remaining perform worse than the baseline models
+**Result:** One DNA foundation model, DNABERT-S, outperforms the others, whilst the remaining perform worse than the baseline models.
 
 ![Result](figures/f1_readme.png "Visualization of the embedding space")
 
@@ -38,7 +38,7 @@ id, sequence, genome
 1. Clone the repository: `git clone https://github.com/eisuke119/Research-Project.git`.
 2. Change to Research-Project directory: `cd Research-Project`.
 3. Install the requirements: `pip install -r requirements.txt`.
-4. Uninstall triton package: `pip uninstall triton`.
+4. Depending on environmnet uninstall triton package: `pip uninstall triton`.
 
 #### 3.3 Reproduce results
 
@@ -50,7 +50,7 @@ id, sequence, genome
 #### 3.4 Remarks
 
 1. The computed embeddings take up 30GB of space. 
-2. We used 4x L40 GPUs to compute the embeddings. 
+2. We used 2x L40 GPUs to compute the embeddings. 
 
 
 
