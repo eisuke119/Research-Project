@@ -1,0 +1,1 @@
+{"NT": {"percentile_threshold": 70, "thresholds": [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9], "f1_results": [4, 1, 0, 0, 0, 0, 0, 0, 0], "recall_results": [8, 4, 4, 3, 3, 2, 2, 1, 1], "silhouette_score": -0.1098598763346672, "n_unclassified_contigs": 0}}

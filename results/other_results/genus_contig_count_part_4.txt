@@ -1,0 +1,72 @@
+genus & Faecalibacterium & Faecalibacterium\_prausnitzii\_L2\_6\_uid197183 & 518 \\
+genus & Faecalibacterium & Faecalibacterium\_prausnitzii\_M21\_2\_uid54555 & 509 \\
+genus & Faecalibacterium & Faecalibacterium\_prausnitzii\_uid197157 & 501 \\
+\hline
+genus & Flavonifractor & Flavonifractor\_plautii\_ATCC\_29863\_uid80691 & 687 \\
+\hline
+genus & Fusobacterium & Fusobacterium\_gonidiaformans\_ATCC\_25563\_uid55569 & 268 \\
+genus & Fusobacterium & Fusobacterium\_mortiferum\_ATCC\_9817\_uid55571 & 393 \\
+\hline
+genus & Gordonibacter & Gordonibacter\_pamelaeae\_7\_10\_1\_b\_uid197167 & 462 \\
+\hline
+genus & Haemophilus & Haemophilus\_parainfluenzae\_ATCC\_33392\_uid63561 & 323 \\
+genus & Haemophilus & Haemophilus\_parainfluenzae\_HK2019\_uid180434 & 365 \\
+genus & Haemophilus & Haemophilus\_parainfluenzae\_T3T1\_uid72801 & 337 \\
+\hline
+genus & Holdemania & Holdemania\_filiformis\_DSM\_12042\_uid55297 & 572 \\
+\hline
+genus & Johnsonella & Johnsonella\_ignava\_ATCC\_51276\_uid77897 & 123 \\
+\hline
+genus & Klebsiella & Klebsiella\_4\_1\_44FAA\_uid80417 & 863 \\
+\hline
+family & Lachnospiraceae & Lachnospiraceae\_bacterium\_1\_1\_57FAA\_uid68209 & 502 \\
+family & Lachnospiraceae & Lachnospiraceae\_bacterium\_1\_4\_56FAA\_uid68205 & 521 \\
+family & Lachnospiraceae & Lachnospiraceae\_bacterium\_2\_1\_58FAA\_uid68203 & 502 \\
+family & Lachnospiraceae & Lachnospiraceae\_bacterium\_3\_1\_46FAA\_uid66427 & 456 \\
+family & Lachnospiraceae & Lachnospiraceae\_bacterium\_3\_1\_57FAA\_CT1\_uid68201 & 1191 \\
+family & Lachnospiraceae & Lachnospiraceae\_bacterium\_4\_1\_37FAA\_uid63581 & 461 \\
+family & Lachnospiraceae & Lachnospiraceae\_bacterium\_5\_1\_63FAA\_uid61883 & 521 \\
+family & Lachnospiraceae & Lachnospiraceae\_bacterium\_7\_1\_58FAA\_uid81607 & 951 \\
+family & Lachnospiraceae & Lachnospiraceae\_bacterium\_9\_1\_43BFAA\_uid66425 & 433 \\
+\hline
+genus & Lactobacillus & Lactobacillus\_acidophilus\_30SC\_uid63605 & 343 \\
+genus & Lactobacillus & Lactobacillus\_amylovorus\_GRL1118\_uid160233 & 331 \\
+genus & Lactobacillus & Lactobacillus\_johnsonii\_DPC\_6026\_uid162057 & 329 \\
+genus & Lactobacillus & Lactobacillus\_reuteri\_DSM\_20016\_uid58471 & 295 \\
+genus & Lactobacillus & Lactobacillus\_rossiae\_DSM\_15814\_uid199472 & 41 \\
+genus & Lactobacillus & Lactobacillus\_ruminis\_ATCC\_25644\_uid179878 & 396 \\
+genus & Lactobacillus & Lactobacillus\_ruminis\_SPM0211\_uid67955 & 337 \\
+\hline
+genus & Lactococcus & Lactococcus\_raffinolactis\_4877\_uid178066 & 623 \\
+\hline
+genus & Megamonas & Megamonas\_funiformis\_YIT\_11815\_uid82999 & 415 \\
+genus & Megamonas & Megamonas\_hypermegale\_uid197163 & 335 \\
+\hline
+genus & Megasphaera & Megasphaera\_elsdenii\_DSM\_20460\_uid71135 & 397 \\
+\hline
+genus & Methanobrevibacter & Methanobrevibacter\_smithii\_ATCC\_35061\_uid58827 & 281 \\
+genus & Methanobrevibacter & Methanobrevibacter\_smithii\_DSM\_2374\_uid55123 & 277 \\
+genus & Methanobrevibacter & Methanobrevibacter\_smithii\_DSM\_2375\_uid54983 & 247 \\
+\hline
+genus & Methanomassiliicoccus & Methanomassiliicoccus\_Mx1\_Issoire\_uid207287 & 318 \\
+\hline
+genus & Mitsuokella & Mitsuokella\_multacida\_DSM\_20544\_uid55073 & 399 \\
+\hline
+genus & Odoribacter & Odoribacter\_splanchnicus\_DSM\_20712\_uid63397 & 693 \\
+\hline
+genus & Oscillibacter & Oscillibacter\_ruminantium\_GH1\_uid199475 & 299 \\
+\hline
+genus & Parabacteroides & Parabacteroides\_D13\_uid55997 & 853 \\
+genus & Parabacteroides & Parabacteroides\_distasonis\_ATCC\_8503\_uid58301 & 783 \\
+genus & Parabacteroides & Parabacteroides\_distasonis\_CL03T12C09\_uid181647 & 805 \\
+genus & Parabacteroides & Parabacteroides\_goldsteinii\_CL02T12C30\_uid178274 & 1064 \\
+genus & Parabacteroides & Parabacteroides\_johnsonii\_CL02T12C29\_uid181649 & 701 \\
+genus & Parabacteroides & Parabacteroides\_johnsonii\_DSM\_18315\_uid55269 & 673 \\
+genus & Parabacteroides & Parabacteroides\_merdae\_ATCC\_43184\_uid54545 & 681 \\
+genus & Parabacteroides & Parabacteroides\_merdae\_CL03T12C32\_uid181650 & 768 \\
+genus & Parabacteroides & Parabacteroides\_merdae\_CL09T00C40\_uid181721 & 682 \\
+\hline
+genus & Paraprevotella & Paraprevotella\_clara\_YIT\_11840\_uid76949 & 673 \\
+genus & Paraprevotella & Paraprevotella\_xylaniphila\_YIT\_11841\_uid66381 & 617 \\
+\hline
+genus & Parasutterella & Parasutterella\_excrementihominis\_YIT\_11859\_uid66383 & 495 \\
